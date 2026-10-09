@@ -61,6 +61,7 @@
               </el-card>
             </el-radio-group>
           </el-form-item>
+          <ContextPolicySettings v-model="form.knowledge_setting.context_policy" />
           <el-row :gutter="10">
             <el-col :span="12">
               <el-form-item>
@@ -193,6 +194,7 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
+import ContextPolicySettings from '@/components/context-policy/ContextPolicySettings.vue'
 import { ref, watch, reactive } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
 import { isWorkFlow } from '@/utils/application'

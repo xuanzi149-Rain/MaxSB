@@ -43,6 +43,7 @@
     </div>
     <el-collapse-transition>
       <div class="mt-12" v-if="data['show']">
+        <ContextProcessingDetails :data="data.context_processing" />
         <template v-if="data.status === 200 || data.type == WorkflowType.LoopNode">
           <!-- 开始 -->
           <template
@@ -1430,6 +1431,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
+import ContextProcessingDetails from '@/components/context-policy/ContextProcessingDetails.vue'
 import { ref, computed, type PropType } from 'vue'
 import ParagraphCard from '@/components/ai-chat/component/knowledge-source-component/ParagraphCard.vue'
 import DynamicsForm from '@/components/dynamics-form/index.vue'

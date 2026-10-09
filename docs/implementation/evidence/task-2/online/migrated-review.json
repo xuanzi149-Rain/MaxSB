@@ -1,0 +1,202 @@
+{
+  "authorization": "User authorized local integration of the six approved examples; exact copy migration",
+  "namespace": "default/reviewed-context",
+  "versions": {
+    "judge": "09b2baa75e0327a40038c0c98aa47cd3c6dc4d3e058c8d7d42c6397f57fa0fae",
+    "embedding": "c84ba34109d5f3b5b49be4e6fd2f1e3a21bdc04ea239332cdaca3832285faf54"
+  },
+  "model_bindings": [
+    {
+      "id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+      "revision": "4d4ca998a36f54f88f2cd9090c5deda7d535602645eae4d98ee58bf3f1bf3a45"
+    },
+    {
+      "id": "42f63a3d-427e-11ef-b3ec-a8a1595801ab",
+      "revision": "6e0bcb72764508c60dec8c0fee9ba89ee91bc81018c8ccbcd3a216d752d12aff"
+    }
+  ],
+  "approvals": {
+    "bb0e3ef98258b3f10bfdbe78d351936332fee775b26b315a8377db4de928a310": "d2da49a75ba81647f1f866779af1615c35cc332747493517b9fd1abc5486a468",
+    "27405e1437b99256dd7c6d6012a72193606611af6af48e19dd3ab833a44a04d3": "67a59bee7630e53f4f82e0e489747ca2b0cbde1f124cf4530c86362da8dbea0c",
+    "b036ffdd9f8d0bbcbc197452ce1a50f1075dcf41a6b80d38e1d5b8a46555a6c6": "181d59132329f21ffee9fa6ace6c9b9326a904600870244919054c184bdb321c",
+    "4db179a0ec82accd56fa9c4cda49dfbc9bb4e0e4cb402c442cf33570cac94047": "7a2f4541631c84329365a4e08ee11a7a9b33016846195513e5602366fed80d63",
+    "9b03ef6c62e79b9b298d326dbfb41dc4ed302481b74e59b889cdcfd23ad30493": "e170d62732295d509db145eaeba8504354f0a3d03d8c7413607db00d40d58bf0",
+    "2a328205feb13d104b14e9a44271c11387446e39876e200c6c275342ef7bd564": "66d8bde993103cb5d321f3d677c6024c504f5d781726c5c211cf189877046b49"
+  },
+  "provenance": [
+    {
+      "case_id": "paraphrase-limit",
+      "original_pair_key": "ed090a00226dddd9a4c00781c33bbb7b0eedd2966e68175bfae35f7f12941e4a",
+      "new_pair_key": "bb0e3ef98258b3f10bfdbe78d351936332fee775b26b315a8377db4de928a310",
+      "items": [
+        {
+          "id": "01a1209a-8ccf-7cd0-a381-9503347d437d",
+          "document_id": "01a1209a-8cc9-7d61-afa2-d8631a087c50",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "普通读者最多借5本书。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8cd5-7db1-bcbf-bd4e97dbe3db",
+          "document_id": "01a1209a-8cc9-7d61-afa2-d8631a087c50",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "普通读者的借阅上限为5本。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546076.2384932,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    },
+    {
+      "case_id": "paraphrase-period",
+      "original_pair_key": "b9ae3fb7a72d7977e6bd75c949c91b1f36ff272b00002cc50387113ccb044eb8",
+      "new_pair_key": "27405e1437b99256dd7c6d6012a72193606611af6af48e19dd3ab833a44a04d3",
+      "items": [
+        {
+          "id": "01a1209a-8cd8-7d22-b808-184e6a968052",
+          "document_id": "01a1209a-8cd7-7971-950a-1198b71b9f13",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "普通图书可借阅21天。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8cd8-7d22-b808-183f088c1b59",
+          "document_id": "01a1209a-8cd7-7971-950a-1198b71b9f13",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "普通图书的借期是21天。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546081.9133694,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    },
+    {
+      "case_id": "paraphrase-closed",
+      "original_pair_key": "0f58dd37568692e1f88458d4afac96d3ecf62f8fca6c0bff47c789b32cb76260",
+      "new_pair_key": "b036ffdd9f8d0bbcbc197452ce1a50f1075dcf41a6b80d38e1d5b8a46555a6c6",
+      "items": [
+        {
+          "id": "01a1209a-8cdb-7fe3-9d0f-6aa4db6c8aa3",
+          "document_id": "01a1209a-8cda-7881-b5f8-e4021d813808",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "青禾图书室每逢周一不对外开放。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8cda-7881-b5f8-e417bf6f2636",
+          "document_id": "01a1209a-8cda-7881-b5f8-e4021d813808",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "青禾图书室周一闭馆。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546087.3710644,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    },
+    {
+      "case_id": "paraphrase-negative",
+      "original_pair_key": "739a564c12be80340cf8f45e5d44b8530946d83760518777f8a92df9baadd61d",
+      "new_pair_key": "4db179a0ec82accd56fa9c4cda49dfbc9bb4e0e4cb402c442cf33570cac94047",
+      "items": [
+        {
+          "id": "01a1209a-8cdd-7163-a99e-cbac396caf87",
+          "document_id": "01a1209a-8cdc-7122-b407-8c8f59ec622d",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "阅览室内不得吸烟。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8cdc-7122-b407-8c9640273518",
+          "document_id": "01a1209a-8cdc-7122-b407-8c8f59ec622d",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "阅览室禁止吸烟。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546092.5028687,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    },
+    {
+      "case_id": "paraphrase-reservation",
+      "original_pair_key": "3cf12391ba5c3512957e8c7924c236c6272265d0475d1783c628b7d4cefcd4a2",
+      "new_pair_key": "9b03ef6c62e79b9b298d326dbfb41dc4ed302481b74e59b889cdcfd23ad30493",
+      "items": [
+        {
+          "id": "01a1209a-8cdf-7b30-81f0-b044bb11eaa0",
+          "document_id": "01a1209a-8cde-7642-8fcb-5808054cc283",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "讨论室需提前1天预约。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8cdf-7b30-81f0-b05c6cdaa966",
+          "document_id": "01a1209a-8cde-7642-8fcb-5808054cc283",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "使用讨论室应在使用前1天完成预约。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546098.1133132,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    },
+    {
+      "case_id": "paraphrase-length",
+      "original_pair_key": "753ca14a7f4a69e025dab65a56c4be58820ae11140e79994639ec62ee11f16d5",
+      "new_pair_key": "2a328205feb13d104b14e9a44271c11387446e39876e200c6c275342ef7bd564",
+      "items": [
+        {
+          "id": "01a1209a-8ce3-7a91-b857-11d07a2168ee",
+          "document_id": "01a1209a-8ce2-7aa2-a146-0a148fb83f9e",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "包裹长度不得超过80厘米。",
+          "meta": {
+            "allow_download": false
+          }
+        },
+        {
+          "id": "01a1209a-8ce3-7a91-b857-11c1eeb897bd",
+          "document_id": "01a1209a-8ce2-7aa2-a146-0a148fb83f9e",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "title": "规则",
+          "content": "包裹最长80厘米。",
+          "meta": {
+            "allow_download": false
+          }
+        }
+      ],
+      "original_created": 1791546103.400143,
+      "scope_change": "isolated demo copies, normalized runtime metadata and real IDs"
+    }
+  ]
+}

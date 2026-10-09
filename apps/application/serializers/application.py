@@ -21,6 +21,7 @@ from typing import Dict, List
 
 import requests
 import uuid_utils.compat as uuid
+from application.context.serializers import ContextPolicySerializer
 from application.flow.common import Workflow, get_base_node_model
 from application.long_term_memory import schedule_extract_long_term_memory
 from application.models.application import Application, ApplicationFolder, ApplicationTypeChoices, ApplicationVersion
@@ -375,6 +376,7 @@ class NoReferencesSetting(serializers.Serializer):
 
 
 class KnowledgeSettingSerializer(serializers.Serializer):
+    context_policy = ContextPolicySerializer(required=False)
     top_n = serializers.FloatField(required=True, max_value=10000, min_value=1, label=_("Reference segment number"))
     similarity = serializers.FloatField(required=True, max_value=1, min_value=0, label=_("Acquaintance"))
     max_paragraph_char_number = serializers.IntegerField(

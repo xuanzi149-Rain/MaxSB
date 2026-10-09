@@ -139,7 +139,11 @@ class BaseSearchDatasetStep(ISearchDatasetStep):
             'status': self.status,
             'err_message': self.err_message,
             'step_type': 'search_step',
-            'paragraph_list': [row.to_dict() for row in (self.context.get('paragraph_list') or [])],
+            'paragraph_list': [row.to_dict() for row in (
+                manage.context.get('paragraph_list', []) if manage.context.get('context_processing')
+                else self.context.get('paragraph_list') or [])],
+            **({'retrieved_paragraph_list': [row.to_dict() for row in self.context.get('paragraph_list') or []]}
+               if manage.context.get('context_processing') else {}),
             'run_time': self.context.get('run_time') or 0,
             'problem_text': step_args.get(
                 'padding_problem_text') if 'padding_problem_text' in step_args else step_args.get('problem_text'),

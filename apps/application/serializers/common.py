@@ -249,6 +249,7 @@ class ChatInfo:
             "top_n": 3 if knowledge_setting.get("top_n") is None else knowledge_setting.get("top_n"),
             "similarity": 0.6 if knowledge_setting.get("similarity") is None else knowledge_setting.get("similarity"),
             "max_paragraph_char_number": knowledge_setting.get("max_paragraph_char_number") or 5000,
+            "context_policy": knowledge_setting.get("context_policy", {}),
             "history_chat_record": self.chat_record_list,
             "chat_id": self.chat_id,
             "dialogue_number": self.application.dialogue_number,

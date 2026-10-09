@@ -1,0 +1,12 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.770 seconds.
+Prefix dict has been built successfully.
+2026-10-09 20:17:13 [tool_code INFO] Init sandbox dir.
+Found 16 test(s).
+System check identified no issues (0 silenced).
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.029s
+
+OK

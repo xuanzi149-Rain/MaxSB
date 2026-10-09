@@ -1,0 +1,72 @@
+[
+  {
+    "policy": "off",
+    "chat_id": "01a1209c-f7e2-77d1-997d-a202c2ecb821",
+    "chat_record_id": "01a1209c-fdb1-7c02-a4f1-4388320d470a",
+    "answer": "不可以，阅览室内禁止吸烟。",
+    "input_tokens": 77,
+    "output_tokens": 7,
+    "seconds": 2.646871167999052,
+    "audit": null,
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "policy": "on",
+    "chat_id": "01a1209d-0271-78f3-a6f3-3ca2e64e9ca5",
+    "chat_record_id": "01a1209d-0375-77b0-86ed-f89acb4b4ef7",
+    "answer": "不可以，阅览室禁止吸烟。",
+    "input_tokens": 65,
+    "output_tokens": 6,
+    "seconds": 1.3059029180003563,
+    "audit": {
+      "enabled": true,
+      "mapping": [
+        {
+          "reason": "semantic_duplicate",
+          "document_id": "01a1209a-8cdc-7122-b407-8c8f59ec622d",
+          "original_id": "01a1209a-8cdd-7163-a99e-cbac396caf87",
+          "retained_id": "01a1209a-8cdc-7122-b407-8c9640273518",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "original_index": 0,
+          "retained_index": 1
+        },
+        {
+          "reason": "retained",
+          "document_id": "01a1209a-8cdc-7122-b407-8c8f59ec622d",
+          "original_id": "01a1209a-8cdc-7122-b407-8c9640273518",
+          "retained_id": "01a1209a-8cdc-7122-b407-8c9640273518",
+          "knowledge_id": "01a1209a-8cc4-7070-b815-0ec0ecc5452a",
+          "original_index": 1,
+          "retained_index": 1
+        }
+      ],
+      "semantic": {
+        "mode": "reviewed_cache_only",
+        "checks": [
+          {
+            "a_id": "01a1209a-8cdd-7163-a99e-cbac396caf87",
+            "b_id": "01a1209a-8cdc-7122-b407-8c9640273518",
+            "status": "approved_equivalent",
+            "pair_key": "4db179a0ec82accd56fa9c4cda49dfbc9bb4e0e4cb402c442cf33570cac94047"
+          }
+        ],
+        "status": "matched",
+        "judge_calls": 0,
+        "approved_pair_count": 1,
+        "actual_removed_count": 1
+      },
+      "max_chars": 5000,
+      "token_budget": 2048,
+      "original_count": 2,
+      "retained_count": 1,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "similarity_threshold": 0.95,
+      "estimated_saved_tokens": 16,
+      "estimated_original_tokens": 31,
+      "estimated_retained_tokens": 15
+    },
+    "human_correct": null,
+    "human_citation_accuracy": null
+  }
+]

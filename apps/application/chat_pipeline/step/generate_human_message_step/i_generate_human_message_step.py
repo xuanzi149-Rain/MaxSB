@@ -15,6 +15,7 @@ from rest_framework import serializers
 
 from application.chat_pipeline.I_base_chat_pipeline import IBaseChatPipelineStep, ParagraphPipelineModel
 from application.chat_pipeline.pipeline_manage import PipelineManage
+from application.context.serializers import ContextPolicySerializer
 from application.models import ChatRecord
 from application.serializers.application import NoReferencesSetting
 from common.field.common import InstanceField
@@ -22,6 +23,8 @@ from common.field.common import InstanceField
 
 class IGenerateHumanMessageStep(IBaseChatPipelineStep):
     class InstanceSerializer(serializers.Serializer):
+        workspace_id = serializers.CharField(required=False, allow_null=True)
+        context_policy = ContextPolicySerializer(required=False)
         # 问题
         problem_text = serializers.CharField(required=True, label=_("question"))
         # 段落列表
@@ -52,6 +55,9 @@ class IGenerateHumanMessageStep(IBaseChatPipelineStep):
     def _run(self, manage: PipelineManage):
         message_list = self.execute(**self.context['step_args'])
         manage.context['message_list'] = message_list
+        if 'retained_paragraphs' in self.context:
+            manage.context['paragraph_list'] = self.context['retained_paragraphs']
+            manage.context['context_processing'] = self.context['context_processing']
 
     @abstractmethod
     def execute(self,

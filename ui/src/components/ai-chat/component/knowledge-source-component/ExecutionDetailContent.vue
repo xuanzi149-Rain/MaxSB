@@ -7,6 +7,7 @@
     </div>
 
     <template v-else>
+      <ContextProcessingDetails :data="props.detail?.find((item) => item.context_processing)?.context_processing" />
       <div class="card-never border-r-6 mb-12">
         <h5 class="p-8-12">
           {{ $t('aiChat.paragraphSource.question') }}
@@ -81,6 +82,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import ContextProcessingDetails from '@/components/context-policy/ContextProcessingDetails.vue'
 import { ref, computed } from 'vue'
 import ExecutionDetailCard from '@/components/execution-detail-card/index.vue'
 import { arraySort } from '@/utils/array'

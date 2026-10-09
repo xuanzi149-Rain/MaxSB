@@ -10,6 +10,7 @@ from typing import List
 
 from langchain_core.documents import Document
 
+from application.context.runtime import process_runtime_context
 from application.flow.i_step_node import NodeResult
 from application.flow.step_node.reranker_node.i_reranker_node import IRerankerNode
 from models_provider.tools import get_model_instance_by_model_workspace_id
@@ -83,6 +84,8 @@ class BaseRerankerNode(IRerankerNode):
         self.context['result_list'] = details.get('result_list')
         self.context['result'] = details.get('result')
         self.context['exception_message'] = details.get('err_message')
+        if 'context_processing' in details:
+            self.context['context_processing'] = details['context_processing']
 
     def execute(self, question, reranker_setting, reranker_list, reranker_model_id, show_knowledge,
                 **kwargs) -> NodeResult:
@@ -93,7 +96,7 @@ class BaseRerankerNode(IRerankerNode):
             return get_none_result(question)
         top_n = reranker_setting.get('top_n', 3)
         self.context['document_list'] = [
-            {'page_content': document.page_content, 'metadata': reset_metadata(document.metadata)} for
+            {'page_content': document.page_content, 'metadata': reset_metadata(document.metadata.copy())} for
             document in documents]
         self.context['question'] = question
         workspace_id = self.workflow_manage.get_body().get('workspace_id')
@@ -106,10 +109,30 @@ class BaseRerankerNode(IRerankerNode):
         similarity = reranker_setting.get('similarity', 0.6)
         max_paragraph_char_number = reranker_setting.get('max_paragraph_char_number', 5000)
         result = reset_result_list(result, documents)
-        r = filter_result(result, max_paragraph_char_number, top_n, similarity)
+        extra = {}
+        if reranker_setting.get('context_policy', {}).get('enabled') and not any(
+                d.metadata.get('is_hit_handling_method') for d in result):
+            candidates = []
+            for document in result[:top_n]:
+                if document.metadata.get('relevance_score') < similarity:
+                    break
+                candidates.append({'page_content': document.page_content, 'metadata': document.metadata})
+            rows = [{**r['metadata'], '_rendered_content': r['page_content'],
+                     'content': r['metadata'].get('content') or r['page_content'],
+                     'title': r['metadata'].get('title') or ''} for r in candidates]
+            processed = process_runtime_context(rows, reranker_setting['context_policy'],
+                                                workspace_id=workspace_id, max_chars=max_paragraph_char_number,
+                                        separator='', render=lambda p: p['_rendered_content'])
+            by_identity = {id(row): candidates[i] for i, row in enumerate(rows)}
+            r = [by_identity[id(row)] for row in processed['retained']]
+            extra['context_processing'] = processed['audit']
+        else:
+            r = filter_result(result, max_paragraph_char_number, top_n, similarity)
+        r = [{'page_content': item['page_content'], 'metadata': reset_metadata(item['metadata'].copy())}
+             for item in r]
         return NodeResult({'result_list': r, 'result': ''.join([item.get('page_content') for item in r]),
                            'is_hit_handling_method_list': [r for row in r if
-                                                           row.get('metadata').get('is_hit_handling_method')]}, {})
+                                                           row.get('metadata').get('is_hit_handling_method')], **extra}, {})
 
     def get_details(self, index: int, **kwargs):
         return {
@@ -123,6 +146,8 @@ class BaseRerankerNode(IRerankerNode):
             'reranker_setting': self.node_params_serializer.data.get('reranker_setting'),
             'result_list': self.context.get('result_list'),
             'result': self.context.get('result'),
+            **({'context_processing': self.context['context_processing']}
+               if 'context_processing' in self.context else {}),
             'status': self.status,
             'err_message': self.err_message,
             'enableException': self.node.properties.get('enableException'),

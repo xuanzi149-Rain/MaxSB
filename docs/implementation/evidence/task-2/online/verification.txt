@@ -1,0 +1,13 @@
+Primary project pure context tests: 63 passed
+Primary project Django context integration tests: 16 passed
+Vue type-check: passed
+Changed Vue component ESLint: passed
+Admin Vite build: passed (upstream eval/large-chunk warnings remain)
+Changed context/runtime/management/test/script Ruff: passed
+Independent review: two reranker regressions fixed; fixes confirmed
+Real HTTP answering off/on: 2 requests succeeded, actual semantic replacement 2 -> 1
+Backend deployed hashes and collected frontend index match primary project
+Admin HTTP health: 200
+New demo application finally published with enabled=true, semantic_enabled=true
+Existing task0/task1 baselines unchanged
+No new paid semantic judgement; original TTL timestamps retained

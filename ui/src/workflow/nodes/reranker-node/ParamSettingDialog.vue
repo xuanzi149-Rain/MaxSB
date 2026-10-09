@@ -10,6 +10,7 @@
     :close-on-press-escape="false"
   >
     <el-form label-position="top" ref="paramFormRef" :model="form">
+      <ContextPolicySettings v-model="form.context_policy" />
       <el-row :gutter="12">
         <el-col :span="12">
           <el-form-item>
@@ -76,6 +77,7 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
+import ContextPolicySettings from '@/components/context-policy/ContextPolicySettings.vue'
 import { ref, watch } from 'vue'
 import { cloneDeep } from 'lodash'
 import type { FormInstance, FormRules } from 'element-plus'

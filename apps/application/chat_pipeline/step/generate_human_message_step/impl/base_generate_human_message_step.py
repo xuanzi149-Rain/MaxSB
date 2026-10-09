@@ -13,6 +13,7 @@ from langchain_core.messages import SystemMessage, BaseMessage, HumanMessage
 from application.chat_pipeline.I_base_chat_pipeline import ParagraphPipelineModel
 from application.chat_pipeline.step.generate_human_message_step.i_generate_human_message_step import \
     IGenerateHumanMessageStep
+from application.context.runtime import process_runtime_context
 from application.models import ChatRecord
 from common.utils.common import flat_map
 
@@ -28,7 +29,22 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
                 padding_problem_text: str = None,
                 no_references_setting=None,
                 system=None,
+                context_policy=None,
+                workspace_id=None,
                 **kwargs) -> List[BaseMessage]:
+        context_text = None
+        if context_policy and context_policy.get('enabled') and not any(
+                p.hit_handling_method == 'directly_return' and p.similarity >= p.directly_return_similarity
+                for p in paragraph_list or []):
+            rows = [p.to_dict() for p in paragraph_list or []]
+            processed = process_runtime_context(rows, context_policy, workspace_id=workspace_id,
+                                                max_chars=max_paragraph_char_number,
+                                        render=lambda p: f"<data>{p.get('title') or ''}:{p['content']}</data>")
+            by_identity = {id(row): paragraph_list[i] for i, row in enumerate(rows)}
+            paragraph_list = [by_identity[id(row)] for row in processed['retained']]
+            self.context['retained_paragraphs'] = paragraph_list
+            self.context['context_processing'] = processed['audit']
+            context_text = processed['text']
         prompt = prompt if (paragraph_list is not None and len(paragraph_list) > 0) else no_references_setting.get(
             'value')
         exec_problem_text = padding_problem_text if padding_problem_text is not None else problem_text
@@ -39,24 +55,26 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
         if system is not None and len(system) > 0:
             return [SystemMessage(system), *flat_map(history_message),
                     self.to_human_message(prompt, exec_problem_text, max_paragraph_char_number, paragraph_list,
-                                          no_references_setting)]
+                                          no_references_setting, context_text)]
 
         return [*flat_map(history_message),
                 self.to_human_message(prompt, exec_problem_text, max_paragraph_char_number, paragraph_list,
-                                      no_references_setting)]
+                                      no_references_setting, context_text)]
 
     @staticmethod
     def to_human_message(prompt: str,
                          problem: str,
                          max_paragraph_char_number: int,
                          paragraph_list: List[ParagraphPipelineModel],
-                         no_references_setting: Dict):
+                         no_references_setting: Dict, context_text=None):
         if paragraph_list is None or len(paragraph_list) == 0:
             if no_references_setting.get('status') == 'ai_questioning':
                 return HumanMessage(
                     content=no_references_setting.get('value').replace('{question}', problem))
             else:
                 return HumanMessage(content=prompt.replace('{data}', "").replace('{question}', problem))
+        if context_text is not None:
+            return HumanMessage(content=prompt.replace('{data}', context_text).replace('{question}', problem))
         temp_len = 0
         data_list = []
         for p in paragraph_list:
@@ -76,4 +94,6 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
             'status': self.status,
             'err_message': self.err_message,
             'step_type': 'generate_human_message',
+            **({'context_processing': self.context['context_processing']}
+               if 'context_processing' in self.context else {}),
         }

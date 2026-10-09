@@ -16,7 +16,11 @@ from application.flow.i_step_node import INode, NodeResult
 from django.utils.translation import gettext_lazy as _
 
 
+from application.context.serializers import ContextPolicySerializer
+
+
 class RerankerSettingSerializer(serializers.Serializer):
+    context_policy = ContextPolicySerializer(required=False)
     # 需要查询的条数
     top_n = serializers.IntegerField(required=True,
                                      label=_("Reference segment number"))
