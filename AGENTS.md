@@ -111,3 +111,7 @@ Two SPAs built from the same repo: admin (`npm run build`) and chat embed (`npm 
 - **Minimize diffs.** Do not reformat entire files, reflow lines, or rename unless required. Make the smallest possible change and preserve existing structure/formatting. (`.github/copilot-instructions.md`)
 - Match the existing module header style (most files begin with a `# coding=utf-8` block-style docstring with `@project/@Author/@file/@date/@desc`).
 - UI code follows the existing Vue 3 Composition API + `<script setup>` + Element Plus patterns; lint with `npm run lint` before finishing.
+
+## 增量任务的技能应用
+
+后续任务形成方案前，必须先对照用户技能图与总计划的技能应用描述，选出最重要的 1–2 项，再说明具体应用、新增能力及验收证据。图中技能与任务 2 的确认记录见 `docs/implementation/skill-application.md`；总计划见 `docs/IMPLEMENTATION_TASKS.md`。
