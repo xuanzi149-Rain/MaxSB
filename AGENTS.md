@@ -35,6 +35,7 @@ python apps/manage.py compilemessages            # compile .po -> .mo (required 
 ```
 
 Frontend (`ui/`):
+
 ```bash
 cd ui
 npm install
@@ -55,6 +56,7 @@ Dependencies are managed with `uv` (`uv.lock`, `pyproject.toml`). Python is pinn
 ### Settings: one project, two runtimes
 
 `apps/maxkb/settings/` is split by the `SERVER_NAME` env var (set by `main.py` based on the service):
+
 - `base/web.py` — full Django app (DB, cache, REST framework, all `INSTALLED_APPS`, templates, i18n). Default for `web`.
 - `base/model.py` — minimal settings for the local-embedding model server. Selected when `SERVER_NAME=local_model`.
 - `settings/__init__.py` imports `web` or `model` accordingly. This is why a missing/wrong `SERVER_NAME` silently loads the wrong app set.
@@ -64,6 +66,7 @@ All runtime config comes from the `CONFIG` singleton (`apps/maxkb/const.py` + `c
 ### URL layout
 
 Two API surfaces, configured via `CONFIG.get_admin_path()` (default `/admin`) and `get_chat_path()` (default `/chat`):
+
 - `/admin/api/*` — management API (users, tools, models_provider, folders, knowledge, system_manage, application, trigger, oss, homepage). Backed by DRF + drf-spectacular (Swagger at `/admin/api-doc`).
 - `/chat/api/*` — runtime chat API (chat views + MCP endpoint at `chat/views/mcp.py`).
 
@@ -76,8 +79,9 @@ The Vue admin SPA and chat SPA are served as Django static files from `ui/dist` 
 ### Application & chat (`apps/application/`, `apps/chat/`)
 
 An "application" is a configurable agent. Two execution engines coexist:
+
 - `chat_pipeline/` — older linear step pipeline (`PipelineManage` builder, steps in `step/`).
-- `flow/` — the workflow engine. A graph of `step_node/*` nodes (start, ai_chat, search_knowledge, search_document, reranker, condition, tool, mcp, loop/*, variable_*, form, document_split/extract, knowledge_write, speech/text/image/video nodes, etc.). `workflow_manage.py` runs nodes concurrently on a `ThreadPoolExecutor`, streams output, and merges node details. Default workflows are seeded from `default_workflow*.json`. Specialized managers: `tool_workflow_manage`, `knowledge_workflow_manage`, `loop_workflow_manage` (and their `_loop_` variants).
+- `flow/` — the workflow engine. A graph of `step_node/*` nodes (start, ai_chat, search_knowledge, search_document, reranker, condition, tool, mcp, loop/*, variable\_*, form, document_split/extract, knowledge_write, speech/text/image/video nodes, etc.). `workflow_manage.py` runs nodes concurrently on a `ThreadPoolExecutor`, streams output, and merges node details. Default workflows are seeded from `default_workflow*.json`. Specialized managers: `tool_workflow_manage`, `knowledge_workflow_manage`, `loop_workflow_manage` (and their `_loop_` variants).
 
 Streaming chat responses go through `BaseToResponse` (`apps/common/handle/base_to_response.py`) with three impls: `system_to_response` (MaxKB SSE protocol), `openai_to_response` (OpenAI-compatible), `loop_to_response`. SSE frames are `data: <json>\n\n`.
 

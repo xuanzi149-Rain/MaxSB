@@ -1,0 +1,3 @@
+# Run from the repository root after building the original baseline image.
+FROM maxkb-baseline:4aad53c
+COPY apps/maxkb/settings/base/model.py /opt/maxkb-app/apps/maxkb/settings/base/model.py
