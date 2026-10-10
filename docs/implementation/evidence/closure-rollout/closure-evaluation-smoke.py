@@ -1,5 +1,6 @@
 """Run one sealed, read-only tool case through the isolated evaluation worker."""
 import json
+import os
 from pathlib import Path
 import runpy
 import time
@@ -10,6 +11,8 @@ from application.models import Application, EvaluationRun  # noqa: E402
 
 root = scope['ROOT']
 release = json.loads((root / 'release.json').read_text())
+os.environ['MAXSB_CODE_SHA'] = release['commit']
+os.environ['MAXSB_IMAGE_ID'] = release['image_id']
 cases = json.loads((root / 'docs/implementation/evaluation/dev-v1.json').read_text())['cases']
 case = next(case for case in cases if case['case_id'] == 'dev-14' and case['scenario'] == 'tool_success')
 application = Application.objects.get(name='任务5部署验证', workspace_id='default')

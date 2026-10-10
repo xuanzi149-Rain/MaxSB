@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-10",
+  "scope": "local-isolated-8084",
+  "source_commit": "bece2e629c3bb45db26167b38c6fa7a12e532e16",
+  "image_id": "sha256:762dd063cad1ebe2f83342ee394b757296c924d7ff30586de954b7866ff0a351",
+  "database": "maxsb_task4_staging",
+  "redis_db": 14,
+  "migration": "0018_merge_evaluation",
+  "backup_restore_verified": true,
+  "existing_rows_unchanged_after_migration": true,
+  "sha256": {
+    "apps/application/evaluation/snapshot.py": "d74755b4d29fdc83b2bd615d8eb953f650fcc8bfee4ec6b751c70123b57f59d9",
+    "apps/application/views/evaluation.py": "85ca4bc59f747d0630cd7563c16f41176aa1d6d96b1788d6018196385e78d290",
+    "admin/index.html": "2d5fe2ccbf89ed854e2f7e67e38ac325ea064cf633ad66248e17b7c07ef62f14",
+    "chat/index.html": "bfb2a55138a65ae0114f67f0f8c16541ff2ef52b425dcd80ad694c7c2d9ffe3a"
+  },
+  "http": {"admin_8084": 200, "chat_8084": 200, "business_admin_8080": 200, "evaluation_anonymous": 401},
+  "evaluation_probe": {
+    "run_id": "3f0b1b18-c93f-4dd8-a2b0-c68e81f4463a",
+    "case_id": "dev-14",
+    "status": "completed",
+    "case_status": "success",
+    "model_calls": 0,
+    "code_sha_matches_release": true,
+    "image_id_matches_release": true
+  },
+  "retained_diagnostic_run_id": "b15cd318-3e27-4e20-9d8c-b81ab54a0a56",
+  "tests": {"evaluation_unit": 22, "context_unit": 63, "retrieval_unit": 23,
+            "memory_unit": 43, "tool_recovery_unit": 11, "application_database": 112,
+            "vue_type_check": "passed", "admin_build": "passed", "chat_build": "passed"}
+}
