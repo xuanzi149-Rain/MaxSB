@@ -43,6 +43,7 @@
     </div>
     <el-collapse-transition>
       <div class="mt-12" v-if="data['show']">
+        <ToolRecoveryDetails :data="data.tool_recovery" />
         <RetrievalBudgetDetails :data="data.retrieval_budget" :raw="data.retrieved_paragraph_list" :output="data.data ?? data.result" />
         <ContextProcessingDetails :data="data.context_processing" />
         <template v-if="data.status === 200 || data.type == WorkflowType.LoopNode">
@@ -1442,6 +1443,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
+import ToolRecoveryDetails from './component/ToolRecoveryDetails.vue'
 import ConversationMemoryDetails from './component/ConversationMemoryDetails.vue'
 import RetrievalBudgetDetails from '@/components/retrieval-policy/RetrievalBudgetDetails.vue'
 import ContextProcessingDetails from '@/components/context-policy/ContextProcessingDetails.vue'

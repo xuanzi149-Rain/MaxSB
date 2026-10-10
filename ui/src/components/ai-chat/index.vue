@@ -7,6 +7,8 @@
       height: firsUserInput ? '100%' : undefined,
     }"
   >
+    <ToolRecovery v-if="(chartOpenId && type === 'ai-chat') || type === 'log'" :chat-id="chartOpenId || ''"
+      :manager="type === 'log'" :application-id="applicationDetails.id || appId || ''" @recovered="mergeRecoveredRecord" />
     <ConversationMemory v-if="chartOpenId && (type === 'ai-chat' || type === 'debug-ai-chat')"
       :chat-id="chartOpenId" :debug="type === 'debug-ai-chat'" :application-id="applicationDetails.id || ''" />
     <div v-if="showUserInputContent && firsUserInput" class="firstUserInput">
@@ -226,6 +228,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import ToolRecovery from './component/tool-recovery/index.vue'
 import ConversationMemory from './component/conversation-memory/index.vue'
 import {
   type Ref,
@@ -351,6 +354,11 @@ const loading = ref(false)
 const inputValue = ref<string>('')
 const chartOpenId = ref<string>('')
 const chatList = ref<any[]>([])
+function mergeRecoveredRecord(run: any) {
+  const record = chatList.value.find(r => (r.record_id || r.id) === run.record_id)
+  if (record) Object.assign(record, { answer_text: run.answer_text, answer_text_list: run.answer_text_list,
+    details: run.details || record.details, status: 200, write_ed: true, is_stop: true })
+}
 // 当前正在查看的会话是否有在途消息(还在吐字)。
 // 用它驱动"停止回答"按钮、输入禁用、发送拦截, 替代组件级全局 loading,
 // 这样后台其它会话的流式不会把当前会话的输入栏按住。

@@ -1,4 +1,5 @@
 export default {
+  toolRecovery: {"executed": "Executed and verified", "notExecuted": "Terminated without execution", "evidence": "Verification evidence (at least 10 characters)", "output": "Actual tool output (JSON array of strings)", "confirm": "Save verified result","title": "Tool recovery", "run": "Run", "generation": "Generation", "resumes": "Resumes", "resume": "Resume failed step", "unknownHint": "Outcome unknown. An application manager must verify the remote result before execution can continue.", "configHint": "Enable on the Start node. Serial text workflows only. Write retries require tool-side idempotency.", "mode": "Side effects", "timeout": "Timeout per attempt (seconds)", "retries": "Maximum retries", "keyField": "Idempotency parameter", "retention": "Tool deduplication retention (hours)", "unknown": "Unknown", "read_only": "Read only", "idempotent_write": "Idempotent write", "unprotected_write": "Unprotected write"},
   node: 'Node',
   nodeName: 'Node Name',
   baseComponent: 'Basic',

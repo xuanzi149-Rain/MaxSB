@@ -45,3 +45,12 @@ class SandboxMCPBackend(MultiServerMCPClient):
         """Call one tool and close its session/worker, preserving the MCP result."""
         async with self.session(server_name) as session:
             return await session.call_tool(tool_name, arguments)
+
+    async def describe_tool(self, server_name: str, tool_name: str) -> dict:
+        """Read the server contract before enabling idempotent writes."""
+        async with self.session(server_name) as session:
+            result = await session.list_tools()
+            for tool in result.tools:
+                if tool.name == tool_name:
+                    return tool.inputSchema
+        raise ValueError('MCP tool not found')

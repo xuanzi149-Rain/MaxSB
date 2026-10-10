@@ -88,8 +88,21 @@ class WorkFlowPostHandler:
                                      ip_address=self.chat_info.ip_address,
                                      source=self.chat_info.source)
 
-        self.chat_info.append_chat_record(chat_record)
-        self.chat_info.set_cache()
+        recovery = getattr(workflow, 'recovery', None)
+        if recovery:
+            if not recovery.store.persist_record(recovery.claim, self.chat_info, chat_record):
+                self.chat_info = None
+                return
+            from common.constants.cache_version import Cache_Version
+            chat_cache.cache.delete(Cache_Version.CHAT.get_key(key=chat_id),
+                                    version=Cache_Version.CHAT_INFO.get_version())
+            recovery.run.refresh_from_db()
+            if recovery.run.status != 'succeeded':
+                self.chat_info = None
+                return
+        else:
+            self.chat_info.append_chat_record(chat_record)
+            self.chat_info.set_cache()
 
         if not self.chat_info.debug and [ChatUserType.ANONYMOUS_USER.value, ChatUserType.CHAT_USER.value].__contains__(
                 workflow_body.get('chat_user_type')):

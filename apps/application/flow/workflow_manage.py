@@ -110,6 +110,7 @@ class WorkflowManage:
             video_list = []
         if other_list is None:
             other_list = []
+        self.recovery = None
         self.start_node_id = start_node_id
         self.start_node = None
         self.form_data = form_data
@@ -224,6 +225,12 @@ class WorkflowManage:
             self.node_context.append(node)
 
     def run(self):
+        from application.tool_recovery.config import validate_recovery_workflow
+        from application.tool_recovery.runtime import RecoveryRuntime
+        if self.recovery is None and validate_recovery_workflow(self.flow):
+            self.recovery = RecoveryRuntime(self)
+        if self.recovery:
+            self.recovery.start_heartbeat()
         close_old_connections()
         language = get_language()
         if self.params.get('stream'):
@@ -263,6 +270,8 @@ class WorkflowManage:
 
     def _cleanup(self):
         """清理所有对象引用"""
+        if self.recovery:
+            self.recovery.close()
         # 清理列表
         self.future_list.clear()
         self.field_list.clear()
@@ -350,8 +359,16 @@ class WorkflowManage:
                 self._cleanup()
 
     def run_chain_async(self, current_node, node_result_future, language='zh'):
-        future = executor.submit(self.run_chain_manage, current_node, node_result_future, language)
+        target = self._run_recovery_chain if self.recovery else self.run_chain_manage
+        future = executor.submit(target, current_node, node_result_future, language)
         self.future_list.append(future)
+
+    def _run_recovery_chain(self, *args):
+        from django.db import connections
+        try:
+            return self.run_chain_manage(*args)
+        finally:
+            connections.close_all()
 
     def run_chain_manage(self, current_node, node_result_future, language='zh'):
         translation.activate(language)
@@ -377,6 +394,16 @@ class WorkflowManage:
                 self.future_list.append(r.get('future'))
 
     def run_chain(self, current_node, node_result_future=None):
+        if self.recovery:
+            try:
+                if self.recovery.before_node(current_node):
+                    return NodeResult({}, {})
+            except Exception as exc:
+                self.status = 500
+                current_node.get_write_error_context(exc)
+                current_node.node_chunk.end()
+                self.recovery.close()
+                return None
         if node_result_future is None:
             node_result_future = self.run_node_future(current_node)
         try:
@@ -384,8 +411,20 @@ class WorkflowManage:
             result = self.hand_event_node_result(current_node,
                                                  node_result_future) if is_stream else self.hand_node_result(
                 current_node, node_result_future)
+            if self.recovery:
+                if result is None or current_node.status != 200:
+                    self.recovery.fail(current_node, getattr(current_node, '_recovery_error', None))
+                else:
+                    self.recovery.after_node(current_node)
             return result
         except Exception as e:
+            if self.recovery:
+                self.status = 500
+                current_node.get_write_error_context(e)
+                try:
+                    self.recovery.fail(current_node, e)
+                except Exception:
+                    self.recovery.close()
             maxkb_logger.error(f'Exception: {e}', exc_info=True)
         return None
 
@@ -563,8 +602,11 @@ class WorkflowManage:
             return NodeResultFuture(None, e, 500)
 
     def run_node(self, node):
-        result = node.run()
-        return result
+        try:
+            return node.run()
+        except Exception as exc:
+            node._recovery_error = exc
+            raise
 
     def is_result(self, current_node, current_node_result):
         return current_node.node_params.get('is_result', not self._has_next_node(
@@ -608,6 +650,10 @@ class WorkflowManage:
                     details_result[node.runtime_node_id] = details
                     continue
             details = get_details(node, index)
+            if self.recovery:
+                details['tool_recovery'] = self.recovery.details()
+                if node.type == 'mcp-node':
+                    details.pop('tool_params', None)
             details['node_id'] = node.id
             details['up_node_id_list'] = node.up_node_id_list
             details['runtime_node_id'] = node.runtime_node_id

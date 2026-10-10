@@ -11,6 +11,7 @@
         ref="replyNodeFormRef"
         hide-required-asterisk
       >
+        <RecoveryPolicy v-model="form_data.recovery_policy" />
         <el-form-item label="MCP Server Config">
           <template #label>
             <div class="flex-between">
@@ -264,6 +265,7 @@
   </NodeContainer>
 </template>
 <script setup lang="ts">
+import RecoveryPolicy from './component/RecoveryPolicy.vue'
 import { cloneDeep, set } from 'lodash'
 import NodeContainer from '@/workflow/common/NodeContainer.vue'
 import { computed, inject, onMounted, ref } from 'vue'

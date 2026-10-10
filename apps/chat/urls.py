@@ -1,3 +1,4 @@
+from chat.views.tool_recovery import ToolRunView, ChatToolRunsView
 from django.urls import path
 
 from application.views import ChatRecordDetailView, ChatRecordLinkView
@@ -9,6 +10,9 @@ app_name = 'chat'
 # @formatter:off
 # fmt: off
 urlpatterns = [
+    path('chat/<uuid:chat_id>/tool_runs', ChatToolRunsView.as_view()),
+    path('tool_runs/<uuid:run_id>', ToolRunView.as_view()),
+    path('tool_runs/<uuid:run_id>/resume', ToolRunView.as_view()),
     path('chat_memory/<uuid:chat_id>', ChatMemoryView.as_view()),
     path('chat_memory/<uuid:chat_id>/facts/<uuid:fact_id>', ChatMemoryView.as_view()),
     path('embed', views.ChatEmbedView.as_view()),

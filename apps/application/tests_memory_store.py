@@ -172,8 +172,12 @@ class MemoryConcurrencyTests(TransactionTestCase):
     def test_migration_round_trip(self):
         from django.db.migrations.executor import MigrationExecutor
         executor = MigrationExecutor(connection)
-        executor.migrate([('application', '0015_application_default_model_setting_and_more')])
-        self.assertNotIn('application_conversation_memory', connection.introspection.table_names())
-        executor = MigrationExecutor(connection)
-        executor.migrate([('application', '0016_conversation_memory')])
-        self.assertIn('application_conversation_memory_event', connection.introspection.table_names())
+        leaf_nodes = executor.loader.graph.leaf_nodes()
+        try:
+            executor.migrate([('application', '0015_application_default_model_setting_and_more')])
+            self.assertNotIn('application_conversation_memory', connection.introspection.table_names())
+            executor = MigrationExecutor(connection)
+            executor.migrate([('application', '0016_conversation_memory')])
+            self.assertIn('application_conversation_memory_event', connection.introspection.table_names())
+        finally:
+            MigrationExecutor(connection).migrate(leaf_nodes)

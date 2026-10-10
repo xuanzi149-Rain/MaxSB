@@ -1,5 +1,11 @@
 <template>
   <NodeContainer :nodeModel="nodeModel">
+    <div class="mb-8">
+      <el-switch :model-value="!!nodeModel.properties.node_data?.tool_recovery"
+        @update:model-value="(value: boolean | string | number) => set(nodeModel.properties, 'node_data.tool_recovery', value)" />
+      {{ $t('workflow.toolRecovery.title') }}
+      <p class="color-secondary">{{ $t('workflow.toolRecovery.configHint') }}</p>
+    </div>
     <h5 class="title-decoration-1 mb-8">{{ $t('workflow.variable.global') }}</h5>
     <div
       v-for="(item, index) in nodeModel.properties.config.globalFields"

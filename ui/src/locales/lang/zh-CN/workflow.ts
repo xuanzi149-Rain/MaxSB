@@ -1,4 +1,5 @@
 export default {
+  toolRecovery: {"executed": "已执行且结果可核对", "notExecuted": "已终止且确认未执行", "evidence": "核对依据（至少10字符）", "output": "实际工具输出（JSON文本数组）", "confirm": "保存核对结果","title": "工具恢复", "run": "运行", "generation": "执行代次", "resumes": "恢复次数", "resume": "从失败处继续", "unknownHint": "结果未知：请管理员核对远端操作结果，确认前不可再次执行。", "configHint": "在开始节点开启后生效。仅支持串行文本工作流；写入重试必须有工具侧幂等保证。", "mode": "副作用类型", "timeout": "每次超时（秒）", "retries": "最多重试次数", "keyField": "工具幂等参数名", "retention": "工具去重保留期（小时）", "unknown": "未知", "read_only": "只读", "idempotent_write": "幂等写入", "unprotected_write": "无保护写入"},
   node: '节点',
   nodeName: '节点名称',
   baseComponent: '基础组件',

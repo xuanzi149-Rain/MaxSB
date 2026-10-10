@@ -1,4 +1,5 @@
 export default {
+  toolRecovery: { executed: '已執行且結果可核對', notExecuted: '已終止且確認未執行', evidence: '核對依據（至少10字元）', output: '實際工具輸出（JSON文字陣列）', confirm: '儲存核對結果', title: '工具恢復', run: '執行', generation: '執行代次', resumes: '恢復次數', resume: '從失敗處繼續', unknownHint: '結果未知：請管理員核對遠端操作結果，確認前不可再次執行。', configHint: '在開始節點開啟後生效。僅支援串行文字工作流；寫入重試必須有工具側冪等保證。', mode: '副作用類型', timeout: '每次逾時（秒）', retries: '最多重試次數', keyField: '工具冪等參數名', retention: '工具去重保留期（小時）', unknown: '未知', read_only: '唯讀', idempotent_write: '冪等寫入', unprotected_write: '無保護寫入' },
   node: '節點',
   nodeName: '節點名稱',
   baseComponent: '基礎組件',

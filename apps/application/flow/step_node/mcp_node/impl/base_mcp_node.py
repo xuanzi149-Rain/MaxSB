@@ -46,6 +46,13 @@ class BaseMcpNode(IMcpNode):
         params = self.handle_variables(params)
 
         backend = SandboxMCPBackend(servers)
+        recovery = getattr(self.workflow_manage, 'recovery', None)
+        if recovery:
+            from application.tool_recovery.executor import execute_mcp
+            from application.tool_recovery.policy import RecoveryPolicy
+            result = execute_mcp(recovery.claim, self.id, RecoveryPolicy.parse(self.node_params.get('recovery_policy')),
+                                 backend, mcp_server, mcp_tool, params)
+            return NodeResult({'result': result, 'tool_params': params, 'mcp_tool': mcp_tool}, {})
         res = asyncio.run(backend.call_tool(mcp_server, mcp_tool, params))
         return NodeResult(
             {'result': [content.text for content in res.content], 'tool_params': params, 'mcp_tool': mcp_tool}, {})

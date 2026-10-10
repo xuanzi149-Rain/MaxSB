@@ -205,6 +205,8 @@ class Workflow:
         """
         from application.conversation_memory.config import validate_memory_workflow
         validate_memory_workflow(self)
+        from application.tool_recovery.config import validate_recovery_workflow
+        validate_recovery_workflow(self)
         self.is_valid_model_params()
         self.is_valid_start_node()
         self.is_valid_base_node()
