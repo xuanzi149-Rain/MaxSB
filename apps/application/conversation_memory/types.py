@@ -20,6 +20,7 @@ class Operation:
     quote: str = ''
     source: str = ''
     explicit: bool = False
+    references: list = field(default_factory=list)
 
 
 @dataclass

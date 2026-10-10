@@ -59,7 +59,7 @@ def apply_operations(snapshot, operations):
                     result.changes.append({'before': deepcopy(old), 'after': {**old, 'status': 'superseded'}})
         fact = {'id': target['id'] if replacing else str(uuid4()), 'entity': entity, 'attribute': attribute,
                 'value': value, 'status': status, 'source': op.source, 'quote': op.quote,
-                'version': snapshot.version + 1, 'updated_at': datetime.now(timezone.utc).isoformat()}
+                'references': op.references, 'version': snapshot.version + 1, 'updated_at': datetime.now(timezone.utc).isoformat()}
         facts.append(fact)
         result.changes.append({'before': before, 'after': deepcopy(fact)})
     return result

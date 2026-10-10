@@ -176,6 +176,21 @@
             :step-strictly="true"
           />
         </el-form-item>
+        <el-form-item :label="t('aiChat.memory.title')">
+          <el-switch v-model="chat_data.memory_policy.enabled" />
+        </el-form-item>
+        <el-form-item v-if="chat_data.memory_policy.enabled" :label="t('aiChat.memory.contextBudget')">
+          <el-input-number v-model="chat_data.memory_policy.context_token_budget" :min="128" :max="32768" :precision="0" />
+        </el-form-item>
+        <el-form-item v-if="chat_data.memory_policy.enabled" :label="t('aiChat.memory.inputBudget')">
+          <el-input-number v-model="chat_data.memory_policy.extraction_input_token_budget" :min="256" :max="32768" :precision="0" />
+        </el-form-item>
+        <el-form-item v-if="chat_data.memory_policy.enabled" :label="t('aiChat.memory.outputBudget')">
+          <el-input-number v-model="chat_data.memory_policy.extraction_output_token_limit" :min="128" :max="4096" :precision="0" />
+        </el-form-item>
+        <el-form-item v-if="chat_data.memory_policy.enabled" :label="t('aiChat.memory.timeout')">
+          <el-input-number v-model="chat_data.memory_policy.extraction_timeout_seconds" :min="1" :max="60" :precision="0" />
+        </el-form-item>
         <el-form-item label="轻量对话上下文">
           <el-switch v-model="chat_data.dialogue_policy_enabled" />
           <el-text type="info">明确的寒暄和会话安排仅简短回应；业务问题保持正常回答。</el-text>
@@ -719,6 +734,7 @@ const form = {
   system: '',
   prompt: defaultPrompt,
   dialogue_number: 1,
+  memory_policy: { enabled: false, context_token_budget: 2048, extraction_input_token_budget: 4096, extraction_output_token_limit: 1024, extraction_timeout_seconds: 20 },
   dialogue_policy_enabled: false,
   dialogue_context_reference: [],
   is_result: true,
@@ -735,6 +751,9 @@ const form = {
 const chat_data = computed({
   get: () => {
     if (props.nodeModel.properties.node_data) {
+      if (!props.nodeModel.properties.node_data.memory_policy) {
+        set(props.nodeModel.properties.node_data, 'memory_policy', { enabled: false, context_token_budget: 2048, extraction_input_token_budget: 4096, extraction_output_token_limit: 1024, extraction_timeout_seconds: 20 })
+      }
       if (!props.nodeModel.properties.node_data.model_setting) {
         set(props.nodeModel.properties.node_data, 'model_setting', {
           reasoning_content_start: '<think>',

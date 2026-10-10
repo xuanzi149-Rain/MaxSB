@@ -32,10 +32,22 @@ def validate_node(data):
         raise ValueError('Do not combine session memory with the upstream memory variable')
 
 
+def nested_memory(value):
+    if isinstance(value, dict):
+        if isinstance(value.get('memory_policy'), dict) and value['memory_policy'].get('enabled'):
+            return True
+        return any(nested_memory(v) for v in value.values())
+    if isinstance(value, list):
+        return any(nested_memory(v) for v in value)
+    return False
+
+
 def validate_memory_workflow(workflow):
     enabled = []
     for node in workflow.nodes:
         data = node.properties.get('node_data') or {}
+        if nested_memory(data.get('loop_body')):
+            raise ValueError('Memory cannot be enabled inside loops')
         if parse_memory_policy(data.get('memory_policy'))['enabled']:
             validate_node(data)
             if node.type != 'ai-chat-node':

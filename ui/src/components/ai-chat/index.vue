@@ -7,6 +7,8 @@
       height: firsUserInput ? '100%' : undefined,
     }"
   >
+    <ConversationMemory v-if="chartOpenId && (type === 'ai-chat' || type === 'debug-ai-chat')"
+      :chat-id="chartOpenId" :debug="type === 'debug-ai-chat'" :application-id="applicationDetails.id || ''" />
     <div v-if="showUserInputContent && firsUserInput" class="firstUserInput">
       <UserForm
         v-model:api_form_data="api_form_data"
@@ -224,6 +226,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import ConversationMemory from './component/conversation-memory/index.vue'
 import {
   type Ref,
   ref,

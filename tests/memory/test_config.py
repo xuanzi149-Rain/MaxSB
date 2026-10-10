@@ -26,3 +26,9 @@ class ConfigTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_memory_workflow(SimpleNamespace(nodes=[node(memory_policy={'enabled': True})],
                                                      workflow_mode='TOOL'))
+
+    def test_nested_loop_memory_rejected_before_execution(self):
+        loop = SimpleNamespace(type='loop-node', properties={'node_data': {'loop_body': {'nodes': [
+            {'type': 'ai-chat-node', 'properties': {'node_data': {'memory_policy': {'enabled': True}}}}]}}})
+        with self.assertRaises(ValueError):
+            validate_memory_workflow(SimpleNamespace(nodes=[loop], workflow_mode='application'))

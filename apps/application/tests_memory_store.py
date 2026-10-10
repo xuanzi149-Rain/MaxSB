@@ -7,7 +7,7 @@ from application.conversation_memory.types import Identity, Operation
 from application.conversation_memory.policy import apply_operations
 
 
-class StoreTests(TestCase):
+class MemoryFixture(TestCase):
     def setUp(self):
         self.app = Application.objects.create(id=uuid4(), name='memory', workspace_id='default')
         self.chat = Chat.objects.create(application=self.app, chat_user_id='owner', chat_user_type='CHAT_USER')
@@ -17,6 +17,8 @@ class StoreTests(TestCase):
     def begin(self, record=None):
         return self.store.begin_turn(self.identity, str(self.chat.id), str(record or uuid4()), '预算3000')
 
+
+class StoreTests(MemoryFixture):
     def test_source_survives_before_chat_record(self):
         ticket = self.begin()
         self.assertEqual(self.store.sources(self.identity, self.chat.id)[0]['question'], '预算3000')
@@ -71,3 +73,42 @@ class StoreTests(TestCase):
         cleared = self.store.clear(self.identity, self.chat.id, corrected.version, request_id)
         self.assertEqual(self.store.clear(self.identity, self.chat.id, corrected.version, request_id), cleared)
         self.assertTrue(Chat.objects.filter(pk=self.chat.id).exists())
+
+    def test_rechat_cannot_change_original_message(self):
+        record = uuid4()
+        self.begin(record)
+        with self.assertRaises(MemoryConflict):
+            self.store.begin_turn(self.identity, self.chat.id, str(record), '预算9000')
+
+    def test_manual_correction_invalidates_old_ticket(self):
+        first = self.begin()
+        state = self.store.commit_turn(first, apply_operations(first.snapshot, [Operation('add', entity='旅行',
+                           attribute='预算', value='3000', quote='预算3000', source=first.event_id)]))
+        old = self.begin()
+        self.store.correct(self.identity, self.chat.id, state.facts[0]['id'], Operation('replace', value='4000'),
+                           state.version, str(uuid4()))
+        with self.assertRaises(MemoryConflict):
+            self.store.commit_turn(old, apply_operations(old.snapshot, []))
+        self.assertEqual(self.store.read(self.identity, self.chat.id).facts[0]['value'], '4000')
+
+
+from concurrent.futures import ThreadPoolExecutor
+from django.test import TransactionTestCase
+from django.db import close_old_connections
+from application.models import ConversationMemory
+
+
+class MemoryConcurrencyTests(TransactionTestCase):
+    def test_first_requests_share_one_state(self):
+        app = Application.objects.create(id=uuid4(), name='concurrent memory', workspace_id='default')
+        chat = Chat.objects.create(application=app, chat_user_id='owner', chat_user_type='CHAT_USER')
+        identity = Identity(str(app.id), 'owner', 'CHAT_USER')
+        def begin(_):
+            close_old_connections()
+            try:
+                return MemoryStore().begin_turn(identity, str(chat.id), str(uuid4()), '预算3000').generation
+            finally:
+                close_old_connections()
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            self.assertEqual(list(executor.map(begin, [1, 2])), [0, 0])
+        self.assertEqual(ConversationMemory.objects.filter(chat=chat).count(), 1)

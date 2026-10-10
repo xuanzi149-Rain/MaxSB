@@ -43,6 +43,11 @@ def _write_context(
     answer_tokens = chat_model.get_num_tokens(answer)
     node.context["message_tokens"] = message_tokens
     node.context["answer_tokens"] = answer_tokens
+    if node.context.get("memory"):
+        from application.conversation_memory.service import finish_usage
+        finish_usage(node.context["memory"], node.context.get("memory_answer_usage", {}))
+        node.context["message_tokens"] = node.context["memory"]["total_usage"]["input_tokens"]
+        node.context["answer_tokens"] = node.context["memory"]["total_usage"]["output_tokens"]
     node.context["answer"] = answer
     node.context["question"] = node_variable["question"]
     node.context["run_time"] = time.time() - node.context["start_time"]
@@ -72,6 +77,10 @@ def write_context_stream(node_variable: Dict, workflow_variable: Dict, node: INo
     response_reasoning_content = False
 
     for chunk in response:
+        if node.context.get("memory") and getattr(chunk, "usage_metadata", None):
+            usage = node.context.setdefault("memory_answer_usage", {"input_tokens": 0, "output_tokens": 0})
+            for key in ("input_tokens", "output_tokens"):
+                usage[key] += chunk.usage_metadata.get(key, 0)
         if workflow.is_the_task_interrupted():
             break
         reasoning_chunk = reasoning.get_reasoning_content(chunk)
@@ -113,6 +122,8 @@ def write_context(node_variable: Dict, workflow_variable: Dict, node: INode, wor
     @param workflow:           工作流管理器
     """
     response = node_variable.get("result")
+    if node.context.get("memory"):
+        node.context["memory_answer_usage"] = getattr(response, "usage_metadata", None) or {}
     model_setting = node.context.get(
         "model_setting",
         {"reasoning_content_enable": False, "reasoning_content_end": "</think>", "reasoning_content_start": "<think>"},
@@ -266,6 +277,44 @@ class BaseChatNode(IChatNode):
             chat_user_id=body.get("chat_user_id"),
             chat_user_type=body.get("chat_user_type"),
         )
+
+        memory_policy = kwargs.get("memory_policy") or {}
+        if memory_policy.get("enabled"):
+            from application.conversation_memory.config import parse_memory_policy, validate_node, validate_memory_workflow
+            from application.conversation_memory.service import prepare_memory_context, GUIDANCE
+            from application.conversation_memory.types import Identity
+            validate_node({"memory_policy": memory_policy, "prompt": prompt, "system": system,
+                           "tool_ids": tool_ids, "mcp_servers": mcp_servers, "mcp_tool_id": mcp_tool_id,
+                           "mcp_tool_ids": mcp_tool_ids, "application_ids": application_ids,
+                           "skill_tool_ids": skill_tool_ids, "image_list": kwargs.get("image_list"),
+                           "video_list": kwargs.get("video_list"), "audio_list": kwargs.get("audio_list"),
+                           "document_list": kwargs.get("document_list")})
+            validate_memory_workflow(self.workflow_manage.flow)
+            if not isinstance(question.content, str) or not raw_question:
+                raise ValueError("Conversation memory requires the original user text")
+            policy = parse_memory_policy(memory_policy)
+            identity = Identity(str(body.get("application_id")), str(body.get("chat_user_id")),
+                                str(body.get("chat_user_type")))
+            recent_turns = [{"id": str(r.id), "question": r.problem_text, "answer": r.answer_text or ""}
+                            for r in (history_chat_record[-dialogue_number:] if dialogue_number > 0 else [])]
+            memory_store = None
+            if body.get("debug"):
+                from application.conversation_memory.temporary import TemporaryMemoryStore
+                memory_store = TemporaryMemoryStore(identity, chat_id)
+            selection, memory_trace = prepare_memory_context(
+                identity, chat_id, chat_record_id, raw_question, chat_model, policy, recent_turns, store=memory_store)
+            history_message = []
+            for turn in selection.history:
+                history_message.extend([HumanMessage(turn["question"]), AIMessage(turn["answer"])])
+            message_list = [*history_message]
+            if selection.block:
+                message_list.append(HumanMessage(selection.block))
+            message_list.append(question)
+            system = (system or "") + "\n" + GUIDANCE
+            self.context["memory"] = memory_trace
+            self.context["system"] = system
+            self.context["history_message"] = [{"role": m.type, "content": m.content} for m in history_message]
+            self.context["message_list"] = message_list
 
         # 过滤tool_id
         all_tool_ids = list(
@@ -678,6 +727,7 @@ class BaseChatNode(IChatNode):
             "raw_question": self.context.get("raw_question"),
             "dialogue_context": self.context.get("dialogue_context"),
             "dialogue_policy": self.context.get("dialogue_policy"),
+            "memory": self.context.get("memory"),
             "question": self.context.get("question"),
             "answer": self.context.get("answer"),
             "reasoning_content": self.context.get("reasoning_content"),

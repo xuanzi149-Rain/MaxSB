@@ -48,7 +48,7 @@ class MemoryStore:
     def sources(self, identity, chat_id):
         self._chat(identity, chat_id)
         return list(ConversationMemoryEvent.objects.filter(memory_id=chat_id).exclude(question='').order_by(
-            '-created_at').values('id', 'record_id', 'question', 'kind', 'created_at')[:100])
+            '-created_at').values('id', 'record_id', 'question', 'kind', 'created_at', 'changes')[:100])
 
     @transaction.atomic
     def begin_turn(self, identity, chat_id, record_id, question):
@@ -150,3 +150,12 @@ class MemoryStore:
         records = ChatRecord.objects.filter(chat_id=chat_id, create_time__gte=state.history_since).exclude(
             id=record_id).order_by('-create_time', '-id')[:20]
         return [{'id': str(r.id), 'question': r.problem_text, 'answer': r.answer_text} for r in reversed(list(records))]
+
+    def filter_recent(self, identity, chat_id, turns):
+        self._chat(identity, chat_id)
+        state = ConversationMemory.objects.filter(chat_id=chat_id).first()
+        if not state or state.generation == 0:
+            return turns
+        allowed = {str(pk) for pk in ChatRecord.objects.filter(chat_id=chat_id,
+                    create_time__gte=state.history_since).values_list('id', flat=True)}
+        return [turn for turn in turns if turn.get('id') in allowed]

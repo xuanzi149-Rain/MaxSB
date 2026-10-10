@@ -24,7 +24,12 @@ def create_test_database(*args, **kwargs):
 
 connection.creation._create_test_db = create_test_database
 runner = get_runner(settings)(verbosity=2, interactive=False)
-failures = runner.run_tests(sys.argv[1:] or ['application'])
+try:
+    failures = runner.run_tests(sys.argv[1:] or ['application'])
+except Exception:
+    import traceback
+    traceback.print_exc()
+    failures = 1
 sys.stdout.flush()
 sys.stderr.flush()
 # All runner teardowns completed; avoid known dependency shutdown hang.

@@ -14,7 +14,25 @@ quote 必须逐字引用当前用户原话，target 是已有事实的 id。不�
 没有明确事实返回空 operations。不要从历史回答自行新增事实。'''
 
 
-def parse_operations(text, question, snapshot, source):
+def ordinal_reference(question, value, evidence):
+    match = re.search(r'第([一二三四五六七八九]|[1-9])款', question)
+    if not match:
+        return []
+    numeral = match.group(1)
+    number = int(numeral) if numeral.isdigit() else '一二三四五六七八九'.index(numeral) + 1
+    candidates = []
+    for record in evidence:
+        lines = re.findall(r'^\s*(\d+)[.、)]\s*(.+?)\s*$', record.get('answer', ''), re.M)
+        for index, content in lines:
+            if int(index) == number:
+                candidates.append((record, content))
+    if not candidates or {content for _, content in candidates} != {value}:
+        return []
+    record, content = candidates[-1]
+    return [{'record_id': record['id'], 'quote': content}]
+
+
+def parse_operations(text, question, snapshot, source, evidence=None):
     try:
         obj = json.loads(text)
         if not isinstance(obj, dict) or set(obj) != {'operations'}:
@@ -36,7 +54,8 @@ def parse_operations(text, question, snapshot, source):
             if op.action in {'replace', 'revoke'} and target is None:
                 raise ValueError()
             # A quote is not proof of a normalized/inferred value. Require literal values for automatic confirmation.
-            if op.value and op.value not in op.quote:
+            op.references = ordinal_reference(question, op.value, evidence or [])
+            if op.value and op.value not in op.quote and not op.references:
                 op.action = 'pending'
                 op.entity = target['entity'] if target else op.entity
                 op.attribute = target['attribute'] if target else op.attribute
@@ -44,12 +63,13 @@ def parse_operations(text, question, snapshot, source):
                 key_present = target['attribute'] in op.quote
                 cue = (r'改为|改成|调整为|更正为|不是.+而是|change.+to|instead' if op.action == 'replace'
                        else r'不再|取消|撤销|不要|无需|no longer|remove|cancel')
-                op.explicit = key_present and bool(re.search(cue, op.quote, re.I))
+                op.explicit = (key_present and bool(re.search(cue, op.quote, re.I))
+                               and not re.search(r'如果|假设|假如|是否|[？?]|\bif\b', question, re.I))
                 if not op.explicit:
                     op.action = 'pending'
                     op.entity, op.attribute = target['entity'], target['attribute']
                     op.value = op.value or '撤销该条件（待确认）'
-            if op.action == 'add' and re.search(r'第[一二三四五六七八九十\d]+款|那个|这个|它', op.quote):
+            if op.action == 'add' and not op.references and re.search(r'第[一二三四五六七八九十\d]+款|那个|这个|它', op.quote):
                 op.action = 'pending'
             result.append(op)
         return ExtractionResult(result)
@@ -80,10 +100,11 @@ def extract_operations(model, question, snapshot, evidence, limits, source=''):
         response = client.with_options(timeout=limits['extraction_timeout_seconds'], max_retries=0).chat.completions.create(
             model=model.model_name, messages=[{'role': 'system', 'content': INSTRUCTIONS},
                                               {'role': 'user', 'content': content}],
-            max_tokens=limits['extraction_output_token_limit'], temperature=0, stream=False)
+            max_tokens=limits['extraction_output_token_limit'], temperature=0, stream=False,
+            extra_body={'enable_thinking': False} if 'enable_thinking' in (getattr(model, 'extra_body', None) or {}) else None)
         if response.usage:
             usage.update(input_tokens=response.usage.prompt_tokens, output_tokens=response.usage.completion_tokens)
-        result = parse_operations(response.choices[0].message.content or '', question, snapshot, source)
+        result = parse_operations(response.choices[0].message.content or '', question, snapshot, source, payload['history'])
     except Exception as exc:
         result = ExtractionResult(status='error')
         usage['error_type'] = type(exc).__name__

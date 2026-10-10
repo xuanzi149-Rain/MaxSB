@@ -195,6 +195,7 @@
           </template>
           <!-- AI 对话 -->
           <template v-if="data.type == WorkflowType.AiChat">
+            <ConversationMemoryDetails :data="data.memory" />
             <div v-if="data.dialogue_policy?.enabled" class="card-never border-r-6 mb-8">
               <h5 class="p-8-12">轻量对话上下文</h5>
               <div class="p-8-12 border-t-dashed lighter">
@@ -1441,6 +1442,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
+import ConversationMemoryDetails from './component/ConversationMemoryDetails.vue'
 import RetrievalBudgetDetails from '@/components/retrieval-policy/RetrievalBudgetDetails.vue'
 import ContextProcessingDetails from '@/components/context-policy/ContextProcessingDetails.vue'
 import { ref, computed, type PropType } from 'vue'

@@ -3,11 +3,14 @@ from django.urls import path
 from application.views import ChatRecordDetailView, ChatRecordLinkView
 from chat.views.mcp import mcp_view
 from . import views
+from chat.views.chat_memory import ChatMemoryView
 
 app_name = 'chat'
 # @formatter:off
 # fmt: off
 urlpatterns = [
+    path('chat_memory/<uuid:chat_id>', ChatMemoryView.as_view()),
+    path('chat_memory/<uuid:chat_id>/facts/<uuid:fact_id>', ChatMemoryView.as_view()),
     path('embed', views.ChatEmbedView.as_view()),
     path('mcp', mcp_view),
     path('auth/anonymous', views.AnonymousAuthentication.as_view()),
