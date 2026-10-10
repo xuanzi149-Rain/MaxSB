@@ -1,0 +1,60 @@
+{
+  "review_date": "2026-10-10",
+  "reviewer": "user",
+  "source": "conversation_reply",
+  "raw_reply": "1A,2B,3A,4B,5A,6符合",
+  "reviewed_run": "acceptance-final",
+  "status": "completed",
+  "results": [
+    {
+      "question": 1,
+      "case_id": "new-multiple",
+      "selected_label": "A",
+      "selected_strategy": "memory",
+      "human_verdict": "符合",
+      "numeric_score": null
+    },
+    {
+      "question": 2,
+      "case_id": "new-revoke",
+      "selected_label": "B",
+      "selected_strategy": "memory",
+      "human_verdict": "符合",
+      "numeric_score": null
+    },
+    {
+      "question": 3,
+      "case_id": "new-reference",
+      "selected_label": "A",
+      "selected_strategy": "memory",
+      "human_verdict": "符合",
+      "numeric_score": null
+    },
+    {
+      "question": 4,
+      "case_id": "new-ambiguity",
+      "selected_label": "B",
+      "selected_strategy": "memory",
+      "human_verdict": "符合",
+      "numeric_score": null
+    },
+    {
+      "question": 5,
+      "case_id": "new-hypothetical",
+      "selected_label": "A",
+      "selected_strategy": "memory",
+      "human_verdict": "符合",
+      "numeric_score": null
+    },
+    {
+      "question": 6,
+      "case_id": "new-clear",
+      "selected_label": null,
+      "selected_strategy": null,
+      "human_verdict": "符合",
+      "numeric_score": null,
+      "note": "用户未指定 A/B，记录为题目级符合；不推断分别对两份答案的评分。"
+    }
+  ],
+  "scope": "最终同集回归人工验收；前五题选中 memory，第六题题目级符合。不是首次未见题通过率，也不是数值评分；未选答案不自动判失败。"
+}
