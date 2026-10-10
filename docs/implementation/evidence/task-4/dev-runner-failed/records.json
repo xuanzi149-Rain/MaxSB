@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 0,
+    "question": "我的旅行预算是3000元，请记住。",
+    "error": "TypeError",
+    "duration_seconds": 1.3183168329996988
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 1,
+    "question": "旅行预算改为4000元。",
+    "error": "TypeError",
+    "duration_seconds": 1.565847460005898
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 2,
+    "question": "先暂停推荐，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.1265325419954024
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 3,
+    "question": "请继续等待，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.9305189169972437
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 4,
+    "question": "暂时不要展开，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.9117272080038674
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 5,
+    "question": "仍在整理资料，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.49076058399805333
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 6,
+    "question": "我稍后再补充，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.8298518340016017
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "fixed",
+    "turn": 7,
+    "question": "我的旅行预算现在是多少？",
+    "error": "TypeError",
+    "duration_seconds": 1.3008850419864757
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 0,
+    "question": "我的旅行预算是3000元，请记住。",
+    "error": "TypeError",
+    "duration_seconds": 3.0844303339981707
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 1,
+    "question": "旅行预算改为4000元。",
+    "error": "TypeError",
+    "duration_seconds": 4.524386544013396
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 2,
+    "question": "先暂停推荐，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 2.0994558759994106
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 3,
+    "question": "请继续等待，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.8229449589998694
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 4,
+    "question": "暂时不要展开，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.6465980840002885
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 5,
+    "question": "仍在整理资料，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.3171110419934848
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 6,
+    "question": "我稍后再补充，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 2.022349917999236
+  },
+  {
+    "case_id": "dev-budget",
+    "strategy": "memory",
+    "turn": 7,
+    "question": "我的旅行预算现在是多少？",
+    "error": "TypeError",
+    "duration_seconds": 2.0773911260039313
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 0,
+    "question": "我的目标是学习Python，每天有30分钟。",
+    "error": "TypeError",
+    "duration_seconds": 1.014896751003107
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 1,
+    "question": "先暂停推荐，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.9292498750000959
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 2,
+    "question": "请继续等待，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 0.8322446670063073
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 3,
+    "question": "暂时不要展开，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.052555874994141
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 4,
+    "question": "仍在整理资料，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.1424140419985633
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 5,
+    "question": "我稍后再补充，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.1211290009960067
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "fixed",
+    "turn": 6,
+    "question": "我想学什么，每天有多久？",
+    "error": "TypeError",
+    "duration_seconds": 0.9746062490012264
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 0,
+    "question": "我的目标是学习Python，每天有30分钟。",
+    "error": "TypeError",
+    "duration_seconds": 3.9383575009997003
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 1,
+    "question": "先暂停推荐，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.5321050419879612
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 2,
+    "question": "请继续等待，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 2.1083104589924915
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 3,
+    "question": "暂时不要展开，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.727546585010714
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 4,
+    "question": "仍在整理资料，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 2.4536144599987892
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 5,
+    "question": "我稍后再补充，只回复好。",
+    "error": "TypeError",
+    "duration_seconds": 1.8604845849913545
+  },
+  {
+    "case_id": "dev-goal",
+    "strategy": "memory",
+    "turn": 6,
+    "question": "我想学什么，每天有多久？",
+    "error": "TypeError",
+    "duration_seconds": 2.45750658500765
+  }
+]

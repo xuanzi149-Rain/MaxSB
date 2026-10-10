@@ -1,0 +1,86 @@
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task4-base-chat.py:535:16
+    |
+533 |         # 处理参数中的变量
+534 |         for k, v in tool_params.items():
+535 |             if type(v) == str:
+    |                ^^^^^^^^^^^^^^
+536 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+537 |             elif type(v) == dict:
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task4-base-chat.py:537:18
+    |
+535 |             if type(v) == str:
+536 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+537 |             elif type(v) == dict:
+    |                  ^^^^^^^^^^^^^^^
+538 |                 self.handle_variables(v)
+539 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task4-base-chat.py:539:19
+    |
+537 |             elif type(v) == dict:
+538 |                 self.handle_variables(v)
+539 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                   ^^^^^^^^^^^^^^^
+540 |                 tool_params[k] = self.get_reference_content(v)
+541 |         return tool_params
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task4-base-chat.py:539:56
+    |
+537 |             elif type(v) == dict:
+538 |                 self.handle_variables(v)
+539 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                                                        ^^^^^^^^^^^^^^^^^
+540 |                 tool_params[k] = self.get_reference_content(v)
+541 |         return tool_params
+    |
+
+F403 `from .application import *` used; unable to detect undefined names
+  --> /tmp/task4-base-model-init.py:9:1
+   |
+ 7 |     @desc:
+ 8 | """
+ 9 | from .application import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+10 | from .application_access_token import *
+11 | from .application_chat import *
+   |
+
+F403 `from .application_access_token import *` used; unable to detect undefined names
+  --> /tmp/task4-base-model-init.py:10:1
+   |
+ 8 | """
+ 9 | from .application import *
+10 | from .application_access_token import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+11 | from .application_chat import *
+12 | from .application_api_key import *
+   |
+
+F403 `from .application_chat import *` used; unable to detect undefined names
+  --> /tmp/task4-base-model-init.py:11:1
+   |
+ 9 | from .application import *
+10 | from .application_access_token import *
+11 | from .application_chat import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+12 | from .application_api_key import *
+   |
+
+F403 `from .application_api_key import *` used; unable to detect undefined names
+  --> /tmp/task4-base-model-init.py:12:1
+   |
+10 | from .application_access_token import *
+11 | from .application_chat import *
+12 | from .application_api_key import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+
+Found 8 errors.

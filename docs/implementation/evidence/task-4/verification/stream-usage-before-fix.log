@@ -1,0 +1,105 @@
+Creating test database for alias 'default' ('test_maxsb_memory_task4')...
+Found 1 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: common, drf_spectacular, drf_spectacular_sidecar, messages, rest_framework, staticfiles
+  Apply all migrations: application, contenttypes, django_apscheduler, django_celery_beat, knowledge, models_provider, system_manage, tools, trigger, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying users.0001_initial... OK
+  Applying tools.0001_initial... OK
+  Applying system_manage.0001_initial... OK
+  Applying system_manage.0002_refresh_collation_reindex... OK
+  Applying models_provider.0001_initial... OK
+  Applying knowledge.0001_initial... OK
+  Applying application.0001_initial... OK
+  Applying system_manage.0003_alter_workspaceuserresourcepermission_target... OK
+  Applying system_manage.0004_alter_systemsetting_type_and_more... OK
+  Applying knowledge.0002_alter_file_source_type... OK
+  Applying knowledge.0003_tag_documenttag... OK
+  Applying knowledge.0004_alter_document_type_alter_knowledge_type_and_more... OK
+  Applying knowledge.0005_knowledgeaction... OK
+  Applying knowledge.0006_paragraph_chunks... OK
+  Applying knowledge.0007_remove_knowledgeworkflowversion_workflow_and_more... OK
+  Applying application.0002_application_simple_mcp... OK
+  Applying application.0003_application_stt_model_params_setting_and_more... OK
+  Applying system_manage.0005_resourcemapping...Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.518 seconds.
+Prefix dict has been built successfully.
+ OK
+  Applying application.0004_application_application_enable_and_more... OK
+  Applying application.0005_chatrecord_vote_other_content_chatrecord_vote_reason... OK
+  Applying application.0006_application_file_clean_time... OK
+  Applying application.0007_applicationapikey_expire_time_and_more... OK
+  Applying application.0008_chat_ip_address_chat_source_chatrecord_ip_address_and_more... OK
+  Applying application.0009_clean_application_knowledge_mapping... OK
+  Applying application.0010_chatsharelink... OK
+  Applying application.0011_application_skill_tool_ids... OK
+  Applying application.0012_remove_applicationapikey_user... OK
+  Applying application.0013_application_long_term_enable_and_more... OK
+  Applying application.0014_applicationversion_knowledge_ids... OK
+  Applying application.0015_application_default_model_setting_and_more... OK
+  Applying application.0016_conversation_memory... OK
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying django_apscheduler.0001_initial... OK
+  Applying django_apscheduler.0002_auto_20180412_0758... OK
+  Applying django_apscheduler.0003_auto_20200716_1632... OK
+  Applying django_apscheduler.0004_auto_20200717_1043... OK
+  Applying django_apscheduler.0005_migrate_name_to_id... OK
+  Applying django_apscheduler.0006_remove_djangojob_name... OK
+  Applying django_apscheduler.0007_auto_20200717_1404... OK
+  Applying django_apscheduler.0008_remove_djangojobexecution_started... OK
+  Applying django_apscheduler.0009_djangojobexecution_unique_job_executions... OK
+  Applying django_celery_beat.0001_initial... OK
+  Applying django_celery_beat.0002_auto_20161118_0346... OK
+  Applying django_celery_beat.0003_auto_20161209_0049... OK
+  Applying django_celery_beat.0004_auto_20170221_0000... OK
+  Applying django_celery_beat.0005_add_solarschedule_events_choices... OK
+  Applying django_celery_beat.0006_auto_20180322_0932... OK
+  Applying django_celery_beat.0007_auto_20180521_0826... OK
+  Applying django_celery_beat.0008_auto_20180914_1922... OK
+  Applying django_celery_beat.0006_auto_20180210_1226... OK
+  Applying django_celery_beat.0006_periodictask_priority... OK
+  Applying django_celery_beat.0009_periodictask_headers... OK
+  Applying django_celery_beat.0010_auto_20190429_0326... OK
+  Applying django_celery_beat.0011_auto_20190508_0153... OK
+  Applying django_celery_beat.0012_periodictask_expire_seconds... OK
+  Applying django_celery_beat.0013_auto_20200609_0727... OK
+  Applying django_celery_beat.0014_remove_clockedschedule_enabled... OK
+  Applying django_celery_beat.0015_edit_solarschedule_events_choices... OK
+  Applying django_celery_beat.0016_alter_crontabschedule_timezone... OK
+  Applying django_celery_beat.0017_alter_crontabschedule_month_of_year... OK
+  Applying django_celery_beat.0018_improve_crontab_helptext... OK
+  Applying django_celery_beat.0019_alter_periodictasks_options... OK
+  Applying knowledge.0008_termbase... OK
+  Applying knowledge.0009_document_user... OK
+  Applying knowledge.0010_publicfileaccess... OK
+  Applying knowledge.0011_knowledgeworkflow_default_model_setting_and_more... OK
+  Applying tools.0002_alter_tool_tool_type... OK
+  Applying tools.0003_alter_tool_template_id... OK
+  Applying tools.0004_alter_tool_tool_type... OK
+  Applying tools.0005_taskrecord... OK
+  Applying tools.0006_alter_tool_tool_type... OK
+  Applying tools.0007_alter_tool_tool_type_toolworkflow_and_more... OK
+  Applying tools.0008_toolworkflow_default_model_setting_and_more... OK
+  Applying trigger.0001_initial... OK
+  Applying trigger.0002_remove_taskrecord_trigger_task_and_more... OK
+System check identified no issues (0 silenced).
+test_stream_and_nonstream_actual_usage_and_missing_fields (application.tests_memory_runtime.MemoryRuntimeTests.test_stream_and_nonstream_actual_usage_and_missing_fields) ... FAIL
+
+======================================================================
+FAIL: test_stream_and_nonstream_actual_usage_and_missing_fields (application.tests_memory_runtime.MemoryRuntimeTests.test_stream_and_nonstream_actual_usage_and_missing_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task4/apps/application/tests_memory_runtime.py", line 109, in test_stream_and_nonstream_actual_usage_and_missing_fields
+    self.assertEqual(node.context['memory']['total_usage']['output_tokens'], None if partial else 5)
+AssertionError: 2 != None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.028s
+
+FAILED (failures=1)
+Destroying test database for alias 'default' ('test_maxsb_memory_task4')...

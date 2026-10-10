@@ -1,0 +1,89 @@
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:592:16
+    |
+590 |         # 处理参数中的变量
+591 |         for k, v in tool_params.items():
+592 |             if type(v) == str:
+    |                ^^^^^^^^^^^^^^
+593 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+594 |             elif type(v) == dict:
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:594:18
+    |
+592 |             if type(v) == str:
+593 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+594 |             elif type(v) == dict:
+    |                  ^^^^^^^^^^^^^^^
+595 |                 self.handle_variables(v)
+596 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:596:19
+    |
+594 |             elif type(v) == dict:
+595 |                 self.handle_variables(v)
+596 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                   ^^^^^^^^^^^^^^^
+597 |                 tool_params[k] = self.get_reference_content(v)
+598 |         return tool_params
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:596:56
+    |
+594 |             elif type(v) == dict:
+595 |                 self.handle_variables(v)
+596 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                                                        ^^^^^^^^^^^^^^^^^
+597 |                 tool_params[k] = self.get_reference_content(v)
+598 |         return tool_params
+    |
+
+F403 `from .application import *` used; unable to detect undefined names
+  --> apps/application/models/__init__.py:9:1
+   |
+ 7 |     @desc:
+ 8 | """
+ 9 | from .application import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+10 | from .application_access_token import *
+11 | from .application_chat import *
+   |
+
+F403 `from .application_access_token import *` used; unable to detect undefined names
+  --> apps/application/models/__init__.py:10:1
+   |
+ 8 | """
+ 9 | from .application import *
+10 | from .application_access_token import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+11 | from .application_chat import *
+12 | from .application_api_key import *
+   |
+
+F403 `from .application_chat import *` used; unable to detect undefined names
+  --> apps/application/models/__init__.py:11:1
+   |
+ 9 | from .application import *
+10 | from .application_access_token import *
+11 | from .application_chat import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+12 | from .application_api_key import *
+13 | from .conversation_memory import ConversationMemory as ConversationMemory
+   |
+
+F403 `from .application_api_key import *` used; unable to detect undefined names
+  --> apps/application/models/__init__.py:12:1
+   |
+10 | from .application_access_token import *
+11 | from .application_chat import *
+12 | from .application_api_key import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+13 | from .conversation_memory import ConversationMemory as ConversationMemory
+14 | from .conversation_memory import ConversationMemoryEvent as ConversationMemoryEvent
+   |
+
+Found 8 errors.

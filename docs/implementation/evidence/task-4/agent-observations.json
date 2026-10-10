@@ -1,0 +1,145 @@
+{
+  "reviewer": "Codex; not an independent human review",
+  "rubric": "Final response recalls the explicitly stated current condition; unnecessary clarification is omission, not hallucination",
+  "runs": [
+    {
+      "directory": "dev-final",
+      "fixed_final_correct": 0,
+      "memory_final_correct": 2,
+      "independent_unseen": false,
+      "human_review": "pending",
+      "final_responses": [
+        {
+          "case_id": "dev-budget",
+          "strategy": "fixed",
+          "turn": 7,
+          "question": "我的旅行预算现在是多少？",
+          "answer": "您尚未提供旅行预算的具体金额。请补充相关信息。"
+        },
+        {
+          "case_id": "dev-budget",
+          "strategy": "memory",
+          "turn": 7,
+          "question": "我的旅行预算现在是多少？",
+          "answer": "4000元"
+        },
+        {
+          "case_id": "dev-goal",
+          "strategy": "fixed",
+          "turn": 6,
+          "question": "我想学什么，每天有多久？",
+          "answer": "请明确您想学习的具体内容以及每天可用的时长。"
+        },
+        {
+          "case_id": "dev-goal",
+          "strategy": "memory",
+          "turn": 6,
+          "question": "我想学什么，每天有多久？",
+          "answer": "根据记录，你想学习 **Python**，每天时长为 **30分钟**。"
+        }
+      ]
+    },
+    {
+      "directory": "acceptance-final",
+      "fixed_final_correct": 0,
+      "memory_final_correct": 2,
+      "independent_unseen": true,
+      "human_review": "pending",
+      "final_responses": [
+        {
+          "case_id": "memory-budget",
+          "strategy": "fixed",
+          "turn": 7,
+          "question": "现在相机预算是多少？",
+          "answer": "您尚未提供相机预算信息。请告诉我您的具体预算范围。"
+        },
+        {
+          "case_id": "memory-budget",
+          "strategy": "memory",
+          "turn": 7,
+          "question": "现在相机预算是多少？",
+          "answer": "6500元"
+        },
+        {
+          "case_id": "memory-revoke",
+          "strategy": "fixed",
+          "turn": 7,
+          "question": "我现在还要求手表防水吗？",
+          "answer": "不知道。请明确是否要求手表防水。"
+        },
+        {
+          "case_id": "memory-revoke",
+          "strategy": "memory",
+          "turn": 7,
+          "question": "我现在还要求手表防水吗？",
+          "answer": "记忆数据中未包含“防水”相关条件。请问您要求手表防水吗？"
+        },
+        {
+          "case_id": "memory-goal",
+          "strategy": "fixed",
+          "turn": 6,
+          "question": "我计划学什么，每天多久？",
+          "answer": "请补充您计划学习的内容以及每天投入的时长。"
+        },
+        {
+          "case_id": "memory-goal",
+          "strategy": "memory",
+          "turn": 6,
+          "question": "我计划学什么，每天多久？",
+          "answer": "根据记忆数据：\n- 计划内容：学习法语\n- 每日时长：20分钟"
+        }
+      ]
+    },
+    {
+      "directory": "acceptance-regression",
+      "fixed_final_correct": 0,
+      "memory_final_correct": 3,
+      "independent_unseen": false,
+      "human_review": "pending",
+      "final_responses": [
+        {
+          "case_id": "memory-budget",
+          "strategy": "fixed",
+          "turn": 7,
+          "question": "现在相机预算是多少？",
+          "answer": "您尚未提供相机预算信息。请明确告知具体金额或范围。"
+        },
+        {
+          "case_id": "memory-budget",
+          "strategy": "memory",
+          "turn": 7,
+          "question": "现在相机预算是多少？",
+          "answer": "6500元"
+        },
+        {
+          "case_id": "memory-revoke",
+          "strategy": "fixed",
+          "turn": 7,
+          "question": "我现在还要求手表防水吗？",
+          "answer": "请澄清：您之前是否提过手表防水的要求？"
+        },
+        {
+          "case_id": "memory-revoke",
+          "strategy": "memory",
+          "turn": 7,
+          "question": "我现在还要求手表防水吗？",
+          "answer": "不要求。根据记忆数据，该条件状态为“revoked”（已撤销）。"
+        },
+        {
+          "case_id": "memory-goal",
+          "strategy": "fixed",
+          "turn": 6,
+          "question": "我计划学什么，每天多久？",
+          "answer": "请补充您计划学习的具体内容以及每天预计投入的时长。"
+        },
+        {
+          "case_id": "memory-goal",
+          "strategy": "memory",
+          "turn": 6,
+          "question": "我计划学什么，每天多久？",
+          "answer": "根据记录，您计划学习法语，每天20分钟。"
+        }
+      ]
+    }
+  ]
+}

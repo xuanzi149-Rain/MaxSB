@@ -1,0 +1,20 @@
+{
+  "paired_cases": [
+    "memory-budget",
+    "memory-goal",
+    "memory-revoke"
+  ],
+  "failed_cases": [],
+  "human_correctness": null,
+  "human_review": "pending",
+  "fixed": {
+    "input_tokens": 2569,
+    "output_tokens": 170,
+    "cost": null
+  },
+  "memory": {
+    "input_tokens": 23197,
+    "output_tokens": 783,
+    "cost": null
+  }
+}

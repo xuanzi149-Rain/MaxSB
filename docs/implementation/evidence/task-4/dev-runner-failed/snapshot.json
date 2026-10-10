@@ -1,0 +1,40 @@
+{
+  "dataset_hash": "91b645177261b75e7d7610f7bae536bcb8dc581708b21e3d7382e3b3d40fbb8e",
+  "model": "qwen3.7-plus",
+  "model_revision": "2026-10-09 08:05:16.800476+00:00",
+  "model_id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+  "source": {
+    "apps/application/conversation_memory/._types.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/types.py": "286bc5124ef1ab4a40073d785f4b1ffb23a50848097e0d36917044d0cb7250c6",
+    "apps/application/conversation_memory/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/conversation_memory/service.py": "1e419f3bd9da2243cc7ab6f0f888b3eb8d1852897acbae6e0bf8ef606c01f1cb",
+    "apps/application/conversation_memory/._policy.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/extractor.py": "7a7e95f0c77747d6e8c8f1b4de8268b30d93e447f54e821255c51e951fd1cfa6",
+    "apps/application/conversation_memory/temporary.py": "41260d143a6debc272cbfa9b547c7a21c73427bd7fd4b9e65c4db6605e4d63e8",
+    "apps/application/conversation_memory/policy.py": "240dcb18ffb87b47bd39c166c69a7edb7a9031ad9c6812eefaf918322aae06c2",
+    "apps/application/conversation_memory/report.py": "adf351c8da595e6f99336b7c67fe81063b8041b06be1b91341c1c83d9da767dd",
+    "apps/application/conversation_memory/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/store.py": "fb39062c18a4e486d4d2743e22a8a9d1b30c03c633e8c10b6ea14b3df699bc67",
+    "apps/application/conversation_memory/config.py": "423f784a18ef197842e589d51709c4331226ffb2898ffd719e48d99a8b59536e",
+    "apps/application/conversation_memory/context.py": "26f3961fe538fd8a44c073b9be34c00747ba9b4ff33c026a32762bdc646749e3",
+    "apps/application/flow/step_node/ai_chat_step_node/._i_chat_node.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/__init__.py": "14a656d2aeb51ccad1977c781398d2f6ad0626c3a8f43de57f6839bc4500da00",
+    "apps/application/flow/step_node/ai_chat_step_node/i_chat_node.py": "7b93562cce9764fe7ac3252c103d3b430aa958ec6197e76e37310623f8765c06",
+    "apps/application/flow/step_node/ai_chat_step_node/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/._base_chat_node.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py": "1f836560f07c3a5608970a3ef7f8f3ef2fa931bc2450df53afbb0f323cce4db0",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/__init__.py": "662c3c5940ba420062a9116acc642275d9880598ff0a9999c60ea1a505a878a0",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335"
+  },
+  "history_rounds": 3,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "started_at": 1791609764.025509,
+  "kind": "production-node-debug-cache-probe",
+  "budget_before": {
+    "limit_cny": "300",
+    "reserved_cny": "49.736595",
+    "requests": 1143,
+    "pricing": "conservative list-price equivalent; not a bill"
+  }
+}

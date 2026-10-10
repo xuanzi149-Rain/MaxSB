@@ -1,0 +1,19 @@
+{
+  "paired_cases": [
+    "dev-budget",
+    "dev-goal"
+  ],
+  "failed_cases": [],
+  "human_correctness": null,
+  "human_review": "pending",
+  "fixed": {
+    "input_tokens": 1524,
+    "output_tokens": 53,
+    "cost": null
+  },
+  "memory": {
+    "input_tokens": 11994,
+    "output_tokens": 656,
+    "cost": null
+  }
+}
