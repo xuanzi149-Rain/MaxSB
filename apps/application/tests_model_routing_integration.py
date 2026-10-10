@@ -40,9 +40,12 @@ class RoutingIntegrationTests(TestCase):
                                                     'evidence_reference': ['s', 'paragraph_list']}})
         node = NS(workflow_manage=NS(flow=NS(nodes=[NS(id='s', type='search-dataset-node')]),
                   get_reference_field=lambda *args: [{'id': 'p1', 'content': 'true evidence'}]))
-        text, ids = resolve_evidence(node, policy)
-        self.assertEqual(ids, frozenset({'p1'}))
-        self.assertIn('true evidence', text)
+        for kind in ('search-knowledge-node', 'search-dataset-node'):
+            with self.subTest(kind=kind):
+                node.workflow_manage.flow.nodes[0].type = kind
+                text, ids = resolve_evidence(node, policy)
+                self.assertEqual(ids, frozenset({'p1'}))
+                self.assertIn('true evidence', text)
         node.workflow_manage.flow.nodes[0].type = 'tool-node'
         with self.assertRaises(ValueError):
             resolve_evidence(node, policy)

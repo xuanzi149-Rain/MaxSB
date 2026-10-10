@@ -126,7 +126,7 @@ def resolve_evidence(node, policy):
         return '', frozenset()
     ref = policy.contract.evidence_reference
     source = next((n for n in node.workflow_manage.flow.nodes if n.id == ref[0]), None)
-    if source is None or source.type != 'search-dataset-node' or ref[1] != 'paragraph_list':
+    if source is None or source.type not in {'search-knowledge-node', 'search-dataset-node'} or ref[1] != 'paragraph_list':
         raise RoutingError('routing_invalid_evidence_reference')
     rows = node.workflow_manage.get_reference_field(ref[0], list(ref[1:]))
     if not isinstance(rows, list):
