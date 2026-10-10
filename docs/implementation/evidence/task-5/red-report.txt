@@ -1,0 +1,35 @@
+test_branch_cycle_or_disconnected_rejected (test_config.ConfigTests.test_branch_cycle_or_disconnected_rejected) ... ok
+test_disabled_does_not_restrict_existing_graph (test_config.ConfigTests.test_disabled_does_not_restrict_existing_graph) ... ok
+test_serial_graph_allowed (test_config.ConfigTests.test_serial_graph_allowed) ... ok
+test_tools_in_ai_and_exception_branches_rejected (test_config.ConfigTests.test_tools_in_ai_and_exception_branches_rejected) ... ok
+test_configured_error_allowlist_is_respected (test_policy.PolicyTests.test_configured_error_allowlist_is_respected) ... ok
+test_idempotent_write_requires_contract (test_policy.PolicyTests.test_idempotent_write_requires_contract) ... ok
+test_invalid_policy_rejected (test_policy.PolicyTests.test_invalid_policy_rejected) ... ok
+test_only_explicit_transient_errors_retry (test_policy.PolicyTests.test_only_explicit_transient_errors_retry) ... ok
+test_retry_limit_counts_retries_not_first_call (test_policy.PolicyTests.test_retry_limit_counts_retries_not_first_call) ... ok
+test_unprotected_write_cannot_retry_unknown_outcome (test_policy.PolicyTests.test_unprotected_write_cannot_retry_unknown_outcome) ... ok
+test_report (unittest.loader._FailedTest.test_report) ... ERROR
+
+======================================================================
+ERROR: test_report (unittest.loader._FailedTest.test_report)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_report
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/tests/tool_recovery/test_report.py", line 8, in <module>
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 896, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/docs/implementation/scripts/run_task5_faults.py'
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+FAILED (errors=1)

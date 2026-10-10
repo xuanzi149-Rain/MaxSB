@@ -1,0 +1,63 @@
+[
+  {
+    "scenario": "success",
+    "status": "succeeded",
+    "error_type": "",
+    "calls": 1,
+    "writes": 0,
+    "duplicates": 0,
+    "seconds": 0.008144374995026737,
+    "cost": null
+  },
+  {
+    "scenario": "transient",
+    "status": "succeeded",
+    "error_type": "",
+    "calls": 2,
+    "writes": 0,
+    "duplicates": 0,
+    "seconds": 0.5262321259942837,
+    "cost": null
+  },
+  {
+    "scenario": "business_failure",
+    "status": "failed",
+    "error_type": "business",
+    "calls": 1,
+    "writes": 0,
+    "duplicates": 0,
+    "seconds": 0.0058337080117780715,
+    "cost": null
+  },
+  {
+    "scenario": "write_response_lost",
+    "status": "succeeded",
+    "error_type": "",
+    "calls": 2,
+    "writes": 1,
+    "duplicates": 0,
+    "seconds": 0.5186317920015426,
+    "cost": null
+  },
+  {
+    "scenario": "unknown_write",
+    "status": "outcome_unknown",
+    "error_type": "timeout",
+    "calls": 1,
+    "writes": 0,
+    "duplicates": 0,
+    "seconds": 0.006568583004991524,
+    "cost": null
+  },
+  {
+    "scenario": "manual_timeout_resume",
+    "status": "succeeded",
+    "error_type": "",
+    "calls": 2,
+    "writes": 0,
+    "duplicates": 0,
+    "seconds": 0.010964166998746805,
+    "resume_seconds": 0.010964166998746805,
+    "cost": null
+  }
+]

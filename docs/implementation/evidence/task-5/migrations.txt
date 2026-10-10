@@ -1,0 +1,22 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.824 seconds.
+Prefix dict has been built successfully.
+2026-10-10 17:54:08 [tool_code ERROR] Exception: [Errno 2] No such file or directory: '/tmp/maxsb-task5/tmp/tool_executor_init_dir.lock'
+Traceback (most recent call last):
+  File "/tmp/maxsb-task5/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/maxsb-task5/apps/common/utils/tool_code.py", line 54, in init_sandbox_dir
+    fd = os.open(
+         ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/maxsb-task5/tmp/tool_executor_init_dir.lock'
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/tmp/maxsb-task5/ui/dist' in the STATICFILES_DIRS setting does not exist.
+Migrations for 'application':
+  apps/application/migrations/0018_alter_application_work_flow_and_more.py
+    ~ Alter field work_flow on application
+    ~ Alter field access_num on applicationchatuserstats
+    ~ Alter field work_flow on applicationversion
+    ~ Alter field answer_text_list on chatrecord

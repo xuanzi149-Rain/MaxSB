@@ -1,0 +1,160 @@
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/api/application/chat-log.ts
+   46:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   64:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   65:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  111:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  112:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  113:20  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  114:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  115:16  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  141:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  142:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  143:20  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  144:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  145:16  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  146:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/api/system-resource-management/chat-log.ts
+   33:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   51:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   52:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   93:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   94:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   95:20  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   96:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+   97:16  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  123:19  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  124:13  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  125:20  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  126:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  127:16  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+  128:17  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/api/system-shared/tool.ts
+  99:26  error  Prefer using the primitive `string` as a type name, rather than the upper-cased `String`  @typescript-eslint/no-wrapper-object-types
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/ai-chat/component/question-content/index.vue
+  300:7   error  Unexpected mutation of "chatRecord" prop  vue/no-mutating-props
+  321:11  error  Unexpected mutation of "chatRecord" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/dynamics-form/FormItem.vue
+  136:5  warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+  190:3  error    Expected an assignment or function call and instead saw an expression                                 @typescript-eslint/no-unused-expressions
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/dynamics-form/constructor/items/ModelConstructor.vue
+  121:60  error  The `Function` type accepts any function-like value.
+Prefer explicitly defining any function parameters and return type  @typescript-eslint/no-unsafe-function-type
+  122:60  error  The `Function` type accepts any function-like value.
+Prefer explicitly defining any function parameters and return type  @typescript-eslint/no-unsafe-function-type
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/dynamics-form/visibility/ConditionRow.vue
+    7:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   19:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   20:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   37:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   38:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   52:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   53:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   68:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   69:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   80:20  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+   81:19  error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  111:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  112:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  113:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  121:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  122:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  123:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  124:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  125:3   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  131:5   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+  132:5   error  Unexpected mutation of "cond" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/dynamics-form/visibility/FieldSelector.vue
+  12:27  error  'node' is defined but never used  vue/no-unused-vars
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/execution-detail-card/index.vue
+    3:46  error  Unexpected mutation of "data" prop  vue/no-mutating-props
+  584:28  error  Unexpected mutation of "data" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/folder-virtualized-tree/index.vue
+  67:35  error  'stat' is defined but never used  vue/no-unused-vars
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/markdown/EchartsRander.vue
+  57:5  error  'evalSeq' is never reassigned. Use 'const' instead  prefer-const
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/components/markdown/assets/markdown-iconfont.js
+  1:1      error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:51297  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:51322  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:51373  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:51771  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:51963  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  1:52036  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/views/home/component/RankingDrawer.vue
+   76:35  error  'row' is defined but never used  vue/no-unused-vars
+  152:35  error  'row' is defined but never used  vue/no-unused-vars
+  226:35  error  'row' is defined but never used  vue/no-unused-vars
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/views/paragraph/component/ParagraphCard.vue
+  21:20  error  Unexpected mutation of "data" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/views/system-chat-user/authentication/component/SCAN.vue
+  210:5  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/views/trigger/component/ApplicationParameter.vue
+   11:26  error  'index' is defined but never used         vue/no-unused-vars
+   35:24  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   47:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   55:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   60:26  error  'index' is defined but never used         vue/no-unused-vars
+   84:24  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   96:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+  104:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+  109:26  error  'index' is defined but never used         vue/no-unused-vars
+  129:24  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+  141:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+  149:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/views/trigger/component/ToolParameter.vue
+   11:26  error  'index' is defined but never used         vue/no-unused-vars
+   35:24  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   47:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   55:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   60:26  error  'index' is defined but never used         vue/no-unused-vars
+   84:24  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+   96:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+  104:20  error  Unexpected mutation of "modelValue" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/common/NodeCascader.vue
+  12:27  error  'node' is defined but never used  vue/no-unused-vars
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/common/NodeContainer.vue
+  531:3  error  Unexpected mutation of "nodeModel" prop                                vue/no-mutating-props
+  571:5  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/nodes/data-source-local-node/index.vue
+  33:40  error  'value' is defined but never used  vue/no-unused-vars
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/nodes/knowledge-write-node/index.vue
+  58:7  error  'ps' is never reassigned. Use 'const' instead  prefer-const
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/nodes/loop-body-node/LoopBodyContainer.vue
+  211:5  error  Unexpected mutation of "nodeModel" prop  vue/no-mutating-props
+  216:5  error  Unexpected mutation of "nodeModel" prop  vue/no-mutating-props
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/nodes/loop-body-node/index.vue
+  116:7  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/nodes/variable-aggregation-node/index.vue
+  165:9  error  Unexpected mutation of "nodeModel" prop      vue/no-mutating-props
+  165:9  error  Unexpected side effect in computed function  vue/no-side-effects-in-computed-properties
+
+/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/ui/src/workflow/plugins/dagre.ts
+  63:7  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+✖ 104 problems (103 errors, 1 warning)
+  31 errors and 1 warning potentially fixable with the `--fix` option.
+

@@ -1,0 +1,11 @@
+test_configured_error_allowlist_is_respected (test_policy.PolicyTests.test_configured_error_allowlist_is_respected) ... ok
+test_idempotent_write_requires_contract (test_policy.PolicyTests.test_idempotent_write_requires_contract) ... ok
+test_invalid_policy_rejected (test_policy.PolicyTests.test_invalid_policy_rejected) ... ok
+test_only_explicit_transient_errors_retry (test_policy.PolicyTests.test_only_explicit_transient_errors_retry) ... ok
+test_retry_limit_counts_retries_not_first_call (test_policy.PolicyTests.test_retry_limit_counts_retries_not_first_call) ... ok
+test_unprotected_write_cannot_retry_unknown_outcome (test_policy.PolicyTests.test_unprotected_write_cannot_retry_unknown_outcome) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

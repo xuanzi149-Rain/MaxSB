@@ -1,0 +1,27 @@
+test_config (unittest.loader._FailedTest.test_config) ... ERROR
+test_configured_error_allowlist_is_respected (test_policy.PolicyTests.test_configured_error_allowlist_is_respected) ... ok
+test_idempotent_write_requires_contract (test_policy.PolicyTests.test_idempotent_write_requires_contract) ... ok
+test_invalid_policy_rejected (test_policy.PolicyTests.test_invalid_policy_rejected) ... ok
+test_only_explicit_transient_errors_retry (test_policy.PolicyTests.test_only_explicit_transient_errors_retry) ... ok
+test_retry_limit_counts_retries_not_first_call (test_policy.PolicyTests.test_retry_limit_counts_retries_not_first_call) ... ok
+test_unprotected_write_cannot_retry_unknown_outcome (test_policy.PolicyTests.test_unprotected_write_cannot_retry_unknown_outcome) ... ok
+
+======================================================================
+ERROR: test_config (unittest.loader._FailedTest.test_config)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_config
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/wangzixuan/.codex/worktrees/tool-recovery/MaxSB/tests/tool_recovery/test_config.py", line 3, in <module>
+    from application.tool_recovery.config import validate_recovery_workflow
+ModuleNotFoundError: No module named 'application.tool_recovery.config'
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+FAILED (errors=1)

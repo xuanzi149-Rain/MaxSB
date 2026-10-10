@@ -1,0 +1,39 @@
+Found 1 test(s).
+Skipping setup of unused database(s): default.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.583 seconds.
+Prefix dict has been built successfully.
+2026-10-10 17:06:56 [tool_code ERROR] Exception: [Errno 2] No such file or directory: '/tmp/maxsb-task5/tmp/tool_executor_init_dir.lock'
+Traceback (most recent call last):
+  File "/tmp/maxsb-task5/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/maxsb-task5/apps/common/utils/tool_code.py", line 54, in init_sandbox_dir
+    fd = os.open(
+         ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/maxsb-task5/tmp/tool_executor_init_dir.lock'
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/tmp/maxsb-task5/ui/dist' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+tests_tool_recovery_store (unittest.loader._FailedTest.tests_tool_recovery_store) ... ERROR
+
+======================================================================
+ERROR: tests_tool_recovery_store (unittest.loader._FailedTest.tests_tool_recovery_store)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests_tool_recovery_store
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task5/apps/application/tests_tool_recovery_store.py", line 7, in <module>
+    from application.tool_recovery.types import Identity, RecoveryConflict, RecoveryDenied
+ModuleNotFoundError: No module named 'application.tool_recovery.types'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
