@@ -1,0 +1,148 @@
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/.___init__.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._config.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._executor.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._policy.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._types.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._usage.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/apps/application/model_routing/._validation.py:1:1
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:43:1
+   |
+41 |             resolve_evidence(node, policy)
+42 |
+43 | from application.tests_tool_recovery_store import RecoveryFixture
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+44 | from application.tests_tool_recovery_runtime import graph
+45 | from application.flow.common import Workflow
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:44:1
+   |
+43 | from application.tests_tool_recovery_store import RecoveryFixture
+44 | from application.tests_tool_recovery_runtime import graph
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+45 | from application.flow.common import Workflow
+46 | from application.flow.workflow_manage import WorkflowManage
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:45:1
+   |
+43 | from application.tests_tool_recovery_store import RecoveryFixture
+44 | from application.tests_tool_recovery_runtime import graph
+45 | from application.flow.common import Workflow
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+46 | from application.flow.workflow_manage import WorkflowManage
+47 | from application.tool_recovery.runtime import RecoveryRuntime
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:46:1
+   |
+44 | from application.tests_tool_recovery_runtime import graph
+45 | from application.flow.common import Workflow
+46 | from application.flow.workflow_manage import WorkflowManage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+47 | from application.tool_recovery.runtime import RecoveryRuntime
+48 | from application.models import ApplicationVersion, ToolRun
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:47:1
+   |
+45 | from application.flow.common import Workflow
+46 | from application.flow.workflow_manage import WorkflowManage
+47 | from application.tool_recovery.runtime import RecoveryRuntime
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+48 | from application.models import ApplicationVersion, ToolRun
+49 | from langchain_core.messages import AIMessageChunk
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:48:1
+   |
+46 | from application.flow.workflow_manage import WorkflowManage
+47 | from application.tool_recovery.runtime import RecoveryRuntime
+48 | from application.models import ApplicationVersion, ToolRun
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+49 | from langchain_core.messages import AIMessageChunk
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:49:1
+   |
+47 | from application.tool_recovery.runtime import RecoveryRuntime
+48 | from application.models import ApplicationVersion, ToolRun
+49 | from langchain_core.messages import AIMessageChunk
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+
+F401 [*] `langchain_core.messages.AIMessage` imported but unused
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:54:45
+   |
+52 | class RoutingRecoveryTests(RecoveryFixture):
+53 |     def test_completed_routed_ai_is_restored_without_another_model_call(self):
+54 |         from langchain_core.messages import AIMessage
+   |                                             ^^^^^^^^^
+55 |         definition = graph()
+56 |         definition['nodes'][2]['type'] = 'ai-chat-node'
+   |
+help: Remove unused import: `langchain_core.messages.AIMessage`
+
+F841 Local variable `path` is assigned to but never used
+  --> /tmp/task6/apps/application/tests_model_routing_integration.py:68:9
+   |
+66 |         first = WorkflowManage(Workflow.new_instance(definition), params, handler)
+67 |         first.recovery = RecoveryRuntime(first)
+68 |         path = 'application.flow.step_node.ai_chat_step_node.impl.base_chat_node'
+   |         ^^^^
+69 |         async def timeout(*args):
+70 |             raise TimeoutError()
+   |
+help: Remove assignment to unused variable `path`
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/tests/model_routing/._test_core.py:1:1
+
+E902 stream did not contain valid UTF-8
+--> /tmp/task6/tests/model_routing/._test_executor.py:1:1
+
+E702 Multiple statements on one line (semicolon)
+  --> /tmp/task6/tests/model_routing/test_evaluation.py:56:50
+   |
+54 |                                         {'model': 'low', 'max_tokens': 100, 'messages': []})
+55 |             self.assertEqual(json.loads(path.read_text())['requests'], 0)
+56 |             ledger = json.loads(path.read_text()); ledger['limit_cny'] = '100'; path.write_text(json.dumps(ledger))
+   |                                                  ^
+57 |             reserve_routing_request(str(path), 'https://models.example/v1/chat/completions',
+58 |                                     {'model': 'low', 'max_tokens': 100, 'messages': []})
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> /tmp/task6/tests/model_routing/test_evaluation.py:56:79
+   |
+54 |                                         {'model': 'low', 'max_tokens': 100, 'messages': []})
+55 |             self.assertEqual(json.loads(path.read_text())['requests'], 0)
+56 |             ledger = json.loads(path.read_text()); ledger['limit_cny'] = '100'; path.write_text(json.dumps(ledger))
+   |                                                                               ^
+57 |             reserve_routing_request(str(path), 'https://models.example/v1/chat/completions',
+58 |                                     {'model': 'low', 'max_tokens': 100, 'messages': []})
+   |
+
+Found 20 errors.
+[*] 1 fixable with the `--fix` option (1 hidden fix can be enabled with the `--unsafe-fixes` option).

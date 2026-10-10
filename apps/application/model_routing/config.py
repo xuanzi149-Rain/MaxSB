@@ -32,6 +32,14 @@ def parse_policy(value: dict) -> RoutingPolicy:
                 valid = type(item) is bool
             else:
                 valid = type(item) in (int, float) and math.isfinite(item)
+            if valid and key in ('max_tokens', 'max_completion_tokens'):
+                valid = type(item) is int and 1 <= item <= 131072
+            elif valid and key == 'seed':
+                valid = type(item) is int and -(2 ** 31) <= item < 2 ** 31
+            elif valid and key in ('temperature', 'top_p', 'presence_penalty', 'frequency_penalty'):
+                lower, upper = {'temperature': (0, 2), 'top_p': (0, 1),
+                                'presence_penalty': (-2, 2), 'frequency_penalty': (-2, 2)}[key]
+                valid = lower <= item <= upper
             if not valid:
                 raise ValueError('routing_invalid_params')
         models.append({'model_id': identity, 'params': dict(params)})

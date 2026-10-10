@@ -1,0 +1,22 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.468 seconds.
+Prefix dict has been built successfully.
+low extract success
+low classify success
+low compare success
+low unknown success
+low mixed success
+low evidence success
+high extract success
+high classify success
+high compare success
+high unknown success
+high mixed success
+high evidence success
+routing extract success
+routing classify success
+routing compare success
+routing unknown success
+routing mixed success
+routing evidence success

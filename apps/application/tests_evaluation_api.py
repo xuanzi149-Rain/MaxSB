@@ -99,3 +99,25 @@ class EvaluationAPITests(TestCase):
         payload = json.loads(response.content)['data']
         self.assertEqual(payload['summary']['citation_accuracy'], .5)
         self.assertEqual(payload['summary']['accuracy'], 0)
+
+    def test_routing_strategy_requires_enabled_node_and_freezes_role(self):
+        from application.evaluation.service import create_run
+        from unittest.mock import patch
+        snapshot = {'application_config': {'work_flow': {'nodes': []}}}
+        with patch('application.evaluation.service.capture_snapshot', return_value=snapshot):
+            with self.assertRaises(ValueError):
+                create_run('w', str(self.app.pk), str(self.user.pk), {}, enqueue=False, routing_strategy='low')
+        snapshot['application_config']['work_flow']['nodes'] = [
+            {'properties': {'node_data': {'model_routing': {'enabled': True}}}}]
+        with patch('application.evaluation.service.capture_snapshot', return_value=snapshot):
+            run = create_run('w', str(self.app.pk), str(self.user.pk), {}, enqueue=False, routing_strategy='low')
+        self.assertEqual(run.snapshot['routing_strategy'], 'low')
+
+    def test_routing_comparison_rejects_wrong_roles(self):
+        from application.models import EvaluationRun
+        runs = [EvaluationRun.objects.create(application=self.app, workspace_id='w', user_id=str(self.user.pk),
+            dataset_hash='x', status='completed', snapshot={'routing_strategy': role}) for role in ('low', 'high', 'high')]
+        response = self.views().EvaluationCompare.as_view()(self.request(data={
+            'left': str(runs[0].pk), 'right': str(runs[1].pk), 'routing': str(runs[2].pk)}, roles=['ADMIN']),
+            workspace_id='w', application_id=str(self.app.pk))
+        self.assertEqual(response.status_code, 400)

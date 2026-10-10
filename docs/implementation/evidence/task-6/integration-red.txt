@@ -1,0 +1,26 @@
+Found 1 test(s).
+Skipping setup of unused database(s): default.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.468 seconds.
+Prefix dict has been built successfully.
+System check identified no issues (0 silenced).
+tests_model_routing_integration (unittest.loader._FailedTest.tests_model_routing_integration) ... ERROR
+
+======================================================================
+ERROR: tests_model_routing_integration (unittest.loader._FailedTest.tests_model_routing_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests_model_routing_integration
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tests_model_routing_integration.py", line 7, in <module>
+    from application.model_routing.integration import validate_definition, resolve_evidence
+ImportError: cannot import name 'validate_definition' from 'application.model_routing.integration' (/tmp/task6/apps/application/model_routing/integration.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

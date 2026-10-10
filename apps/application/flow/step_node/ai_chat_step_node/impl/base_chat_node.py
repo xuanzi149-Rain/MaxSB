@@ -174,7 +174,8 @@ class BaseChatNode(IChatNode):
         self.context["answer"] = details.get("answer")
         self.context["question"] = details.get("question")
         self.context["reasoning_content"] = details.get("reasoning_content")
-        for field in ("raw_question", "dialogue_context", "dialogue_policy"):
+        for field in ("raw_question", "dialogue_context", "dialogue_policy", "model_routing",
+                      "message_tokens", "answer_tokens"):
             self.context[field] = details.get(field)
         self.context["exception_message"] = details.get("err_message")
         if self.node_params.get("is_result", False):
@@ -205,6 +206,14 @@ class BaseChatNode(IChatNode):
         mcp_output_enable=True,
         **kwargs,
     ) -> NodeResult:
+        if (kwargs.get("model_routing") or {}).get("enabled"):
+            from application.model_routing.integration import execute_node
+            return execute_node(self, policy_value=kwargs["model_routing"], system=system, prompt=prompt,
+                dialogue_number=dialogue_number, history_chat_record=history_chat_record, stream=stream,
+                question=kwargs.get("question", ""), dialogue_type=dialogue_type,
+                extra={**kwargs, "mcp_servers": mcp_servers, "mcp_tool_id": mcp_tool_id,
+                       "mcp_tool_ids": mcp_tool_ids, "tool_ids": tool_ids,
+                       "application_ids": application_ids, "skill_tool_ids": skill_tool_ids})
         if dialogue_type is None:
             dialogue_type = "WORKFLOW"
 
@@ -736,6 +745,7 @@ class BaseChatNode(IChatNode):
             "dialogue_context": self.context.get("dialogue_context"),
             "dialogue_policy": self.context.get("dialogue_policy"),
             "memory": self.context.get("memory"),
+            "model_routing": self.context.get("model_routing"),
             "question": self.context.get("question"),
             "answer": self.context.get("answer"),
             "reasoning_content": self.context.get("reasoning_content"),

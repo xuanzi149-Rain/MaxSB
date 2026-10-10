@@ -6,7 +6,10 @@ PUBLIC_FIELDS = {'answer', 'case_id', 'status', 'trace', 'node_id', 'node_type',
                  'input_tokens', 'output_tokens', 'usage_source', 'error', 'complete', 'record_id',
                  'retrieved_evidence_ids', 'citations', 'evidence_id', 'document_name', 'paragraph_id',
                  'tracking_id', 'chat_id', 'estimated_input_tokens', 'estimated_output_tokens', 'model_call_count', 'evaluation_scope',
-                 'score', 'review', 'actual_cost', 'currency', 'turns', 'tool_events', 'read_only', 'outcome'}
+                 'score', 'review', 'actual_cost', 'currency', 'turns', 'tool_events', 'read_only', 'outcome', 'model_calls', 'model_routing', 'task_id', 'attempts', 'attempt_id',
+                 'model_id', 'model_name', 'response_model', 'role', 'selected_role', 'rule_id', 'rule_version', 'reason',
+                 'upgrade_reason', 'started_at', 'ended_at', 'usage', 'cache_read_tokens',
+                 'priced_cost', 'price_basis', 'price_version', 'price_source'}
 
 
 def sanitize_result(result):

@@ -1,6 +1,7 @@
 # coding=utf-8
 """Machine validation only, never an assertion of factual correctness."""
 import json
+import math
 
 
 def _pairs(pairs):
@@ -16,11 +17,18 @@ def _constant(value):
     raise ValueError('nonfinite_number')
 
 
+def _float(value):
+    number = float(value)
+    if not math.isfinite(number):
+        raise ValueError('nonfinite_number')
+    return number
+
+
 def validate_output(text, contract, evidence_ids):
     if not contract.enabled:
         return []
     try:
-        parsed = json.loads(text, object_pairs_hook=_pairs, parse_constant=_constant)
+        parsed = json.loads(text, object_pairs_hook=_pairs, parse_constant=_constant, parse_float=_float)
     except (ValueError, TypeError, RecursionError):
         return ['invalid_json']
     if not isinstance(parsed, dict):

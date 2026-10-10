@@ -25,7 +25,7 @@
             data.type == WorkflowType.IntentNode ||
             data.type === WorkflowType.VideoUnderstandNode
           "
-          >{{ data?.message_tokens + data?.answer_tokens }} tokens</span
+          >{{ data?.message_tokens == null || data?.answer_tokens == null ? '—' : data.message_tokens + data.answer_tokens }} tokens</span
         >
         <span class="mr-16 color-secondary" v-if="data.status != 202"
           >{{ data?.run_time?.toFixed(2) || 0.0 }} s</span
@@ -197,6 +197,7 @@
           <!-- AI 对话 -->
           <template v-if="data.type == WorkflowType.AiChat">
             <ConversationMemoryDetails :data="data.memory" />
+            <ModelRoutingDetails :data="data.model_routing" />
             <div v-if="data.dialogue_policy?.enabled" class="card-never border-r-6 mb-8">
               <h5 class="p-8-12">轻量对话上下文</h5>
               <div class="p-8-12 border-t-dashed lighter">
@@ -1443,6 +1444,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
+import ModelRoutingDetails from './component/ModelRoutingDetails.vue'
 import ToolRecoveryDetails from './component/ToolRecoveryDetails.vue'
 import ConversationMemoryDetails from './component/ConversationMemoryDetails.vue'
 import RetrievalBudgetDetails from '@/components/retrieval-policy/RetrievalBudgetDetails.vue'

@@ -1,0 +1,24 @@
+2026-10-10 19:26:52 [tool_code ERROR] Exception: [Errno 2] No such file or directory: '/tmp/task6/tmp/tool_executor_init_dir.lock'
+Traceback (most recent call last):
+  File "/tmp/task6/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/task6/apps/common/utils/tool_code.py", line 54, in init_sandbox_dir
+    fd = os.open(
+         ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/task6/tmp/tool_executor_init_dir.lock'
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.493 seconds.
+Prefix dict has been built successfully.
+Found 2 test(s).
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/tmp/task6/ui/dist' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+OK

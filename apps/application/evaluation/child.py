@@ -1,6 +1,7 @@
 # coding=utf-8
 """No credentials are sent over process arguments or written to result files."""
 import json
+import os
 import logging
 from copy import copy
 from langchain_core.tracers.context import collect_runs
@@ -38,6 +39,7 @@ def freeze_chat_info(info, snapshot):
 def run_case(case, snapshot):
     identity = {'workspace_id': snapshot['workspace_id'], 'application_id': snapshot['application_id'],
                 'chat_user_id': snapshot['user_id'], 'chat_user_type': ChatUserType.PLATFORM_USER, 'debug': True}
+    os.environ['MAXSB_ROUTING_EVALUATION_STRATEGY'] = snapshot.get('routing_strategy', 'routing')
     chat_id = OpenChatSerializers(data=identity).open()
     rows, evidence, trace, tool_events = [], set(), [], []
     for question in case['turns']:
@@ -78,8 +80,12 @@ def run_case(case, snapshot):
             for key, node in record.details.items():
                 if not isinstance(node, dict):
                     continue
+                if node.get('model_routing'):
+                    from application.evaluation.routing import price_trace
+                    price_trace(node['model_routing'], snapshot.get('routing_prices', {}))
                 trace.append({'node_id': key, 'node_type': node.get('step_type', node.get('type')),
-                              'status': node.get('status'), 'run_time': node.get('run_time')})
+                              'status': node.get('status'), 'run_time': node.get('run_time'),
+                              'model_routing': node.get('model_routing')})
                 if is_tool and node.get('type') == 'tool-node':
                     value = node.get('result')
                     if isinstance(value, dict):

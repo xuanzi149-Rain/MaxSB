@@ -55,11 +55,15 @@ def capture_snapshot(application_id: str) -> dict:
     diff = git('diff', 'HEAD')
     # Includes untracked implementation files; does not hash credentials or runtime .env files.
     source_files = {}
-    for base in (root / 'apps/application/evaluation', root / 'docs/implementation/evaluation'):
+    for base in (root / 'apps/application/evaluation', root / 'apps/application/model_routing',
+                 root / 'docs/implementation/evaluation'):
         for path in sorted(base.glob('*')):
             if path.suffix in ('.py', '.json'):
                 source_files[str(path.relative_to(root))] = path.read_text()
-    return {'application_id': str(app.id), 'workspace_id': app.workspace_id,
+    protocol_path = root / 'docs/implementation/evaluation/task6-protocol.json'
+    protocol = json.loads(protocol_path.read_text()) if protocol_path.exists() else {}
+    return {'routing_prices': protocol.get('prices', {}), 'routing_protocol_hash': dataset_digest(protocol),
+            'application_id': str(app.id), 'workspace_id': app.workspace_id,
             'application_type': app.type, 'tool_fixture': 'readonly_lookup_v1',
             'tool_fixture_hash': dataset_digest(LOOKUP_CODE), 'config_hash': dataset_digest(dependency),
             'application_hash': dataset_digest(raw), 'knowledge_hash': dataset_digest(dependency['paragraphs']),

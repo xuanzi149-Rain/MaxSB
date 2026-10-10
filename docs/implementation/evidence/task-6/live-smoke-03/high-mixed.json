@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "high",
+  "case_id": "mixed",
+  "question": "提取借期并解释续借条件：借期21天，可续借14天，但预约中的书不可续借。",
+  "answer": "{\"answer\":\"借期21天；续借条件：可续借14天，但预约中的书不可续借。\"}",
+  "status": "success",
+  "elapsed_seconds": 0.7093574169994099,
+  "model_routing": {
+    "task_id": "620390db-631d-4e14-8841-8f80e27d54ee",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "high",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "1521f13d-4ffd-4a2b-a91f-65c7fe67c085",
+        "role": "high",
+        "model_id": "01a11f05-0114-7e73-859e-5cc08ccb3e70",
+        "model_name": "deepseek-v4-flash",
+        "started_at": "2026-10-10T11:53:57.918369+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 47,
+          "output_tokens": 27,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "deepseek-flash",
+        "ended_at": "2026-10-10T11:53:58.627040+00:00",
+        "elapsed_seconds": 0.7086742510000477,
+        "priced_cost": "0.000155",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_basis": "offpeak_reference_price_not_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 47,
+      "output_tokens": 27
+    },
+    "priced_cost": "0.000155",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

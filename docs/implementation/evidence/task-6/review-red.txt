@@ -1,0 +1,79 @@
+test_config_disabled_and_invalid (test_core.RoutingTests.test_config_disabled_and_invalid) ... ok
+test_overflow_number_rejected (test_core.RoutingTests.test_overflow_number_rejected) ... ok
+test_rules_conservative (test_core.RoutingTests.test_rules_conservative) ... 
+  test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='提取姓名，翻译成英文') ... FAIL
+  test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='Extract names, summarize the document') ... FAIL
+  test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='分类客户需求，制定营销方案') ... FAIL
+test_strict_json_and_citations (test_core.RoutingTests.test_strict_json_and_citations) ... ok
+test_budget_atomic_limit_and_unapproved_model (test_evaluation.EvaluationTests.test_budget_atomic_limit_and_unapproved_model) ... ok
+test_callback_dedup_and_model_identity (test_evaluation.EvaluationTests.test_callback_dedup_and_model_identity) ... ok
+test_comparison_requires_reviews_and_complete_cost (test_evaluation.EvaluationTests.test_comparison_requires_reviews_and_complete_cost) ... FAIL
+test_price_and_unknown_cache (test_evaluation.EvaluationTests.test_price_and_unknown_cache) ... ok
+test_double_failure_and_cancel (test_executor.ExecutorTests.test_double_failure_and_cancel) ... ok
+test_failed_draft_never_escapes_and_two_attempts_count (test_executor.ExecutorTests.test_failed_draft_never_escapes_and_two_attempts_count) ... ok
+test_fixed_low_baseline_never_upgrades (test_executor.ExecutorTests.test_fixed_low_baseline_never_upgrades) ... FAIL
+test_oversize_does_not_leak_or_retry (test_executor.ExecutorTests.test_oversize_does_not_leak_or_retry) ... ok
+test_timeout_upgrades_and_unknown_error_does_not (test_executor.ExecutorTests.test_timeout_upgrades_and_unknown_error_does_not) ... ok
+test_unknown_propagates_per_field (test_executor.ExecutorTests.test_unknown_propagates_per_field) ... ok
+test_workflow_total_does_not_hide_unknown_routed_usage (test_executor.ExecutorTests.test_workflow_total_does_not_hide_unknown_routed_usage) ... ok
+
+======================================================================
+FAIL: test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='提取姓名，翻译成英文')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_core.py", line 30, in test_rules_conservative
+    self.assertEqual(select_route(question, p, has_history=False, has_tool_results=False).role, role)
+AssertionError: 'low' != 'high'
+- low
++ high
+
+
+======================================================================
+FAIL: test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='Extract names, summarize the document')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_core.py", line 30, in test_rules_conservative
+    self.assertEqual(select_route(question, p, has_history=False, has_tool_results=False).role, role)
+AssertionError: 'low' != 'high'
+- low
++ high
+
+
+======================================================================
+FAIL: test_rules_conservative (test_core.RoutingTests.test_rules_conservative) (question='分类客户需求，制定营销方案')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_core.py", line 30, in test_rules_conservative
+    self.assertEqual(select_route(question, p, has_history=False, has_tool_results=False).role, role)
+AssertionError: 'low' != 'high'
+- low
++ high
+
+
+======================================================================
+FAIL: test_comparison_requires_reviews_and_complete_cost (test_evaluation.EvaluationTests.test_comparison_requires_reviews_and_complete_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_evaluation.py", line 35, in test_comparison_requires_reviews_and_complete_cost
+    self.assertFalse(compare_routing(groups, {})['comparable'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_fixed_low_baseline_never_upgrades (test_executor.ExecutorTests.test_fixed_low_baseline_never_upgrades)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_executor.py", line 101, in test_fixed_low_baseline_never_upgrades
+    self.assertEqual(roles, ['low'])
+AssertionError: Lists differ: ['high'] != ['low']
+
+First differing element 0:
+'high'
+'low'
+
+- ['high']
++ ['low']
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.013s
+
+FAILED (failures=5)

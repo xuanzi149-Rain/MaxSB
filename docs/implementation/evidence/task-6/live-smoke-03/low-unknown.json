@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "low",
+  "case_id": "unknown",
+  "question": "为什么要给实验保留失败记录？",
+  "answer": "{\n  \"answer\": \"避免重复错误、分析失败原因、优化实验设计、确保数据完整性及可追溯性。\"\n}",
+  "status": "success",
+  "elapsed_seconds": 1.353453043004265,
+  "model_routing": {
+    "task_id": "d8324ab4-4ee8-4f4c-bb08-206b3bd10100",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "low",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "1669a1f5-8fe7-42af-897d-df6d70d82dd9",
+        "role": "low",
+        "model_id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+        "model_name": "qwen3.7-plus",
+        "started_at": "2026-10-10T11:53:50.709700+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 38,
+          "output_tokens": 30,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "qwen3.7-plus",
+        "ended_at": "2026-10-10T11:53:52.062068+00:00",
+        "elapsed_seconds": 1.3523790009930963,
+        "priced_cost": "0.000316",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "price_basis": "public_list_price_not_token_plan_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 38,
+      "output_tokens": 30
+    },
+    "priced_cost": "0.000316",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

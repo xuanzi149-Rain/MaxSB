@@ -1,0 +1,44 @@
+2026-10-10 19:27:32 [tool_code INFO] Init sandbox dir.
+2026-10-10 19:27:32 [tool_code ERROR] Exception: [Errno -3] Temporary failure in name resolution
+Traceback (most recent call last):
+  File "/tmp/task6/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/task6/apps/common/utils/tool_code.py", line 86, in init_sandbox_dir
+    local_ip = socket.gethostbyname(hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.480 seconds.
+Prefix dict has been built successfully.
+Found 23 test(s).
+Skipping setup of unused database(s): default.
+System check identified no issues (0 silenced).
+test_invalid_combinations_and_dependencies (application.tests_model_routing_runtime.RoutingNodeTests.test_invalid_combinations_and_dependencies) ... ok
+test_node_replaces_old_model_and_retains_failed_usage (application.tests_model_routing_runtime.RoutingNodeTests.test_node_replaces_old_model_and_retains_failed_usage) ... ok
+test_ai_node_history_removes_only_current_verified_context (application.tests_retrieval.DialogueIntegrationTests.test_ai_node_history_removes_only_current_verified_context) ... ok
+test_clearing_dialogue_context_reference_preserves_optional_configuration (application.tests_retrieval.DialogueIntegrationTests.test_clearing_dialogue_context_reference_preserves_optional_configuration) ... ok
+test_dialogue_settings_are_optional_and_typed (application.tests_retrieval.DialogueIntegrationTests.test_dialogue_settings_are_optional_and_typed) ... ok
+test_live_ai_input_uses_guidance_only_when_enabled_without_tools (application.tests_retrieval.DialogueIntegrationTests.test_live_ai_input_uses_guidance_only_when_enabled_without_tools) ... ok
+test_workflow_history_and_disabled_node_history_remain_unchanged (application.tests_retrieval.DialogueIntegrationTests.test_workflow_history_and_disabled_node_history_remain_unchanged) ... ok
+test_cleared_optional_reference_is_valid (application.tests_retrieval.DynamicRerankerTests.test_cleared_optional_reference_is_valid) ... ok
+test_complex_reranks_raw_candidates_before_context_deduplication (application.tests_retrieval.DynamicRerankerTests.test_complex_reranks_raw_candidates_before_context_deduplication) ... ok
+test_disabled_source_uses_legacy_processed_paragraphs (application.tests_retrieval.DynamicRerankerTests.test_disabled_source_uses_legacy_processed_paragraphs) ... ok
+test_empty_input_does_not_load_reranker_and_replays_audit (application.tests_retrieval.DynamicRerankerTests.test_empty_input_does_not_load_reranker_and_replays_audit) ... ok
+test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence (application.tests_retrieval.DynamicRerankerTests.test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence) ... ok
+test_missing_dynamic_model_falls_back_to_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_missing_dynamic_model_falls_back_to_original_evidence) ... ok
+test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip (application.tests_retrieval.DynamicRerankerTests.test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip) ... ok
+test_simple_bypasses_reranker_and_still_deduplicates_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_simple_bypasses_reranker_and_still_deduplicates_original_evidence) ... ok
+test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload (application.tests_retrieval.DynamicRerankerTests.test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload) ... ok
+test_unlinked_and_unknown_reranker_keep_original_failure_semantics (application.tests_retrieval.DynamicRerankerTests.test_unlinked_and_unknown_reranker_keep_original_failure_semantics) ... ok
+test_empty_authorized_knowledge_skips_model_and_reports_empty_scope (application.tests_retrieval.RetrievalIntegrationTests.test_empty_authorized_knowledge_skips_model_and_reports_empty_scope) ... ok
+test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace) ... ok
+test_old_and_disabled_workflow_outputs_are_identical (application.tests_retrieval.RetrievalIntegrationTests.test_old_and_disabled_workflow_outputs_are_identical) ... ok
+test_policy_serializer_roundtrip_and_range_validation (application.tests_retrieval.RetrievalIntegrationTests.test_policy_serializer_roundtrip_and_range_validation) ... ok
+test_query_uses_decision_before_context_processing_and_keeps_raw_sources (application.tests_retrieval.RetrievalIntegrationTests.test_query_uses_decision_before_context_processing_and_keeps_raw_sources) ... ok
+test_unknown_keeps_fixed_query_and_complex_expands (application.tests_retrieval.RetrievalIntegrationTests.test_unknown_keeps_fixed_query_and_complex_expands) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.030s
+
+OK

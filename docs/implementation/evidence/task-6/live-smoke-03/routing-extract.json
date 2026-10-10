@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "routing",
+  "case_id": "extract",
+  "question": "提取以下信息中的姓名：姓名李明，年龄25岁。",
+  "answer": "{\n  \"answer\": \"李明\"\n}",
+  "status": "success",
+  "elapsed_seconds": 0.7124514579918468,
+  "model_routing": {
+    "task_id": "b6116305-7a89-4541-aae1-ad953ff13470",
+    "rule_id": "simple_structured",
+    "rule_version": "1",
+    "reason": "Explicit extraction or classification with output contract",
+    "selected_role": "low",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "da03ace7-56b4-4de6-9d96-28624b42494f",
+        "role": "low",
+        "model_id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+        "model_name": "qwen3.7-plus",
+        "started_at": "2026-10-10T11:53:59.492657+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 45,
+          "output_tokens": 11,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "qwen3.7-plus",
+        "ended_at": "2026-10-10T11:54:00.204124+00:00",
+        "elapsed_seconds": 0.7114936669968301,
+        "priced_cost": "0.000178",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "price_basis": "public_list_price_not_token_plan_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 45,
+      "output_tokens": 11
+    },
+    "priced_cost": "0.000178",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

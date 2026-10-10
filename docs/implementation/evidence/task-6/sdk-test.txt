@@ -1,0 +1,15 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.423 seconds.
+Prefix dict has been built successfully.
+Found 3 test(s).
+Skipping setup of unused database(s): default.
+System check identified no issues (0 silenced).
+test_invalid_combinations_and_dependencies (application.tests_model_routing_runtime.RoutingNodeTests.test_invalid_combinations_and_dependencies) ... ok
+test_native_sdk_stream_metadata_and_retries (application.tests_model_routing_runtime.RoutingNodeTests.test_native_sdk_stream_metadata_and_retries) ... ok
+test_node_replaces_old_model_and_retains_failed_usage (application.tests_model_routing_runtime.RoutingNodeTests.test_node_replaces_old_model_and_retains_failed_usage) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.611s
+
+OK

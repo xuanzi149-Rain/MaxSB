@@ -52,6 +52,7 @@ def run_data(run, detail=False):
 
 
 class CreateRunInput(serializers.Serializer):
+    routing_strategy = serializers.ChoiceField(choices=['low', 'high', 'routing'], required=False)
     dataset_version = serializers.ChoiceField(choices=['dev-v1', 'frozen-v1'])
 
 
@@ -91,7 +92,8 @@ class EvaluationRuns(APIView):
         if dataset['split'] == 'frozen' and manifest.get('rubric_review', {}).get('status') != 'reviewed':
             raise ValidationError('Frozen dataset requires rubric review before baseline execution')
         try:
-            run = create_run(workspace_id, application_id, str(request.user.pk), dataset)
+            run = create_run(workspace_id, application_id, str(request.user.pk), dataset,
+                             routing_strategy=data.validated_data.get('routing_strategy'))
         except ValueError as exc:
             return result.error(str(exc), response_status=400)
         return result.success(run_data(run))
@@ -136,4 +138,14 @@ class EvaluationCompare(APIView):
         right = scoped_run(workspace_id, application_id, request.query_params.get('right'))
         if left.status not in TERMINAL or right.status not in TERMINAL:
             return result.error('Both runs must be finished', response_status=400)
+        if request.query_params.get('routing'):
+            from application.evaluation.routing import compare_routing
+            routed = scoped_run(workspace_id, application_id, request.query_params['routing'])
+            selected = {'low': left, 'high': right, 'routing': routed}
+            if any(run.status != 'completed' or run.snapshot.get('routing_strategy') != role
+                   for role, run in selected.items()):
+                return result.error('Select completed low / high / routing runs in order', response_status=400)
+            groups = {role: {**run_data(run, True), 'contract_hash': run.snapshot.get('config_hash')}
+                      for role, run in selected.items()}
+            return result.success(compare_routing(groups, {'quality_delta': 0, 'new_evidence_regressions': 0}))
         return result.success(compare_runs(run_data(left, True), run_data(right, True)))

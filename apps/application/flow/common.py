@@ -207,6 +207,8 @@ class Workflow:
         validate_memory_workflow(self)
         from application.tool_recovery.config import validate_recovery_workflow
         validate_recovery_workflow(self)
+        from application.model_routing.integration import validate_routing_workflow
+        validate_routing_workflow(self)
         self.is_valid_model_params()
         self.is_valid_start_node()
         self.is_valid_base_node()
@@ -253,6 +255,9 @@ class Workflow:
         node_list = [node for node in self.nodes if (
                 node.type == 'ai-chat-node' or node.type == 'question-node' or node.type == 'parameter-extraction-node')]
         for node in node_list:
+            from application.model_routing.integration import routing_model_ids
+            if routing_model_ids(node.properties.get('node_data', {})):
+                continue
             model_id_type = node.properties.get('node_data', {}).get('model_id_type') or 'custom'
             if model_id_type in ('reference', 'default'):
                 continue

@@ -1,0 +1,24 @@
+test_config_disabled_and_invalid (test_core.RoutingTests.test_config_disabled_and_invalid) ... ok
+test_rules_conservative (test_core.RoutingTests.test_rules_conservative) ... ok
+test_strict_json_and_citations (test_core.RoutingTests.test_strict_json_and_citations) ... ok
+test_executor (unittest.loader._FailedTest.test_executor) ... ERROR
+
+======================================================================
+ERROR: test_executor (unittest.loader._FailedTest.test_executor)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_executor
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangzixuan/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_executor.py", line 4, in <module>
+    from application.model_routing.executor import execute_routed
+ModuleNotFoundError: No module named 'application.model_routing.executor'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=1)

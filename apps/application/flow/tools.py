@@ -821,6 +821,12 @@ async def anext_async(agen):
     return await agen.__anext__()
 
 
+def _get_ai_model_ids(node):
+    from application.model_routing.integration import routing_model_ids
+    routed = routing_model_ids(node.get('properties', {}).get('node_data', {}))
+    return routed or [v for v in [_get_node_model_id(node, 'model_id', 'model_id_type')] if v]
+
+
 def _get_node_model_id(node, model_field, mode_field):
     """节点为 default/reference 模式时不返回节点内 model_id(运行时才解析,避免脏映射)。"""
     node_data = (node.get("properties") or {}).get("node_data") or {}
@@ -861,7 +867,7 @@ target_source_node_mapping = {
         "tool-workflow-lib-node": lambda n: [n.get("properties").get("node_data").get("tool_lib_id")],
     },
     "MODEL": {
-        "ai-chat-node": lambda n: [v for v in [_get_node_model_id(n, 'model_id', 'model_id_type')] if v],
+        "ai-chat-node": _get_ai_model_ids,
         "question-node": lambda n: [v for v in [_get_node_model_id(n, 'model_id', 'model_id_type')] if v],
         "speech-to-text-node": lambda n: [v for v in [_get_node_model_id(n, 'stt_model_id', 'stt_model_id_type')] if v],
         "text-to-speech-node": lambda n: [v for v in [_get_node_model_id(n, 'tts_model_id', 'tts_model_id_type')] if v],

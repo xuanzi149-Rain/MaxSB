@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "high",
+  "case_id": "classify",
+  "question": "分类这个评价为正面或负面：服务很好，下次还来。",
+  "answer": "{\"answer\":\"正面\"}",
+  "status": "success",
+  "elapsed_seconds": 0.7824728330015205,
+  "model_routing": {
+    "task_id": "369c1563-79e5-4b83-aefa-f7bb498612ff",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "high",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "651aac23-f4c6-40a8-95a8-dc169bf68f73",
+        "role": "high",
+        "model_id": "01a11f05-0114-7e73-859e-5cc08ccb3e70",
+        "model_name": "deepseek-v4-flash",
+        "started_at": "2026-10-10T11:53:55.551656+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 34,
+          "output_tokens": 5,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "deepseek-flash",
+        "ended_at": "2026-10-10T11:53:56.332981+00:00",
+        "elapsed_seconds": 0.7813157089985907,
+        "priced_cost": "0.000054",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_basis": "offpeak_reference_price_not_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 34,
+      "output_tokens": 5
+    },
+    "priced_cost": "0.000054",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

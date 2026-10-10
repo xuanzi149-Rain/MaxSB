@@ -133,6 +133,8 @@ def validate_workflow_default_models(work_flow, default_model_setting):
                         500,
                         _default_model_not_configured_message(node_name, default_model_type),
                     )
+        if node_type == 'ai-chat-node' and (node_data.get('model_routing') or {}).get('enabled'):
+            continue
         if model_type is not None:
             # 取该节点实际使用的 model_id_type 字段(custom/reference/default)
             type_key = (
@@ -479,6 +481,8 @@ class ApplicationCreateSerializer(serializers.Serializer):
         @staticmethod
         def to_application_model(user_id: str, workspace_id: str, application: Dict):
             default_workflow = application.get("work_flow")
+            from application.model_routing.integration import validate_definition
+            validate_definition(default_workflow, workspace_id)
             for node in default_workflow.get("nodes"):
                 if node.get("id") == "base-node":
                     node.get("properties")["node_data"]["desc"] = application.get("desc")
@@ -966,6 +970,8 @@ class ApplicationSerializer(serializers.Serializer):
                 raise AppApiException(403, str(message))
         application_model = self.to_application(application, workspace_id, user_id, update_tool_map, folder_id)
         tool_model_list = [self.to_tool(f, workspace_id, user_id) for f in tool_list]
+        from application.model_routing.integration import validate_definition
+        validate_definition(application_model.work_flow, workspace_id)
         application_model.save()
         # 插入授权数据
         UserResourcePermissionSerializer(
@@ -1330,6 +1336,8 @@ class ApplicationOperateSerializer(serializers.Serializer):
             work_flow = application.work_flow
             if work_flow is None:
                 raise AppApiException(500, _("work_flow is a required field"))
+            from application.model_routing.integration import validate_definition
+            validate_definition(work_flow, workspace_id)
             Workflow.new_instance(work_flow).is_valid()
             validate_workflow_default_models(work_flow, application.default_model_setting)
             base_node = get_base_node_work_flow(work_flow)
@@ -1486,6 +1494,8 @@ class ApplicationOperateSerializer(serializers.Serializer):
             if model is None:
                 raise AppApiException(500, _("Model does not exist"))
         if "work_flow" in instance:
+            from application.model_routing.integration import validate_definition
+            validate_definition(instance["work_flow"], application.workspace_id)
             # 把工作流中的字段提取到表上
             self.update_work_flow_model(instance)
         if "mcp_servers" in instance and len(instance.get("mcp_servers", {})) > 0:
@@ -1618,6 +1628,8 @@ class ApplicationOperateSerializer(serializers.Serializer):
             if node.get("type") == "loop-node":
                 for n in node.get("properties", {}).get("node_data", {}).get("loop_body", {}).get("nodes", []):
                     hand_node(n, update_tool_map)
+        from application.model_routing.integration import validate_definition
+        validate_definition(work_flow, app.workspace_id)
         app.work_flow = work_flow
         application = mk_instance.application
         app.name = application.get("name")

@@ -1,4 +1,5 @@
 export default {
+  modelRouting: {"title": "模型路由", "hint": "开启后使用下方两模型替代原模型选择。仅支持纯文本节点；结构化答案校验完成后输出，等待时间可能增加。", "low": "低成本模型", "high": "高能力模型", "temperature": "温度", "maxTokens": "最大输出 token", "timeout": "单次超时（秒）", "fields": "必需 JSON 字段（输入后回车；留空为开放回答）", "citations": "引用字段名（可选）", "evidence": "绑定检索节点的 paragraph_list", "upgrade": "升级／失败原因", "role": "模型角色", "model": "实际模型", "status": "状态", "seconds": "耗时（秒）", "unknown": "— 表示未知用量，不能作为零费用。"},
   toolRecovery: {"executed": "已执行且结果可核对", "notExecuted": "已终止且确认未执行", "evidence": "核对依据（至少10字符）", "output": "实际工具输出（JSON文本数组）", "confirm": "保存核对结果","title": "工具恢复", "run": "运行", "generation": "执行代次", "resumes": "恢复次数", "resume": "从失败处继续", "unknownHint": "结果未知：请管理员核对远端操作结果，确认前不可再次执行。", "configHint": "在开始节点开启后生效。仅支持串行文本工作流；写入重试必须有工具侧幂等保证。", "mode": "副作用类型", "timeout": "每次超时（秒）", "retries": "最多重试次数", "keyField": "工具幂等参数名", "retention": "工具去重保留期（小时）", "unknown": "未知", "read_only": "只读", "idempotent_write": "幂等写入", "unprotected_write": "无保护写入"},
   node: '节点',
   nodeName: '节点名称',

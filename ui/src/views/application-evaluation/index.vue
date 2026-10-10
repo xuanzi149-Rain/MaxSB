@@ -21,6 +21,30 @@
       </el-select>
       <el-button :disabled="!left || !right" @click="compare">比较运行</el-button>
     </div>
+    <el-card class="mb-12" shadow="never">
+      <h4>模型路由三组评测</h4>
+      <p>选择已启用路由的应用。三组共享题集、消息和输出契约；固定低成本组不升级。</p>
+      <el-select v-model="routingStrategy" aria-label="新建运行的模型策略" style="width: 220px">
+        <el-option label="沿用应用策略" value="" /><el-option label="固定低成本模型" value="low" />
+        <el-option label="始终高能力模型" value="high" /><el-option label="路由策略" value="routing" />
+      </el-select>
+      <p>上方基准选择低成本运行，对照选择高能力运行，下方选择路由运行。</p>
+      <el-select v-model="routedRun" aria-label="路由运行" style="width: 320px">
+        <el-option v-for="run in completed" :key="run.run_id" :value="run.run_id" :label="runLabel(run)" />
+      </el-select>
+      <el-button :disabled="!left || !right || !routedRun" @click="compareRouting">比较三组</el-button>
+      <template v-if="routingComparison">
+        <el-alert :closable="false" :type="routingComparison.cost_optimized ? 'success' : 'info'"
+          :title="routingComparison.cost_optimized ? '质量与实际费用门槛均通过' : '尚不能证明成本优化；核对人工评分、引用和完整费用'" />
+        <p v-if="routingComparison.reasons?.length">不可比较原因：{{ routingComparison.reasons.join('、') }}</p>
+        <el-table :data="routingRows" size="small">
+          <el-table-column prop="scenario" label="题型" /><el-table-column prop="role" label="策略" />
+          <el-table-column prop="accuracy" label="正确率" /><el-table-column prop="cost" label="每成功任务实际费用" />
+          <el-table-column prop="p95" label="P95（秒）" />
+        </el-table>
+        <p>升级率：{{ routingComparison.upgrade_rate ?? '未知' }}；未知计量不会按零处理。</p>
+      </template>
+    </el-card>
     <el-empty v-if="!runs.length" description="尚无评测运行。创建开发集运行，建立第一份基线。" />
     <template v-if="detail">
       <div class="metadata">
@@ -85,6 +109,9 @@ const canEdit = computed(() => hasPermission([
   PermissionConst.APPLICATION_EDIT.getWorkspacePermissionWorkspaceManageRole(),
   RoleConst.WORKSPACE_MANAGE.getWorkspaceRole(), RoleConst.ADMIN,
 ], 'OR'))
+const routedRun = ref(''), routingStrategy = ref(''), routingComparison = ref<any>(null)
+const routingRows = computed(() => Object.entries(routingComparison.value?.by_scenario || {}).flatMap(([scenario, groups]) => Object.entries(groups as Record<string, any>).map(([role, summary]) => ({ scenario, role, accuracy: summary.accuracy ?? '未知', cost: summary.cost_per_success ?? '未知', p95: summary.p95_seconds ?? '未知' }))))
+async function compareRouting() { routingComparison.value = (await api.compareRouting(id.value, left.value, right.value, routedRun.value)).data }
 const runs = ref<any[]>([]), detail = ref<any>(null), comparison = ref<any>(null)
 const left = ref(''), right = ref(''), dataset = ref('dev-v1'), creating = ref(false), filter = ref('all')
 const citationTotal = ref<number | undefined>(undefined), citationSupported = ref<number | undefined>(undefined)
@@ -95,7 +122,7 @@ const runLabel = (r: any) => `${r.created_at?.slice(0, 16)} · ${r.dataset_versi
 const reviewLabel = (r: any) => typeof r?.review?.correct === 'boolean' ? (r.review.correct ? '正确' : '错误') : '待复核'
 async function refresh() { runs.value = (await api.list(id.value)).data; if (left.value) await loadDetail() }
 async function loadDetail() { comparison.value = null; if (left.value) detail.value = (await api.detail(id.value, left.value)).data }
-async function create() { creating.value = true; try { const r = await api.create(id.value, dataset.value); left.value = r.data.run_id; await refresh() } finally { creating.value = false } }
+async function create() { creating.value = true; try { const r = await api.create(id.value, dataset.value, routingStrategy.value); left.value = r.data.run_id; await refresh() } finally { creating.value = false } }
 async function compare() { comparison.value = (await api.compare(id.value, left.value, right.value)).data }
 async function saveReview(caseId: string) {
   if (!reviewReason.value.trim()) return

@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "routing",
+  "case_id": "classify",
+  "question": "分类这个评价为正面或负面：服务很好，下次还来。",
+  "answer": "{\n  \"answer\": \"正面\"\n}",
+  "status": "success",
+  "elapsed_seconds": 0.9392471250030212,
+  "model_routing": {
+    "task_id": "1c82f07e-b73b-4436-b40b-34615919898f",
+    "rule_id": "simple_structured",
+    "rule_version": "1",
+    "reason": "Explicit extraction or classification with output contract",
+    "selected_role": "low",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "6b72a0f9-3c31-406c-8333-25ae1d506def",
+        "role": "low",
+        "model_id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+        "model_name": "qwen3.7-plus",
+        "started_at": "2026-10-10T11:54:00.248775+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 46,
+          "output_tokens": 11,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "qwen3.7-plus",
+        "ended_at": "2026-10-10T11:54:01.186269+00:00",
+        "elapsed_seconds": 0.9375345419975929,
+        "priced_cost": "0.00018",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "price_basis": "public_list_price_not_token_plan_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 46,
+      "output_tokens": 11
+    },
+    "priced_cost": "0.00018",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}
