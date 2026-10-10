@@ -1,0 +1,60 @@
+{
+  "context_tests": {
+    "count": 63,
+    "exit_code": 0
+  },
+  "retrieval_and_report_tests": {
+    "count": 11,
+    "exit_code": 0
+  },
+  "django_application_tests": {
+    "count": 32,
+    "exit_code": 0
+  },
+  "vue_type_check": {
+    "exit_code": 0
+  },
+  "admin_build": {
+    "exit_code": 0,
+    "initial_attempt": "heap out of memory; retried with 8192 MiB"
+  },
+  "ruff": {
+    "exit_code": 0
+  },
+  "changed_new_and_config_components_eslint": {
+    "exit_code": 0
+  },
+  "full_eslint": {
+    "exit_code": 1,
+    "errors": 103,
+    "warnings": 1
+  },
+  "frozen_local_retrieval": {
+    "cases": 80,
+    "applicable_pairs": 68,
+    "tool_cases_excluded": 12,
+    "knowledge_unchanged": true,
+    "evidence_regressions": [
+      "frozen-021"
+    ]
+  },
+  "external_model_evaluation": {
+    "status": "completed after explicit user authorization",
+    "applicable_pairs": 68,
+    "successful_frozen_model_requests": 422,
+    "successful_smoke_requests": 2,
+    "input_tokens_relative_change": 0.038250689898402405,
+    "output_tokens_relative_change": 0.182122204417195,
+    "actual_bill": null,
+    "human_correctness_and_citation_review": "pending",
+    "evidence": "real-verification.json"
+  },
+  "quality_acceptance": "not passed",
+  "revision_2": {
+    "implementation": "complete",
+    "tests_passed": 123,
+    "validation": "limited paired evaluation complete; formal human review pending",
+    "report": "revision-2/report.md",
+    "default_enabled": false
+  }
+}

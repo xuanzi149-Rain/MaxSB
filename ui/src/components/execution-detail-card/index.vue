@@ -43,6 +43,7 @@
     </div>
     <el-collapse-transition>
       <div class="mt-12" v-if="data['show']">
+        <RetrievalBudgetDetails :data="data.retrieval_budget" :raw="data.retrieved_paragraph_list" :output="data.data ?? data.result" />
         <ContextProcessingDetails :data="data.context_processing" />
         <template v-if="data.status === 200 || data.type == WorkflowType.LoopNode">
           <!-- 开始 -->
@@ -194,6 +195,15 @@
           </template>
           <!-- AI 对话 -->
           <template v-if="data.type == WorkflowType.AiChat">
+            <div v-if="data.dialogue_policy?.enabled" class="card-never border-r-6 mb-8">
+              <h5 class="p-8-12">轻量对话上下文</h5>
+              <div class="p-8-12 border-t-dashed lighter">
+                移除重复资料 {{ data.dialogue_policy.removed_contexts }} 处，
+                {{ data.dialogue_policy.removed_chars }} 字符；
+                简短回应：{{ data.dialogue_policy.brief_response ? '是' : '否' }}。
+                字符数不代表实际 token 或费用。
+              </div>
+            </div>
             <div class="card-never border-r-6">
               <h5 class="p-8-12">
                 {{ $t('views.application.form.roleSettings.label') }}
@@ -1431,6 +1441,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
+import RetrievalBudgetDetails from '@/components/retrieval-policy/RetrievalBudgetDetails.vue'
 import ContextProcessingDetails from '@/components/context-policy/ContextProcessingDetails.vue'
 import { ref, computed, type PropType } from 'vue'
 import ParagraphCard from '@/components/ai-chat/component/knowledge-source-component/ParagraphCard.vue'

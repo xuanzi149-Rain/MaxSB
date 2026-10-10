@@ -1,0 +1,437 @@
+[
+  {
+    "case_id": "frozen-001",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "直接回答北站工作日16:00停止寄件，符合问题范围。",
+    "citations": [
+      {
+        "id": "F-north",
+        "supported": true,
+        "reason": "最终输入载有北站工作日寄件截止16:00，支持所引时间。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-002",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "准确回答南站单件限重15千克。",
+    "citations": [
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "最终输入明确南站单件限重15千克。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-003",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确否定现场付款，并说明仅接收预付运单。",
+    "citations": [
+      {
+        "id": "F-east",
+        "supported": true,
+        "reason": "最终输入明确仅接收预付运单且不提供现场付款。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-004",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "准确回答西站纸箱3元。",
+    "citations": [
+      {
+        "id": "F-west",
+        "supported": true,
+        "reason": "最终输入明确纸箱3元。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-005",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确解释已揽收表示包裹进入运输。",
+    "citations": [
+      {
+        "id": "F-track",
+        "supported": true,
+        "reason": "最终输入明确该状态含义。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-006",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确否定标签替代缓冲材料，并完整说明双层包装与填充空隙。",
+    "citations": [
+      {
+        "id": "F-fragile",
+        "supported": true,
+        "reason": "最终输入同时支持不可替代、双层包装及填充空隙。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-007",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "准确回答取件码有效期48小时。",
+    "citations": [
+      {
+        "id": "F-code",
+        "supported": true,
+        "reason": "最终输入明确有效期48小时。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-008",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确区分自助柜与人工柜台，回答自助柜最长40厘米。",
+    "citations": [
+      {
+        "id": "F-locker",
+        "supported": true,
+        "reason": "最终输入明确自助柜最长40厘米。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-009",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "准确回答退件须保留原运单号。",
+    "citations": [
+      {
+        "id": "F-return",
+        "supported": true,
+        "reason": "最终输入明确退件保留原运单号。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-010",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确说明出库后不能直接修改，须申请拦截且不保证成功。",
+    "citations": [
+      {
+        "id": "F-change",
+        "supported": true,
+        "reason": "最终输入明确这三项限制。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-011",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确采用节假日特殊安排，回答南站10:00—15:00开放。",
+    "citations": [
+      {
+        "id": "F-holiday",
+        "supported": true,
+        "reason": "最终输入明确南站节假日开放时间及优先规则。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-012",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确要求先补全缺失寄件日期且不猜测。",
+    "citations": [
+      {
+        "id": "F-lost",
+        "supported": true,
+        "reason": "最终输入要求缺少查询信息先询问补全、不猜测。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-013",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "分别识别北站周末关闭与南站15千克限重，正确判断两站均不可寄18千克包裹。",
+    "citations": [
+      {
+        "id": "F-dupe",
+        "supported": true,
+        "reason": "最终输入明确北站周末不开放。"
+      },
+      {
+        "id": "F-north",
+        "supported": true,
+        "reason": "最终输入明确北站周末关闭。"
+      },
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "最终输入支持每日开放及15千克上限，18千克超重推论正确。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-014",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "虽选对南站且重量判断正确，但把节假日截止误用为18:00，缺失15:00特殊安排；北站节假日关闭也未获实际输入支持。",
+    "citations": [
+      {
+        "id": "F-dupe",
+        "supported": false,
+        "reason": "最终输入有该来源，但仅说明周末关闭，不能支持所引“周末及节假日不开放”。"
+      },
+      {
+        "id": "F-north",
+        "supported": false,
+        "reason": "最终输入有该来源，但仅说明周末关闭，不支持节假日断言。"
+      },
+      {
+        "id": "F-south",
+        "supported": false,
+        "reason": "来源虽在输入且支持15千克，但不支持将普通18:00截止应用于节假日；完整语料规定节假日至15:00。"
+      },
+      {
+        "id": "F-notice-old",
+        "supported": true,
+        "reason": "最终输入明确旧版17:00已被2025版替代，支持所引旧规则失效说明。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-015",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确判断6千克超过自助柜5千克上限，且北站周末关闭。",
+    "citations": [
+      {
+        "id": "F-locker",
+        "supported": true,
+        "reason": "最终输入载有自助柜5千克上限，支持超重判断。"
+      },
+      {
+        "id": "F-dupe",
+        "supported": true,
+        "reason": "最终输入明确北站工作日开放、周末不开放。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-016",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "完整说明免费填充物与双层包装、填空隙要求；对数量是否足够保留判断，未编造供应量。",
+    "citations": [
+      {
+        "id": "F-west",
+        "supported": true,
+        "reason": "最终输入明确西站填充物免费。"
+      },
+      {
+        "id": "F-fragile",
+        "supported": true,
+        "reason": "最终输入支持双层包装、填充空隙及标签不能替代缓冲；后文为条件性建议。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-017",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "说明50小时取件码过期并需重生成，但漏掉领取还需运单尾号4位；将待揽收不能证明交付升级为确定尚未到达也无依据。",
+    "citations": [
+      {
+        "id": "F-code",
+        "supported": true,
+        "reason": "最终输入明确48小时有效期及过期重生成，支持50小时已过期。"
+      },
+      {
+        "id": "F-track",
+        "supported": false,
+        "reason": "来源在输入中，但仅说待揽收不代表已交付，不能证明“包裹尚未到达可领取状态”的确定结论。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-018",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "已给出确实出库时需拦截且不保证成功，但未要求核实相互冲突的状态；额外解释通常出库意味着离开始发地，实际输入无此依据。",
+    "citations": [
+      {
+        "id": "F-track",
+        "supported": true,
+        "reason": "最终输入支持所引待揽收与已揽收含义；后续通常出库的解释不在该来源中，单独计入答案缺陷。"
+      },
+      {
+        "id": "F-change",
+        "supported": true,
+        "reason": "最终输入明确已出库不可直接改目的地、须申请拦截且不保证成功。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-019",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "准确要求补全地址及投诉站点、日期，但漏掉验收要求的保留原运单号和注明退件原因。",
+    "citations": [
+      {
+        "id": "F-return",
+        "supported": true,
+        "reason": "最终输入支持先联系寄件人补全地址。"
+      },
+      {
+        "id": "F-service",
+        "supported": true,
+        "reason": "最终输入支持投诉须站点名称与事件日期。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-020",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确区分企业月结与个人寄件，明确个人逐单付款。",
+    "citations": [
+      {
+        "id": "F-scope-a",
+        "supported": true,
+        "reason": "最终输入明确签约企业月结不适用于个人寄件。"
+      },
+      {
+        "id": "F-scope-b",
+        "supported": true,
+        "reason": "最终输入明确个人逐单付款、不支持月结。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-021",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "体积及计费重量12千克计算正确；实际输入漏检南站资料，拒答其限重虽谨慎，但应用级验收仍缺少10千克不超过15千克的必要结论。",
+    "citations": [
+      {
+        "id": "F-volume",
+        "supported": true,
+        "reason": "最终输入有体积公式及取较大者规则，60×40×30÷6000=12计算正确；[资料不足]为状态标签，不是证据ID。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-022",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确识别9件不满上门10件门槛及18千克超过南站15千克限制；预约段虽标题简略，正文用“若”限定，未确定断言用户未预约。",
+    "citations": [
+      {
+        "id": "F-bulk",
+        "supported": true,
+        "reason": "最终输入支持满10件和提前24小时规则；9件不满足数量要求，时间要求以条件句说明。"
+      },
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "最终输入明确15千克上限，支持18千克超重判断。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-023",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "完整区分寄件18:00、客服工作日17:00结束，以及投诉所需站点和事件日期；对截止边界提示确认而未确定断言。",
+    "citations": [
+      {
+        "id": "F-notice-new",
+        "supported": true,
+        "reason": "最终输入明确2025版南站截止18:00。"
+      },
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "最终输入明确18:00截止；边界是否允许寄件被写为需确认的解释，不冒充已明确的规则。"
+      },
+      {
+        "id": "F-service",
+        "supported": true,
+        "reason": "最终输入支持工作日09:00—17:00在线及投诉须站点、日期；18:00超出在线时段的推论成立。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-024",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "正确否定预付运单可绕过专用渠道要求，但缺少验收关键事实“须申报电池类型”。",
+    "citations": [
+      {
+        "id": "F-battery",
+        "supported": true,
+        "reason": "最终输入支持电池仅走专用渠道、普通渠道不接收。"
+      },
+      {
+        "id": "F-east",
+        "supported": true,
+        "reason": "最终输入支持东站仅接收预付运单。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  }
+]

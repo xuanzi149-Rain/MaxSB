@@ -1,0 +1,52 @@
+{
+  "records": 160,
+  "knowledge_unchanged": true,
+  "scope": "production retrieval node + real model; no reranker connected; tools excluded",
+  "strategies": {
+    "fixed": {
+      "cases": 68,
+      "success": 68,
+      "failed_case_ids": [],
+      "model_calls_recorded": 211,
+      "input_tokens_coverage": 68,
+      "input_tokens_total": 161618,
+      "input_tokens_mean_per_case": 2376.735294117647,
+      "output_tokens_coverage": 68,
+      "output_tokens_total": 14353,
+      "output_tokens_mean_per_case": 211.0735294117647,
+      "p95_case_elapsed_ms": 27766.851137996127,
+      "actual_cost": null
+    },
+    "dynamic": {
+      "cases": 68,
+      "success": 68,
+      "failed_case_ids": [],
+      "model_calls_recorded": 211,
+      "input_tokens_coverage": 68,
+      "input_tokens_total": 167800,
+      "input_tokens_mean_per_case": 2467.6470588235293,
+      "output_tokens_coverage": 68,
+      "output_tokens_total": 16967,
+      "output_tokens_mean_per_case": 249.51470588235293,
+      "p95_case_elapsed_ms": 49594.349813996814,
+      "actual_cost": null
+    }
+  },
+  "evidence_recall_regressions": [
+    "frozen-021"
+  ],
+  "input_tokens_relative_change": 0.038250689898402405,
+  "output_tokens_relative_change": 0.182122204417195,
+  "budget": {
+    "request_delta": 424,
+    "reservation_delta_cny": "19.769043",
+    "reserved_after_cny": "42.146568",
+    "limit_cny": "300",
+    "actual_bill": null
+  },
+  "successful_calls_plus_smoke": 424,
+  "ledger_request_count_matches": true,
+  "turns_at_output_limit": [],
+  "human_correctness_and_citation_review": "pending",
+  "runtime_source_archive_matches_snapshot": true
+}

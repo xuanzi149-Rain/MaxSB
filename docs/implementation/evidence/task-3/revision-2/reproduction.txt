@@ -1,0 +1,32 @@
+Runtime: existing maxkb-task0 container; isolated source /tmp/maxsb-task3.
+Do not modify /opt/maxkb-app or published application settings.
+
+Shared budget: MAXSB_EVALUATION_BUDGET_FILE=/tmp/maxsb-eval/task1-budget.json
+Existing cumulative cap: 300 CNY conservative reservation (not an invoice).
+Endpoint/model: token-plan.cn-beijing.maas.aliyuncs.com / qwen3.7-plus.
+
+From /tmp/maxsb-task3, use /opt/py3/bin/python with PYTHONPATH=apps:
+docs/implementation/scripts/run_task3_comparison.py \
+  --dataset-dir docs/implementation/evidence/task-3/revision-2/inputs \
+  --evaluation-module /tmp/maxsb-eval/apps/application/evaluation \
+  --baseline /tmp/maxsb-eval/task1-results/sealed-v1/frozen-baseline.json \
+  --split acceptance-v2 --output NEW_DIRECTORY --history-mode shared
+
+Free conversation run 1: replace --history-mode shared with --dialogue-policy.
+Free conversation run 2: also add --strategy-order dynamic-first.
+Each output directory must be new. Do not overwrite recorded runs.
+Runs use the saved main entrypoint via runpy, then flush stdout/stderr and os._exit(0)
+after main returns, to avoid the known dependency interpreter-shutdown hang.
+This does not bypass exceptions or interrupt evaluation before completion.
+
+Source archives match the per-file snapshot digests. Shared-source serializer precedes
+an optional-reference allow_null fix; free-source contains that fix. Retrieval policy,
+dialogue processing and evaluator are identical across the three acceptance runs.
+No acceptance-score-driven policy changes were made between these runs.
+
+Offline verification (no API calls): python3 verify-comparison.py
+Unit tests: PYTHONPATH=apps python3 -m unittest discover -s tests/retrieval -v
+Context tests: PYTHONPATH=apps python3 -m unittest discover -s tests/context -v
+Django: PYTHONPATH=apps /opt/py3/bin/python /tmp/maxsb-task3-test-runner.py application
+Frontend: vue-tsc --build, vite build --outDir /private/tmp/maxsb-task3-v2-admin,
+ESLint full tree and changed AI node; bundled Node used with 8192 MiB for Vite.

@@ -176,6 +176,20 @@
             :step-strictly="true"
           />
         </el-form-item>
+        <el-form-item label="轻量对话上下文">
+          <el-switch v-model="chat_data.dialogue_policy_enabled" />
+          <el-text type="info">明确的寒暄和会话安排仅简短回应；业务问题保持正常回答。</el-text>
+        </el-form-item>
+        <el-form-item v-if="chat_data.dialogue_policy_enabled" label="检索资料来源（可选）">
+          <NodeCascader
+            :nodeModel="nodeModel"
+            v-model="chat_data.dialogue_context_reference"
+            class="w-full"
+            placeholder="选择当前提示词使用的检索或重排文本"
+          />
+          <el-text type="info">节点历史中，仅移除与当前资料完全相同的旧资料；保留用户原话和回答。
+            指代追问及来源不明时保留完整历史。工作流历史保持原样。</el-text>
+        </el-form-item>
         <div class="flex" style="justify-content: space-between">
           {{ t('workflow.nodes.aiChatNode.vision.label') }}
           <el-switch size="small" v-model="vision" />
@@ -705,6 +719,8 @@ const form = {
   system: '',
   prompt: defaultPrompt,
   dialogue_number: 1,
+  dialogue_policy_enabled: false,
+  dialogue_context_reference: [],
   is_result: true,
   temperature: null,
   max_tokens: null,

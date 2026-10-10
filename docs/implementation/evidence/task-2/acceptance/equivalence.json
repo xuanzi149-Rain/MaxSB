@@ -1,0 +1,41 @@
+{
+  "dataset_cases": 80,
+  "applicable_cases": 68,
+  "tool_cases_not_applicable": 12,
+  "paired_retrieval_records": 136,
+  "paired_turns": 211,
+  "context_off_on_equal": true,
+  "reconstructed_full_prompts_equal_to_reused_run": true,
+  "knowledge_unchanged": true,
+  "removed_paragraphs": 0,
+  "online_semantic_judge_calls": 0,
+  "missing_required_evidence_cases": [
+    "frozen-014",
+    "frozen-015",
+    "frozen-021",
+    "frozen-032"
+  ],
+  "causal_input_reduction_tokens": 0,
+  "reused_run_only": {
+    "input_tokens": 161618,
+    "output_tokens": 14353,
+    "p95_case_elapsed_ms": 27766.851137996127
+  },
+  "independent_new_off_on_model_runs": false,
+  "human_review": "pending",
+  "actual_bill": null,
+  "required_evidence_recall": {
+    "scored_cases": 60,
+    "macro_mean": 0.9583333333333334
+  },
+  "fresh_retrieval_only": {
+    "off": {
+      "mean_case_ms": 345.8971141169647,
+      "p95_case_ms": 1457.7002100122627
+    },
+    "on": {
+      "mean_case_ms": 375.9103132503215,
+      "p95_case_ms": 1491.493668028852
+    }
+  }
+}

@@ -1,0 +1,285 @@
+[
+  {
+    "case_id": "frozen-065",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确采用2025版18:00并说明替代2024版17:00；没有把旧规则作为现行依据。",
+    "citations": [
+      {
+        "id": "F-notice-new",
+        "supported": true,
+        "reason": "输入明确2025版18:00替代2024版17:00，支持版本及截止时间判断。"
+      },
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "输入明确南站每日开放、18:00截止、15千克限重，支持相邻南站事实；不证明存在电池专用渠道。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-066",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "明确限定现行时间规则，说明2025版18:00截止，17:30未超时；此处不会拒收按题目的时间条件理解，不扩展为所有收件条件。",
+    "citations": [
+      {
+        "id": "F-notice-new",
+        "supported": true,
+        "reason": "输入明确2025版18:00替代2024版17:00，支持版本及截止时间判断。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-067",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确应用节假日优先规则，周三为节假日时北站关闭；附带两份临时柜台公告虽无关，但准确复述且未用其推翻明确规则。",
+    "citations": [
+      {
+        "id": "F-holiday",
+        "supported": true,
+        "reason": "输入明确北站节假日关闭、南站10:00—15:00开放且节假日优先，支持对应判断。"
+      },
+      {
+        "id": "F-uncertain-a",
+        "supported": true,
+        "reason": "输入公告甲明确周三开放、无日期且无替代说明，支持对公告甲及冲突不确定性的描述。"
+      },
+      {
+        "id": "F-uncertain-b",
+        "supported": true,
+        "reason": "输入公告乙明确周三关闭、无日期且无替代说明，支持对公告乙及冲突不确定性的描述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-068",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "指出节假日10:00—15:00开放并优先于普通安排，因而08:00不能办理，完整满足问题。",
+    "citations": [
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "输入明确南站每日开放、18:00截止、15千克限重，支持相邻南站事实；不证明存在电池专用渠道。"
+      },
+      {
+        "id": "F-holiday",
+        "supported": true,
+        "reason": "输入明确北站节假日关闭、南站10:00—15:00开放且节假日优先，支持对应判断。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-069",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "区分签约企业与个人的适用范围，分别说明月结与逐单付款，正确判断不矛盾。",
+    "citations": [
+      {
+        "id": "F-scope-a",
+        "supported": true,
+        "reason": "输入限定签约企业月结且排除个人，支持适用范围区分。"
+      },
+      {
+        "id": "F-scope-b",
+        "supported": true,
+        "reason": "输入明确个人逐单付款、不支持月结，支持对应个人规则。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-070",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "没有擅定开关，明确两公告直接冲突且缺少发布日期和替代说明；所列缺失信息等价指出需核实生效优先级后才可判断。",
+    "citations": [
+      {
+        "id": "F-uncertain-a",
+        "supported": true,
+        "reason": "输入公告甲明确周三开放、无日期且无替代说明，支持对公告甲及冲突不确定性的描述。"
+      },
+      {
+        "id": "F-uncertain-b",
+        "supported": true,
+        "reason": "输入公告乙明确周三关闭、无日期且无替代说明，支持对公告乙及冲突不确定性的描述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-071",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "明确不能从填充物免费推导纸箱免费，正确给出纸箱3元。",
+    "citations": [
+      {
+        "id": "F-west",
+        "supported": true,
+        "reason": "输入明确纸箱3元及填充物免费，支持费用陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-072",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确区分自助柜40厘米与人工柜台100厘米，否定跨对象继承。",
+    "citations": [
+      {
+        "id": "F-locker",
+        "supported": true,
+        "reason": "输入明确自助柜5千克40厘米、人工柜台20千克100厘米，支持尺寸重量比较及给定包裹的推论。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-073",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "代码围栏内是合法JSON对象，max_kg为整数15，符合南站限重。题面未要求只输出裸JSON，围栏按展示格式接受；若下游要求整段直接JSON解析则需另立严格格式指标。",
+    "citations": [],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-074",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "仅返回包含取件码和运单尾号4位的数组，无额外文本，满足事实和只返回数组的要求；JSON数组括号不是证据引用。",
+    "citations": [],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-075",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "首行分类为未确认交付，解释准确区分创建运单与已交付且有依据。题面未明确只输出标签，接受附带说明；严格枚举消费接口需另行限定。",
+    "citations": [
+      {
+        "id": "F-track",
+        "supported": true,
+        "reason": "输入明确待揽收仅表示已创建运单而非已交付，支持分类。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-076",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "price为3、currency为元，与资料的3元及预期CNY在本中文合成语料中语义等价；题面未指定ISO代码且rubric允许等价表达，故接受。输出带JSON围栏和引用，不可当作裸JSON直接解析，此为格式口径限制。",
+    "citations": [
+      {
+        "id": "F-west",
+        "supported": true,
+        "reason": "输入明确纸箱3元及填充物免费，支持费用陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-077",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "北站周日关闭、南站18千克超15千克及电池专用渠道三个关键事实均正确；但综合结论额外断言南站符合电池专用渠道要求，资料从未说明南站提供该渠道。按不得添加无依据断言的rubric判不通过。",
+    "citations": [
+      {
+        "id": "F-north",
+        "supported": true,
+        "reason": "输入明确北站周末关闭，支持周日无法在北站寄件。"
+      },
+      {
+        "id": "F-south",
+        "supported": true,
+        "reason": "输入明确南站每日开放、18:00截止、15千克限重，支持相邻南站事实；不证明存在电池专用渠道。"
+      },
+      {
+        "id": "F-battery",
+        "supported": true,
+        "reason": "输入明确电池专用渠道、申报类型及普通渠道不收，支持渠道要求段落，未证明具体站点提供该渠道。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-078",
+    "reviewer": "Codex AI",
+    "correct": false,
+    "reasoning": "上门满10件且提前24小时、双层包装填空隙、纸箱3元及填充物免费均正确；但题目仅要求使用西站材料，回答却额外要求所有包裹必须非冷藏件。西站不接收冷藏件不能推出购买其材料并另行上门寄送也禁止冷藏件，适用范围扩展使答案不通过。",
+    "citations": [
+      {
+        "id": "F-bulk",
+        "supported": true,
+        "reason": "输入明确满10件可预约上门且提前24小时，支持12件具备数量资格与提前预约要求。"
+      },
+      {
+        "id": "F-fragile",
+        "supported": true,
+        "reason": "输入明确双层包装填充空隙且标签不能代替缓冲，支持易碎件包装要求。"
+      },
+      {
+        "id": "F-west",
+        "supported": false,
+        "reason": "输入确实支持西站纸箱3元、填充物免费和西站不收冷藏件；但同一引用又被用于要求仅使用西站材料并预约上门的包裹必须非冷藏，超出证据适用范围。按同一ID任一引用用途不支持则该ID不通过。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-079",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "分别处理出库后改址和地址不全退件；完整保留拦截不保证成功、原运单号、退件原因及先补全寄件人地址。",
+    "citations": [
+      {
+        "id": "F-change",
+        "supported": true,
+        "reason": "输入明确出库后不可直接改目的地、须拦截且不保证成功，支持改址处理。"
+      },
+      {
+        "id": "F-return",
+        "supported": true,
+        "reason": "输入明确保留运单、登记退件原因、地址不全先联系补全，支持退件处理。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "frozen-080",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "完整比较5千克/40厘米与20千克/100厘米，并正确判定6千克50厘米同时超过自助柜两项限制、符合人工柜台两项限制；只能选择按题目给定两种渠道理解。",
+    "citations": [
+      {
+        "id": "F-locker",
+        "supported": true,
+        "reason": "输入明确自助柜5千克40厘米、人工柜台20千克100厘米，支持尺寸重量比较及给定包裹的推论。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  }
+]

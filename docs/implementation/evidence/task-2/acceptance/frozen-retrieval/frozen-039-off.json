@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-039",
+  "scenario": "no_evidence",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "遗失包裹一定赔多少钱？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 80.16070899611805,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5048179186609322,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-301aadbe8af8",
+            "content": "[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。",
+            "title": "F-change",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.138705+0800\", \"2\": \"2026-10-09 15:27:52.265757+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-300b0eb6429f",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-change",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4878180637576539,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.44782765766877497,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcd-7db2-a210-2253364b0d88",
+            "content": "[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。",
+            "title": "F-track",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.017919+0800\", \"2\": \"2026-10-09 15:27:51.330673+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcd-7db2-a210-22477d429d00",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-track",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.43771040439605713,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+            "content": "[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+            "title": "F-bulk",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.858472+0800\", \"2\": \"2026-10-09 15:27:53.004019+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76477f50d458",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-bulk",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.42497554868605514,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-change\n[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。\n#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。\n#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+        "directly_return": "",
+        "question": "遗失包裹一定赔多少钱？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-change\n[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。\n#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。\n#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。\n用户问题：遗失包裹一定赔多少钱？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-bulk",
+    "F-change",
+    "F-lost",
+    "F-return",
+    "F-track"
+  ],
+  "elapsed_ms": 80.21470899984706,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "reviewer_type": "AI, not human signoff",
+  "frozen": {
+    "cases": 68,
+    "correct": 48,
+    "accuracy": 0.7058823529411765,
+    "unique_citations_per_answer": 127,
+    "supported_citations": 120,
+    "uncertain_citations": 0,
+    "failed_case_ids": [
+      "frozen-014",
+      "frozen-017",
+      "frozen-018",
+      "frozen-019",
+      "frozen-021",
+      "frozen-024",
+      "frozen-032",
+      "frozen-041",
+      "frozen-042",
+      "frozen-044",
+      "frozen-045",
+      "frozen-046",
+      "frozen-047",
+      "frozen-048",
+      "frozen-049",
+      "frozen-050",
+      "frozen-051",
+      "frozen-052",
+      "frozen-077",
+      "frozen-078"
+    ]
+  },
+  "by_scenario": {
+    "direct": {
+      "cases": 12,
+      "correct": 12,
+      "accuracy": 1.0,
+      "unique_citations_per_answer": 12,
+      "supported_citations": 12,
+      "uncertain_citations": 0,
+      "failed_case_ids": []
+    },
+    "multi_evidence": {
+      "cases": 12,
+      "correct": 6,
+      "accuracy": 0.5,
+      "unique_citations_per_answer": 27,
+      "supported_citations": 23,
+      "uncertain_citations": 0,
+      "failed_case_ids": [
+        "frozen-014",
+        "frozen-017",
+        "frozen-018",
+        "frozen-019",
+        "frozen-021",
+        "frozen-024"
+      ]
+    },
+    "duplicate": {
+      "cases": 8,
+      "correct": 7,
+      "accuracy": 0.875,
+      "unique_citations_per_answer": 14,
+      "supported_citations": 14,
+      "uncertain_citations": 0,
+      "failed_case_ids": [
+        "frozen-032"
+      ]
+    },
+    "no_evidence": {
+      "cases": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "unique_citations_per_answer": 26,
+      "supported_citations": 26,
+      "uncertain_citations": 0,
+      "failed_case_ids": []
+    },
+    "conversation": {
+      "cases": 12,
+      "correct": 1,
+      "accuracy": 0.08333333333333333,
+      "unique_citations_per_answer": 23,
+      "supported_citations": 21,
+      "uncertain_citations": 0,
+      "failed_case_ids": [
+        "frozen-041",
+        "frozen-042",
+        "frozen-044",
+        "frozen-045",
+        "frozen-046",
+        "frozen-047",
+        "frozen-048",
+        "frozen-049",
+        "frozen-050",
+        "frozen-051",
+        "frozen-052"
+      ]
+    },
+    "conflict": {
+      "cases": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "unique_citations_per_answer": 14,
+      "supported_citations": 14,
+      "uncertain_citations": 0,
+      "failed_case_ids": []
+    },
+    "routing": {
+      "cases": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "unique_citations_per_answer": 11,
+      "supported_citations": 10,
+      "uncertain_citations": 0,
+      "failed_case_ids": [
+        "frozen-077",
+        "frozen-078"
+      ]
+    }
+  },
+  "historical_semantic": {
+    "cases": 24,
+    "correct": 24,
+    "accuracy": 1.0,
+    "unique_citations_per_answer": 36,
+    "supported_citations": 36,
+    "uncertain_citations": 0,
+    "failed_case_ids": []
+  },
+  "human_review": "pending",
+  "applicable_review_coverage": "68/68",
+  "overall_review_coverage": "68/80; 12 tool cases not applicable"
+}

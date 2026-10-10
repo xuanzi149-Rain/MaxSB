@@ -1,0 +1,6 @@
+
+/Users/wangzixuan/Desktop/Github/MaxSB/ui/src/components/execution-detail-card/index.vue
+    3:46  error  Unexpected mutation of "data" prop  vue/no-mutating-props
+  572:28  error  Unexpected mutation of "data" prop  vue/no-mutating-props
+
+✖ 2 problems (2 errors, 0 warnings)

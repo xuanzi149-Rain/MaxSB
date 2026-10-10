@@ -64,6 +64,12 @@
             </el-col>
           </el-row>
         </el-form-item>
+        <el-form-item label="动态检索预算关联（可选）">
+          <NodeCascader :nodeModel="nodeModel" v-model="form_data.retrieval_budget_reference" class="w-full"
+            placeholder="选择上游检索节点的检索预算决策" />
+          <el-text type="info">关联后，重排内容须仅选择同节点的“原始检索候选”，问题须与检索问题一致。
+            未识别问题沿用固定重排设置；动态重排不可用时回退原排序。请在参数设置中启用最终上下文去重。</el-text>
+        </el-form-item>
         <el-form-item :label="$t('workflow.nodes.searchKnowledgeNode.searchParam')">
           <template #label>
             <div class="flex-between">
@@ -228,6 +234,7 @@ const ParamSettingDialogRef = ref<InstanceType<typeof ParamSettingDialog>>()
 
 const form = {
   reranker_reference_list: [[]],
+  retrieval_budget_reference: [],
   reranker_model_id: '',
   reranker_model_id_type: 'default',
   reranker_model_id_reference: [],
@@ -261,6 +268,9 @@ const wheel = (e: any) => {
 const form_data = computed({
   get: () => {
     if (props.nodeModel.properties.node_data) {
+      if (!props.nodeModel.properties.node_data.retrieval_budget_reference) {
+        set(props.nodeModel.properties.node_data, 'retrieval_budget_reference', [])
+      }
       if (!props.nodeModel.properties.node_data.reranker_model_id_type) {
         set(props.nodeModel.properties.node_data, 'reranker_model_id_type', 'custom')
       }

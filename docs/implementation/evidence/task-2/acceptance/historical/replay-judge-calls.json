@@ -1,0 +1,44 @@
+[
+  {
+    "a_id": "additional-exception-b",
+    "b_id": "additional-exception-a",
+    "input_tokens": 359,
+    "output_tokens": 124,
+    "seconds": 3.5850249599970994
+  },
+  {
+    "a_id": "additional-exception-a",
+    "b_id": "additional-exception-b",
+    "input_tokens": 359,
+    "output_tokens": 126,
+    "seconds": 3.2115447930045775
+  },
+  {
+    "a_id": "partial-overlap-b",
+    "b_id": "partial-overlap-a",
+    "input_tokens": 348,
+    "output_tokens": 107,
+    "seconds": 3.228697207996447
+  },
+  {
+    "a_id": "partial-overlap-a",
+    "b_id": "partial-overlap-b",
+    "input_tokens": 348,
+    "output_tokens": 99,
+    "seconds": 2.687597875999927
+  },
+  {
+    "a_id": "quoted-example-b",
+    "b_id": "quoted-example-a",
+    "input_tokens": 341,
+    "output_tokens": 102,
+    "seconds": 2.6563150430010865
+  },
+  {
+    "a_id": "quoted-example-a",
+    "b_id": "quoted-example-b",
+    "input_tokens": 341,
+    "output_tokens": 100,
+    "seconds": 2.3024786680034595
+  }
+]

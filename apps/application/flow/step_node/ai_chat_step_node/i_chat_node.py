@@ -26,6 +26,10 @@ class ChatNodeSerializer(serializers.Serializer):
     # 多轮对话数量
     dialogue_number = serializers.IntegerField(required=True, label=_("Number of multi-round conversations"))
 
+    dialogue_policy_enabled = serializers.BooleanField(required=False, default=False)
+    dialogue_context_reference = serializers.ListField(
+        required=False, child=serializers.CharField(), allow_empty=True, allow_null=True, max_length=2)
+
     is_result = serializers.BooleanField(required=False,
                                          label=_('Whether to return content'))
 

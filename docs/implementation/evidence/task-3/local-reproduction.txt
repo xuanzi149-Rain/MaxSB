@@ -1,0 +1,32 @@
+Runtime: existing maxkb-task0 container, Python 3.11, isolated source /tmp/maxsb-task3.
+The running /opt/maxkb-app service and published application settings were not overwritten.
+
+Local-only sealed retrieval command (output directory must not exist):
+cd /tmp/maxsb-task3
+PYTHONPATH=apps python docs/implementation/scripts/run_task3_comparison.py \
+  --retrieval-only \
+  --dataset-dir /tmp/maxsb-eval/docs/implementation/evaluation \
+  --evaluation-module /tmp/maxsb-eval/apps/application/evaluation \
+  --baseline /tmp/maxsb-eval/task1-results/sealed-v1/frozen-baseline.json \
+  --split frozen-v1 \
+  --output /tmp/maxsb-task3/frozen-local
+
+Do not reuse that existing output directory. The retained runtime-source.tar.gz records
+this measurement's exact source. Compare snapshot.json file hashes when reproducing.
+The task-1 dataset/helper paths are existing local evaluation artifacts, not repository dependencies.
+
+Final application tests (test runner saved alongside evidence):
+cd /tmp/maxsb-task3
+PYTHONPATH=apps python /tmp/maxsb-task3-test-runner.py application
+Result: 32 tests, OK, exit 0. No test database was used (SimpleTestCase).
+The helper exits from the completed runner's failure count after all test teardowns,
+avoiding the observed interpreter-shutdown hang. It does not skip failed tests.
+
+Frontend commands, run in ui, with desktop bundled Node executable:
+node node_modules/vue-tsc/bin/vue-tsc.js --build
+node --max-old-space-size=8192 node_modules/vite/bin/vite.js build --outDir /private/tmp/maxsb-task3-admin
+node node_modules/eslint/bin/eslint.js .
+Full ESLint: exit 1, 103 errors / 1 warning. Changed execution-detail card has 2 existing
+vue/no-mutating-props errors; HEAD baseline reproduces both. New/config components: exit 0.
+
+External answer-model mode remains unexecuted, pending explicit user authorization.

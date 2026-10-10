@@ -1,0 +1,28 @@
+{
+  "case_id": "v2-001",
+  "scenario": "direct",
+  "enabled": true,
+  "category": "simple",
+  "turns": [],
+  "actual_cost": null,
+  "status": "failed",
+  "answer": "",
+  "retrieved_evidence_ids": [],
+  "error": "APIConnectionError",
+  "elapsed_ms": 5516.326293996826,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 0.0,
+    "missing_evidence_ids": [
+      "F-west"
+    ],
+    "tool_complete": null,
+    "fact_mentions": [
+      false
+    ],
+    "review_status": "pending"
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "case_id": "frozen-038",
+  "scenario": "no_evidence",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "西站仓库门禁密码？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 80.69895800144877,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5453617464633631,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5223083211367405,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5198918271129244,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49873246241205194,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49761274499665387,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+        "directly_return": "",
+        "question": "西站仓库门禁密码？",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 197,
+          "estimated_retained_tokens": 197,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+              "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+              "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+              "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "reason": "retained"
+            }
+          ],
+          "semantic": {
+            "mode": "reviewed_cache_only",
+            "judge_calls": 0,
+            "approved_pair_count": 0,
+            "checks": [],
+            "actual_removed_count": 0,
+            "status": "no_approved_match"
+          }
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5453617464633631,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5223083211367405,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5198918271129244,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49873246241205194,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49761274499665387,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n用户问题：西站仓库门禁密码？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-dupe",
+    "F-locker",
+    "F-lost",
+    "F-north",
+    "F-south"
+  ],
+  "elapsed_ms": 80.75195800483925,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

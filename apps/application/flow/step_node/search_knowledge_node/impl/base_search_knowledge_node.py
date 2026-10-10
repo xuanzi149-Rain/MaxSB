@@ -7,12 +7,14 @@
     @desc:
 """
 import os
+from time import perf_counter
 from typing import List, Dict
 
 from django.db import connection
 from django.db.models import QuerySet
 
 from application.context.runtime import process_runtime_context
+from application.retrieval.policy import decide_retrieval
 from application.flow.i_step_node import NodeResult
 from application.flow.step_node.search_knowledge_node.i_search_knowledge_node import ISearchKnowledgeStepNode
 from common.config.embedding_config import VectorStore
@@ -75,6 +77,11 @@ class BaseSearchKnowledgeNode(ISearchKnowledgeStepNode):
             self.context['data'] = details['data']
             self.context['retrieved_paragraph_list'] = details.get('retrieved_paragraph_list', [])
 
+        if 'retrieval_budget' in details:
+            self.context['retrieval_budget'] = details['retrieval_budget']
+            self.context['retrieved_paragraph_list'] = details.get('retrieved_paragraph_list', [])
+            self.context['data'] = details['data']
+
     def get_reference_content(self, fields: List[str]):
         return self.workflow_manage.get_reference_field(fields[0], fields[1:]) if fields else None
 
@@ -86,6 +93,21 @@ class BaseSearchKnowledgeNode(ISearchKnowledgeStepNode):
         self.context['question'] = question
         self.context['show_knowledge'] = show_knowledge
 
+        started = perf_counter()
+        decision = decide_retrieval(question, knowledge_setting)
+
+        def empty_result(status):
+            result = get_none_result(question)
+            if decision is not None:
+                result.node_variable.update(
+                    retrieval_budget={**decision, 'status': status, 'raw_count': 0,
+                                      'retrieval_ms': (perf_counter() - started) * 1000},
+                    retrieved_paragraph_list=[], is_hit_handling_method_list=[])
+            return result
+
+        if decision is not None and not decision['retrieve']:
+            return empty_result('skipped')
+        top_n = decision['top_n'] if decision is not None else knowledge_setting.get('top_n')
         document_id_list = None
         if search_scope_type == 'referencing':  # 引用上一步知识库/文档
             if search_scope_source == 'knowledge':  # 知识库
@@ -106,7 +128,7 @@ class BaseSearchKnowledgeNode(ISearchKnowledgeStepNode):
         workspace_id = self.workflow_manage.get_body().get('workspace_id')
         knowledge_id_list = filter_authorized_ids('knowledge', knowledge_id_list, workspace_id)
         if len(knowledge_id_list) == 0:
-            return get_none_result(question)
+            return empty_result('empty_scope')
         model_id = get_embedding_id(knowledge_id_list)
         embedding_model = get_model_instance_by_model_workspace_id(model_id, workspace_id)
         embedding_value = embedding_model.embed_query(question)
@@ -117,25 +139,30 @@ class BaseSearchKnowledgeNode(ISearchKnowledgeStepNode):
                                         is_active=False)]
         embedding_list = vector.query(question, embedding_value, knowledge_id_list, document_id_list,
                                       exclude_document_id_list,
-                                      exclude_paragraph_id_list, True, knowledge_setting.get('top_n'),
+                                      exclude_paragraph_id_list, True, top_n,
                                       knowledge_setting.get('similarity'),
                                       SearchMode(knowledge_setting.get('search_mode')))
         # 手动关闭数据库连接
         connection.close()
         if embedding_list is None:
-            return get_none_result(question)
+            return empty_result('no_hits')
         paragraph_list = self.list_paragraph(embedding_list, vector)
         result = [self.reset_paragraph(paragraph, embedding_list) for paragraph in paragraph_list]
         result = sorted(result, key=lambda p: p.get('similarity'), reverse=True)
         extra = {}
+        if decision is not None:
+            extra = {'retrieval_budget': {**decision, 'status': 'retrieved' if result else 'no_hits',
+                                          'raw_count': len(result),
+                                          'retrieval_ms': (perf_counter() - started) * 1000},
+                     'retrieved_paragraph_list': result}
         if knowledge_setting.get('context_policy', {}).get('enabled') and not any(
                 row.get('is_hit_handling_method') for row in result):
             processed = process_runtime_context(result, knowledge_setting['context_policy'],
                                                 workspace_id=workspace_id,
                                         max_chars=knowledge_setting.get('max_paragraph_char_number', 5000),
                                         render=lambda p: f"{reset_title(p.get('title', ''))}{p.get('content')}")
-            extra = {'context_processing': processed['audit'], 'retrieved_paragraph_list': result,
-                     'data': processed['text']}
+            extra.update({'context_processing': processed['audit'], 'retrieved_paragraph_list': result,
+                          'data': processed['text']})
             result = processed['retained']
         return NodeResult({'paragraph_list': result,
                            'is_hit_handling_method_list': [row for row in result if row.get('is_hit_handling_method')],
@@ -197,6 +224,8 @@ class BaseSearchKnowledgeNode(ISearchKnowledgeStepNode):
             'paragraph_list': self.context.get('paragraph_list'),
             **({key: self.context.get(key) for key in ('context_processing', 'retrieved_paragraph_list', 'data')}
                if 'context_processing' in self.context else {}),
+            **({key: self.context.get(key) for key in ('retrieval_budget', 'retrieved_paragraph_list', 'data')}
+               if 'retrieval_budget' in self.context else {}),
             'type': self.node.type,
             'status': self.status,
             'err_message': self.err_message,

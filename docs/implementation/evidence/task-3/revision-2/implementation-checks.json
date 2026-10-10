@@ -1,0 +1,21 @@
+{
+  "pure_retrieval_tests": 23,
+  "context_tests": 63,
+  "application_tests": 37,
+  "application_test_status": "passed",
+  "typecheck_exit": 0,
+  "admin_build_exit": 0,
+  "ai_node_eslint_exit": 0,
+  "review": "Four independently reproduced boundary errors corrected before acceptance runs",
+  "full_eslint": {
+    "errors": 103,
+    "warnings": 1,
+    "baseline_unchanged": true
+  },
+  "ruff_new_and_changed_entrypoints": "passed",
+  "ruff_ai_node": {
+    "errors": 4,
+    "code": "E721",
+    "baseline_unchanged": true
+  }
+}

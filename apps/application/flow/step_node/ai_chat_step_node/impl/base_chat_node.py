@@ -32,6 +32,7 @@ from application.flow.i_step_node import INode, NodeResult
 from application.flow.step_node.ai_chat_step_node.i_chat_node import IChatNode
 from application.flow.tools import Reasoning, get_tools, mcp_response_generator
 from application.models import Application, ApplicationAccessToken, ApplicationApiKey
+from application.retrieval.dialogue import dialogue_guidance, prepare_history, response_guidance
 
 
 def _write_context(
@@ -162,6 +163,8 @@ class BaseChatNode(IChatNode):
         self.context["answer"] = details.get("answer")
         self.context["question"] = details.get("question")
         self.context["reasoning_content"] = details.get("reasoning_content")
+        for field in ("raw_question", "dialogue_context", "dialogue_policy"):
+            self.context[field] = details.get(field)
         self.context["exception_message"] = details.get("err_message")
         if self.node_params.get("is_result", False):
             self.answer_text = details.get("answer")
@@ -222,16 +225,38 @@ class BaseChatNode(IChatNode):
         self.context["model_setting"] = model_setting
         workspace_id = self.workflow_manage.get_body().get("workspace_id")
         chat_model = get_model_instance_by_model_workspace_id(model_id, workspace_id, **(model_params_setting or {}))
-        history_message = self.get_history_message(
-            history_chat_record, dialogue_number, dialogue_type, self.runtime_node_id
-        )
+        policy_enabled = kwargs.get("dialogue_policy_enabled", False)
+        raw_question = kwargs.get("question", "")
+        context_reference = kwargs.get("dialogue_context_reference") or []
+        dialogue_context = ""
+        if policy_enabled and len(context_reference) == 2:
+            value = self.workflow_manage.get_reference_field(context_reference[0], context_reference[1:])
+            if isinstance(value, str):
+                dialogue_context = value
+        question = self.generate_prompt_question(prompt, chat_model)
+        # Only treat explicitly referenced text actually present in this prompt as evidence.
+        if not isinstance(question.content, str) or question.content.count(dialogue_context) != 1:
+            dialogue_context = ""
+        history_message, policy_trace = self.prepare_dialogue_history(
+            history_chat_record, dialogue_number, dialogue_type, self.runtime_node_id,
+            dialogue_context, raw_question, policy_enabled)
+        self.context["raw_question"] = raw_question
+        self.context["dialogue_context"] = dialogue_context
+        self.context["dialogue_policy"] = policy_trace
         self.context["history_message"] = [
             {"content": message.content, "role": message.type}
             for message in (history_message if history_message is not None else [])
         ]
-        question = self.generate_prompt_question(prompt, chat_model)
         self.context["question"] = question.content
         system = self.workflow_manage.generate_prompt(system)
+        guidance = dialogue_guidance(raw_question, policy_enabled)
+        # Tool and multimodal nodes must retain their original execution instructions.
+        if (mcp_servers or mcp_tool_id or mcp_tool_ids or tool_ids or application_ids or skill_tool_ids
+                or not isinstance(question.content, str) or not raw_question or raw_question not in question.content):
+            guidance = ""
+        if guidance:
+            system = (system or "") + "\n" + guidance
+        policy_trace["brief_response"] = bool(guidance and response_guidance(raw_question, policy_enabled))
         self.context["system"] = system
         message_list = self.generate_message_list(question, history_message)
         self.context["message_list"] = message_list
@@ -519,6 +544,28 @@ class BaseChatNode(IChatNode):
         return str(self.workflow_manage.get_reference_field(fields[0], fields[1:])) if fields else ""
 
     @staticmethod
+    def prepare_dialogue_history(records, number, dialogue_type, runtime_id, context, question, enabled):
+        if not enabled or dialogue_type != "NODE":
+            return BaseChatNode.get_history_message(records, number, dialogue_type, runtime_id), {
+                "enabled": enabled, "removed_contexts": 0, "removed_chars": 0, "status": "preserved"}
+        turns = []
+        for record in (records[-number:] if number > 0 else []):
+            details = record.get_node_details_runtime_node_id(runtime_id)
+            if details is not None:
+                turns.append({"question": details.get("question"), "answer": details.get("answer"),
+                              "raw_question": details.get("raw_question"),
+                              "context": details.get("dialogue_context")})
+        turns, trace = prepare_history(turns, context, question, enabled)
+        messages = []
+        for turn in turns:
+            for cls, field in ((HumanMessage, "question"), (AIMessage, "answer")):
+                content = turn[field]
+                if isinstance(content, str):
+                    content = re.sub(r"<form_rander>.*?</form_rander>", "", content, flags=re.DOTALL)
+                messages.append(cls(content))
+        return messages, trace
+
+    @staticmethod
     def get_history_message(history_chat_record, dialogue_number, dialogue_type, runtime_node_id):
         start_index = len(history_chat_record) - dialogue_number
         history_message = reduce(
@@ -628,6 +675,9 @@ class BaseChatNode(IChatNode):
             "run_time": self.context.get("run_time"),
             "system": self.context.get("system"),
             "history_message": self.context.get("history_message"),
+            "raw_question": self.context.get("raw_question"),
+            "dialogue_context": self.context.get("dialogue_context"),
+            "dialogue_policy": self.context.get("dialogue_policy"),
             "question": self.context.get("question"),
             "answer": self.context.get("answer"),
             "reasoning_content": self.context.get("reasoning_content"),

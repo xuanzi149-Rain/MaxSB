@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-070",
+  "scenario": "conflict",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "两份无日期公告对临时柜台周三相反，应确定说开还是关？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 100.79716699692653,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7620480060577447,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+            "content": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+            "title": "F-uncertain-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:54.143122+0800\", \"2\": \"2026-10-09 15:27:54.307343+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7540602684021049,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+            "content": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+            "title": "F-holiday",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.275744+0800\", \"2\": \"2026-10-09 15:27:52.431038+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-holiday",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5747576102469938,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5527886113381492,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+            "content": "[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+            "title": "F-fragile",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.358731+0800\", \"2\": \"2026-10-09 15:27:51.662305+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fde0a933b3e3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-fragile",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5414781893180731,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+        "directly_return": "",
+        "question": "两份无日期公告对临时柜台周三相反，应确定说开还是关？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。\n用户问题：两份无日期公告对临时柜台周三相反，应确定说开还是关？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-fragile",
+    "F-holiday",
+    "F-lost",
+    "F-uncertain-a",
+    "F-uncertain-b"
+  ],
+  "elapsed_ms": 100.85162500035949,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

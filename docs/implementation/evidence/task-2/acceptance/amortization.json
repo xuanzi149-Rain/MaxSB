@@ -1,0 +1,102 @@
+{
+  "unit": "provider input + output token count; NOT currency or invoice",
+  "per_case": [
+    {
+      "case_id": "paraphrase-closed",
+      "mean_saved_per_hit": {
+        "input_tokens": 23.0,
+        "output_tokens": 20.0
+      },
+      "total_saved_per_hit": 43.0,
+      "cold_judge_tokens": 930,
+      "strict_positive_hits": 22
+    },
+    {
+      "case_id": "paraphrase-length",
+      "mean_saved_per_hit": {
+        "input_tokens": 20.0,
+        "output_tokens": 7.0
+      },
+      "total_saved_per_hit": 27.0,
+      "cold_judge_tokens": 891,
+      "strict_positive_hits": 34
+    },
+    {
+      "case_id": "paraphrase-limit",
+      "mean_saved_per_hit": {
+        "input_tokens": 21.0,
+        "output_tokens": 2.0
+      },
+      "total_saved_per_hit": 23.0,
+      "cold_judge_tokens": 902,
+      "strict_positive_hits": 40
+    },
+    {
+      "case_id": "paraphrase-negative",
+      "mean_saved_per_hit": {
+        "input_tokens": 18.0,
+        "output_tokens": 13.0
+      },
+      "total_saved_per_hit": 31.0,
+      "cold_judge_tokens": 872,
+      "strict_positive_hits": 29
+    },
+    {
+      "case_id": "paraphrase-period",
+      "mean_saved_per_hit": {
+        "input_tokens": 21.0,
+        "output_tokens": 13.0
+      },
+      "total_saved_per_hit": 34.0,
+      "cold_judge_tokens": 927,
+      "strict_positive_hits": 28
+    },
+    {
+      "case_id": "paraphrase-reservation",
+      "mean_saved_per_hit": {
+        "input_tokens": 25.0,
+        "output_tokens": 16.0
+      },
+      "total_saved_per_hit": 41.0,
+      "cold_judge_tokens": 935,
+      "strict_positive_hits": 23
+    }
+  ],
+  "target_six_judge_tokens": 5457,
+  "all_known_judge_calls": 42,
+  "all_known_judge_tokens": 19086,
+  "observed_paired_benchmark_saved_tokens": 398.0,
+  "net_vs_target_setup_tokens": -5059.0,
+  "net_vs_all_exploration_tokens": -18688.0,
+  "balanced_mean_saved_tokens_per_effective_hit": 33.166666666666664,
+  "conditional_target_strict_positive_hits_per_24h": 165,
+  "conditional_all_exploration_strict_positive_hits": 576,
+  "conditional_scenarios": [
+    {
+      "effective_hits_per_24h": 6,
+      "net_tokens": -5258.0
+    },
+    {
+      "effective_hits_per_24h": 30,
+      "net_tokens": -4462.0
+    },
+    {
+      "effective_hits_per_24h": 180,
+      "net_tokens": 513.0
+    },
+    {
+      "effective_hits_per_24h": 600,
+      "net_tokens": 14443.0
+    }
+  ],
+  "assumptions": [
+    "same six-case balanced mix and observed mean savings",
+    "same setup cost each 24-hour approval TTL; actual future costs may differ",
+    "effective hits only; frozen corpus had zero matches",
+    "output savings are observed stochastic results, not guaranteed causal savings"
+  ],
+  "real_long_term_traffic_observed": false,
+  "actual_bill": null,
+  "this_turn_new_model_requests": 2,
+  "this_turn_reservation_delta_cny": "0.080238"
+}

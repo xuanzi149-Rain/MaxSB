@@ -1,0 +1,405 @@
+{
+  "version": "acceptance-v2",
+  "split": "frozen",
+  "cases": [
+    {
+      "case_id": "v2-001",
+      "scenario": "direct",
+      "turns": [
+        "西站买纸箱需要多少钱？"
+      ],
+      "reference_answers": [
+        "纸箱3元。[F-west]"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "3元"
+      ],
+      "acceptable_answers": [
+        "3元"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-002",
+      "scenario": "direct",
+      "turns": [
+        "领取包裹需要出示哪些信息？"
+      ],
+      "reference_answers": [
+        "取件码与运单尾号4位。[F-code]"
+      ],
+      "required_evidence_ids": [
+        "F-code"
+      ],
+      "expected_facts": [
+        "取件码",
+        "4位"
+      ],
+      "acceptable_answers": [
+        "取件码",
+        "4位"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-003",
+      "scenario": "multi_evidence",
+      "turns": [
+        "南站与北站周末是否都能寄件？"
+      ],
+      "reference_answers": [
+        "南站可以，北站周末关闭。[F-south][F-north]"
+      ],
+      "required_evidence_ids": [
+        "F-south",
+        "F-north"
+      ],
+      "expected_facts": [
+        "南站",
+        "北站",
+        "周末"
+      ],
+      "acceptable_answers": [
+        "南站",
+        "北站",
+        "周末"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-004",
+      "scenario": "multi_evidence",
+      "turns": [
+        "箱子长50宽40高30厘米，重6千克，计费重量及自助柜限制是否满足？"
+      ],
+      "reference_answers": [
+        "体积重10千克，计费重10千克；实际重6千克超过自助柜5千克限重。[F-volume][F-locker]"
+      ],
+      "required_evidence_ids": [
+        "F-volume",
+        "F-locker"
+      ],
+      "expected_facts": [
+        "10",
+        "5"
+      ],
+      "acceptable_answers": [
+        "10",
+        "5"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-005",
+      "scenario": "routing",
+      "turns": [
+        "请简洁答复，暂时不要制定计划。"
+      ],
+      "reference_answers": [
+        "好的，暂不制定计划。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "暂不"
+      ],
+      "acceptable_answers": [
+        "暂不"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "skip"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-006",
+      "scenario": "routing",
+      "turns": [
+        "请先保留刚才的条件。"
+      ],
+      "reference_answers": [
+        "好的，本轮不改变此前条件。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "条件"
+      ],
+      "acceptable_answers": [
+        "条件"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "skip"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-007",
+      "scenario": "routing",
+      "turns": [
+        "补充一个无关安排：我今晚准备画画，这不改变之前的条件。"
+      ],
+      "reference_answers": [
+        "好的，不改变此前条件。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "条件"
+      ],
+      "acceptable_answers": [
+        "条件"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "skip"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-008",
+      "scenario": "direct",
+      "turns": [
+        "请简短回复，西站是否接受冷藏包裹？"
+      ],
+      "reference_answers": [
+        "不接受冷藏件。[F-west]"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "不",
+        "冷藏"
+      ],
+      "acceptable_answers": [
+        "不",
+        "冷藏"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-009",
+      "scenario": "routing",
+      "turns": [
+        "先记住：现在改为个人寄件，是否可以在企业柜台月结？"
+      ],
+      "reference_answers": [
+        "个人寄件不适用企业月结。[F-scope-a]"
+      ],
+      "required_evidence_ids": [
+        "F-scope-a"
+      ],
+      "expected_facts": [
+        "个人",
+        "不"
+      ],
+      "acceptable_answers": [
+        "个人",
+        "不"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-010",
+      "scenario": "routing",
+      "turns": [
+        "这条规则也适用于别人吗？"
+      ],
+      "reference_answers": [
+        "无法确定指的是哪条规则，请明确。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "规则"
+      ],
+      "acceptable_answers": [
+        "规则"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-011",
+      "scenario": "conversation",
+      "turns": [
+        "我要寄一个重3千克、长25厘米的包裹。",
+        "更正，重量是7千克，长度不变。",
+        "请先保留前面的条件。",
+        "暂时不要制定计划。",
+        "结合现在的重量，自助柜能收吗？"
+      ],
+      "reference_answers": [
+        "请确认投递方式。",
+        "已了解，7千克，长25厘米。",
+        "好的，条件不变。",
+        "好的，暂不制定计划。",
+        "不能，7千克超过自助柜5千克限重。[F-locker]"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "7",
+        "5",
+        "不能"
+      ],
+      "acceptable_answers": [
+        "7",
+        "5",
+        "不能"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve",
+        "retrieve",
+        "skip",
+        "skip",
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-012",
+      "scenario": "conversation",
+      "turns": [
+        "原本计划以签约企业身份寄件。",
+        "更正一下，这次以个人身份寄。",
+        "请用简短文字回复。",
+        "请先记住刚才的信息。",
+        "按这次身份，能否月结？"
+      ],
+      "reference_answers": [
+        "企业柜台支持签约企业月结。[F-scope-a]",
+        "已了解，本次是个人寄件。",
+        "好的。",
+        "好的。",
+        "不能，个人寄件不适用。[F-scope-a]"
+      ],
+      "required_evidence_ids": [
+        "F-scope-a"
+      ],
+      "expected_facts": [
+        "个人",
+        "不"
+      ],
+      "acceptable_answers": [
+        "个人",
+        "不"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve",
+        "retrieve",
+        "skip",
+        "skip",
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "v2-013",
+      "scenario": "conversation",
+      "turns": [
+        "请介绍西站纸箱价格。",
+        "我只需要知道西站纸箱费用。",
+        "请介绍西站纸箱价格。",
+        "请简洁回复。",
+        "西站填充物另外收费吗？"
+      ],
+      "reference_answers": [
+        "纸箱3元。[F-west]",
+        "纸箱3元。[F-west]",
+        "纸箱3元。[F-west]",
+        "好的。",
+        "填充物免费。[F-west]"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "免费"
+      ],
+      "acceptable_answers": [
+        "免费"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve",
+        "retrieve",
+        "retrieve",
+        "skip",
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    }
+  ]
+}

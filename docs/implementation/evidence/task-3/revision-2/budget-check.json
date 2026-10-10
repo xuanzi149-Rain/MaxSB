@@ -1,0 +1,9 @@
+{
+  "guarded_request_attempts": 174,
+  "successful_recorded_model_calls": 173,
+  "failed_cases": 1,
+  "reservation_delta_cny": "7.509789",
+  "reserved_after_cny": "49.656357",
+  "limit_cny": "300",
+  "actual_bill": null
+}

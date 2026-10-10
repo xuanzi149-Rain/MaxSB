@@ -1,0 +1,67 @@
+{
+  "case_id": "v2-006",
+  "scenario": "routing",
+  "enabled": true,
+  "category": "none",
+  "turns": [
+    {
+      "question": "请先保留刚才的条件。",
+      "answer": "好的，已保留之前的业务条件。",
+      "input_tokens": 136,
+      "output_tokens": 8,
+      "retrieval_ms": 0.037625002732966095,
+      "trace": {
+        "paragraph_list": [],
+        "is_hit_handling_method": [],
+        "question": "请先保留刚才的条件。",
+        "data": "",
+        "directly_return": "",
+        "retrieval_budget": {
+          "version": 2,
+          "question": "请先保留刚才的条件。",
+          "category": "none",
+          "reason": "conversation_control",
+          "retrieve": false,
+          "top_n": 0,
+          "rerank": false,
+          "similarity": 0.2,
+          "search_mode": "embedding",
+          "status": "skipped",
+          "raw_count": 0,
+          "retrieval_ms": 0.0305419962387532
+        },
+        "retrieved_paragraph_list": [],
+        "is_hit_handling_method_list": []
+      },
+      "dialogue_policy": {
+        "enabled": true,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "status": "preserved",
+        "brief_response": true
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。\n结合历史中用户明确陈述的业务条件回答；更正以最新原话为准，不把助手推测当作用户事实。本轮用户仅寒暄或说明会话安排。只用一句简短中文回应，不复述业务资料、不主动展开建议。不要声称已完成操作或已持久化记忆；不改变用户此前的业务条件。",
+        "已知信息：\n用户问题：请先保留刚才的条件。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "好的，已保留之前的业务条件。",
+  "retrieved_evidence_ids": [],
+  "elapsed_ms": 1191.8194169993512,
+  "input_tokens": 136,
+  "output_tokens": 8,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      true
+    ],
+    "review_status": "pending"
+  }
+}

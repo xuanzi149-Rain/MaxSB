@@ -1,0 +1,28 @@
+test_all_clauses_must_be_pure_controls (test_dialogue_policy.ComposedControlsTests.test_all_clauses_must_be_pure_controls) ... ok
+test_business_guidance_preserves_user_corrections_without_brief_constraint (test_dialogue_policy.ContinuityTests.test_business_guidance_preserves_user_corrections_without_brief_constraint) ... ok
+test_brief_guidance_only_for_pure_controls (test_dialogue_policy.DialogueHistoryTests.test_brief_guidance_only_for_pure_controls) ... ok
+test_deduplicates_only_verified_current_evidence (test_dialogue_policy.DialogueHistoryTests.test_deduplicates_only_verified_current_evidence) ... ok
+test_disabled_unknown_sources_and_followups_preserve_history (test_dialogue_policy.DialogueHistoryTests.test_disabled_unknown_sources_and_followups_preserve_history) ... ok
+test_explicit_conversation_controls_skip_knowledge (test_dialogue_policy.IntentTests.test_explicit_conversation_controls_skip_knowledge) ... ok
+test_mixed_intents_and_corrections_still_retrieve (test_dialogue_policy.IntentTests.test_mixed_intents_and_corrections_still_retrieve) ... ok
+test_multi_requirement_and_numeric_constraints_are_not_simple (test_dialogue_policy.IntentTests.test_multi_requirement_and_numeric_constraints_are_not_simple) ... ok
+test_reference_question_preserves_evidence (test_dialogue_policy.IntentTests.test_reference_question_preserves_evidence) ... ok
+test_business_correction_inside_claimed_side_note_is_not_skipped (test_dialogue_policy.ReviewRegressionTests.test_business_correction_inside_claimed_side_note_is_not_skipped) ... ok
+test_chinese_quantity_and_second_request_do_not_shrink (test_dialogue_policy.ReviewRegressionTests.test_chinese_quantity_and_second_request_do_not_shrink) ... ok
+test_polite_prefix_does_not_hide_reference (test_dialogue_policy.ReviewRegressionTests.test_polite_prefix_does_not_hide_reference) ... ok
+test_category_configuration_and_input_are_preserved (test_policy.RetrievalPolicyTests.test_category_configuration_and_input_are_preserved) ... ok
+test_disabled_or_old_settings_are_unchanged (test_policy.RetrievalPolicyTests.test_disabled_or_old_settings_are_unchanged) ... ok
+test_exact_greeting_skips_but_greeting_with_question_does_not (test_policy.RetrievalPolicyTests.test_exact_greeting_skips_but_greeting_with_question_does_not) ... ok
+test_multiple_questions_never_use_single_fact_budget (test_policy.RetrievalPolicyTests.test_multiple_questions_never_use_single_fact_budget) ... ok
+test_single_fact_and_comparison_use_distinct_limits (test_policy.RetrievalPolicyTests.test_single_fact_and_comparison_use_distinct_limits) ... ok
+test_unknown_and_followup_preserve_fixed_parameters (test_policy.RetrievalPolicyTests.test_unknown_and_followup_preserve_fixed_parameters) ... ok
+test_complex_missing_evidence_is_explicit_failure (test_report.ReportTests.test_complex_missing_evidence_is_explicit_failure) ... ok
+test_dataset_scenario_exposes_complex_cases_misclassified_as_simple (test_report.ReportTests.test_dataset_scenario_exposes_complex_cases_misclassified_as_simple) ... ok
+test_failed_partial_run_tokens_not_misreported_as_complete (test_report.ReportTests.test_failed_partial_run_tokens_not_misreported_as_complete) ... ok
+test_grouping_does_not_hide_complex_loss_in_simple_success (test_report.ReportTests.test_grouping_does_not_hide_complex_loss_in_simple_success) ... ok
+test_missing_measurements_are_unknown_not_zero (test_report.ReportTests.test_missing_measurements_are_unknown_not_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK

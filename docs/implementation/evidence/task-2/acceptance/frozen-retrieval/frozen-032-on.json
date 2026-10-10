@@ -1,0 +1,371 @@
+{
+  "case_id": "frozen-032",
+  "scenario": "duplicate",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "只用一句话总结北站适用日期，不重复表述。",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 92.16612500313204,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+            "content": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+            "title": "F-holiday",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.275744+0800\", \"2\": \"2026-10-09 15:27:52.431038+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-holiday",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6616887642966275,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6104805369044322,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+            "content": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+            "title": "F-uncertain-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:54.143122+0800\", \"2\": \"2026-10-09 15:27:54.307343+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5842562070045688,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5799574005578492,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+            "content": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+            "title": "F-scope-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.887940+0800\", \"2\": \"2026-10-09 15:27:53.983044+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5763591709993293,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+        "directly_return": "",
+        "question": "只用一句话总结北站适用日期，不重复表述。",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 187,
+          "estimated_retained_tokens": 187,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+              "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+              "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+              "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+              "reason": "retained"
+            }
+          ],
+          "semantic": {
+            "mode": "reviewed_cache_only",
+            "judge_calls": 0,
+            "approved_pair_count": 0,
+            "checks": [],
+            "actual_removed_count": 0,
+            "status": "no_approved_match"
+          }
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+            "content": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+            "title": "F-holiday",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.275744+0800\", \"2\": \"2026-10-09 15:27:52.431038+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-holiday",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6616887642966275,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6104805369044322,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+            "content": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+            "title": "F-uncertain-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:54.143122+0800\", \"2\": \"2026-10-09 15:27:54.307343+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5842562070045688,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5799574005578492,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+            "content": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+            "title": "F-scope-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.887940+0800\", \"2\": \"2026-10-09 15:27:53.983044+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5763591709993293,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。\n用户问题：只用一句话总结北站适用日期，不重复表述。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-holiday",
+    "F-scope-a",
+    "F-scope-b",
+    "F-uncertain-a",
+    "F-uncertain-b"
+  ],
+  "elapsed_ms": 92.22391699586296,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 0.0,
+    "missing_evidence_ids": [
+      "F-dupe",
+      "F-north"
+    ],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

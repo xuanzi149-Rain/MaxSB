@@ -1,0 +1,12 @@
+{
+  "matches_deployed_task2": true,
+  "files": {
+    "apps/application/context/semantic.py": "787a57582c1b071c73d94c95a1e559d3ff3af9bbae025004e9fc106d3fe39086",
+    "apps/application/context/serializers.py": "f2b006c38cdb9e058c586c71a5149018a0e35f7ea681bec39c56f3a4b1df994a",
+    "apps/application/context/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/context/processor.py": "8d1c485741ce5a6ed5e8269becacf016c9d86d19a6304c66449776e473e86662",
+    "apps/application/context/runtime.py": "1dee0d2680b2fb68d0dac72df91165878fec6ac7200ee3ce8473b3e651484606",
+    "apps/application/context/matching.py": "b89859b47b01e27fa804a289ba83687d2a2f8dfbf8b841ff3efab06ff1b8165d",
+    "apps/application/context/reviewed.py": "8e885ffb67bd3cd9e7d7f112669caa5984212c6f839e616d8cfe1a45473d7443"
+  }
+}

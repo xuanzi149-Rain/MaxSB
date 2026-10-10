@@ -1,0 +1,368 @@
+{
+  "case_id": "dev2-002",
+  "scenario": "routing",
+  "enabled": false,
+  "category": "none",
+  "turns": [
+    {
+      "question": "请用简短条目回复。",
+      "answer": "- **退件处理**：须保留原运单号并在系统注明原因；若寄件人地址不完整，需先联系补全 [F-return]。\n- **丢失查询**：需提供运单号、寄件日期和寄件站点；信息缺失时应询问补全，严禁猜测 [F-lost]。\n- **月结政策**：仅企业柜台对签约企业支持月结，个人寄件不适用 [F-scope-a]。\n- **电池寄送**：仅可走专用渠道并须申报电池类型，普通渠道不接收 [F-battery]。\n- **取件规则**：取件码有效期48小时，过期需重新生成；领取时需出示取件码及运单尾号4位 [F-code]。",
+      "input_tokens": 237,
+      "output_tokens": 166,
+      "retrieval_ms": 1062.991751001391,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5813516128869084,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5356957476048587,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5010748802974971,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-7633628d1483",
+            "content": "[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。",
+            "title": "F-battery",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.713083+0800\", \"2\": \"2026-10-09 15:27:52.848866+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-762be1b25c29",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-battery",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4956679046154163,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4916813676547267,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-battery\n[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+        "directly_return": "",
+        "question": "请用简短条目回复。",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 208,
+          "estimated_retained_tokens": 208,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-7633628d1483",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-762be1b25c29",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-7633628d1483",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "reason": "retained"
+            }
+          ]
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5813516128869084,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5356957476048587,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5010748802974971,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-7633628d1483",
+            "content": "[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。",
+            "title": "F-battery",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.713083+0800\", \"2\": \"2026-10-09 15:27:52.848866+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-762be1b25c29",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-battery",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4956679046154163,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4916813676547267,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "dialogue_policy": {
+        "enabled": false,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-battery\n[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。\n用户问题：请用简短条目回复。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "- **退件处理**：须保留原运单号并在系统注明原因；若寄件人地址不完整，需先联系补全 [F-return]。\n- **丢失查询**：需提供运单号、寄件日期和寄件站点；信息缺失时应询问补全，严禁猜测 [F-lost]。\n- **月结政策**：仅企业柜台对签约企业支持月结，个人寄件不适用 [F-scope-a]。\n- **电池寄送**：仅可走专用渠道并须申报电池类型，普通渠道不接收 [F-battery]。\n- **取件规则**：取件码有效期48小时，过期需重新生成；领取时需出示取件码及运单尾号4位 [F-code]。",
+  "retrieved_evidence_ids": [
+    "F-battery",
+    "F-code",
+    "F-lost",
+    "F-return",
+    "F-scope-a"
+  ],
+  "elapsed_ms": 4824.485835000814,
+  "input_tokens": 237,
+  "output_tokens": 166,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      false
+    ],
+    "review_status": "pending"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-025",
+  "scenario": "duplicate",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "北站两份资料都写限重20千克，是否合计允许40千克？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 92.71237500070129,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6324603746075025,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6251822672947625,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6247831098283,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+            "content": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+            "title": "F-east",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.689636+0800\", \"2\": \"2026-10-09 15:27:50.846510+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-east",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5359660355933447,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.523215823035661,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+        "directly_return": "",
+        "question": "北站两份资料都写限重20千克，是否合计允许40千克？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n用户问题：北站两份资料都写限重20千克，是否合计允许40千克？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-dupe",
+    "F-east",
+    "F-locker",
+    "F-north",
+    "F-south"
+  ],
+  "elapsed_ms": 92.76841700193472,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

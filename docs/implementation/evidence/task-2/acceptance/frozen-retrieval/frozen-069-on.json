@@ -1,0 +1,368 @@
+{
+  "case_id": "frozen-069",
+  "scenario": "conflict",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "月结与逐单付款两条规则是不是互相矛盾？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 107.31554099766072,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5904273146645624,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+            "content": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+            "title": "F-scope-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.887940+0800\", \"2\": \"2026-10-09 15:27:53.983044+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.577268311651748,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+            "content": "[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+            "title": "F-fragile",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.358731+0800\", \"2\": \"2026-10-09 15:27:51.662305+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fde0a933b3e3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-fragile",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4803212285041809,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.454247138663622,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.443360990786705,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。\n#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+        "directly_return": "",
+        "question": "月结与逐单付款两条规则是不是互相矛盾？",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 198,
+          "estimated_retained_tokens": 198,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+              "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+              "document_id": "01a11f8e-fbce-7091-9d09-fde0a933b3e3",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "reason": "retained"
+            }
+          ],
+          "semantic": {
+            "mode": "reviewed_cache_only",
+            "judge_calls": 0,
+            "approved_pair_count": 0,
+            "checks": [],
+            "actual_removed_count": 0,
+            "status": "no_approved_match"
+          }
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5904273146645624,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+            "content": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+            "title": "F-scope-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.887940+0800\", \"2\": \"2026-10-09 15:27:53.983044+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.577268311651748,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+            "content": "[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+            "title": "F-fragile",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.358731+0800\", \"2\": \"2026-10-09 15:27:51.662305+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fde0a933b3e3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-fragile",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4803212285041809,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.454247138663622,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.443360990786705,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。\n#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n用户问题：月结与逐单付款两条规则是不是互相矛盾？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-fragile",
+    "F-lost",
+    "F-return",
+    "F-scope-a",
+    "F-scope-b"
+  ],
+  "elapsed_ms": 107.36741699656704,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

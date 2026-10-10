@@ -1,0 +1,470 @@
+[
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通读者最多5本，保留了人群范围及上限，未引入额外借阅条件。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-limit-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者最多借5本书。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-limit-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者的借阅上限为5本。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通读者最多5本，保留了人群范围及上限，未引入额外借阅条件。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-limit-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者最多借5本书。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通读者最多5本，保留了人群范围及上限，未引入额外借阅条件。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-limit-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者最多借5本书。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通读者最多5本，保留了人群范围及上限，未引入额外借阅条件。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-limit-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者最多借5本书。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-limit-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通读者的借阅上限为5本。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通图书借期21天，未混淆借期与续借期限。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-period-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书的借期是21天。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-period-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书可借阅21天。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通图书借期21天，未混淆借期与续借期限。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-period-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书的借期是21天。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通图书借期21天，未混淆借期与续借期限。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-period-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书的借期是21天。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答普通图书借期21天，未混淆借期与续借期限。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-period-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书的借期是21天。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-period-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“普通图书可借阅21天。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答青禾图书室周一不开放，与闭馆及不对外开放两种表述一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-closed-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室周一闭馆。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-closed-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室每逢周一不对外开放。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答青禾图书室周一不开放，与闭馆及不对外开放两种表述一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-closed-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室周一闭馆。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答青禾图书室周一不开放，与闭馆及不对外开放两种表述一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-closed-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室周一闭馆。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答青禾图书室周一不开放，与闭馆及不对外开放两种表述一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-closed-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室周一闭馆。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-closed-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“青禾图书室每逢周一不对外开放。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确保留禁止吸烟这一否定约束，未把禁止误解为允许。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-negative-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室禁止吸烟。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-negative-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室内不得吸烟。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确保留禁止吸烟这一否定约束，未把禁止误解为允许。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-negative-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室禁止吸烟。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确保留禁止吸烟这一否定约束，未把禁止误解为允许。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-negative-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室禁止吸烟。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确保留禁止吸烟这一否定约束，未把禁止误解为允许。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-negative-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室禁止吸烟。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-negative-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“阅览室内不得吸烟。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答讨论室需提前1天预约，保留具体对象与预约时间关系。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-reservation-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“讨论室需提前1天预约。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-reservation-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“使用讨论室应在使用前1天完成预约。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答讨论室需提前1天预约，保留具体对象与预约时间关系。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-reservation-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“讨论室需提前1天预约。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答讨论室需提前1天预约，保留具体对象与预约时间关系。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-reservation-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“讨论室需提前1天预约。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答讨论室需提前1天预约，保留具体对象与预约时间关系。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-reservation-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“讨论室需提前1天预约。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-reservation-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“使用讨论室应在使用前1天完成预约。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 1,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答包裹长度上限80厘米，与最长及不得超过语义一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-length-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹最长80厘米。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-length-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹长度不得超过80厘米。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 1,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答包裹长度上限80厘米，与最长及不得超过语义一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-length-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹最长80厘米。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 2,
+    "policy": "on",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答包裹长度上限80厘米，与最长及不得超过语义一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-length-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹最长80厘米。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 2,
+    "policy": "off",
+    "reviewer": "Codex AI",
+    "correct": true,
+    "reasoning": "正确回答包裹长度上限80厘米，与最长及不得超过语义一致。 已逐条比对本条回答、题目及retained_ids对应原文；历史记录未附完整模型消息，输入可见性仅由retained_ids佐证。",
+    "citations": [
+      {
+        "id": "paraphrase-length-a",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹最长80厘米。”直接支持所附陈述。"
+      },
+      {
+        "id": "paraphrase-length-b",
+        "supported": true,
+        "reason": "完整引用ID存在于本次retained_ids；对应原文“包裹长度不得超过80厘米。”直接支持所附陈述。"
+      }
+    ],
+    "human_correct": null,
+    "human_citation_accuracy": null
+  }
+]

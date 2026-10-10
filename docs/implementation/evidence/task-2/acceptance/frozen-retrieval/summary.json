@@ -1,0 +1,214 @@
+{
+  "none": {
+    "fixed": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    },
+    "dynamic": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    }
+  },
+  "simple": {
+    "fixed": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    },
+    "dynamic": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    }
+  },
+  "complex": {
+    "fixed": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    },
+    "dynamic": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    }
+  },
+  "unknown": {
+    "fixed": {
+      "count": 68,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-014",
+        "frozen-015",
+        "frozen-021",
+        "frozen-032"
+      ],
+      "missing_evidence": {
+        "frozen-014": [
+          "F-holiday"
+        ],
+        "frozen-015": [
+          "F-north"
+        ],
+        "frozen-021": [
+          "F-south"
+        ],
+        "frozen-027": [
+          "F-dupe"
+        ],
+        "frozen-032": [
+          "F-dupe",
+          "F-north"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9583333333333334,
+      "evidence_recall_coverage": 60,
+      "retrieval_ms": 345.8971141169647
+    },
+    "dynamic": {
+      "count": 68,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-014",
+        "frozen-015",
+        "frozen-021",
+        "frozen-032"
+      ],
+      "missing_evidence": {
+        "frozen-014": [
+          "F-holiday"
+        ],
+        "frozen-015": [
+          "F-north"
+        ],
+        "frozen-021": [
+          "F-south"
+        ],
+        "frozen-027": [
+          "F-dupe"
+        ],
+        "frozen-032": [
+          "F-dupe",
+          "F-north"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9583333333333334,
+      "evidence_recall_coverage": 60,
+      "retrieval_ms": 375.9103132503215
+    }
+  }
+}

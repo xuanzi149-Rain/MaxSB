@@ -1,0 +1,146 @@
+[
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 30,
+      "row": 535
+    },
+    "filename": "/tmp/maxsb-task3/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 535
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 535,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 33,
+      "row": 537
+    },
+    "filename": "/tmp/maxsb-task3/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 537
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 537,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 34,
+      "row": 539
+    },
+    "filename": "/tmp/maxsb-task3/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py",
+    "fix": null,
+    "location": {
+      "column": 19,
+      "row": 539
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 539,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 73,
+      "row": 539
+    },
+    "filename": "/tmp/maxsb-task3/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py",
+    "fix": null,
+    "location": {
+      "column": 56,
+      "row": 539
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 539,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 30,
+      "row": 510
+    },
+    "filename": "/tmp/task3-ai-baseline.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 510
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 510,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 33,
+      "row": 512
+    },
+    "filename": "/tmp/task3-ai-baseline.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 512
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 512,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 34,
+      "row": 514
+    },
+    "filename": "/tmp/task3-ai-baseline.py",
+    "fix": null,
+    "location": {
+      "column": 19,
+      "row": 514
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 514,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  },
+  {
+    "cell": null,
+    "code": "E721",
+    "end_location": {
+      "column": 73,
+      "row": 514
+    },
+    "filename": "/tmp/task3-ai-baseline.py",
+    "fix": null,
+    "location": {
+      "column": 56,
+      "row": 514
+    },
+    "message": "Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks",
+    "noqa_row": 514,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-comparison"
+  }
+]

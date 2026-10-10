@@ -19,10 +19,12 @@ from common.utils.common import flat_map
 
 
 from application.context.serializers import ContextPolicySerializer
+from application.retrieval.serializers import RetrievalPolicySerializer
 
 
 class DatasetSettingSerializer(serializers.Serializer):
     context_policy = ContextPolicySerializer(required=False)
+    retrieval_policy = RetrievalPolicySerializer(required=False)
     # 需要查询的条数
     top_n = serializers.IntegerField(required=True,
                                      label=_("Reference segment number"))

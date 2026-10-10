@@ -1,0 +1,34 @@
+{
+  "scope": "six explicitly approved synthetic pairs, fixed-input answering regression",
+  "records": 24,
+  "selection_cases": 21,
+  "versions": {
+    "judge": "09b2baa75e0327a40038c0c98aa47cd3c6dc4d3e058c8d7d42c6397f57fa0fae",
+    "embedding": "c84ba34109d5f3b5b49be4e6fd2f1e3a21bdc04ea239332cdaca3832285faf54"
+  },
+  "namespace": "default/semantic-development-fixtures",
+  "judge_requests": 0,
+  "embedding_requests": 0,
+  "model_name": "qwen3.7-plus",
+  "model_params": {
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "max_tokens": 2048,
+    "max_retries": 0,
+    "temperature": 0,
+    "stream_usage": true
+  },
+  "fixtures_sha256": "0c0d1b133e1d152d38ac983c9d25a50df94314516cd7ebe8fe43db0deed192d6",
+  "approvals_sha256": "2a12f6ca6261fa460a9985b279a10e1bb6308481093e7ed774cd401bd1ecf13e",
+  "source_sha256": {
+    "apps/application/context/semantic.py": "787a57582c1b071c73d94c95a1e559d3ff3af9bbae025004e9fc106d3fe39086",
+    "apps/application/context/serializers.py": "c14d2d5245434f42f5236afec07ab047465dc1dea9cd05d5b87f3c9588a21bd7",
+    "apps/application/context/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/context/processor.py": "8d1c485741ce5a6ed5e8269becacf016c9d86d19a6304c66449776e473e86662",
+    "apps/application/context/matching.py": "b89859b47b01e27fa804a289ba83687d2a2f8dfbf8b841ff3efab06ff1b8165d",
+    "apps/application/context/reviewed.py": "8e885ffb67bd3cd9e7d7f112669caa5984212c6f839e616d8cfe1a45473d7443"
+  },
+  "human_review": "new answers pending; prior six equivalence relations approved",
+  "actual_cost": null
+}

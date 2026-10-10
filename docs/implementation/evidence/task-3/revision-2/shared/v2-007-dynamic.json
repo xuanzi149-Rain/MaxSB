@@ -1,0 +1,66 @@
+{
+  "case_id": "v2-007",
+  "scenario": "routing",
+  "enabled": true,
+  "category": "none",
+  "turns": [
+    {
+      "question": "补充一个无关安排：我今晚准备画画，这不改变之前的条件。",
+      "answer": "收到，已记录您今晚准备画画的安排。根据要求，这不会改变之前的条件。",
+      "input_tokens": 76,
+      "output_tokens": 20,
+      "retrieval_ms": 0.20304100326029584,
+      "trace": {
+        "paragraph_list": [],
+        "is_hit_handling_method": [],
+        "question": "补充一个无关安排：我今晚准备画画，这不改变之前的条件。",
+        "data": "",
+        "directly_return": "",
+        "retrieval_budget": {
+          "version": 2,
+          "question": "补充一个无关安排：我今晚准备画画，这不改变之前的条件。",
+          "category": "none",
+          "reason": "explicit_side_note",
+          "retrieve": false,
+          "top_n": 0,
+          "rerank": false,
+          "similarity": 0.2,
+          "search_mode": "embedding",
+          "status": "skipped",
+          "raw_count": 0,
+          "retrieval_ms": 0.15633300063200295
+        },
+        "retrieved_paragraph_list": [],
+        "is_hit_handling_method_list": []
+      },
+      "dialogue_policy": {
+        "enabled": false,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：\n用户问题：补充一个无关安排：我今晚准备画画，这不改变之前的条件。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "收到，已记录您今晚准备画画的安排。根据要求，这不会改变之前的条件。",
+  "retrieved_evidence_ids": [],
+  "elapsed_ms": 1210.1362090033945,
+  "input_tokens": 76,
+  "output_tokens": 20,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      true
+    ],
+    "review_status": "pending"
+  }
+}

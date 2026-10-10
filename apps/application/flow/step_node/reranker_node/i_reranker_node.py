@@ -33,6 +33,8 @@ class RerankerSettingSerializer(serializers.Serializer):
 
 class RerankerStepNodeSerializer(serializers.Serializer):
     reranker_setting = RerankerSettingSerializer(required=True)
+    retrieval_budget_reference = serializers.ListField(required=False, child=serializers.CharField(),
+                                                       allow_empty=True, allow_null=True)
 
     question_reference_address = serializers.ListField(required=True)
     reranker_model_id = serializers.CharField(required=False, allow_blank=True, allow_null=True)
@@ -64,12 +66,30 @@ class IRerankerNode(INode):
 
         node_params_data = dict(self.node_params_serializer.data)
 
+        budget_reference = node_params_data.pop('retrieval_budget_reference', []) or []
+        decision = None
+        if budget_reference:
+            references = node_params_data['reranker_reference_list']
+            if (len(budget_reference) != 2 or budget_reference[1] != 'retrieval_budget'
+                    or references != [[budget_reference[0], 'retrieved_paragraph_list']]):
+                raise ValueError('动态预算必须关联同一检索节点的 retrieval_budget 和唯一的 retrieved_paragraph_list')
+            decision = self.workflow_manage.get_reference_field(budget_reference[0], budget_reference[1:])
+            if decision is not None and (not isinstance(decision, dict) or decision.get('version') not in (1, 2)
+                                         or decision.get('question') != str(question)):
+                raise ValueError('动态检索预算与当前重排问题不匹配')
+            # Disabled source: resolve its ordinary output, retaining legacy reranker behavior.
+            if decision is None:
+                reranker_list = [self.workflow_manage.get_reference_field(budget_reference[0], ['paragraph_list'])]
+        node_params_data['retrieval_budget'] = decision
+        dynamic = decision is not None and decision['rerank'] is not None
+        skip = dynamic and not decision['rerank']
+
         reranker_model_id_type = node_params_data.pop('reranker_model_id_type', None)
         reranker_model_id_reference = node_params_data.pop('reranker_model_id_reference', None)
         reranker_model_id = node_params_data.pop('reranker_model_id', None)
 
         # 处理引用类型
-        if reranker_model_id_type == 'reference' and reranker_model_id_reference:
+        if not skip and reranker_model_id_type == 'reference' and reranker_model_id_reference:
             reference_data = self.workflow_manage.get_reference_field(
                 reranker_model_id_reference[0],
                 reranker_model_id_reference[1:],
@@ -77,10 +97,10 @@ class IRerankerNode(INode):
             if reference_data and isinstance(reference_data, dict):
                 reranker_model_id = reference_data.get('reranker_model_id',
                                                        reference_data.get('model_id', reranker_model_id))
-        elif reranker_model_id_type == 'default':
+        elif not skip and reranker_model_id_type == 'default':
             default_setting = self.workflow_manage.get_default_model_setting('RERANKER')
             reranker_model_id = default_setting.get('model_id')
-        if reranker_model_id is None or reranker_model_id == '':
+        if not dynamic and (reranker_model_id is None or reranker_model_id == ''):
             raise Exception(_('Model is not allowed to be empty'))
 
         return self.execute(**node_params_data, question=str(question),

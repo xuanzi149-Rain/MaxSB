@@ -1,0 +1,261 @@
+{
+  "case_id": "frozen-021",
+  "scenario": "multi_evidence",
+  "enabled": true,
+  "category": "simple",
+  "turns": [
+    {
+      "question": "长60宽40高30厘米、实际10千克的包裹，其计费重量及南站实际限重是否满足？",
+      "answer": "根据提供的资料，**无法回答**该问题。\n\n原因如下：\n1.  **缺少“南站”的相关信息**：提供的资料中仅包含 [F-bulk]（批量寄件规则）、[F-east]（东站规则）和 [F-locker]（自助柜及人工柜台通用规则），并未提及“南站”的具体规定或限重标准。\n2.  **缺少计费重量计算规则**：资料中未提供体积重量的计算公式或计费重量的具体定义，因此无法确定该包裹的计费重量。\n\n虽然 [F-locker] 提到人工柜台单件限重20千克、最长100厘米，该包裹（10千克，最长边60厘米）在物理尺寸和重量上符合 [F-locker] 中人工柜台的要求，但由于问题明确询问的是“南站”且涉及“计费重量”，而现有资料不足，故无法给出确切结论。",
+      "input_tokens": 197,
+      "output_tokens": 195,
+      "retrieval_ms": 273.5201249961392,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+            "content": "[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+            "title": "F-bulk",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.858472+0800\", \"2\": \"2026-10-09 15:27:53.004019+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76477f50d458",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-bulk",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6629401642960433,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+            "content": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+            "title": "F-east",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.689636+0800\", \"2\": \"2026-10-09 15:27:50.846510+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-east",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6475775400710937,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6436236904971832,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+        "directly_return": "",
+        "question": "长60宽40高30厘米、实际10千克的包裹，其计费重量及南站实际限重是否满足？",
+        "retrieval_budget": {
+          "version": 1,
+          "question": "长60宽40高30厘米、实际10千克的包裹，其计费重量及南站实际限重是否满足？",
+          "category": "simple",
+          "reason": "single_fact",
+          "retrieve": true,
+          "top_n": 3,
+          "rerank": false,
+          "similarity": 0.2,
+          "search_mode": "embedding",
+          "status": "retrieved",
+          "raw_count": 3,
+          "retrieval_ms": 272.99800000037067
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+            "content": "[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+            "title": "F-bulk",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.858472+0800\", \"2\": \"2026-10-09 15:27:53.004019+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76477f50d458",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-bulk",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6629401642960433,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+            "content": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+            "title": "F-east",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.689636+0800\", \"2\": \"2026-10-09 15:27:50.846510+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-east",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6475775400710937,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6436236904971832,
+            "is_hit_handling_method": false
+          }
+        ],
+        "context_processing": {
+          "enabled": true,
+          "original_count": 3,
+          "retained_count": 3,
+          "estimated_original_tokens": 118,
+          "estimated_retained_tokens": 118,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76477f50d458",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+              "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "reason": "retained"
+            }
+          ]
+        }
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n用户问题：长60宽40高30厘米、实际10千克的包裹，其计费重量及南站实际限重是否满足？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "根据提供的资料，**无法回答**该问题。\n\n原因如下：\n1.  **缺少“南站”的相关信息**：提供的资料中仅包含 [F-bulk]（批量寄件规则）、[F-east]（东站规则）和 [F-locker]（自助柜及人工柜台通用规则），并未提及“南站”的具体规定或限重标准。\n2.  **缺少计费重量计算规则**：资料中未提供体积重量的计算公式或计费重量的具体定义，因此无法确定该包裹的计费重量。\n\n虽然 [F-locker] 提到人工柜台单件限重20千克、最长100厘米，该包裹（10千克，最长边60厘米）在物理尺寸和重量上符合 [F-locker] 中人工柜台的要求，但由于问题明确询问的是“南站”且涉及“计费重量”，而现有资料不足，故无法给出确切结论。",
+  "retrieved_evidence_ids": [
+    "F-bulk",
+    "F-east",
+    "F-locker"
+  ],
+  "elapsed_ms": 4544.523836004373,
+  "input_tokens": 197,
+  "output_tokens": 195,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 0.0,
+    "missing_evidence_ids": [
+      "F-south",
+      "F-volume"
+    ],
+    "tool_complete": null,
+    "fact_mentions": [
+      false,
+      false,
+      false
+    ],
+    "review_status": "pending"
+  }
+}

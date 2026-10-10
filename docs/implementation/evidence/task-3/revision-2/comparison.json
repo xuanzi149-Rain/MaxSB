@@ -1,0 +1,133 @@
+{
+  "shared": {
+    "cases": 13,
+    "paired_cases": 13,
+    "requests_recorded": 50,
+    "failed_records": [],
+    "excluded_pairs": [],
+    "knowledge_unchanged": true,
+    "strategies": {
+      "fixed": {
+        "input_tokens": 6693,
+        "output_tokens": 1566,
+        "control_output_tokens": 269,
+        "control_max_output_tokens": 147,
+        "removed_contexts": 0,
+        "removed_chars": 0
+      },
+      "dynamic": {
+        "input_tokens": 5406,
+        "output_tokens": 1457,
+        "control_output_tokens": 96,
+        "control_max_output_tokens": 26,
+        "removed_contexts": 0,
+        "removed_chars": 0
+      }
+    },
+    "relative_change": {
+      "input_tokens": -0.19229045271178846,
+      "output_tokens": -0.06960408684546615
+    },
+    "recall_regressions": [],
+    "incomplete_evidence": {
+      "fixed": [
+        "v2-002"
+      ],
+      "dynamic": [
+        "v2-002"
+      ]
+    },
+    "input_history_verified_identical": true,
+    "output_limit_turns": []
+  },
+  "free-1": {
+    "cases": 13,
+    "paired_cases": 13,
+    "requests_recorded": 50,
+    "failed_records": [],
+    "excluded_pairs": [],
+    "knowledge_unchanged": true,
+    "strategies": {
+      "fixed": {
+        "input_tokens": 15461,
+        "output_tokens": 2532,
+        "control_output_tokens": 752,
+        "control_max_output_tokens": 341,
+        "removed_contexts": 0,
+        "removed_chars": 0
+      },
+      "dynamic": {
+        "input_tokens": 13485,
+        "output_tokens": 2046,
+        "control_output_tokens": 36,
+        "control_max_output_tokens": 8,
+        "removed_contexts": 1,
+        "removed_chars": 272
+      }
+    },
+    "relative_change": {
+      "input_tokens": -0.12780544596080456,
+      "output_tokens": -0.19194312796208535
+    },
+    "recall_regressions": [],
+    "incomplete_evidence": {
+      "fixed": [
+        "v2-002"
+      ],
+      "dynamic": [
+        "v2-002"
+      ]
+    },
+    "input_history_verified_identical": false,
+    "output_limit_turns": []
+  },
+  "free-2": {
+    "cases": 13,
+    "paired_cases": 12,
+    "requests_recorded": 49,
+    "failed_records": [
+      {
+        "case_id": "v2-001",
+        "enabled": true,
+        "error": "APIConnectionError"
+      }
+    ],
+    "excluded_pairs": [
+      "v2-001"
+    ],
+    "knowledge_unchanged": true,
+    "strategies": {
+      "fixed": {
+        "input_tokens": 15193,
+        "output_tokens": 2423,
+        "control_output_tokens": 561,
+        "control_max_output_tokens": 227,
+        "removed_contexts": 0,
+        "removed_chars": 0
+      },
+      "dynamic": {
+        "input_tokens": 12648,
+        "output_tokens": 1846,
+        "control_output_tokens": 31,
+        "control_max_output_tokens": 8,
+        "removed_contexts": 1,
+        "removed_chars": 272
+      }
+    },
+    "relative_change": {
+      "input_tokens": -0.16751135391298622,
+      "output_tokens": -0.2381345439537763
+    },
+    "recall_regressions": [],
+    "incomplete_evidence": {
+      "fixed": [
+        "v2-002"
+      ],
+      "dynamic": [
+        "v2-002"
+      ]
+    },
+    "input_history_verified_identical": false,
+    "output_limit_turns": []
+  }
+}

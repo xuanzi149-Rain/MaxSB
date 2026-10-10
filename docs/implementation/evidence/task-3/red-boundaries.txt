@@ -1,0 +1,36 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 2.390 seconds.
+Prefix dict has been built successfully.
+Found 2 test(s).
+Skipping setup of unused database(s): default.
+System check identified no issues (0 silenced).
+test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace) ... ERROR
+test_cleared_optional_reference_is_valid (application.tests_retrieval.DynamicRerankerTests.test_cleared_optional_reference_is_valid) ... ERROR
+
+======================================================================
+ERROR: test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 64, in test_greeting_skips_embedding_and_vector_io_with_replayable_trace
+    self.assertEqual(result['is_hit_handling_method_list'], [])
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'is_hit_handling_method_list'
+
+======================================================================
+ERROR: test_cleared_optional_reference_is_valid (application.tests_retrieval.DynamicRerankerTests.test_cleared_optional_reference_is_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 227, in test_cleared_optional_reference_is_valid
+    self.assertTrue(serializer.is_valid(), serializer.errors)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/application/flow/step_node/reranker_node/i_reranker_node.py", line 48, in is_valid
+    super().is_valid(raise_exception=True)
+  File "/opt/py3/lib/python3.11/site-packages/rest_framework/serializers.py", line 233, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'retrieval_budget_reference': [ErrorDetail(string='该字段不能为 null。', code='null')]}
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.058s
+
+FAILED (errors=2)

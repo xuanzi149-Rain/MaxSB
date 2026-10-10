@@ -1,0 +1,220 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+2026-10-10 00:41:22 [tool_code ERROR] Exception: [Errno 2] No such file or directory: '/tmp/maxsb-task3/tmp/tool_executor_init_dir.lock'
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/maxsb-task3/apps/common/utils/tool_code.py", line 54, in init_sandbox_dir
+    fd = os.open(
+         ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/maxsb-task3/tmp/tool_executor_init_dir.lock'
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.262 seconds.
+Prefix dict has been built successfully.
+Found 12 test(s).
+Skipping setup of unused database(s): default.
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/tmp/maxsb-task3/ui/dist' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+test_complex_reranks_raw_candidates_before_context_deduplication (application.tests_retrieval.DynamicRerankerTests.test_complex_reranks_raw_candidates_before_context_deduplication) ... ERROR
+test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence (application.tests_retrieval.DynamicRerankerTests.test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence) ... ERROR
+test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip (application.tests_retrieval.DynamicRerankerTests.test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip) ... ERROR
+test_simple_bypasses_reranker_and_still_deduplicates_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_simple_bypasses_reranker_and_still_deduplicates_original_evidence) ... FAIL
+test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload (application.tests_retrieval.DynamicRerankerTests.test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload) ... ERROR
+test_unlinked_and_unknown_reranker_keep_original_failure_semantics (application.tests_retrieval.DynamicRerankerTests.test_unlinked_and_unknown_reranker_keep_original_failure_semantics) ... ok
+test_empty_authorized_knowledge_skips_model_and_reports_empty_scope (application.tests_retrieval.RetrievalIntegrationTests.test_empty_authorized_knowledge_skips_model_and_reports_empty_scope) ... ERROR
+test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace) ... FAIL
+test_old_and_disabled_workflow_outputs_are_identical (application.tests_retrieval.RetrievalIntegrationTests.test_old_and_disabled_workflow_outputs_are_identical) ... ok
+test_policy_serializer_roundtrip_and_range_validation (application.tests_retrieval.RetrievalIntegrationTests.test_policy_serializer_roundtrip_and_range_validation) ... ERROR
+test_query_uses_decision_before_context_processing_and_keeps_raw_sources (application.tests_retrieval.RetrievalIntegrationTests.test_query_uses_decision_before_context_processing_and_keeps_raw_sources) ... FAIL
+test_unknown_keeps_fixed_query_and_complex_expands (application.tests_retrieval.RetrievalIntegrationTests.test_unknown_keeps_fixed_query_and_complex_expands) ... ERROR
+
+======================================================================
+ERROR: test_complex_reranks_raw_candidates_before_context_deduplication (application.tests_retrieval.DynamicRerankerTests.test_complex_reranks_raw_candidates_before_context_deduplication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 133, in test_complex_reranks_raw_candidates_before_context_deduplication
+    self.assertEqual(result['retrieval_budget']['rerank_status'], 'applied')
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'retrieval_budget'
+
+======================================================================
+ERROR: test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence (application.tests_retrieval.DynamicRerankerTests.test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2766, in to_python
+    return uuid.UUID(**{input_form: value})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/uuid.py", line 178, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 174, in test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence
+    IRerankerNode._run(node)
+  File "/tmp/maxsb-task3/apps/application/flow/step_node/reranker_node/i_reranker_node.py", line 86, in _run
+    return self.execute(**node_params_data, question=str(question),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/application/flow/step_node/reranker_node/impl/base_reranker_node.py", line 103, in execute
+    reranker_model = get_model_instance_by_model_workspace_id(reranker_model_id,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/models_provider/tools.py", line 151, in get_model_instance_by_model_workspace_id
+    model = get_model_by_id(model_id, workspace_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/models_provider/tools.py", line 109, in get_model_by_id
+    model = QuerySet(Model).filter(id=_id).first()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/query.py", line 1495, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/query.py", line 1513, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/query.py", line 1523, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1648, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1680, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1590, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1417, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/lookups.py", line 410, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/lookups.py", line 96, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2750, in get_prep_value
+    return self.to_python(value)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2768, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“model” is not a valid UUID.']
+
+======================================================================
+ERROR: test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip (application.tests_retrieval.DynamicRerankerTests.test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 158, in test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip
+    result = IRerankerNode._run(node).node_variable
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/application/flow/step_node/reranker_node/i_reranker_node.py", line 84, in _run
+    raise Exception(_('Model is not allowed to be empty'))
+Exception: 模型不能为空
+
+======================================================================
+ERROR: test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload (application.tests_retrieval.DynamicRerankerTests.test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 137, in test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload
+    result, _, _ = self.execute('比较成人和儿童借书条件', failure=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 115, in execute
+    output = node.execute(question, {'top_n': 5, 'similarity': .2, 'max_paragraph_char_number': 5000,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task3/apps/application/flow/step_node/reranker_node/impl/base_reranker_node.py", line 103, in execute
+    reranker_model = get_model_instance_by_model_workspace_id(reranker_model_id,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: provider error with sensitive payload
+
+======================================================================
+ERROR: test_empty_authorized_knowledge_skips_model_and_reports_empty_scope (application.tests_retrieval.RetrievalIntegrationTests.test_empty_authorized_knowledge_skips_model_and_reports_empty_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 78, in test_empty_authorized_knowledge_skips_model_and_reports_empty_scope
+    self.assertEqual(result['retrieval_budget']['status'], 'empty_scope')
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'retrieval_budget'
+
+======================================================================
+ERROR: test_policy_serializer_roundtrip_and_range_validation (application.tests_retrieval.RetrievalIntegrationTests.test_policy_serializer_roundtrip_and_range_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 98, in test_policy_serializer_roundtrip_and_range_validation
+    self.assertEqual(serializer.data['retrieval_policy'], {'enabled': True})
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'retrieval_policy'
+
+======================================================================
+ERROR: test_unknown_keeps_fixed_query_and_complex_expands (application.tests_retrieval.RetrievalIntegrationTests.test_unknown_keeps_fixed_query_and_complex_expands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 93, in test_unknown_keeps_fixed_query_and_complex_expands
+    self.assertEqual(result['retrieval_budget']['top_n'], limit)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'retrieval_budget'
+
+======================================================================
+FAIL: test_simple_bypasses_reranker_and_still_deduplicates_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_simple_bypasses_reranker_and_still_deduplicates_original_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 123, in test_simple_bypasses_reranker_and_still_deduplicates_original_evidence
+    loader.assert_not_called()
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 900, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'get_model_instance_by_model_workspace_id' to not have been called. Called 1 times.
+Calls: [call('model', 'default', top_n=5),
+ call().compress_documents([Document(metadata={'title': '', 'id': '0', 'document_id': 'doc', 'knowledge_id': 'kb', 'content': '借期21天', 'similarity': 0.9, 'is_hit_handling_method': False, 'meta': {'allow_download': False}}, page_content='借期21天'), Document(metadata={'title': '', 'id': '1', 'document_id': 'doc', 'knowledge_id': 'kb', 'content': '借期21天', 'similarity': 0.8, 'is_hit_handling_method': False, 'meta': {'allow_download': False}}, page_content='借期21天'), Document(metadata={'title': '', 'id': '2', 'document_id': 'doc', 'knowledge_id': 'kb', 'content': '儿童限借3本', 'similarity': 0.7, 'is_hit_handling_method': False, 'meta': {'allow_download': False}}, page_content='儿童限借3本')], '借期是多少天？')].
+
+======================================================================
+FAIL: test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 60, in test_greeting_skips_embedding_and_vector_io_with_replayable_trace
+    self.assertEqual(result['data'], '')
+AssertionError: '借期21天\n借期21天\n儿童限借3本' != ''
+- 借期21天
+- 借期21天
+- 儿童限借3本
+
+======================================================================
+FAIL: test_query_uses_decision_before_context_processing_and_keeps_raw_sources (application.tests_retrieval.RetrievalIntegrationTests.test_query_uses_decision_before_context_processing_and_keeps_raw_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/maxsb-task3/apps/application/tests_retrieval.py", line 69, in test_query_uses_decision_before_context_processing_and_keeps_raw_sources
+    self.assertEqual(vector.query.call_args.args[7:9], (3, .2))
+AssertionError: Tuples differ: (5, 0.2) != (3, 0.2)
+
+First differing element 0:
+5
+3
+
+- (5, 0.2)
+?  ^
+
++ (3, 0.2)
+?  ^
+
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.086s
+
+FAILED (failures=3, errors=7)

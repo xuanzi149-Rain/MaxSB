@@ -1,0 +1,217 @@
+{
+  "none": {
+    "fixed": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    },
+    "dynamic": {
+      "count": 0,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": null,
+      "evidence_recall_coverage": 0,
+      "retrieval_ms": null
+    }
+  },
+  "simple": {
+    "fixed": {
+      "count": 16,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-014",
+        "frozen-021"
+      ],
+      "missing_evidence": {
+        "frozen-014": [
+          "F-holiday"
+        ],
+        "frozen-021": [
+          "F-south"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9230769230769231,
+      "evidence_recall_coverage": 13,
+      "retrieval_ms": 3778.4385900627058
+    },
+    "dynamic": {
+      "count": 16,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-014",
+        "frozen-021"
+      ],
+      "missing_evidence": {
+        "frozen-014": [
+          "F-holiday"
+        ],
+        "frozen-021": [
+          "F-south",
+          "F-volume"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.8846153846153846,
+      "evidence_recall_coverage": 13,
+      "retrieval_ms": 4029.833572250027
+    }
+  },
+  "complex": {
+    "fixed": {
+      "count": 5,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-015"
+      ],
+      "missing_evidence": {
+        "frozen-015": [
+          "F-north"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9,
+      "evidence_recall_coverage": 5,
+      "retrieval_ms": 2226.4422342006583
+    },
+    "dynamic": {
+      "count": 5,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [],
+      "missing_evidence": {},
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 1.0,
+      "evidence_recall_coverage": 5,
+      "retrieval_ms": 2025.9391508006956
+    }
+  },
+  "unknown": {
+    "fixed": {
+      "count": 47,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-032"
+      ],
+      "missing_evidence": {
+        "frozen-027": [
+          "F-dupe"
+        ],
+        "frozen-032": [
+          "F-dupe",
+          "F-north"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9761904761904762,
+      "evidence_recall_coverage": 42,
+      "retrieval_ms": 7447.35406176698
+    },
+    "dynamic": {
+      "count": 47,
+      "success_count": 0,
+      "execution_failures": [],
+      "quality_failures": [
+        "frozen-032"
+      ],
+      "missing_evidence": {
+        "frozen-027": [
+          "F-dupe"
+        ],
+        "frozen-032": [
+          "F-dupe",
+          "F-north"
+        ]
+      },
+      "input_tokens": null,
+      "input_tokens_coverage": 0,
+      "output_tokens": null,
+      "output_tokens_coverage": 0,
+      "actual_cost": null,
+      "actual_cost_coverage": 0,
+      "correctness": null,
+      "correctness_coverage": 0,
+      "citation_accuracy": null,
+      "citation_accuracy_coverage": 0,
+      "evidence_recall": 0.9761904761904762,
+      "evidence_recall_coverage": 42,
+      "retrieval_ms": 3825.031872382982
+    }
+  }
+}

@@ -238,6 +238,8 @@ export const searchKnowledgeNode = {
           label: t('workflow.nodes.searchKnowledgeNode.directly_return'),
           value: 'directly_return',
         },
+        { label: '检索预算决策', value: 'retrieval_budget' },
+        { label: '原始检索候选', value: 'retrieved_paragraph_list' },
       ],
     },
   },

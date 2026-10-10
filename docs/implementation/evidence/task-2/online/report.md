@@ -59,3 +59,7 @@ PYTHONPATH=apps python apps/manage.py publish_context_review \
 原在线源码与静态资源备份在容器挂载数据目录 `/opt/maxkb/rollback/task2-online/source-before.tar`（宿主机 `/private/tmp/maxkb-task0-data/rollback/task2-online/source-before.tar`）。备份时原镜像没有 `pyproject.toml`，tar 提示该可选文件不存在；已确认实际原 `apps`、`ui/dist`、`main.py` 完整保存。服务部署后文件哈希及真实问答已核验。可先关闭应用开关立即停用语义路径；源码回退需恢复备份并重载 Web，同时将新验证应用停用或明确其回退状态。
 
 首次准备验证应用的发布步骤因缺少 serializer 校验中断，已补上校验并续用既有应用完成发布，没有重复创建资料或重新付费判断。后续示例准备脚本会拒绝重名应用，避免重复运行。
+
+## 2026-10-10 补充验收
+
+完整冻结集输入对照、逐题 AI 复核与离线判断摊销见 [补充验收报告](../acceptance/report.md)。冻结集 211 轮 OFF/ON 上下文一致、输入节省为零；历史六组样例的已观测节省尚未抵消离线判断成本。正式人工签收与实际账单仍待补齐，不以本页演示成功视为整体净收益已验收。

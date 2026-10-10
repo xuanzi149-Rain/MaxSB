@@ -1,0 +1,254 @@
+[
+  {
+    "a_id": "paraphrase-limit-a",
+    "b_id": "paraphrase-limit-b",
+    "input_tokens": 349,
+    "output_tokens": 103,
+    "seconds": 3.0163005430003977
+  },
+  {
+    "a_id": "paraphrase-limit-b",
+    "b_id": "paraphrase-limit-a",
+    "input_tokens": 349,
+    "output_tokens": 101,
+    "seconds": 2.4067456260017934
+  },
+  {
+    "a_id": "paraphrase-period-a",
+    "b_id": "paraphrase-period-b",
+    "input_tokens": 352,
+    "output_tokens": 111,
+    "seconds": 2.6871852510012104
+  },
+  {
+    "a_id": "paraphrase-period-b",
+    "b_id": "paraphrase-period-a",
+    "input_tokens": 352,
+    "output_tokens": 112,
+    "seconds": 2.979273793003813
+  },
+  {
+    "a_id": "paraphrase-closed-b",
+    "b_id": "paraphrase-closed-a",
+    "input_tokens": 355,
+    "output_tokens": 110,
+    "seconds": 2.679647833996569
+  },
+  {
+    "a_id": "paraphrase-closed-a",
+    "b_id": "paraphrase-closed-b",
+    "input_tokens": 355,
+    "output_tokens": 110,
+    "seconds": 2.766678252002748
+  },
+  {
+    "a_id": "paraphrase-negative-b",
+    "b_id": "paraphrase-negative-a",
+    "input_tokens": 343,
+    "output_tokens": 93,
+    "seconds": 2.758793542998319
+  },
+  {
+    "a_id": "paraphrase-negative-a",
+    "b_id": "paraphrase-negative-b",
+    "input_tokens": 343,
+    "output_tokens": 93,
+    "seconds": 2.363263792998623
+  },
+  {
+    "a_id": "paraphrase-reservation-a",
+    "b_id": "paraphrase-reservation-b",
+    "input_tokens": 357,
+    "output_tokens": 110,
+    "seconds": 2.8226245010009734
+  },
+  {
+    "a_id": "paraphrase-reservation-b",
+    "b_id": "paraphrase-reservation-a",
+    "input_tokens": 357,
+    "output_tokens": 111,
+    "seconds": 2.7780677100017783
+  },
+  {
+    "a_id": "paraphrase-length-a",
+    "b_id": "paraphrase-length-b",
+    "input_tokens": 347,
+    "output_tokens": 97,
+    "seconds": 2.8238686680051615
+  },
+  {
+    "a_id": "paraphrase-length-b",
+    "b_id": "paraphrase-length-a",
+    "input_tokens": 347,
+    "output_tokens": 100,
+    "seconds": 2.4539229170040926
+  },
+  {
+    "a_id": "negative-conflict-b",
+    "b_id": "negative-conflict-a",
+    "input_tokens": 338,
+    "output_tokens": 93,
+    "seconds": 2.4397156679988257
+  },
+  {
+    "a_id": "negative-conflict-a",
+    "b_id": "negative-conflict-b",
+    "input_tokens": 338,
+    "output_tokens": 90,
+    "seconds": 2.273627000999113
+  },
+  {
+    "a_id": "subject-difference-b",
+    "b_id": "subject-difference-a",
+    "input_tokens": 344,
+    "output_tokens": 88,
+    "seconds": 2.238212668002234
+  },
+  {
+    "a_id": "subject-difference-a",
+    "b_id": "subject-difference-b",
+    "input_tokens": 344,
+    "output_tokens": 94,
+    "seconds": 2.460262792999856
+  },
+  {
+    "a_id": "additional-exception-b",
+    "b_id": "additional-exception-a",
+    "input_tokens": 359,
+    "output_tokens": 118,
+    "seconds": 2.510527001002629
+  },
+  {
+    "a_id": "additional-exception-a",
+    "b_id": "additional-exception-b",
+    "input_tokens": 359,
+    "output_tokens": 122,
+    "seconds": 2.7754815430016606
+  },
+  {
+    "a_id": "partial-overlap-b",
+    "b_id": "partial-overlap-a",
+    "input_tokens": 348,
+    "output_tokens": 109,
+    "seconds": 2.820506292002392
+  },
+  {
+    "a_id": "partial-overlap-a",
+    "b_id": "partial-overlap-b",
+    "input_tokens": 348,
+    "output_tokens": 102,
+    "seconds": 2.4502378350007348
+  },
+  {
+    "a_id": "quantifier-b",
+    "b_id": "quantifier-a",
+    "input_tokens": 339,
+    "output_tokens": 113,
+    "seconds": 2.818748293000681
+  },
+  {
+    "a_id": "quantifier-a",
+    "b_id": "quantifier-b",
+    "input_tokens": 339,
+    "output_tokens": 110,
+    "seconds": 2.6758230429986725
+  },
+  {
+    "a_id": "one-way-independent-a",
+    "b_id": "one-way-independent-b",
+    "input_tokens": 347,
+    "output_tokens": 104,
+    "seconds": 2.5247245430000476
+  },
+  {
+    "a_id": "one-way-independent-b",
+    "b_id": "one-way-independent-a",
+    "input_tokens": 347,
+    "output_tokens": 106,
+    "seconds": 2.5385125429966138
+  },
+  {
+    "a_id": "quoted-example-b",
+    "b_id": "quoted-example-a",
+    "input_tokens": 341,
+    "output_tokens": 103,
+    "seconds": 2.507870750996517
+  },
+  {
+    "a_id": "quoted-example-a",
+    "b_id": "quoted-example-b",
+    "input_tokens": 341,
+    "output_tokens": 108,
+    "seconds": 2.6643244169972604
+  },
+  {
+    "a_id": "injected-instruction-b",
+    "b_id": "injected-instruction-a",
+    "input_tokens": 357,
+    "output_tokens": 106,
+    "seconds": 2.698339501999726
+  },
+  {
+    "a_id": "injected-instruction-a",
+    "b_id": "injected-instruction-b",
+    "input_tokens": 357,
+    "output_tokens": 112,
+    "seconds": 2.75265775200387
+  },
+  {
+    "a_id": "additional-exception-b",
+    "b_id": "additional-exception-a",
+    "input_tokens": 359,
+    "output_tokens": 118,
+    "seconds": 2.6658377509957063
+  },
+  {
+    "a_id": "additional-exception-a",
+    "b_id": "additional-exception-b",
+    "input_tokens": 359,
+    "output_tokens": 122,
+    "seconds": 2.8845934999990277
+  },
+  {
+    "a_id": "partial-overlap-b",
+    "b_id": "partial-overlap-a",
+    "input_tokens": 348,
+    "output_tokens": 110,
+    "seconds": 2.7692834600020433
+  },
+  {
+    "a_id": "partial-overlap-a",
+    "b_id": "partial-overlap-b",
+    "input_tokens": 348,
+    "output_tokens": 100,
+    "seconds": 2.7145482510022703
+  },
+  {
+    "a_id": "one-way-independent-a",
+    "b_id": "one-way-independent-b",
+    "input_tokens": 347,
+    "output_tokens": 105,
+    "seconds": 2.5644141680022585
+  },
+  {
+    "a_id": "one-way-independent-b",
+    "b_id": "one-way-independent-a",
+    "input_tokens": 347,
+    "output_tokens": 103,
+    "seconds": 2.5107054179970874
+  },
+  {
+    "a_id": "quoted-example-b",
+    "b_id": "quoted-example-a",
+    "input_tokens": 341,
+    "output_tokens": 103,
+    "seconds": 2.7345175849986845
+  },
+  {
+    "a_id": "quoted-example-a",
+    "b_id": "quoted-example-b",
+    "input_tokens": 341,
+    "output_tokens": 100,
+    "seconds": 2.8982547519990476
+  }
+]

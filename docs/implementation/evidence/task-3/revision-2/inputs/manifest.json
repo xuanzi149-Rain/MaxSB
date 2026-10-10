@@ -1,0 +1,9 @@
+{
+  "status": "sealed_before_v2_model_runs",
+  "corpus_hash": "6de852ee4145d8a83b0e61d6986628d204264b1d397a4f8033d5f4b7193ed3b6",
+  "datasets": {
+    "dev-v2": "b23fabadf0cb750de1cfe17370bace4ca31de7fbf9d33652b55d90a85d0f36cb",
+    "acceptance-v2": "15326944fb0e237ecdce065d174297caaa0c698a67c9808a2fafb0a86f18ed5a"
+  },
+  "limitation": "New authored holdout, same corpus and author; not independent human benchmark. Old frozen set not used for tuning."
+}

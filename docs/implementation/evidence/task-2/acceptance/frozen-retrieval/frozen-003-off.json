@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-003",
+  "scenario": "direct",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "东站接受现场付款吗？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 96.59800100052962,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+            "content": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+            "title": "F-east",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.689636+0800\", \"2\": \"2026-10-09 15:27:50.846510+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-east",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6363988247868597,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec3307b66893",
+            "content": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+            "title": "F-scope-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.887940+0800\", \"2\": \"2026-10-09 15:27:53.983044+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec26f3be32f3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5626405030823953,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5357649688300444,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd2-7741-bc81-bd151dc2bf75",
+            "content": "[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+            "title": "F-bulk",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.858472+0800\", \"2\": \"2026-10-09 15:27:53.004019+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76477f50d458",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-bulk",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4895722859843026,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcd-7db2-a210-2253364b0d88",
+            "content": "[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。",
+            "title": "F-track",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.017919+0800\", \"2\": \"2026-10-09 15:27:51.330673+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcd-7db2-a210-22477d429d00",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-track",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.48332872788056813,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。",
+        "directly_return": "",
+        "question": "东站接受现场付款吗？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-scope-b\n[F-scope-b] 个人柜台须逐单付款，不支持月结。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-bulk\n[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。\n用户问题：东站接受现场付款吗？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-bulk",
+    "F-east",
+    "F-scope-a",
+    "F-scope-b",
+    "F-track"
+  ],
+  "elapsed_ms": 96.67054199962877,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

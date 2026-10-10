@@ -1,0 +1,368 @@
+{
+  "case_id": "v2-005",
+  "scenario": "routing",
+  "enabled": false,
+  "category": "none",
+  "turns": [
+    {
+      "question": "请简洁答复，暂时不要制定计划。",
+      "answer": "资料中关于临时柜台周三开放 [F-uncertain-a] 与关闭 [F-uncertain-b] 的公告存在冲突，且均未标明日期或说明替代关系，无法确定确切状态。",
+      "input_tokens": 254,
+      "output_tokens": 43,
+      "retrieval_ms": 335.9319579976727,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.560896243995653,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5592641471720023,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+            "content": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+            "title": "F-uncertain-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:54.143122+0800\", \"2\": \"2026-10-09 15:27:54.307343+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.550433483693989,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+            "content": "[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。",
+            "title": "D-room",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.695385+0800\", \"2\": \"2026-10-09 15:27:49.868844+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-room",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.549066814724614,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+            "content": "[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+            "title": "D-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.328626+0800\", \"2\": \"2026-10-09 15:27:50.465488+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5208184278255235,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### D-room\n[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。\n#### D-new\n[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+        "directly_return": "",
+        "question": "请简洁答复，暂时不要制定计划。",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 216,
+          "estimated_retained_tokens": 216,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+              "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+              "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+              "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+              "reason": "retained"
+            }
+          ]
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.560896243995653,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5592641471720023,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e577d4e47695",
+            "content": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+            "title": "F-uncertain-b",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:54.143122+0800\", \"2\": \"2026-10-09 15:27:54.307343+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd6-7fc0-855e-e56df55b2be8",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-b",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.550433483693989,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+            "content": "[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。",
+            "title": "D-room",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.695385+0800\", \"2\": \"2026-10-09 15:27:49.868844+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-room",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.549066814724614,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+            "content": "[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+            "title": "D-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.328626+0800\", \"2\": \"2026-10-09 15:27:50.465488+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5208184278255235,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "dialogue_policy": {
+        "enabled": false,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n#### F-uncertain-b\n[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。\n#### D-room\n[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。\n#### D-new\n[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。\n用户问题：请简洁答复，暂时不要制定计划。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "资料中关于临时柜台周三开放 [F-uncertain-a] 与关闭 [F-uncertain-b] 的公告存在冲突，且均未标明日期或说明替代关系，无法确定确切状态。",
+  "retrieved_evidence_ids": [
+    "D-new",
+    "D-room",
+    "F-lost",
+    "F-uncertain-a",
+    "F-uncertain-b"
+  ],
+  "elapsed_ms": 1896.7972099999315,
+  "input_tokens": 254,
+  "output_tokens": 43,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      false
+    ],
+    "review_status": "pending"
+  }
+}

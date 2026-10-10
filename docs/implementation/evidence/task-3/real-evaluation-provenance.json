@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-09T17:18:05.444252+00:00",
+  "authorization": "用户在上一轮具体请求后明确回复：授权执行",
+  "endpoint": "token-plan.cn-beijing.maas.aliyuncs.com",
+  "model": "qwen3.7-plus",
+  "data": "评测题目、检索到的公开上下文及本题多轮历史",
+  "shared_budget_limit_cny": 300,
+  "max_output_tokens_per_request": 2048,
+  "code_sha": "3bb137db442447c93fd710d2b9f3306a0370889a",
+  "runner_sha256": "254c2e47e829cdc7c70794dcf38196a9c4e4f4efcd83434f51b26c93dd5a68a1",
+  "scope": "既有检索节点加真实回答模型；没有新增外部重排模型或工具调用",
+  "policy_tuning": "未依据冻结集修改规则和参数",
+  "runtime": {
+    "python": "3.11.16",
+    "Django": "5.2.16",
+    "langchain-core": "1.4.8",
+    "langchain-openai": "1.3.2",
+    "httpx": "0.28.1"
+  },
+  "image_id": "sha256:762dd063cad1ebe2f83342ee394b757296c924d7ff30586de954b7866ff0a351",
+  "configured_reranker_models_in_default_workspace": 0
+}

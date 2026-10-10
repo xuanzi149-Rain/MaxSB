@@ -1,0 +1,15 @@
+{
+  "status": "sealed_before_model_runs",
+  "version": "v1",
+  "corpus_hash": "6de852ee4145d8a83b0e61d6986628d204264b1d397a4f8033d5f4b7193ed3b6",
+  "datasets": {
+    "dev-v1": "6caebd05bcb5d7671144ac06e85a3b59221b584309fe0749cfbbb28128326b7a",
+    "frozen-v1": "26f1d1b48baeb64cc02689a1e1a8c3fc55b013618efa40bef364196d18e70adf"
+  },
+  "human_review": "answer scoring pending; rubric editorial review is not human answer scoring",
+  "rubric_review": {
+    "status": "reviewed",
+    "reviewer": "Codex",
+    "method": "independent review findings corrected; evidence references and counts checked before model execution"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "apps/application/flow/step_node/reranker_node/i_reranker_node.py": "2e412bfa8e33cb55706b1a1f4b473d5e08329355b366f125e2b8b5e7b3602a97",
+  "apps/application/flow/step_node/reranker_node/impl/base_reranker_node.py": "76cebd6d325b9ff010c490155547009a512652ef49743f9a1b026229538cc840",
+  "apps/application/flow/step_node/search_knowledge_node/i_search_knowledge_node.py": "fbc563b8608f7411e78b1bdb99e7f5012a8dc43ec47455499f6b71bb980fb45e",
+  "apps/application/flow/step_node/search_knowledge_node/impl/base_search_knowledge_node.py": "68d43bbc4f8ced82bf7e2774a77382fea54010379afb38f393290f4d638e072f",
+  "apps/application/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "apps/application/retrieval/policy.py": "fb5b6324b5dbd0333b79b0e0be0d16a34ac0ae87e092317d1b64d8957cfe45d0",
+  "apps/application/retrieval/report.py": "105f9bc2a20186442d98f12a3140d12b8d0942c1f0c476da7482e364bd6c4b2e",
+  "apps/application/retrieval/serializers.py": "9acc42678cb5b3b8a95ea08888c83acf614d300089b2416c87ffa695148b27db",
+  "apps/application/tests_retrieval.py": "b29399c1280416b32accd286377f8d364df0a0f450d3701fba3d93ba35388a72",
+  "docs/implementation/scripts/run_task3_comparison.py": "254c2e47e829cdc7c70794dcf38196a9c4e4f4efcd83434f51b26c93dd5a68a1",
+  "ui/src/components/execution-detail-card/index.vue": "26bc7d10d9c93feaef1d1dd8edde89508cb2d81c44ba157872897f213255d35f",
+  "ui/src/components/retrieval-policy/RetrievalBudgetDetails.vue": "1b9b55b12c8e7682434f9f290152cb1367ba0071dc9d8a9f7236e6121079e8f8",
+  "ui/src/components/retrieval-policy/RetrievalPolicySettings.vue": "92478bfe85b5ae94706ec518c34709f257a2d6e9fae1cff5e396d8b7409c1e65",
+  "ui/src/views/application/component/ParamSettingDialog.vue": "aa5138d3726b0d56b585b8f0dd2d1bb3c29dc9149d9d92297025eeb6bd2ef8e3",
+  "ui/src/workflow/common/data.ts": "d74fbeeb62032ebf930cea36ec3162292365894eb9254312d5b440bb0c6b22d5",
+  "ui/src/workflow/nodes/reranker-node/index.vue": "9c9facc36499fb754c6c1a0188616f3b7ad0906e4dce7f2e108ae45428dad9fe",
+  "ui/src/workflow/nodes/search-knowledge-node/index.vue": "88490c9ea21131956507beb3807ac95badd6eda4c34567a6dc9b1390da1e10c3"
+}

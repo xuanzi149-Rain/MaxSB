@@ -1,0 +1,23 @@
+{
+  "case_id": "frozen-060",
+  "scenario": "tool_success",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [],
+  "actual_cost": null,
+  "status": "not_applicable",
+  "answer": "",
+  "retrieved_evidence_ids": [],
+  "elapsed_ms": 0.0003749955794773996,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": false,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

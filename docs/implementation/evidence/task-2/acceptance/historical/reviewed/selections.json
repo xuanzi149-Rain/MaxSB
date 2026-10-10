@@ -1,0 +1,1004 @@
+[
+  {
+    "case_id": "paraphrase-limit",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 50,
+      "estimated_retained_tokens": 24,
+      "estimated_saved_tokens": 26,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-limit-a",
+          "document_id": "paraphrase-limit-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-limit-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-limit-b",
+          "document_id": "paraphrase-limit-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-limit-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "ed090a00226dddd9a4c00781c33bbb7b0eedd2966e68175bfae35f7f12941e4a",
+          "a_id": "paraphrase-limit-a",
+          "b_id": "paraphrase-limit-b",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-limit-a"
+    ]
+  },
+  {
+    "case_id": "paraphrase-period",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 48,
+      "estimated_retained_tokens": 25,
+      "estimated_saved_tokens": 23,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-period-a",
+          "document_id": "paraphrase-period-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-period-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-period-b",
+          "document_id": "paraphrase-period-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-period-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "b9ae3fb7a72d7977e6bd75c949c91b1f36ff272b00002cc50387113ccb044eb8",
+          "a_id": "paraphrase-period-a",
+          "b_id": "paraphrase-period-b",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-period-a"
+    ]
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 53,
+      "estimated_retained_tokens": 24,
+      "estimated_saved_tokens": 29,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-closed-a",
+          "document_id": "paraphrase-closed-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-closed-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-closed-b",
+          "document_id": "paraphrase-closed-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-closed-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "0f58dd37568692e1f88458d4afac96d3ecf62f8fca6c0bff47c789b32cb76260",
+          "a_id": "paraphrase-closed-b",
+          "b_id": "paraphrase-closed-a",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-closed-a"
+    ]
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 46,
+      "estimated_retained_tokens": 23,
+      "estimated_saved_tokens": 23,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-negative-a",
+          "document_id": "paraphrase-negative-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-negative-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-negative-b",
+          "document_id": "paraphrase-negative-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-negative-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "739a564c12be80340cf8f45e5d44b8530946d83760518777f8a92df9baadd61d",
+          "a_id": "paraphrase-negative-b",
+          "b_id": "paraphrase-negative-a",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-negative-a"
+    ]
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 58,
+      "estimated_retained_tokens": 26,
+      "estimated_saved_tokens": 32,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-reservation-a",
+          "document_id": "paraphrase-reservation-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-reservation-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-reservation-b",
+          "document_id": "paraphrase-reservation-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-reservation-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "3cf12391ba5c3512957e8c7924c236c6272265d0475d1783c628b7d4cefcd4a2",
+          "a_id": "paraphrase-reservation-a",
+          "b_id": "paraphrase-reservation-b",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-reservation-a"
+    ]
+  },
+  {
+    "case_id": "paraphrase-length",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 1,
+      "estimated_original_tokens": 47,
+      "estimated_retained_tokens": 22,
+      "estimated_saved_tokens": 25,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "paraphrase-length-a",
+          "document_id": "paraphrase-length-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-length-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "paraphrase-length-b",
+          "document_id": "paraphrase-length-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "paraphrase-length-a",
+          "reason": "semantic_duplicate"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 1,
+      "checks": [
+        {
+          "pair_key": "753ca14a7f4a69e025dab65a56c4be58820ae11140e79994639ec62ee11f16d5",
+          "a_id": "paraphrase-length-a",
+          "b_id": "paraphrase-length-b",
+          "status": "approved_equivalent"
+        }
+      ],
+      "actual_removed_count": 1
+    },
+    "retained_ids": [
+      "paraphrase-length-a"
+    ]
+  },
+  {
+    "case_id": "numeric-conflict",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 46,
+      "estimated_retained_tokens": 46,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "numeric-conflict-a",
+          "document_id": "numeric-conflict-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "numeric-conflict-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "numeric-conflict-b",
+          "document_id": "numeric-conflict-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "numeric-conflict-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "numeric-conflict-a",
+      "numeric-conflict-b"
+    ]
+  },
+  {
+    "case_id": "negative-conflict",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 44,
+      "estimated_retained_tokens": 44,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "negative-conflict-a",
+          "document_id": "negative-conflict-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "negative-conflict-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "negative-conflict-b",
+          "document_id": "negative-conflict-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "negative-conflict-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "negative-conflict-a",
+      "negative-conflict-b"
+    ]
+  },
+  {
+    "case_id": "subject-difference",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 47,
+      "estimated_retained_tokens": 47,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "subject-difference-a",
+          "document_id": "subject-difference-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "subject-difference-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "subject-difference-b",
+          "document_id": "subject-difference-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "subject-difference-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "subject-difference-a",
+      "subject-difference-b"
+    ]
+  },
+  {
+    "case_id": "additional-exception",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 62,
+      "estimated_retained_tokens": 62,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "additional-exception-a",
+          "document_id": "additional-exception-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "additional-exception-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "additional-exception-b",
+          "document_id": "additional-exception-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "additional-exception-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "additional-exception-a",
+      "additional-exception-b"
+    ]
+  },
+  {
+    "case_id": "partial-overlap",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 53,
+      "estimated_retained_tokens": 53,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "partial-overlap-a",
+          "document_id": "partial-overlap-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "partial-overlap-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "partial-overlap-b",
+          "document_id": "partial-overlap-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "partial-overlap-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "partial-overlap-a",
+      "partial-overlap-b"
+    ]
+  },
+  {
+    "case_id": "unknown-reference",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 45,
+      "estimated_retained_tokens": 45,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "unknown-reference-a",
+          "document_id": "unknown-reference-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "unknown-reference-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "unknown-reference-b",
+          "document_id": "unknown-reference-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "unknown-reference-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "unknown-reference-a",
+      "unknown-reference-b"
+    ]
+  },
+  {
+    "case_id": "quantifier",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 45,
+      "estimated_retained_tokens": 45,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "quantifier-a",
+          "document_id": "quantifier-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "quantifier-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "quantifier-b",
+          "document_id": "quantifier-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "quantifier-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "quantifier-a",
+      "quantifier-b"
+    ]
+  },
+  {
+    "case_id": "time-scope",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 48,
+      "estimated_retained_tokens": 48,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "time-scope-a",
+          "document_id": "time-scope-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "time-scope-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "time-scope-b",
+          "document_id": "time-scope-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "time-scope-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "time-scope-a",
+      "time-scope-b"
+    ]
+  },
+  {
+    "case_id": "one-way-independent",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 53,
+      "estimated_retained_tokens": 53,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "one-way-independent-a",
+          "document_id": "one-way-independent-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "one-way-independent-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "one-way-independent-b",
+          "document_id": "one-way-independent-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "one-way-independent-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "one-way-independent-a",
+      "one-way-independent-b"
+    ]
+  },
+  {
+    "case_id": "quoted-example",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 47,
+      "estimated_retained_tokens": 47,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "quoted-example-a",
+          "document_id": "quoted-example-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "quoted-example-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "quoted-example-b",
+          "document_id": "quoted-example-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "quoted-example-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "quoted-example-a",
+      "quoted-example-b"
+    ]
+  },
+  {
+    "case_id": "unit-conversion",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 47,
+      "estimated_retained_tokens": 47,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "unit-conversion-a",
+          "document_id": "unit-conversion-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "unit-conversion-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "unit-conversion-b",
+          "document_id": "unit-conversion-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "unit-conversion-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "unit-conversion-a",
+      "unit-conversion-b"
+    ]
+  },
+  {
+    "case_id": "injected-instruction",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 65,
+      "estimated_retained_tokens": 65,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "injected-instruction-a",
+          "document_id": "injected-instruction-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "injected-instruction-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "injected-instruction-b",
+          "document_id": "injected-instruction-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "injected-instruction-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "injected-instruction-a",
+      "injected-instruction-b"
+    ]
+  },
+  {
+    "case_id": "original-loan-copy",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 102,
+      "estimated_retained_tokens": 102,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "original-loan-copy-a",
+          "document_id": "original-loan-copy-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "original-loan-copy-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "original-loan-copy-b",
+          "document_id": "original-loan-copy-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "original-loan-copy-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "original-loan-copy-a",
+      "original-loan-copy-b"
+    ]
+  },
+  {
+    "case_id": "title-scope",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 45,
+      "estimated_retained_tokens": 45,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "title-scope-a",
+          "document_id": "title-scope-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "title-scope-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "title-scope-b",
+          "document_id": "title-scope-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "title-scope-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "title-scope-a",
+      "title-scope-b"
+    ]
+  },
+  {
+    "case_id": "metadata-version",
+    "audit": {
+      "enabled": true,
+      "original_count": 2,
+      "retained_count": 2,
+      "estimated_original_tokens": 46,
+      "estimated_retained_tokens": 46,
+      "estimated_saved_tokens": 0,
+      "token_estimator": "utf8_bytes_div_3_v1",
+      "token_budget": 2048,
+      "max_chars": 5000,
+      "similarity_threshold": 0.95,
+      "mapping": [
+        {
+          "original_index": 0,
+          "original_id": "metadata-version-a",
+          "document_id": "metadata-version-a",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 0,
+          "retained_id": "metadata-version-a",
+          "reason": "retained"
+        },
+        {
+          "original_index": 1,
+          "original_id": "metadata-version-b",
+          "document_id": "metadata-version-b",
+          "knowledge_id": "semantic-dev",
+          "retained_index": 1,
+          "retained_id": "metadata-version-b",
+          "reason": "retained"
+        }
+      ]
+    },
+    "semantic_application": {
+      "mode": "reviewed_cache_only",
+      "judge_calls": 0,
+      "approved_pair_count": 0,
+      "checks": [],
+      "actual_removed_count": 0
+    },
+    "retained_ids": [
+      "metadata-version-a",
+      "metadata-version-b"
+    ]
+  }
+]

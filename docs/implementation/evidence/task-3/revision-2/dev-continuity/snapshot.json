@@ -1,0 +1,90 @@
+{
+  "utc": "2026-10-10T03:19:17.372003+00:00",
+  "dataset_hash": "b23fabadf0cb750de1cfe17370bace4ca31de7fbf9d33652b55d90a85d0f36cb",
+  "corpus_hash": "6de852ee4145d8a83b0e61d6986628d204264b1d397a4f8033d5f4b7193ed3b6",
+  "knowledge_hash": "996de245f6c83031df998d7671719f756e6a13214c40c0e3817ad7a00edc69f9",
+  "source_files": {
+    "apps/application/retrieval/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/retrieval/._policy.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/retrieval/._serializers.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/application/retrieval/dialogue.py": "dec0bb5653705ed96a11c6321ff9d2a33461e292482b48ad5e672e9b88e74bd1",
+    "apps/application/retrieval/policy.py": "fed3ffb3be7e181b15041bcb5185ef7f62850fd4cb8d4f6853190298e7012d27",
+    "apps/application/retrieval/report.py": "105f9bc2a20186442d98f12a3140d12b8d0942c1f0c476da7482e364bd6c4b2e",
+    "apps/application/retrieval/serializers.py": "9acc42678cb5b3b8a95ea08888c83acf614d300089b2416c87ffa695148b27db",
+    "apps/application/context/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/context/matching.py": "b89859b47b01e27fa804a289ba83687d2a2f8dfbf8b841ff3efab06ff1b8165d",
+    "apps/application/context/processor.py": "8d1c485741ce5a6ed5e8269becacf016c9d86d19a6304c66449776e473e86662",
+    "apps/application/context/reviewed.py": "8e885ffb67bd3cd9e7d7f112669caa5984212c6f839e616d8cfe1a45473d7443",
+    "apps/application/context/runtime.py": "1dee0d2680b2fb68d0dac72df91165878fec6ac7200ee3ce8473b3e651484606",
+    "apps/application/context/semantic.py": "787a57582c1b071c73d94c95a1e559d3ff3af9bbae025004e9fc106d3fe39086",
+    "apps/application/context/serializers.py": "f2b006c38cdb9e058c586c71a5149018a0e35f7ea681bec39c56f3a4b1df994a",
+    "apps/application/flow/step_node/search_knowledge_node/__init__.py": "c74b5b9d5a8b3029707404cc68bac16d9f1bc860c017b6ed11f2bed06832ab92",
+    "apps/application/flow/step_node/search_knowledge_node/i_search_knowledge_node.py": "fbc563b8608f7411e78b1bdb99e7f5012a8dc43ec47455499f6b71bb980fb45e",
+    "apps/application/flow/step_node/search_knowledge_node/impl/__init__.py": "ad90f1733e778c15c4d20ce952508d2d1b9b84d28717d4456d2ab044489441ce",
+    "apps/application/flow/step_node/search_knowledge_node/impl/base_search_knowledge_node.py": "68d43bbc4f8ced82bf7e2774a77382fea54010379afb38f393290f4d638e072f",
+    "apps/application/flow/step_node/reranker_node/__init__.py": "40d35a5da54f14222ea7a7b3f4f86fc9c0be3504c4a3796eb0cfddd723f77ae3",
+    "apps/application/flow/step_node/reranker_node/i_reranker_node.py": "c7205b7caa8ba85abd2be991894d4b14b6c0a6abcdce6b83fe13b4de379eeba8",
+    "apps/application/flow/step_node/reranker_node/impl/__init__.py": "d56c791ee878cefc971b65da1e88b1df20a27397eec099bf4eb03030a56d28f7",
+    "apps/application/flow/step_node/reranker_node/impl/base_reranker_node.py": "76cebd6d325b9ff010c490155547009a512652ef49743f9a1b026229538cc840",
+    "apps/application/flow/step_node/ai_chat_step_node/__init__.py": "14a656d2aeb51ccad1977c781398d2f6ad0626c3a8f43de57f6839bc4500da00",
+    "apps/application/flow/step_node/ai_chat_step_node/i_chat_node.py": "f2ab0772aee9a543ae62909eb76643fe8ee2d64130b912cc457c20583e5d5bf0",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/__init__.py": "662c3c5940ba420062a9116acc642275d9880598ff0a9999c60ea1a505a878a0",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py": "b2609ba8dd4333c8182eb48379bbb47f0cb0533dbf8b080291ca2beececfc5c1"
+  },
+  "model_id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+  "model_alias": "qwen3.7-plus",
+  "model_revision": "2026-10-09 08:05:16.800476+00:00",
+  "model_params": {
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "max_tokens": 2048,
+    "max_retries": 0,
+    "temperature": 0,
+    "stream_usage": true
+  },
+  "knowledge_ids": [
+    "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73"
+  ],
+  "workspace": "default",
+  "prompt": "已知信息：{data}\n用户问题：{question}\n回答要求：\n- 请使用中文回答用户问题",
+  "system": "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+  "dialogue_number": 3,
+  "settings": {
+    "top_n": 5,
+    "similarity": 0.2,
+    "search_mode": "embedding",
+    "max_paragraph_char_number": 5000,
+    "context_policy": {
+      "enabled": true,
+      "token_budget": 2048,
+      "similarity_threshold": 0.95
+    }
+  },
+  "profiles": {
+    "none": {
+      "retrieve": false,
+      "top_n": 1,
+      "rerank": false
+    },
+    "simple": {
+      "retrieve": true,
+      "top_n": 3,
+      "rerank": false
+    },
+    "complex": {
+      "retrieve": true,
+      "top_n": 8,
+      "rerank": true
+    }
+  },
+  "actual_cost": null,
+  "scope": "production retrieval node + real model; no reranker connected; tools excluded",
+  "retrieval_only": false,
+  "history_mode": "free",
+  "dialogue_policy": true,
+  "strategy_order": "fixed-first",
+  "human_review": "pending",
+  "historical_baseline_comparable": false
+}

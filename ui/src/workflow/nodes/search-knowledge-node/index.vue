@@ -262,6 +262,14 @@ const form_data = computed({
 })
 
 const knowledgeNodeFormRef = ref<FormInstance>()
+for (const field of [
+  { label: '检索预算决策', value: 'retrieval_budget' },
+  { label: '原始检索候选', value: 'retrieved_paragraph_list' },
+]) {
+  const fields = props.nodeModel.properties.config?.fields
+  if (fields && !fields.some((item: any) => item.value === field.value)) fields.push(field)
+}
+
 const ParamSettingDialogRef = ref<InstanceType<typeof ParamSettingDialog>>()
 const AddknowledgeDialogRef = ref<InstanceType<typeof AddknowledgeDialog>>()
 const knowledgeList = ref<any>([])

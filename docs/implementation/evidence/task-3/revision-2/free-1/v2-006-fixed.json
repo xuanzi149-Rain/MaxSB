@@ -1,0 +1,368 @@
+{
+  "case_id": "v2-006",
+  "scenario": "routing",
+  "enabled": false,
+  "category": "none",
+  "turns": [
+    {
+      "question": "请先保留刚才的条件。",
+      "answer": "已保留上述条件。请问您有什么具体问题需要咨询？",
+      "input_tokens": 244,
+      "output_tokens": 12,
+      "retrieval_ms": 90.54875000583706,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6110358685053259,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5697514071690155,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-301aadbe8af8",
+            "content": "[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。",
+            "title": "F-change",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.138705+0800\", \"2\": \"2026-10-09 15:27:52.265757+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-300b0eb6429f",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-change",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5525059535352722,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+            "content": "[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。",
+            "title": "D-room",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.695385+0800\", \"2\": \"2026-10-09 15:27:49.868844+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-room",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5002834946339572,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4953125108033454,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。\n#### F-change\n[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。\n#### D-room\n[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+        "directly_return": "",
+        "question": "请先保留刚才的条件。",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 223,
+          "estimated_retained_tokens": 223,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbd0-70e3-88f5-301aadbe8af8",
+              "document_id": "01a11f8e-fbd0-70e3-88f5-300b0eb6429f",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbd0-70e3-88f5-301aadbe8af8",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+              "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+              "reason": "retained"
+            }
+          ]
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34368465207f",
+            "content": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+            "title": "F-return",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.990637+0800\", \"2\": \"2026-10-09 15:27:52.129157+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-34231a50f625",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-return",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6110358685053259,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5697514071690155,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-301aadbe8af8",
+            "content": "[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。",
+            "title": "F-change",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.138705+0800\", \"2\": \"2026-10-09 15:27:52.265757+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-300b0eb6429f",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-change",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5525059535352722,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f6227dbf7ca3",
+            "content": "[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。",
+            "title": "D-room",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.695385+0800\", \"2\": \"2026-10-09 15:27:49.868844+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f618290fef50",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-room",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5002834946339572,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-761ed9c1fade",
+            "content": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+            "title": "F-lost",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.452287+0800\", \"2\": \"2026-10-09 15:27:52.696934+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-76092e4fa11a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-lost",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.4953125108033454,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "dialogue_policy": {
+        "enabled": false,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-return\n[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。\n#### F-change\n[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。\n#### D-room\n[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。\n#### F-lost\n[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。\n用户问题：请先保留刚才的条件。\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "已保留上述条件。请问您有什么具体问题需要咨询？",
+  "retrieved_evidence_ids": [
+    "D-room",
+    "F-change",
+    "F-code",
+    "F-lost",
+    "F-return"
+  ],
+  "elapsed_ms": 1275.0655000054394,
+  "input_tokens": 244,
+  "output_tokens": 12,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      true
+    ],
+    "review_status": "pending"
+  }
+}

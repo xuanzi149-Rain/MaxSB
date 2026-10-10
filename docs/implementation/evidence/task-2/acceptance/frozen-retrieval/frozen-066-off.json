@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-066",
+  "scenario": "conflict",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "17:30去南站按2024版会拒收，按现行时间规则呢？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 118.804708996322,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd4-78e1-941b-c8053496a893",
+            "content": "[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。",
+            "title": "F-notice-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.619442+0800\", \"2\": \"2026-10-09 15:27:53.722542+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c7f2d1358ba3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-notice-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7557222392724623,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7c1e33c04c7a",
+            "content": "[F-notice-old] 南站2024版规则：寄件截止17:00；已被2025版规则替代。",
+            "title": "F-notice-old",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.490622+0800\", \"2\": \"2026-10-09 15:27:53.610720+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7c03b484e59b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-notice-old",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7415579865505711,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7084804003525133,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6606783473087354,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6572186572030455,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-notice-new\n[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。\n#### F-notice-old\n[F-notice-old] 南站2024版规则：寄件截止17:00；已被2025版规则替代。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+        "directly_return": "",
+        "question": "17:30去南站按2024版会拒收，按现行时间规则呢？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-notice-new\n[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。\n#### F-notice-old\n[F-notice-old] 南站2024版规则：寄件截止17:00；已被2025版规则替代。\n#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n用户问题：17:30去南站按2024版会拒收，按现行时间规则呢？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-dupe",
+    "F-north",
+    "F-notice-new",
+    "F-notice-old",
+    "F-south"
+  ],
+  "elapsed_ms": 118.86650099768303,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

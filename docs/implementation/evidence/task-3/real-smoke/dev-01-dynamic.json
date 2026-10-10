@@ -1,0 +1,376 @@
+{
+  "case_id": "dev-01",
+  "scenario": "direct",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "青禾图书室周一开放吗？",
+      "answer": "青禾图书室周一不开放，当天闭馆[D-hours]。",
+      "input_tokens": 256,
+      "output_tokens": 15,
+      "retrieval_ms": 544.647333001194,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc3-70a0-b895-4935686c01e9",
+            "content": "[D-hours] 青禾图书室周二至周日09:00—18:00开放；周一闭馆。自助还书箱全天可用。",
+            "title": "D-hours",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:47.671359+0800\", \"2\": \"2026-10-09 15:27:49.200819+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbbe-7da1-98d0-9661b748e64a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-hours",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6870925239975777,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+            "content": "[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+            "title": "D-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.328626+0800\", \"2\": \"2026-10-09 15:27:50.465488+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6626652475594208,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc9-78b2-88dc-3c268594edb7",
+            "content": "[D-access] 青禾图书室一楼有无障碍入口和电梯；大字版图书位于二楼A区。",
+            "title": "D-access",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.880703+0800\", \"2\": \"2026-10-09 15:27:50.037080+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f636eac8da87",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-access",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.64934498071671,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc9-78b2-88dc-3c45009554b8",
+            "content": "[D-copy] 青禾图书室的借阅上限为5本，普通借期为21天，最多续借一次14天。",
+            "title": "D-copy",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.046199+0800\", \"2\": \"2026-10-09 15:27:50.163699+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc9-78b2-88dc-3c3af66940be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-copy",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6054020649674016,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f60987f553e7",
+            "content": "[D-loan] 青禾图书室普通读者每人最多借5本，借期21天，可续借1次14天；预约中的书不可续借。",
+            "title": "D-loan",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.248784+0800\", \"2\": \"2026-10-09 15:27:49.680154+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc7-7a63-bb75-5e259626c1a0",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-loan",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.600065350532536,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### D-hours\n[D-hours] 青禾图书室周二至周日09:00—18:00开放；周一闭馆。自助还书箱全天可用。\n#### D-new\n[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。\n#### D-access\n[D-access] 青禾图书室一楼有无障碍入口和电梯；大字版图书位于二楼A区。\n#### D-copy\n[D-copy] 青禾图书室的借阅上限为5本，普通借期为21天，最多续借一次14天。\n#### D-loan\n[D-loan] 青禾图书室普通读者每人最多借5本，借期21天，可续借1次14天；预约中的书不可续借。",
+        "directly_return": "",
+        "question": "青禾图书室周一开放吗？",
+        "retrieval_budget": {
+          "version": 1,
+          "question": "青禾图书室周一开放吗？",
+          "category": "unknown",
+          "reason": "no_explicit_rule",
+          "retrieve": true,
+          "top_n": 5,
+          "rerank": null,
+          "similarity": 0.2,
+          "search_mode": "embedding",
+          "status": "retrieved",
+          "raw_count": 5,
+          "retrieval_ms": 543.8070419986616
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc3-70a0-b895-4935686c01e9",
+            "content": "[D-hours] 青禾图书室周二至周日09:00—18:00开放；周一闭馆。自助还书箱全天可用。",
+            "title": "D-hours",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:47.671359+0800\", \"2\": \"2026-10-09 15:27:49.200819+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbbe-7da1-98d0-9661b748e64a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-hours",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6870925239975777,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+            "content": "[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+            "title": "D-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.328626+0800\", \"2\": \"2026-10-09 15:27:50.465488+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6626652475594208,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc9-78b2-88dc-3c268594edb7",
+            "content": "[D-access] 青禾图书室一楼有无障碍入口和电梯；大字版图书位于二楼A区。",
+            "title": "D-access",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.880703+0800\", \"2\": \"2026-10-09 15:27:50.037080+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc8-70c0-88fd-f636eac8da87",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-access",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.64934498071671,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc9-78b2-88dc-3c45009554b8",
+            "content": "[D-copy] 青禾图书室的借阅上限为5本，普通借期为21天，最多续借一次14天。",
+            "title": "D-copy",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.046199+0800\", \"2\": \"2026-10-09 15:27:50.163699+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc9-78b2-88dc-3c3af66940be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-copy",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6054020649674016,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbc8-70c0-88fd-f60987f553e7",
+            "content": "[D-loan] 青禾图书室普通读者每人最多借5本，借期21天，可续借1次14天；预约中的书不可续借。",
+            "title": "D-loan",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:49.248784+0800\", \"2\": \"2026-10-09 15:27:49.680154+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbc7-7a63-bb75-5e259626c1a0",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "D-loan",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.600065350532536,
+            "is_hit_handling_method": false
+          }
+        ],
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 198,
+          "estimated_retained_tokens": 198,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbc3-70a0-b895-4935686c01e9",
+              "document_id": "01a11f8e-fbbe-7da1-98d0-9661b748e64a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbc3-70a0-b895-4935686c01e9",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+              "document_id": "01a11f8e-fbca-7020-ad92-ecd84a1b6579",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbca-7020-ad92-ecef0d8a7a09",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbc9-78b2-88dc-3c268594edb7",
+              "document_id": "01a11f8e-fbc8-70c0-88fd-f636eac8da87",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbc9-78b2-88dc-3c268594edb7",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbc9-78b2-88dc-3c45009554b8",
+              "document_id": "01a11f8e-fbc9-78b2-88dc-3c3af66940be",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbc9-78b2-88dc-3c45009554b8",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbc8-70c0-88fd-f60987f553e7",
+              "document_id": "01a11f8e-fbc7-7a63-bb75-5e259626c1a0",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbc8-70c0-88fd-f60987f553e7",
+              "reason": "retained"
+            }
+          ]
+        }
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### D-hours\n[D-hours] 青禾图书室周二至周日09:00—18:00开放；周一闭馆。自助还书箱全天可用。\n#### D-new\n[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。\n#### D-access\n[D-access] 青禾图书室一楼有无障碍入口和电梯；大字版图书位于二楼A区。\n#### D-copy\n[D-copy] 青禾图书室的借阅上限为5本，普通借期为21天，最多续借一次14天。\n#### D-loan\n[D-loan] 青禾图书室普通读者每人最多借5本，借期21天，可续借1次14天；预约中的书不可续借。\n用户问题：青禾图书室周一开放吗？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "青禾图书室周一不开放，当天闭馆[D-hours]。",
+  "retrieved_evidence_ids": [
+    "D-access",
+    "D-copy",
+    "D-hours",
+    "D-loan",
+    "D-new"
+  ],
+  "elapsed_ms": 1519.7882930006017,
+  "input_tokens": 256,
+  "output_tokens": 15,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      false
+    ],
+    "review_status": "pending"
+  }
+}

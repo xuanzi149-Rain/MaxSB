@@ -1,0 +1,174 @@
+{
+  "case_id": "frozen-024",
+  "scenario": "multi_evidence",
+  "enabled": false,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "电池件在东站用预付运单即可走普通渠道吗？",
+      "answer": "",
+      "input_tokens": null,
+      "output_tokens": null,
+      "retrieval_ms": 89.95062499889173,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd1-7d60-9c6b-7633628d1483",
+            "content": "[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。",
+            "title": "F-battery",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.713083+0800\", \"2\": \"2026-10-09 15:27:52.848866+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd1-7d60-9c6b-762be1b25c29",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-battery",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.7427879844145772,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fe12088a0d3",
+            "content": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+            "title": "F-east",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.689636+0800\", \"2\": \"2026-10-09 15:27:50.846510+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fd69e1839be",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-east",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6160884914714707,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcd-7db2-a210-223219154b53",
+            "content": "[F-west] 西站提供纸箱和填充物；纸箱3元，填充物免费；不接收冷藏件。",
+            "title": "F-west",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.856945+0800\", \"2\": \"2026-10-09 15:27:50.992865+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcd-7db2-a210-222a66bf077a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-west",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5895862792936205,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcd-7db2-a210-2253364b0d88",
+            "content": "[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。",
+            "title": "F-track",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.017919+0800\", \"2\": \"2026-10-09 15:27:51.330673+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcd-7db2-a210-22477d429d00",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-track",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5581742067752536,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fdff4647cfe4",
+            "content": "[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+            "title": "F-fragile",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.358731+0800\", \"2\": \"2026-10-09 15:27:51.662305+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fde0a933b3e3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-fragile",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5518387083622871,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-battery\n[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-west\n[F-west] 西站提供纸箱和填充物；纸箱3元，填充物免费；不接收冷藏件。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+        "directly_return": "",
+        "question": "电池件在东站用预付运单即可走普通渠道吗？"
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-battery\n[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。\n#### F-east\n[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。\n#### F-west\n[F-west] 西站提供纸箱和填充物；纸箱3元，填充物免费；不接收冷藏件。\n#### F-track\n[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。\n#### F-fragile\n[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。\n用户问题：电池件在东站用预付运单即可走普通渠道吗？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "retrieval_only",
+  "answer": "",
+  "retrieved_evidence_ids": [
+    "F-battery",
+    "F-east",
+    "F-fragile",
+    "F-track",
+    "F-west"
+  ],
+  "elapsed_ms": 90.0691669958178,
+  "input_tokens": null,
+  "output_tokens": null,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": null,
+    "review_status": "pending"
+  }
+}

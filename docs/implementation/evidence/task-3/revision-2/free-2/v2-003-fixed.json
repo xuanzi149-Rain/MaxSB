@@ -1,0 +1,370 @@
+{
+  "case_id": "v2-003",
+  "scenario": "multi_evidence",
+  "enabled": false,
+  "category": "complex",
+  "turns": [
+    {
+      "question": "南站与北站周末是否都能寄件？",
+      "answer": "南站与北站周末并非都能寄件。\n\n根据资料显示，南站每天开放 [F-south]，因此周末可以寄件。而北站在工作日开放，周末关闭 [F-north] [F-dupe]，因此周末不能在北站寄件。",
+      "input_tokens": 240,
+      "output_tokens": 55,
+      "retrieval_ms": 178.42437600484118,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6347403526306332,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.634396835041428,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6268368879446732,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+            "content": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+            "title": "F-holiday",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.275744+0800\", \"2\": \"2026-10-09 15:27:52.431038+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-holiday",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5894423616597263,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5772187365759265,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+        "directly_return": "",
+        "question": "南站与北站周末是否都能寄件？",
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 186,
+          "estimated_retained_tokens": 186,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+              "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+              "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+              "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+              "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "reason": "retained"
+            }
+          ]
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcc-7b71-878c-9fc8567718eb",
+            "content": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+            "title": "F-south",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.588534+0800\", \"2\": \"2026-10-09 15:27:50.681824+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcc-7b71-878c-9fbe5aaaeb7a",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-south",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6347403526306332,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd3-75f3-b845-7bfbfbb7d8bc",
+            "content": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+            "title": "F-dupe",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.326634+0800\", \"2\": \"2026-10-09 15:27:53.472979+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd3-75f3-b845-7be3a0d61863",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-dupe",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.634396835041428,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcb-79b0-a87b-d3b5196c7f7d",
+            "content": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+            "title": "F-north",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:50.473909+0800\", \"2\": \"2026-10-09 15:27:50.580325+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcb-79b0-a87b-d3a72b2379e7",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-north",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.6268368879446732,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd0-70e3-88f5-303234b4a8ba",
+            "content": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+            "title": "F-holiday",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:52.275744+0800\", \"2\": \"2026-10-09 15:27:52.431038+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd0-70e3-88f5-302d6efd314d",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-holiday",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5894423616597263,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.5772187365759265,
+            "is_hit_handling_method": false
+          }
+        ]
+      },
+      "dialogue_policy": {
+        "enabled": false,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。",
+        "已知信息：#### F-south\n[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。\n#### F-dupe\n[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。\n#### F-north\n[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。\n#### F-holiday\n[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。\n#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n用户问题：南站与北站周末是否都能寄件？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "南站与北站周末并非都能寄件。\n\n根据资料显示，南站每天开放 [F-south]，因此周末可以寄件。而北站在工作日开放，周末关闭 [F-north] [F-dupe]，因此周末不能在北站寄件。",
+  "retrieved_evidence_ids": [
+    "F-dupe",
+    "F-holiday",
+    "F-north",
+    "F-scope-a",
+    "F-south"
+  ],
+  "elapsed_ms": 1792.223500997352,
+  "input_tokens": 240,
+  "output_tokens": 55,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": 1.0,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      true,
+      true,
+      true
+    ],
+    "review_status": "pending"
+  }
+}

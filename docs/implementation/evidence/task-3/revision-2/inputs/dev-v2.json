@@ -1,0 +1,96 @@
+{
+  "version": "dev-v2",
+  "split": "dev",
+  "cases": [
+    {
+      "case_id": "dev2-001",
+      "scenario": "direct",
+      "turns": [
+        "北站截止寄件的时间是什么？"
+      ],
+      "reference_answers": [
+        "16:00。[F-north]"
+      ],
+      "required_evidence_ids": [
+        "F-north"
+      ],
+      "expected_facts": [
+        "16:00"
+      ],
+      "acceptable_answers": [
+        "16:00"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "dev2-002",
+      "scenario": "routing",
+      "turns": [
+        "请用简短条目回复。"
+      ],
+      "reference_answers": [
+        "好的。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "好"
+      ],
+      "acceptable_answers": [
+        "好"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "skip"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    },
+    {
+      "case_id": "dev2-003",
+      "scenario": "conversation",
+      "turns": [
+        "包裹实际重2千克。",
+        "改为8千克。",
+        "请先记住前面的要求。",
+        "能用自助柜吗？"
+      ],
+      "reference_answers": [
+        "请说明寄件需求。",
+        "已了解，8千克。",
+        "好的。",
+        "不能，超过5千克。[F-locker]"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "5",
+        "不能"
+      ],
+      "acceptable_answers": [
+        "5",
+        "不能"
+      ],
+      "tool_expectation": null,
+      "expected_retrieval_intents": [
+        "retrieve",
+        "retrieve",
+        "skip",
+        "retrieve"
+      ],
+      "rubric": {
+        "correct": "业务答案保留所有关键事实和更正；控制轮简短确认且不重复业务建议。",
+        "failure": "误跳过业务问题、遗漏更正、无依据声称操作完成或业务答案错误。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "case_id": "v2-010",
+  "scenario": "routing",
+  "enabled": true,
+  "category": "unknown",
+  "turns": [
+    {
+      "question": "这条规则也适用于别人吗？",
+      "answer": "由于您未指明具体的“这条规则”是指哪一条，且问题中的“别人”指代不明（通常指个人用户或非签约企业），根据现有资料，不同规则的适用对象如下：\n\n1.  **若指月结政策**：该政策**不适用**于个人寄件，仅支持签约企业。[F-scope-a]\n2.  **若指南站寄件截止时间**：资料中未明确说明该规则是否区分个人或企业，仅陈述了南站2025版规则将截止时间为18:00。[F-notice-new]\n3.  **若指取件码规则**：资料中未说明该规则是否区分用户类型，仅规定了取件码有效期及领取要求。[F-code]\n4.  **若指限重/尺寸规则**：资料中按“自助柜”和“人工柜台”区分限制，未直接按用户身份（如个人或企业）区分适用性。[F-locker]\n\n若您能明确具体指的是哪条规则，我可以提供更准确的回答。",
+      "input_tokens": 277,
+      "output_tokens": 225,
+      "retrieval_ms": 115.7348750057281,
+      "trace": {
+        "paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49368351735571714,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd4-78e1-941b-c8053496a893",
+            "content": "[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。",
+            "title": "F-notice-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.619442+0800\", \"2\": \"2026-10-09 15:27:53.722542+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c7f2d1358ba3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-notice-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.48382649018449053,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.48192376006104765,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.45189942076220024,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.44555539866291394,
+            "is_hit_handling_method": false
+          }
+        ],
+        "is_hit_handling_method_list": [],
+        "data": "#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-notice-new\n[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+        "directly_return": "",
+        "question": "这条规则也适用于别人吗？",
+        "retrieval_budget": {
+          "version": 2,
+          "question": "这条规则也适用于别人吗？",
+          "category": "unknown",
+          "reason": "ambiguous_or_followup",
+          "retrieve": true,
+          "top_n": 5,
+          "rerank": null,
+          "similarity": 0.2,
+          "search_mode": "embedding",
+          "status": "retrieved",
+          "raw_count": 5,
+          "retrieval_ms": 115.54420799802756
+        },
+        "retrieved_paragraph_list": [
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+            "content": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+            "title": "F-scope-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.733267+0800\", \"2\": \"2026-10-09 15:27:53.878907+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-scope-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.49368351735571714,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd4-78e1-941b-c8053496a893",
+            "content": "[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。",
+            "title": "F-notice-new",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.619442+0800\", \"2\": \"2026-10-09 15:27:53.722542+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd4-78e1-941b-c7f2d1358ba3",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-notice-new",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.48382649018449053,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+            "content": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+            "title": "F-code",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.672708+0800\", \"2\": \"2026-10-09 15:27:51.816777+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-code",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.48192376006104765,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+            "content": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+            "title": "F-locker",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:51.826815+0800\", \"2\": \"2026-10-09 15:27:51.981919+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-locker",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.45189942076220024,
+            "is_hit_handling_method": false
+          },
+          {
+            "create_time": "2026-10-09 07:27:06",
+            "update_time": "2026-10-09 07:27:06",
+            "id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+            "content": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+            "title": "F-uncertain-a",
+            "status": "nnn2",
+            "status_meta": "{\"state_time\": {\"1\": {\"1\": \"2026-10-09 15:27:53.991962+0800\", \"2\": \"2026-10-09 15:27:54.133117+0800\"}}}",
+            "hit_num": 0,
+            "is_active": true,
+            "position": 1,
+            "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+            "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+            "chunks": [],
+            "knowledge_name": "任务1合成评测资料",
+            "knowledge_type": 0,
+            "document_name": "F-uncertain-a",
+            "meta": {
+              "allow_download": false
+            },
+            "hit_handling_method": "optimization",
+            "directly_return_similarity": 0.9,
+            "similarity": 0.44555539866291394,
+            "is_hit_handling_method": false
+          }
+        ],
+        "context_processing": {
+          "enabled": true,
+          "original_count": 5,
+          "retained_count": 5,
+          "estimated_original_tokens": 195,
+          "estimated_retained_tokens": 195,
+          "estimated_saved_tokens": 0,
+          "token_estimator": "utf8_bytes_div_3_v1",
+          "token_budget": 2048,
+          "max_chars": 5000,
+          "similarity_threshold": 0.95,
+          "mapping": [
+            {
+              "original_index": 0,
+              "original_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c81393e9a368",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 0,
+              "retained_id": "01a11f8e-fbd5-7551-89b0-ec169c4dd5b1",
+              "reason": "retained"
+            },
+            {
+              "original_index": 1,
+              "original_id": "01a11f8e-fbd4-78e1-941b-c8053496a893",
+              "document_id": "01a11f8e-fbd4-78e1-941b-c7f2d1358ba3",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 1,
+              "retained_id": "01a11f8e-fbd4-78e1-941b-c8053496a893",
+              "reason": "retained"
+            },
+            {
+              "original_index": 2,
+              "original_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "document_id": "01a11f8e-fbce-7091-9d09-fe0297cfaa5b",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 2,
+              "retained_id": "01a11f8e-fbce-7091-9d09-fe1baec21e19",
+              "reason": "retained"
+            },
+            {
+              "original_index": 3,
+              "original_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "document_id": "01a11f8e-fbcf-74c0-b2eb-3402292f09e1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 3,
+              "retained_id": "01a11f8e-fbcf-74c0-b2eb-34154005d391",
+              "reason": "retained"
+            },
+            {
+              "original_index": 4,
+              "original_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "document_id": "01a11f8e-fbd5-7551-89b0-ec4e5e690ad1",
+              "knowledge_id": "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73",
+              "retained_index": 4,
+              "retained_id": "01a11f8e-fbd6-7fc0-855e-e55d6baeb0c4",
+              "reason": "retained"
+            }
+          ]
+        }
+      },
+      "dialogue_policy": {
+        "enabled": true,
+        "removed_contexts": 0,
+        "removed_chars": 0,
+        "status": "preserved",
+        "brief_response": false
+      },
+      "model_input": [
+        "根据提供的资料回答。保留资料中的方括号证据ID作为引用；资料不足时明确说明，不编造。\n结合历史中用户明确陈述的业务条件回答；更正以最新原话为准，不把助手推测当作用户事实。",
+        "已知信息：#### F-scope-a\n[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。\n#### F-notice-new\n[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。\n#### F-code\n[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。\n#### F-locker\n[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。\n#### F-uncertain-a\n[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。\n用户问题：这条规则也适用于别人吗？\n回答要求：\n- 请使用中文回答用户问题"
+      ]
+    }
+  ],
+  "actual_cost": null,
+  "status": "success",
+  "answer": "由于您未指明具体的“这条规则”是指哪一条，且问题中的“别人”指代不明（通常指个人用户或非签约企业），根据现有资料，不同规则的适用对象如下：\n\n1.  **若指月结政策**：该政策**不适用**于个人寄件，仅支持签约企业。[F-scope-a]\n2.  **若指南站寄件截止时间**：资料中未明确说明该规则是否区分个人或企业，仅陈述了南站2025版规则将截止时间为18:00。[F-notice-new]\n3.  **若指取件码规则**：资料中未说明该规则是否区分用户类型，仅规定了取件码有效期及领取要求。[F-code]\n4.  **若指限重/尺寸规则**：资料中按“自助柜”和“人工柜台”区分限制，未直接按用户身份（如个人或企业）区分适用性。[F-locker]\n\n若您能明确具体指的是哪条规则，我可以提供更准确的回答。",
+  "retrieved_evidence_ids": [
+    "F-code",
+    "F-locker",
+    "F-notice-new",
+    "F-scope-a",
+    "F-uncertain-a"
+  ],
+  "elapsed_ms": 4788.217294000788,
+  "input_tokens": 277,
+  "output_tokens": 225,
+  "score": {
+    "correct": null,
+    "citation_accuracy": null,
+    "evidence_recall": null,
+    "missing_evidence_ids": [],
+    "tool_complete": null,
+    "fact_mentions": [
+      true
+    ],
+    "review_status": "pending"
+  }
+}

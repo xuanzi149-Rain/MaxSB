@@ -1,0 +1,18 @@
+test_complex_missing_evidence_is_explicit_failure (test_report.ReportTests.test_complex_missing_evidence_is_explicit_failure) ... ok
+test_dataset_scenario_exposes_complex_cases_misclassified_as_simple (test_report.ReportTests.test_dataset_scenario_exposes_complex_cases_misclassified_as_simple) ... ERROR
+test_failed_partial_run_tokens_not_misreported_as_complete (test_report.ReportTests.test_failed_partial_run_tokens_not_misreported_as_complete) ... ok
+test_grouping_does_not_hide_complex_loss_in_simple_success (test_report.ReportTests.test_grouping_does_not_hide_complex_loss_in_simple_success) ... ok
+test_missing_measurements_are_unknown_not_zero (test_report.ReportTests.test_missing_measurements_are_unknown_not_zero) ... ok
+
+======================================================================
+ERROR: test_dataset_scenario_exposes_complex_cases_misclassified_as_simple (test_report.ReportTests.test_dataset_scenario_exposes_complex_cases_misclassified_as_simple)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/Desktop/Github/MaxSB/tests/retrieval/test_report.py", line 52, in test_dataset_scenario_exposes_complex_cases_misclassified_as_simple
+    report = self.summarize([row], group_by='scenario')
+TypeError: summarize_pairs() got an unexpected keyword argument 'group_by'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (errors=1)

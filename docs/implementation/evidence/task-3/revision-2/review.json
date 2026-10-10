@@ -1,0 +1,12 @@
+{
+  "mode": "independent read-only code review; acceptance dataset not opened by reviewer",
+  "findings": [
+    "business correction disguised as side note",
+    "written numerical quantities",
+    "second request after comma",
+    "polite-prefixed historical reference"
+  ],
+  "resolution": "all reproduced by failing tests then fixed; quantity guard broadened on follow-up review",
+  "additional_local_fix": "optional source reference accepts null when cleared; failing integration test reproduced then fixed",
+  "remaining_scope": "Finite conservative rules; opt-in prompting is not a hard output length guarantee; no persistent memory or real reranker evaluation"
+}

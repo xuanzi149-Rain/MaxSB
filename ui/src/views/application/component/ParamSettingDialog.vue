@@ -61,6 +61,7 @@
               </el-card>
             </el-radio-group>
           </el-form-item>
+          <RetrievalPolicySettings v-if="isWorkflowType" v-model="form.knowledge_setting.retrieval_policy" />
           <ContextPolicySettings v-model="form.knowledge_setting.context_policy" />
           <el-row :gutter="10">
             <el-col :span="12">
@@ -194,6 +195,7 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
+import RetrievalPolicySettings from '@/components/retrieval-policy/RetrievalPolicySettings.vue'
 import ContextPolicySettings from '@/components/context-policy/ContextPolicySettings.vue'
 import { ref, watch, reactive } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'

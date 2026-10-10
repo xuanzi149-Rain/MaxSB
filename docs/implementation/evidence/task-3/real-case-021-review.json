@@ -1,0 +1,23 @@
+{
+  "reviewer": "Codex",
+  "review_type": "assistant evidence-based inspection; not human sign-off",
+  "case_id": "frozen-021",
+  "fixed": {
+    "answer_completeness": "partial",
+    "supported_fact": "体积重量12千克，计费重量12千克",
+    "missing_evidence": [
+      "F-south"
+    ]
+  },
+  "dynamic": {
+    "answer_completeness": "incomplete",
+    "lost_answerable_fact": "计费重量12千克",
+    "missing_evidence": [
+      "F-south",
+      "F-volume"
+    ]
+  },
+  "finding": "动态候选5到3使F-volume丢失；真实回答不再给出计费重量计算。两侧都未完成南站条件部分。",
+  "formal_human_score": "pending",
+  "policy_tuning_performed": false
+}

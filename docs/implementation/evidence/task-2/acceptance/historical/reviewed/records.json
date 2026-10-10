@@ -1,0 +1,398 @@
+[
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 1,
+    "policy": "off",
+    "question": "普通读者最多能借多少本书？",
+    "retained_ids": [
+      "paraphrase-limit-a",
+      "paraphrase-limit-b"
+    ],
+    "answer": "普通读者最多能借5本书[paraphrase-limit-a][paraphrase-limit-b]。",
+    "input_tokens": 109,
+    "output_tokens": 21,
+    "seconds": 1.7543633349996526,
+    "input_sha256": "fb69b488b87d8753333d7c05ecd6acdde158ca38778aa792bace63b1f3c42750",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 1,
+    "policy": "on",
+    "question": "普通读者最多能借多少本书？",
+    "retained_ids": [
+      "paraphrase-limit-a"
+    ],
+    "answer": "根据已知信息，普通读者最多能借5本书[paraphrase-limit-a]。",
+    "input_tokens": 88,
+    "output_tokens": 19,
+    "seconds": 1.4719070840001223,
+    "input_sha256": "e5dd340f9565cb059fd6cbf68bf7abe56f75c029d3b37f203041ef55eea89d1d",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 2,
+    "policy": "on",
+    "question": "普通读者最多能借多少本书？",
+    "retained_ids": [
+      "paraphrase-limit-a"
+    ],
+    "answer": "根据已知信息，普通读者最多能借5本书[paraphrase-limit-a]。",
+    "input_tokens": 88,
+    "output_tokens": 19,
+    "seconds": 1.2763257510014228,
+    "input_sha256": "e5dd340f9565cb059fd6cbf68bf7abe56f75c029d3b37f203041ef55eea89d1d",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-limit",
+    "repeat": 2,
+    "policy": "off",
+    "question": "普通读者最多能借多少本书？",
+    "retained_ids": [
+      "paraphrase-limit-a",
+      "paraphrase-limit-b"
+    ],
+    "answer": "普通读者最多能借5本书[paraphrase-limit-a][paraphrase-limit-b]。",
+    "input_tokens": 109,
+    "output_tokens": 21,
+    "seconds": 1.2803939999939757,
+    "input_sha256": "fb69b488b87d8753333d7c05ecd6acdde158ca38778aa792bace63b1f3c42750",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 1,
+    "policy": "off",
+    "question": "普通图书能借多久？",
+    "retained_ids": [
+      "paraphrase-period-a",
+      "paraphrase-period-b"
+    ],
+    "answer": "普通图书的借期是21天[paraphrase-period-a]，即可借阅21天[paraphrase-period-b]。",
+    "input_tokens": 110,
+    "output_tokens": 30,
+    "seconds": 1.5691231259988854,
+    "input_sha256": "708b44e4c20807c94356c38d1fc6fc39657faff2d8e1b9dd58fbb8146f8bbe6b",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 1,
+    "policy": "on",
+    "question": "普通图书能借多久？",
+    "retained_ids": [
+      "paraphrase-period-a"
+    ],
+    "answer": "普通图书的借期是21天[paraphrase-period-a]。",
+    "input_tokens": 89,
+    "output_tokens": 17,
+    "seconds": 1.292899291998765,
+    "input_sha256": "e53e4bda0decc0971986dc075e78c128b41c25a5de3944ab88df1b9558688800",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 2,
+    "policy": "on",
+    "question": "普通图书能借多久？",
+    "retained_ids": [
+      "paraphrase-period-a"
+    ],
+    "answer": "普通图书的借期是21天[paraphrase-period-a]。",
+    "input_tokens": 89,
+    "output_tokens": 17,
+    "seconds": 1.3850011260001338,
+    "input_sha256": "e53e4bda0decc0971986dc075e78c128b41c25a5de3944ab88df1b9558688800",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-period",
+    "repeat": 2,
+    "policy": "off",
+    "question": "普通图书能借多久？",
+    "retained_ids": [
+      "paraphrase-period-a",
+      "paraphrase-period-b"
+    ],
+    "answer": "普通图书的借期是21天[paraphrase-period-a]，即可借阅21天[paraphrase-period-b]。",
+    "input_tokens": 110,
+    "output_tokens": 30,
+    "seconds": 1.6520397509957547,
+    "input_sha256": "708b44e4c20807c94356c38d1fc6fc39657faff2d8e1b9dd58fbb8146f8bbe6b",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 1,
+    "policy": "off",
+    "question": "青禾图书室周一开放吗？",
+    "retained_ids": [
+      "paraphrase-closed-a",
+      "paraphrase-closed-b"
+    ],
+    "answer": "青禾图书室周一不开放。根据资料显示，青禾图书室周一闭馆[paraphrase-closed-a]，且每逢周一不对外开放[paraphrase-closed-b]。",
+    "input_tokens": 113,
+    "output_tokens": 41,
+    "seconds": 1.460598834004486,
+    "input_sha256": "7e8905eb88e0721ec60d330e588bb92b4a9ed92642faabd7cc6693111b39d27b",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 1,
+    "policy": "on",
+    "question": "青禾图书室周一开放吗？",
+    "retained_ids": [
+      "paraphrase-closed-a"
+    ],
+    "answer": "青禾图书室周一不开放，因为周一闭馆[paraphrase-closed-a]。",
+    "input_tokens": 90,
+    "output_tokens": 21,
+    "seconds": 1.6198158339975635,
+    "input_sha256": "383ee8b3e6118f7378d66e42de75a76cf6be4af0bcb018dd14f3351217160969",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 2,
+    "policy": "on",
+    "question": "青禾图书室周一开放吗？",
+    "retained_ids": [
+      "paraphrase-closed-a"
+    ],
+    "answer": "青禾图书室周一不开放，因为周一闭馆[paraphrase-closed-a]。",
+    "input_tokens": 90,
+    "output_tokens": 21,
+    "seconds": 1.3546368759998586,
+    "input_sha256": "383ee8b3e6118f7378d66e42de75a76cf6be4af0bcb018dd14f3351217160969",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-closed",
+    "repeat": 2,
+    "policy": "off",
+    "question": "青禾图书室周一开放吗？",
+    "retained_ids": [
+      "paraphrase-closed-a",
+      "paraphrase-closed-b"
+    ],
+    "answer": "青禾图书室周一不开放。根据资料显示，青禾图书室周一闭馆[paraphrase-closed-a]，且每逢周一不对外开放[paraphrase-closed-b]。",
+    "input_tokens": 113,
+    "output_tokens": 41,
+    "seconds": 1.502612501004478,
+    "input_sha256": "7e8905eb88e0721ec60d330e588bb92b4a9ed92642faabd7cc6693111b39d27b",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 1,
+    "policy": "off",
+    "question": "阅览室可以吸烟吗？",
+    "retained_ids": [
+      "paraphrase-negative-a",
+      "paraphrase-negative-b"
+    ],
+    "answer": "阅览室不可以吸烟。根据规定，阅览室禁止吸烟[paraphrase-negative-a]，且阅览室内不得吸烟[paraphrase-negative-b]。",
+    "input_tokens": 100,
+    "output_tokens": 31,
+    "seconds": 1.9864599999928032,
+    "input_sha256": "5d3b63f6154d9b7a49b00287083317c30d7019bb614158a202135dc1ed73a1dd",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 1,
+    "policy": "on",
+    "question": "阅览室可以吸烟吗？",
+    "retained_ids": [
+      "paraphrase-negative-a"
+    ],
+    "answer": "阅览室不可以吸烟，因为规则明确规定阅览室禁止吸烟[paraphrase-negative-a]。",
+    "input_tokens": 82,
+    "output_tokens": 18,
+    "seconds": 1.6532470430029207,
+    "input_sha256": "9996b0858164184613bc825dc2ce1718601bd1ead126a7774f394541fea4c973",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 2,
+    "policy": "on",
+    "question": "阅览室可以吸烟吗？",
+    "retained_ids": [
+      "paraphrase-negative-a"
+    ],
+    "answer": "阅览室不可以吸烟，因为规则明确规定阅览室禁止吸烟[paraphrase-negative-a]。",
+    "input_tokens": 82,
+    "output_tokens": 18,
+    "seconds": 1.125448459002655,
+    "input_sha256": "9996b0858164184613bc825dc2ce1718601bd1ead126a7774f394541fea4c973",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-negative",
+    "repeat": 2,
+    "policy": "off",
+    "question": "阅览室可以吸烟吗？",
+    "retained_ids": [
+      "paraphrase-negative-a",
+      "paraphrase-negative-b"
+    ],
+    "answer": "阅览室不可以吸烟。根据规则，阅览室禁止吸烟[paraphrase-negative-a]，且阅览室内不得吸烟[paraphrase-negative-b]。",
+    "input_tokens": 100,
+    "output_tokens": 31,
+    "seconds": 2.131584376002138,
+    "input_sha256": "5d3b63f6154d9b7a49b00287083317c30d7019bb614158a202135dc1ed73a1dd",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 1,
+    "policy": "off",
+    "question": "讨论室需要提前多久预约？",
+    "retained_ids": [
+      "paraphrase-reservation-a",
+      "paraphrase-reservation-b"
+    ],
+    "answer": "讨论室需要提前1天预约[paraphrase-reservation-a]，即应在使用前1天完成预约[paraphrase-reservation-b]。",
+    "input_tokens": 113,
+    "output_tokens": 32,
+    "seconds": 1.4919782090000808,
+    "input_sha256": "72f5140e788d70f8d4ecc91d85d313742d4ba44c667d7934bfc1e410e1904d4f",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 1,
+    "policy": "on",
+    "question": "讨论室需要提前多久预约？",
+    "retained_ids": [
+      "paraphrase-reservation-a"
+    ],
+    "answer": "讨论室需提前1天预约[paraphrase-reservation-a]。",
+    "input_tokens": 88,
+    "output_tokens": 16,
+    "seconds": 1.612697667995235,
+    "input_sha256": "35a6969922f46cf8cccd4c2ee15b8ebba714caa26f7097ac26093dcf3f4b5b2f",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 2,
+    "policy": "on",
+    "question": "讨论室需要提前多久预约？",
+    "retained_ids": [
+      "paraphrase-reservation-a"
+    ],
+    "answer": "讨论室需提前1天预约[paraphrase-reservation-a]。",
+    "input_tokens": 88,
+    "output_tokens": 16,
+    "seconds": 1.4778732929989928,
+    "input_sha256": "35a6969922f46cf8cccd4c2ee15b8ebba714caa26f7097ac26093dcf3f4b5b2f",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-reservation",
+    "repeat": 2,
+    "policy": "off",
+    "question": "讨论室需要提前多久预约？",
+    "retained_ids": [
+      "paraphrase-reservation-a",
+      "paraphrase-reservation-b"
+    ],
+    "answer": "讨论室需要提前1天预约[paraphrase-reservation-a]，即应在使用前1天完成预约[paraphrase-reservation-b]。",
+    "input_tokens": 113,
+    "output_tokens": 32,
+    "seconds": 1.874962042995321,
+    "input_sha256": "72f5140e788d70f8d4ecc91d85d313742d4ba44c667d7934bfc1e410e1904d4f",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 1,
+    "policy": "off",
+    "question": "包裹长度最多是多少？",
+    "retained_ids": [
+      "paraphrase-length-a",
+      "paraphrase-length-b"
+    ],
+    "answer": "根据提供的资料，包裹长度最多是80厘米[paraphrase-length-a][paraphrase-length-b]。",
+    "input_tokens": 104,
+    "output_tokens": 25,
+    "seconds": 1.4527183749960386,
+    "input_sha256": "32c67c4706bc0a8bf18575f98c17ce344c3357bd029996ac6881434b99350e66",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 1,
+    "policy": "on",
+    "question": "包裹长度最多是多少？",
+    "retained_ids": [
+      "paraphrase-length-a"
+    ],
+    "answer": "根据提供的资料，包裹最长为80厘米[paraphrase-length-a]。",
+    "input_tokens": 84,
+    "output_tokens": 18,
+    "seconds": 1.6072334999989835,
+    "input_sha256": "71644687dbbdccea96156d575a7329f8637e0f26578db6bd42c240e75210a2fc",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 2,
+    "policy": "on",
+    "question": "包裹长度最多是多少？",
+    "retained_ids": [
+      "paraphrase-length-a"
+    ],
+    "answer": "根据提供的资料，包裹最长为80厘米[paraphrase-length-a]。",
+    "input_tokens": 84,
+    "output_tokens": 18,
+    "seconds": 1.2998572500000591,
+    "input_sha256": "71644687dbbdccea96156d575a7329f8637e0f26578db6bd42c240e75210a2fc",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  },
+  {
+    "case_id": "paraphrase-length",
+    "repeat": 2,
+    "policy": "off",
+    "question": "包裹长度最多是多少？",
+    "retained_ids": [
+      "paraphrase-length-a",
+      "paraphrase-length-b"
+    ],
+    "answer": "根据提供的资料，包裹长度最多是80厘米[paraphrase-length-a][paraphrase-length-b]。",
+    "input_tokens": 104,
+    "output_tokens": 25,
+    "seconds": 1.642433250999602,
+    "input_sha256": "32c67c4706bc0a8bf18575f98c17ce344c3357bd029996ac6881434b99350e66",
+    "human_correct": null,
+    "human_citation_accuracy": null
+  }
+]
