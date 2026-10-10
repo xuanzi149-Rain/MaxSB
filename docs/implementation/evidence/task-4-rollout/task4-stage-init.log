@@ -1,0 +1,15 @@
+Creating test database for alias 'default'...
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.673 seconds.
+Prefix dict has been built successfully.
+2026-10-10 16:34:58 [tool_code ERROR] Exception: [Errno 2] No such file or directory: '/tmp/maxsb-task4-staging/tmp/tool_executor_init_dir.lock'
+Traceback (most recent call last):
+  File "/tmp/maxsb-task4-staging/apps/common/utils/tool_code.py", line 102, in ToolExecutor
+    init_sandbox_dir()
+  File "/tmp/maxsb-task4-staging/apps/common/utils/tool_code.py", line 54, in init_sandbox_dir
+    fd = os.open(
+         ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/maxsb-task4-staging/tmp/tool_executor_init_dir.lock'
+READY task4 isolated HTTP on 18084; fixture=/tmp/maxsb-task4-staging/followup-http-c83bf4dc
+INITIALIZED persistent staging; memory disabled

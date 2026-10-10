@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/admin/index.html",
+    "status": 200,
+    "bytes": 606
+  },
+  {
+    "path": "/admin/assets/admin-B_B5hTS1.js",
+    "status": 200,
+    "bytes": 9179236
+  },
+  {
+    "path": "/chat/index.html",
+    "status": 200,
+    "bytes": 572
+  },
+  {
+    "path": "/chat/assets/chat-soOGAbZ4.js",
+    "status": 200,
+    "bytes": 9181394
+  },
+  {
+    "path": "/chat/<local-test-token>/",
+    "status": 200,
+    "bytes": 572
+  }
+]

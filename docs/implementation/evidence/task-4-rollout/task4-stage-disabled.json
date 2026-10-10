@@ -1,0 +1,42 @@
+{
+  "phase": "disabled",
+  "passed": true,
+  "chat_id": "01a124f7-42e2-7ed0-a601-f6afa26f6fd2",
+  "records": [
+    {
+      "question": "我的咖啡机预算是1900元，请记住。",
+      "seconds": 2.184,
+      "response": {
+        "code": 200,
+        "message": "Success",
+        "data": {
+          "chat_id": "01a124f7-42e2-7ed0-a601-f6afa26f6fd2",
+          "id": "01a124f7-433e-7ff3-bdf8-8c941cb29454",
+          "operate": true,
+          "content": "已记录，您的咖啡机预算为1900元。",
+          "is_end": true,
+          "answer_list": [
+            {
+              "view_type": "many_view",
+              "content": "已记录，您的咖啡机预算为1900元。",
+              "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+              "chat_record_id": "01a124f7-433e-7ff3-bdf8-8c941cb29454",
+              "child_node": {},
+              "reasoning_content": "",
+              "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+            }
+          ],
+          "completion_tokens": 43,
+          "prompt_tokens": 14
+        }
+      }
+    }
+  ],
+  "memory": {
+    "facts": [],
+    "version": 0,
+    "generation": 0,
+    "sources": [],
+    "temporary": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "reviewer": "agent",
+  "checks": {
+    "new-multiple": true,
+    "new-revoke": true,
+    "new-reference": true,
+    "new-ambiguity": true,
+    "new-hypothetical": true,
+    "new-clear": true
+  },
+  "final_answers": {
+    "new-multiple": "电脑预算为 7200 元，显示器预算为 2300 元。",
+    "new-revoke": "颜色不需要是黑色（该条件已撤销）。\n\n目前确认的要求只有：\n*   **容量**：25升\n\n请问还有其他要求吗？",
+    "new-reference": "橡木书桌",
+    "new-ambiguity": "键盘预算为 600 元，耳机预算为 900 元。\n\n（注：快照中关于“750元”的更正因未明确对象且状态为 pending，故未采纳。）",
+    "new-hypothetical": "4小时",
+    "new-clear": "我目前没有关于您帐篷预算的记录。请问您的预算是多少？"
+  },
+  "scope": "同集回归，关键条件保留；歧义题说明待确认但未直接提问。不是新增人工评分或首次未见题通过率。"
+}

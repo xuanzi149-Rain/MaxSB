@@ -1,0 +1,19 @@
+Operations to perform:
+  Target specific migration: 0015_application_default_model_setting_and_more, from application
+Running migrations:
+  Rendering model states... DONE
+  Unapplying application.0016_conversation_memory... OK
+Operations to perform:
+  Target specific migration: 0016_conversation_memory, from application
+Running migrations:
+  Applying application.0016_conversation_memory... OK
+Operations to perform:
+  Target specific migration: 0015_application_default_model_setting_and_more, from application
+Running migrations:
+  Rendering model states... DONE
+  Unapplying application.0016_conversation_memory... OK
+Operations to perform:
+  Target specific migration: 0016_conversation_memory, from application
+Running migrations:
+  Applying application.0016_conversation_memory... OK
+{"backup": "/opt/maxkb/rollback/task4-staging/pre-0016.dump", "restore_verified": true, "migration_roundtrip": true}

@@ -1,0 +1,79 @@
+{
+  "phase": "restart",
+  "passed": true,
+  "chat_id": "01a124fa-f3db-7683-8c7b-c0c74b2e5343",
+  "records": [
+    {
+      "question": "我的咖啡机预算是多少？",
+      "seconds": 3.146,
+      "response": {
+        "code": 200,
+        "message": "Success",
+        "data": {
+          "chat_id": "01a124fa-f3db-7683-8c7b-c0c74b2e5343",
+          "id": "01a124fc-4572-7281-9bba-9aa616e81bad",
+          "operate": true,
+          "content": "您的咖啡机预算是4600元。",
+          "is_end": true,
+          "answer_list": [
+            {
+              "view_type": "many_view",
+              "content": "您的咖啡机预算是4600元。",
+              "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+              "chat_record_id": "01a124fc-4572-7281-9bba-9aa616e81bad",
+              "child_node": {},
+              "reasoning_content": "",
+              "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+            }
+          ],
+          "completion_tokens": 536,
+          "prompt_tokens": 20
+        }
+      }
+    },
+    {
+      "question": "清除之后，你知道我已确定的咖啡机预算吗？",
+      "seconds": 2.561,
+      "response": {
+        "code": 200,
+        "message": "Success",
+        "data": {
+          "chat_id": "01a124fa-f3db-7683-8c7b-c0c74b2e5343",
+          "id": "01a124fc-5224-7b93-b34b-49dac4acb429",
+          "operate": true,
+          "content": "不知道。清除后我无法访问之前的会话记忆，且您在本轮消息中未提供该信息。请告诉我您的预算。",
+          "is_end": true,
+          "answer_list": [
+            {
+              "view_type": "many_view",
+              "content": "不知道。清除后我无法访问之前的会话记忆，且您在本轮消息中未提供该信息。请告诉我您的预算。",
+              "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+              "chat_record_id": "01a124fc-5224-7b93-b34b-49dac4acb429",
+              "child_node": {},
+              "reasoning_content": "",
+              "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+            }
+          ],
+          "completion_tokens": 365,
+          "prompt_tokens": 35
+        }
+      }
+    }
+  ],
+  "memory": {
+    "facts": [],
+    "version": 6,
+    "generation": 1,
+    "sources": [
+      {
+        "id": "ce9f2857-7a85-47ed-bd84-60bb07e593bf",
+        "record_id": "01a124fc-5224-7b93-b34b-49dac4acb429",
+        "question": "清除之后，你知道我已确定的咖啡机预算吗？",
+        "kind": "turn",
+        "created_at": "2026-10-10T08:44:38.344Z",
+        "changes": []
+      }
+    ],
+    "temporary": false
+  }
+}

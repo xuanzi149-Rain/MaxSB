@@ -1,0 +1,48 @@
+test_invalid_budget_rejected (test_config.ConfigTests.test_invalid_budget_rejected) ... ok
+test_missing_disabled (test_config.ConfigTests.test_missing_disabled) ... ok
+test_multiple_and_legacy_memory_rejected (test_config.ConfigTests.test_multiple_and_legacy_memory_rejected) ... ok
+test_other_mode_rejected (test_config.ConfigTests.test_other_mode_rejected) ... ok
+test_single_nested_loop_memory_allowed (test_config.ConfigTests.test_single_nested_loop_memory_allowed) ... ok
+test_tool_and_multimodal_nodes_allowed_in_application_loop (test_config.ConfigTests.test_tool_and_multimodal_nodes_allowed_in_application_loop) ... ok
+test_pending_not_presented_as_confirmed (test_context.ContextTests.test_pending_not_presented_as_confirmed) ... ok
+test_tokenizer_failure_marked (test_context.ContextTests.test_tokenizer_failure_marked) ... ok
+test_whole_fact_budget_and_current_question_not_modified (test_context.ContextTests.test_whole_fact_budget_and_current_question_not_modified) ... ok
+test_answer_block_is_compact_but_trace_keeps_provenance (test_efficiency.EfficiencyTests.test_answer_block_is_compact_but_trace_keeps_provenance) ... ok
+test_exact_control_skips_paid_extraction_but_mixed_fact_does_not (test_efficiency.EfficiencyTests.test_exact_control_skips_paid_extraction_but_mixed_fact_does_not) ... ok
+test_extraction_omits_audit_metadata_and_unneeded_history (test_efficiency.EfficiencyTests.test_extraction_omits_audit_metadata_and_unneeded_history) ... ok
+test_multimodal_history_is_budgeted_without_flattening_messages (test_efficiency.EfficiencyTests.test_multimodal_history_is_budgeted_without_flattening_messages) ... ok
+test_ambiguous_entity_cannot_be_assigned_to_one_old_budget (test_extractor.ExtractorTests.test_ambiguous_entity_cannot_be_assigned_to_one_old_budget) ... ok
+test_ambiguous_generic_entity_keys_do_not_pin_a_target (test_extractor.ExtractorTests.test_ambiguous_generic_entity_keys_do_not_pin_a_target) ... ok
+test_explicit_revoke_accepts_attribute_requirement_suffix (test_extractor.ExtractorTests.test_explicit_revoke_accepts_attribute_requirement_suffix) ... ok
+test_explicit_value_and_quote (test_extractor.ExtractorTests.test_explicit_value_and_quote) ... ok
+test_fabricated_quote_rejected (test_extractor.ExtractorTests.test_fabricated_quote_rejected) ... ok
+test_hypothetical_add_not_confirmed (test_extractor.ExtractorTests.test_hypothetical_add_not_confirmed) ... ok
+test_hypothetical_correction_does_not_mutate (test_extractor.ExtractorTests.test_hypothetical_correction_does_not_mutate) ... ok
+test_invalid_json_rejected (test_extractor.ExtractorTests.test_invalid_json_rejected) ... ok
+test_later_hypothesis_does_not_discard_explicit_fact (test_extractor.ExtractorTests.test_later_hypothesis_does_not_discard_explicit_fact) ... ok
+test_mixed_question_retains_independent_declarative_quote (test_extractor.ExtractorTests.test_mixed_question_retains_independent_declarative_quote) ... ok
+test_model_cannot_claim_explicit_authority (test_extractor.ExtractorTests.test_model_cannot_claim_explicit_authority) ... ok
+test_optional_null_target_on_add (test_extractor.ExtractorTests.test_optional_null_target_on_add) ... ok
+test_ordinal_literal_resolves_only_unique_explicit_choice (test_extractor.ExtractorTests.test_ordinal_literal_resolves_only_unique_explicit_choice) ... ok
+test_question_cannot_create_new_condition (test_extractor.ExtractorTests.test_question_cannot_create_new_condition) ... ok
+test_question_mark_omitted_from_model_quote_still_does_not_write (test_extractor.ExtractorTests.test_question_mark_omitted_from_model_quote_still_does_not_write) ... ok
+test_quoted_example_not_confirmed (test_extractor.ExtractorTests.test_quoted_example_not_confirmed) ... ok
+test_two_local_ordinals_keep_distinct_choices (test_extractor.ExtractorTests.test_two_local_ordinals_keep_distinct_choices) ... ok
+test_unique_ordinal_has_real_historical_source (test_extractor.ExtractorTests.test_unique_ordinal_has_real_historical_source) ... ok
+test_wrong_entity_target_cannot_replace_confirmed_fact (test_extractor.ExtractorTests.test_wrong_entity_target_cannot_replace_confirmed_fact) ... ok
+test_ambiguous_conflict_requires_confirmation (test_policy.PolicyTests.test_ambiguous_conflict_requires_confirmation) ... ok
+test_capacity_does_not_drop_existing_facts (test_policy.PolicyTests.test_capacity_does_not_drop_existing_facts) ... ok
+test_replace_budget_retains_both_sources (test_policy.PolicyTests.test_replace_budget_retains_both_sources) ... ok
+test_revoke_excludes_condition (test_policy.PolicyTests.test_revoke_excludes_condition) ... ok
+test_same_attribute_different_entities (test_policy.PolicyTests.test_same_attribute_different_entities) ... ok
+test_unknown_target_rejected (test_policy.PolicyTests.test_unknown_target_rejected) ... ok
+test_later_fact_and_pending_candidate_suppress_old_revocation (test_policy.RevocationContextTests.test_later_fact_and_pending_candidate_suppress_old_revocation) ... ok
+test_anthropic_bounded_extraction_and_usage (test_provider.ProviderTests.test_anthropic_bounded_extraction_and_usage) ... ok
+test_unsupported_provider_explicit_and_unknown_usage (test_provider.ProviderTests.test_unsupported_provider_explicit_and_unknown_usage) ... ok
+test_both_calls_counted_and_unknown_propagates (test_report.ReportTests.test_both_calls_counted_and_unknown_propagates) ... ok
+test_failure_excludes_both_sides_from_paired_totals (test_report.ReportTests.test_failure_excludes_both_sides_from_paired_totals) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.012s
+
+OK

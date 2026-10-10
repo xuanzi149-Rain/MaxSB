@@ -1,0 +1,33 @@
+{
+  "source_merge": "8bb1d38b420d1637dcbe6781fdd5363124bbf12f",
+  "memory_pure": 43,
+  "context_pure": 63,
+  "retrieval_pure": 23,
+  "application_database": 68,
+  "total_tests": 197,
+  "frontend_typecheck": "passed",
+  "build_admin": "passed",
+  "build_chat": "passed",
+  "frontend_unchanged_by_prompt_fix": true,
+  "initial_manual_correction_smoke": "failed_old_answer_1900_despite_memory_4600",
+  "corrected_independent_sessions": 3,
+  "corrected_sessions_passed": 3,
+  "restart_and_clear": "passed",
+  "disable_rollback": "passed",
+  "six_case_regression": "key_conditions_preserved_agent_observation",
+  "backup_restore": "passed",
+  "business_memory_migration": "absent",
+  "test_deployment": "enabled_single_application_loopback_only",
+  "browser_this_run": "automation_timed_out_static_HTTP_verified",
+  "budget": {
+    "limit_cny": "300",
+    "reserved_cny": "77.581698",
+    "requests": 2139,
+    "pricing": "conservative list-price equivalent; not a bill"
+  },
+  "actual_cost": null,
+  "runtime_source_hashes": {
+    "apps/application/conversation_memory/context.py": "1822dbd195d0657b2f3d563e9b60e22304f6fe5eb77a2ea3d8c99546f76deae4",
+    "apps/application/conversation_memory/service.py": "026de31e33ce612639188dfdd11c468a58727a5211a9e81c9aaaaa4766ea7b5c"
+  }
+}

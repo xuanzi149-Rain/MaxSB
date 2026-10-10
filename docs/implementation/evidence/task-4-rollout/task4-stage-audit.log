@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/task4-stage-audit.py", line 28, in <module>
+    assert expected == actual
+           ^^^^^^^^^^^^^^^^^^
+AssertionError

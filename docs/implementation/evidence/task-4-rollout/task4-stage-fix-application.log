@@ -1,0 +1,169 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.555 seconds.
+Prefix dict has been built successfully.
+Found 68 test(s).
+Creating test database for alias 'default' ('test_maxsb_memory_task4')...
+Operations to perform:
+  Synchronize unmigrated apps: common, drf_spectacular, drf_spectacular_sidecar, messages, rest_framework, staticfiles
+  Apply all migrations: application, contenttypes, django_apscheduler, django_celery_beat, knowledge, models_provider, system_manage, tools, trigger, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying users.0001_initial... OK
+  Applying tools.0001_initial... OK
+  Applying system_manage.0001_initial... OK
+  Applying system_manage.0002_refresh_collation_reindex... OK
+  Applying models_provider.0001_initial... OK
+  Applying knowledge.0001_initial... OK
+  Applying application.0001_initial... OK
+  Applying system_manage.0003_alter_workspaceuserresourcepermission_target... OK
+  Applying system_manage.0004_alter_systemsetting_type_and_more... OK
+  Applying knowledge.0002_alter_file_source_type... OK
+  Applying knowledge.0003_tag_documenttag... OK
+  Applying knowledge.0004_alter_document_type_alter_knowledge_type_and_more... OK
+  Applying knowledge.0005_knowledgeaction... OK
+  Applying knowledge.0006_paragraph_chunks... OK
+  Applying knowledge.0007_remove_knowledgeworkflowversion_workflow_and_more... OK
+  Applying application.0002_application_simple_mcp... OK
+  Applying application.0003_application_stt_model_params_setting_and_more... OK
+  Applying system_manage.0005_resourcemapping... OK
+  Applying application.0004_application_application_enable_and_more... OK
+  Applying application.0005_chatrecord_vote_other_content_chatrecord_vote_reason... OK
+  Applying application.0006_application_file_clean_time... OK
+  Applying application.0007_applicationapikey_expire_time_and_more... OK
+  Applying application.0008_chat_ip_address_chat_source_chatrecord_ip_address_and_more... OK
+  Applying application.0009_clean_application_knowledge_mapping... OK
+  Applying application.0010_chatsharelink... OK
+  Applying application.0011_application_skill_tool_ids... OK
+  Applying application.0012_remove_applicationapikey_user... OK
+  Applying application.0013_application_long_term_enable_and_more... OK
+  Applying application.0014_applicationversion_knowledge_ids... OK
+  Applying application.0015_application_default_model_setting_and_more... OK
+  Applying application.0016_conversation_memory... OK
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying django_apscheduler.0001_initial... OK
+  Applying django_apscheduler.0002_auto_20180412_0758... OK
+  Applying django_apscheduler.0003_auto_20200716_1632... OK
+  Applying django_apscheduler.0004_auto_20200717_1043... OK
+  Applying django_apscheduler.0005_migrate_name_to_id... OK
+  Applying django_apscheduler.0006_remove_djangojob_name... OK
+  Applying django_apscheduler.0007_auto_20200717_1404... OK
+  Applying django_apscheduler.0008_remove_djangojobexecution_started... OK
+  Applying django_apscheduler.0009_djangojobexecution_unique_job_executions... OK
+  Applying django_celery_beat.0001_initial... OK
+  Applying django_celery_beat.0002_auto_20161118_0346... OK
+  Applying django_celery_beat.0003_auto_20161209_0049... OK
+  Applying django_celery_beat.0004_auto_20170221_0000... OK
+  Applying django_celery_beat.0005_add_solarschedule_events_choices... OK
+  Applying django_celery_beat.0006_auto_20180322_0932... OK
+  Applying django_celery_beat.0007_auto_20180521_0826... OK
+  Applying django_celery_beat.0008_auto_20180914_1922... OK
+  Applying django_celery_beat.0006_auto_20180210_1226... OK
+  Applying django_celery_beat.0006_periodictask_priority... OK
+  Applying django_celery_beat.0009_periodictask_headers... OK
+  Applying django_celery_beat.0010_auto_20190429_0326... OK
+  Applying django_celery_beat.0011_auto_20190508_0153... OK
+  Applying django_celery_beat.0012_periodictask_expire_seconds... OK
+  Applying django_celery_beat.0013_auto_20200609_0727... OK
+  Applying django_celery_beat.0014_remove_clockedschedule_enabled... OK
+  Applying django_celery_beat.0015_edit_solarschedule_events_choices... OK
+  Applying django_celery_beat.0016_alter_crontabschedule_timezone... OK
+  Applying django_celery_beat.0017_alter_crontabschedule_month_of_year... OK
+  Applying django_celery_beat.0018_improve_crontab_helptext... OK
+  Applying django_celery_beat.0019_alter_periodictasks_options... OK
+  Applying knowledge.0008_termbase... OK
+  Applying knowledge.0009_document_user... OK
+  Applying knowledge.0010_publicfileaccess... OK
+  Applying knowledge.0011_knowledgeworkflow_default_model_setting_and_more... OK
+  Applying tools.0002_alter_tool_tool_type... OK
+  Applying tools.0003_alter_tool_template_id... OK
+  Applying tools.0004_alter_tool_tool_type... OK
+  Applying tools.0005_taskrecord... OK
+  Applying tools.0006_alter_tool_tool_type... OK
+  Applying tools.0007_alter_tool_tool_type_toolworkflow_and_more... OK
+  Applying tools.0008_toolworkflow_default_model_setting_and_more... OK
+  Applying trigger.0001_initial... OK
+  Applying trigger.0002_remove_taskrecord_trigger_task_and_more... OK
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/tmp/maxsb-task4-staging/ui/dist' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+test_body_cannot_override_identity (application.tests_memory_api.MemoryAPITests.test_body_cannot_override_identity) ... ok
+test_clear_returns_version_and_keeps_chat (application.tests_memory_api.MemoryAPITests.test_clear_returns_version_and_keeps_chat) ... ok
+test_correction_sources_and_stale_version (application.tests_memory_api.MemoryAPITests.test_correction_sources_and_stale_version) ... ok
+test_get_hides_other_user (application.tests_memory_api.MemoryAPITests.test_get_hides_other_user) ... ok
+test_other_application_client_type_and_deleted_chat_denied (application.tests_memory_api.MemoryAPITests.test_other_application_client_type_and_deleted_chat_denied) ... ok
+test_real_authentication_rejects_missing_token (application.tests_memory_api.MemoryAPITests.test_real_authentication_rejects_missing_token) ... ok
+test_multimodal_and_tool_path_keep_original_message_and_raw_text (application.tests_memory_extended.ExtendedRuntimeTests.test_multimodal_and_tool_path_keep_original_message_and_raw_text) ... ok
+test_same_record_repeated_by_loop_extracts_once (application.tests_memory_extended.ExtendedRuntimeTests.test_same_record_repeated_by_loop_extracts_once) ... ok
+test_actual_ai_node_receives_memory (application.tests_memory_runtime.MemoryRuntimeTests.test_actual_ai_node_receives_memory) ... ok
+test_clear_excludes_old_recent_history (application.tests_memory_runtime.MemoryRuntimeTests.test_clear_excludes_old_recent_history) ... ok
+test_extraction_failure_does_not_inject_old_facts (application.tests_memory_runtime.MemoryRuntimeTests.test_extraction_failure_does_not_inject_old_facts) ... ok
+test_extraction_updates_model_context (application.tests_memory_runtime.MemoryRuntimeTests.test_extraction_updates_model_context) ... ok
+test_prepared_history_preserved_separately_from_extraction (application.tests_memory_runtime.MemoryRuntimeTests.test_prepared_history_preserved_separately_from_extraction) ... ok
+test_revocation_survives_history_window_without_becoming_active (application.tests_memory_runtime.MemoryRuntimeTests.test_revocation_survives_history_window_without_becoming_active) ... ok
+test_stream_and_nonstream_actual_usage_and_missing_fields (application.tests_memory_runtime.MemoryRuntimeTests.test_stream_and_nonstream_actual_usage_and_missing_fields) ... ok
+test_clear_does_not_reextract_old_turn (application.tests_memory_store.StoreTests.test_clear_does_not_reextract_old_turn) ... ok
+test_clear_rejects_inflight_commit (application.tests_memory_store.StoreTests.test_clear_rejects_inflight_commit) ... ok
+test_correction_and_clear_version_checks (application.tests_memory_store.StoreTests.test_correction_and_clear_version_checks) ... ok
+test_duplicate_cannot_extract_twice (application.tests_memory_store.StoreTests.test_duplicate_cannot_extract_twice) ... ok
+test_manual_correction_invalidates_old_ticket (application.tests_memory_store.StoreTests.test_manual_correction_invalidates_old_ticket) ... ok
+test_rechat_cannot_change_original_message (application.tests_memory_store.StoreTests.test_rechat_cannot_change_original_message) ... ok
+test_source_survives_before_chat_record (application.tests_memory_store.StoreTests.test_source_survives_before_chat_record) ... ok
+test_update_and_idempotent_replay (application.tests_memory_store.StoreTests.test_update_and_idempotent_replay) ... ok
+test_wrong_identity_and_deleted_chat_denied (application.tests_memory_store.StoreTests.test_wrong_identity_and_deleted_chat_denied) ... ok
+test_budget_empty_uses_no_reference_behavior (application.tests_context.ContextIntegrationTests.test_budget_empty_uses_no_reference_behavior) ... ok
+test_config_survives_application_serializer_and_rejects_invalid (application.tests_context.ContextIntegrationTests.test_config_survives_application_serializer_and_rejects_invalid) ... ok
+test_containment_sends_complete_original_with_extra_facts (application.tests_context.ContextIntegrationTests.test_containment_sends_complete_original_with_extra_facts) ... ok
+test_direct_return_remains_available_even_when_budget_is_tiny (application.tests_context.ContextIntegrationTests.test_direct_return_remains_available_even_when_budget_is_tiny) ... ok
+test_disabled_message_matches_upstream_bytes (application.tests_context.ContextIntegrationTests.test_disabled_message_matches_upstream_bytes) ... ok
+test_disabled_reranker_preserves_original_truncation (application.tests_context.ContextIntegrationTests.test_disabled_reranker_preserves_original_truncation) ... ok
+test_enabled_pipeline_model_receives_one_copy_and_original_source (application.tests_context.ContextIntegrationTests.test_enabled_pipeline_model_receives_one_copy_and_original_source) ... ok
+test_no_removal_keeps_original_model_message_and_history (application.tests_context.ContextIntegrationTests.test_no_removal_keeps_original_model_message_and_history) ... ok
+test_normalized_source_labels_removed_only_from_comparison (application.tests_context.ContextIntegrationTests.test_normalized_source_labels_removed_only_from_comparison) ... ok
+test_old_pipeline_settings_need_no_new_fields (application.tests_context.ContextIntegrationTests.test_old_pipeline_settings_need_no_new_fields) ... ok
+test_reranker_selects_before_truncation_and_preserves_metadata (application.tests_context.ContextIntegrationTests.test_reranker_selects_before_truncation_and_preserves_metadata) ... ok
+test_search_node_filters_actual_output_and_replay (application.tests_context.ContextIntegrationTests.test_search_node_filters_actual_output_and_replay) ... ok
+test_live_pipeline_uses_workspace_and_filters_actual_model_message (application.tests_context.SemanticRuntimeIntegrationTests.test_live_pipeline_uses_workspace_and_filters_actual_model_message) ... ok
+test_policy_switch_roundtrips_and_rejects_bad_value (application.tests_context.SemanticRuntimeIntegrationTests.test_policy_switch_roundtrips_and_rejects_bad_value) ... ok
+test_reranker_title_only_is_preserved_and_output_metadata_stays_sanitized (application.tests_context.SemanticRuntimeIntegrationTests.test_reranker_title_only_is_preserved_and_output_metadata_stays_sanitized) ... ok
+test_reranker_uses_original_fields_for_approved_hash (application.tests_context.SemanticRuntimeIntegrationTests.test_reranker_uses_original_fields_for_approved_hash) ... ok
+test_real_anthropic_sdk_local_transport (application.tests_memory_extended.NativeProviderProtocolTests.test_real_anthropic_sdk_local_transport) ... ok
+test_correction_waits_for_extraction_commit_and_detects_conflict (application.tests_memory_store.MemoryConcurrencyTests.test_correction_waits_for_extraction_commit_and_detects_conflict) ... ok
+test_first_requests_share_one_state (application.tests_memory_store.MemoryConcurrencyTests.test_first_requests_share_one_state) ... ok
+test_migration_round_trip (application.tests_memory_store.MemoryConcurrencyTests.test_migration_round_trip) ... ok
+test_clear_does_not_reextract_old_turn (application.tests_memory_temporary.TemporaryMemoryTests.test_clear_does_not_reextract_old_turn) ... ok
+test_debug_isolated_and_clear_rejects_inflight (application.tests_memory_temporary.TemporaryMemoryTests.test_debug_isolated_and_clear_rejects_inflight) ... ok
+test_wrong_identity_denied (application.tests_memory_temporary.TemporaryMemoryTests.test_wrong_identity_denied) ... ok
+test_ai_node_history_removes_only_current_verified_context (application.tests_retrieval.DialogueIntegrationTests.test_ai_node_history_removes_only_current_verified_context) ... ok
+test_clearing_dialogue_context_reference_preserves_optional_configuration (application.tests_retrieval.DialogueIntegrationTests.test_clearing_dialogue_context_reference_preserves_optional_configuration) ... ok
+test_dialogue_settings_are_optional_and_typed (application.tests_retrieval.DialogueIntegrationTests.test_dialogue_settings_are_optional_and_typed) ... ok
+test_live_ai_input_uses_guidance_only_when_enabled_without_tools (application.tests_retrieval.DialogueIntegrationTests.test_live_ai_input_uses_guidance_only_when_enabled_without_tools) ... ok
+test_workflow_history_and_disabled_node_history_remain_unchanged (application.tests_retrieval.DialogueIntegrationTests.test_workflow_history_and_disabled_node_history_remain_unchanged) ... ok
+test_cleared_optional_reference_is_valid (application.tests_retrieval.DynamicRerankerTests.test_cleared_optional_reference_is_valid) ... ok
+test_complex_reranks_raw_candidates_before_context_deduplication (application.tests_retrieval.DynamicRerankerTests.test_complex_reranks_raw_candidates_before_context_deduplication) ... ok
+test_disabled_source_uses_legacy_processed_paragraphs (application.tests_retrieval.DynamicRerankerTests.test_disabled_source_uses_legacy_processed_paragraphs) ... ok
+test_empty_input_does_not_load_reranker_and_replays_audit (application.tests_retrieval.DynamicRerankerTests.test_empty_input_does_not_load_reranker_and_replays_audit) ... ok
+test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence (application.tests_retrieval.DynamicRerankerTests.test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence) ... ok
+test_missing_dynamic_model_falls_back_to_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_missing_dynamic_model_falls_back_to_original_evidence) ... ok
+test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip (application.tests_retrieval.DynamicRerankerTests.test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip) ... ok
+test_simple_bypasses_reranker_and_still_deduplicates_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_simple_bypasses_reranker_and_still_deduplicates_original_evidence) ... ok
+test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload (application.tests_retrieval.DynamicRerankerTests.test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload) ... ok
+test_unlinked_and_unknown_reranker_keep_original_failure_semantics (application.tests_retrieval.DynamicRerankerTests.test_unlinked_and_unknown_reranker_keep_original_failure_semantics) ... ok
+test_empty_authorized_knowledge_skips_model_and_reports_empty_scope (application.tests_retrieval.RetrievalIntegrationTests.test_empty_authorized_knowledge_skips_model_and_reports_empty_scope) ... ok
+test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace) ... ok
+test_old_and_disabled_workflow_outputs_are_identical (application.tests_retrieval.RetrievalIntegrationTests.test_old_and_disabled_workflow_outputs_are_identical) ... ok
+test_policy_serializer_roundtrip_and_range_validation (application.tests_retrieval.RetrievalIntegrationTests.test_policy_serializer_roundtrip_and_range_validation) ... ok
+test_query_uses_decision_before_context_processing_and_keeps_raw_sources (application.tests_retrieval.RetrievalIntegrationTests.test_query_uses_decision_before_context_processing_and_keeps_raw_sources) ... ok
+test_unknown_keeps_fixed_query_and_complex_expands (application.tests_retrieval.RetrievalIntegrationTests.test_unknown_keeps_fixed_query_and_complex_expands) ... ok
+
+----------------------------------------------------------------------
+Ran 68 tests in 2.211s
+
+OK
+Destroying test database for alias 'default' ('test_maxsb_memory_task4')...

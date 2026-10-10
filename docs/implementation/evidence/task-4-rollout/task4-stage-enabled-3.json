@@ -1,0 +1,143 @@
+{
+  "phase": "enabled",
+  "passed": true,
+  "chat_id": "01a124ff-5d10-7d02-89a9-764e769a8c04",
+  "records": [
+    {
+      "question": "我的咖啡机预算是1900元，请记住。",
+      "seconds": 3.795,
+      "response": {
+        "code": 200,
+        "message": "Success",
+        "data": {
+          "chat_id": "01a124ff-5d10-7d02-89a9-764e769a8c04",
+          "id": "01a124ff-5d72-7af3-8f71-e1f7be38c13b",
+          "operate": true,
+          "content": "已记录，您的咖啡机预算为1900元。",
+          "is_end": true,
+          "answer_list": [
+            {
+              "view_type": "many_view",
+              "content": "已记录，您的咖啡机预算为1900元。",
+              "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+              "chat_record_id": "01a124ff-5d72-7af3-8f71-e1f7be38c13b",
+              "child_node": {},
+              "reasoning_content": "",
+              "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+            }
+          ],
+          "completion_tokens": 424,
+          "prompt_tokens": 93
+        }
+      }
+    },
+    {
+      "question": "我的咖啡机预算是多少？",
+      "seconds": 2.592,
+      "response": {
+        "code": 200,
+        "message": "Success",
+        "data": {
+          "chat_id": "01a124ff-5d10-7d02-89a9-764e769a8c04",
+          "id": "01a124ff-6cff-7ed3-80e4-b2489b88f40c",
+          "operate": true,
+          "content": "您的咖啡机预算是4600元。",
+          "is_end": true,
+          "answer_list": [
+            {
+              "view_type": "many_view",
+              "content": "您的咖啡机预算是4600元。",
+              "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+              "chat_record_id": "01a124ff-6cff-7ed3-80e4-b2489b88f40c",
+              "child_node": {},
+              "reasoning_content": "",
+              "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+            }
+          ],
+          "completion_tokens": 503,
+          "prompt_tokens": 20
+        }
+      }
+    }
+  ],
+  "memory": {
+    "facts": [
+      {
+        "id": "190b133a-3b91-4640-ba23-f8fa3ac0f315",
+        "entity": "当前任务",
+        "attribute": "预算",
+        "value": "4600元",
+        "status": "confirmed",
+        "source": "9d764b6f-240a-4ca5-9671-2d0379dc14db",
+        "quote": "4600元",
+        "references": [],
+        "version": 2,
+        "updated_at": "2026-10-10T08:48:01.719212+00:00"
+      }
+    ],
+    "version": 2,
+    "generation": 0,
+    "sources": [
+      {
+        "id": "9d764b6f-240a-4ca5-9671-2d0379dc14db",
+        "record_id": "",
+        "question": "4600元",
+        "kind": "manual",
+        "created_at": "2026-10-10T08:48:01.719Z",
+        "changes": [
+          {
+            "after": {
+              "id": "190b133a-3b91-4640-ba23-f8fa3ac0f315",
+              "quote": "4600元",
+              "value": "4600元",
+              "entity": "当前任务",
+              "source": "9d764b6f-240a-4ca5-9671-2d0379dc14db",
+              "status": "confirmed",
+              "version": 2,
+              "attribute": "预算",
+              "references": [],
+              "updated_at": "2026-10-10T08:48:01.719212+00:00"
+            },
+            "before": {
+              "id": "190b133a-3b91-4640-ba23-f8fa3ac0f315",
+              "quote": "我的咖啡机预算是1900元",
+              "value": "1900元",
+              "entity": "当前任务",
+              "source": "ac35548a-aef2-49fe-ab0f-94ce280e192c",
+              "status": "confirmed",
+              "version": 1,
+              "attribute": "预算",
+              "references": [],
+              "updated_at": "2026-10-10T08:48:00.290695+00:00"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ac35548a-aef2-49fe-ab0f-94ce280e192c",
+        "record_id": "01a124ff-5d72-7af3-8f71-e1f7be38c13b",
+        "question": "我的咖啡机预算是1900元，请记住。",
+        "kind": "turn",
+        "created_at": "2026-10-10T08:47:57.875Z",
+        "changes": [
+          {
+            "after": {
+              "id": "190b133a-3b91-4640-ba23-f8fa3ac0f315",
+              "quote": "我的咖啡机预算是1900元",
+              "value": "1900元",
+              "entity": "当前任务",
+              "source": "ac35548a-aef2-49fe-ab0f-94ce280e192c",
+              "status": "confirmed",
+              "version": 1,
+              "attribute": "预算",
+              "references": [],
+              "updated_at": "2026-10-10T08:48:00.290695+00:00"
+            },
+            "before": null
+          }
+        ]
+      }
+    ],
+    "temporary": false
+  }
+}

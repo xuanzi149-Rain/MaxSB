@@ -1,0 +1,23 @@
+{
+  "paired_cases": [
+    "new-ambiguity",
+    "new-clear",
+    "new-hypothetical",
+    "new-multiple",
+    "new-reference",
+    "new-revoke"
+  ],
+  "failed_cases": [],
+  "human_correctness": null,
+  "human_review": "pending",
+  "fixed": {
+    "input_tokens": 4856,
+    "output_tokens": 374,
+    "cost": null
+  },
+  "memory": {
+    "input_tokens": 16055,
+    "output_tokens": 1349,
+    "cost": null
+  }
+}

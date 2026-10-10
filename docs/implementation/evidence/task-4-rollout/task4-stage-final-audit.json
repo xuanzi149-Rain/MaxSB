@@ -1,0 +1,83 @@
+{
+  "staging": {
+    "database": "maxsb_task4_staging",
+    "application_id": "01a124f3-81b0-7900-bb25-74edd027d4c2",
+    "memory_enabled": true,
+    "chats": 6,
+    "memories": 4,
+    "events": 14,
+    "memory_states": [
+      {
+        "chat_id": "01a124f8-77dc-7602-bc82-22a031d3ea8a",
+        "version": 3,
+        "generation": 0,
+        "facts": [
+          {
+            "id": "e746a254-091d-406f-89d8-50d9433ecf56",
+            "quote": "4600元",
+            "value": "4600元",
+            "entity": "当前任务",
+            "source": "500b027b-bd07-4c6c-af4b-48b77f7557af",
+            "status": "confirmed",
+            "version": 2,
+            "attribute": "预算",
+            "references": [],
+            "updated_at": "2026-10-10T08:40:30.301813+00:00"
+          }
+        ]
+      },
+      {
+        "chat_id": "01a124fa-f3db-7683-8c7b-c0c74b2e5343",
+        "version": 6,
+        "generation": 1,
+        "facts": []
+      },
+      {
+        "chat_id": "01a124ff-1bdd-7033-986e-926c3f304336",
+        "version": 3,
+        "generation": 0,
+        "facts": [
+          {
+            "id": "b7b3dfe8-d567-461f-afb3-462ad4bbe43c",
+            "quote": "4600元",
+            "value": "4600元",
+            "entity": "当前任务",
+            "source": "f3e1627a-2c37-430a-a10c-8f4eed8e403a",
+            "status": "confirmed",
+            "version": 2,
+            "attribute": "预算",
+            "references": [],
+            "updated_at": "2026-10-10T08:47:45.447470+00:00"
+          }
+        ]
+      },
+      {
+        "chat_id": "01a124ff-5d10-7d02-89a9-764e769a8c04",
+        "version": 3,
+        "generation": 0,
+        "facts": [
+          {
+            "id": "190b133a-3b91-4640-ba23-f8fa3ac0f315",
+            "quote": "4600元",
+            "value": "4600元",
+            "entity": "当前任务",
+            "source": "9d764b6f-240a-4ca5-9671-2d0379dc14db",
+            "status": "confirmed",
+            "version": 2,
+            "attribute": "预算",
+            "references": [],
+            "updated_at": "2026-10-10T08:48:01.719212+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "post_smoke_backup": "/opt/maxkb/rollback/task4-staging/post-smoke.dump",
+  "restore_matches_memory_and_events": true,
+  "business_memory_migration_count": 0,
+  "business_memory_tables": [
+    null,
+    null
+  ],
+  "business_staging_apps": 0
+}
