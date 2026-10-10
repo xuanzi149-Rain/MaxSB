@@ -97,7 +97,7 @@
 
 ## 任务 4：长对话结构化记忆（原计划改动 2）
 
-实施记录：[任务 4 交付与验证](implementation/task-4.md)。默认关闭；人工质量复核与完整 HTTP/浏览器端到端验收仍需完成，不据此自动进入下一任务。
+实施记录：[任务 4 交付与验证](implementation/task-4.md)、[增量验收](implementation/task-4-followup.md)。默认关闭；完整 HTTP/浏览器验证和用户六题人工复核已完成。合并及测试部署进度见 [发布记录](implementation/task-4-rollout.md)。
 
 ### 通俗解释
 
