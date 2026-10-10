@@ -84,3 +84,49 @@ class MemoryRuntimeTests(MemoryFixture):
                 answer_turns=prepared)
         self.assertEqual(selected.history[0]['question'], '节点处理后的问题')
         self.assertEqual(extract.call_args.args[3][0]['question'], '原问题')
+
+    def test_stream_and_nonstream_actual_usage_and_missing_fields(self):
+        import time
+        from types import SimpleNamespace
+        from langchain_core.messages import AIMessage, AIMessageChunk
+        from application.flow.step_node.ai_chat_step_node.impl.base_chat_node import write_context, write_context_stream
+        def unavailable(_):
+            raise RuntimeError('Tokenizer unavailable')
+        model = SimpleNamespace(get_num_tokens_from_messages=unavailable, get_num_tokens=unavailable)
+        workflow = SimpleNamespace(is_result=lambda *args: False, is_the_task_interrupted=lambda: False)
+        for streaming, partial in [(False, False), (True, False), (True, True)]:
+            node = SimpleNamespace(context={'start_time': time.time(), 'memory': {
+                'extraction_usage': {'input_tokens': 10, 'output_tokens': 2}}})
+            cls = AIMessageChunk if streaming else AIMessage
+            message = cls(content='好', usage_metadata={'input_tokens': 20, 'output_tokens': 3, 'total_tokens': 23})
+            if partial:
+                message.usage_metadata = {'input_tokens': 20}
+            variables = {'chat_model': model, 'message_list': [], 'question': '预算3000',
+                         'result': iter([message]) if streaming else message}
+            if streaming:
+                list(write_context_stream(variables, {}, node, workflow))
+            else:
+                write_context(variables, {}, node, workflow)
+            self.assertEqual(node.context['memory']['total_usage']['input_tokens'], 30)
+            self.assertEqual(node.context['memory']['total_usage']['output_tokens'], None if partial else 5)
+            self.assertEqual(node.context['message_tokens'], 30)
+
+    def test_revocation_survives_history_window_without_becoming_active(self):
+        from uuid import uuid4
+        from application.conversation_memory.policy import apply_operations
+        first = self.begin()
+        state = self.store.commit_turn(first, apply_operations(first.snapshot, [Operation(
+            'add', entity='手表', attribute='防水', value='要求', quote='要求防水', source=first.event_id)]))
+        second = self.store.begin_turn(self.identity, self.chat.id, str(uuid4()), '不再要求手表防水')
+        self.store.commit_turn(second, apply_operations(second.snapshot, [Operation(
+            'revoke', target=state.facts[0]['id'], explicit=True, quote='不再要求手表防水', source=second.event_id)]))
+        self.assertEqual(self.store.read(self.identity, self.chat.id).facts, [])
+        with patch('application.conversation_memory.service.extract_operations', return_value=ExtractionResult()):
+            selected, _ = self.prepare('还要求防水吗')
+        self.assertIn('revoked', selected.block)
+        self.assertIn('不再要求手表防水', selected.block)
+        self.assertEqual(self.store.read(self.identity, self.chat.id).facts, [])
+        self.store.clear(self.identity, self.chat.id, self.store.read(self.identity, self.chat.id).version, str(uuid4()))
+        with patch('application.conversation_memory.service.extract_operations', return_value=ExtractionResult()):
+            selected, _ = self.prepare('还要求防水吗')
+        self.assertEqual(selected.block, '')

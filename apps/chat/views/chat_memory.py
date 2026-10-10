@@ -1,7 +1,7 @@
+# coding=utf-8
 from common.auth import TokenAuth
 from common.auth.authentication import has_permissions
 from common.constants.permission_constants import PermissionConstants, RoleConstants, ViewPermission, CompareConstants
-# coding=utf-8
 from dataclasses import asdict
 from rest_framework.views import APIView
 from rest_framework.exceptions import ValidationError
@@ -51,8 +51,6 @@ class ChatMemoryView(APIView):
 
     def delete(self, request, chat_id, **kwargs):
         return self.operate(request, chat_id, **kwargs)
-
-
 
 
 class DebugMemoryView(ChatMemoryView):

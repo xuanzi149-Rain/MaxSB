@@ -168,3 +168,12 @@ class MemoryConcurrencyTests(TransactionTestCase):
                 store.commit_turn(ticket, changes)
             self.assertEqual(future.result(timeout=5), 'conflict')
         self.assertEqual({f['value'] for f in store.read(identity, chat.id).facts}, {'3000', '2'})
+
+    def test_migration_round_trip(self):
+        from django.db.migrations.executor import MigrationExecutor
+        executor = MigrationExecutor(connection)
+        executor.migrate([('application', '0015_application_default_model_setting_and_more')])
+        self.assertNotIn('application_conversation_memory', connection.introspection.table_names())
+        executor = MigrationExecutor(connection)
+        executor.migrate([('application', '0016_conversation_memory')])
+        self.assertIn('application_conversation_memory_event', connection.introspection.table_names())

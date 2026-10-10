@@ -7,7 +7,7 @@ from dataclasses import asdict, replace
 from uuid import uuid4
 from django.core.cache import cache
 from .types import MemorySnapshot, TurnTicket
-from .policy import apply_operations
+from .policy import apply_operations, revocation_notes
 from .store import MemoryConflict, MemoryDenied
 
 
@@ -39,6 +39,11 @@ class TemporaryMemoryStore:
     def read(self, identity, chat_id):
         self._check(identity, chat_id)
         return MemorySnapshot(**self._load()['snapshot'])
+
+    def revoked_context(self, identity, chat_id, active_facts):
+        self._check(identity, chat_id)
+        events = [e for e in self._load()['events'].values() if e.get('status') == 'completed' and e.get('changes')]
+        return revocation_notes(reversed(events[-100:]), active_facts)
 
     def sources(self, identity, chat_id):
         self._check(identity, chat_id)
@@ -85,7 +90,7 @@ class TemporaryMemoryStore:
                 state.facts = changes.snapshot.facts
                 state.version += 1
                 data['snapshot'] = asdict(state)
-            event.update(status=status, usage=usage or {}, changes=changes.changes)
+            event.update(status=status, usage=usage or {}, changes=changes.changes, result_version=state.version)
             return state
 
     def correct(self, identity, chat_id, fact_id, operation, expected_version, request_id):

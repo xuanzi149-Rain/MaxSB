@@ -63,3 +63,20 @@ def apply_operations(snapshot, operations):
         facts.append(fact)
         result.changes.append({'before': before, 'after': deepcopy(fact)})
     return result
+
+
+def revocation_notes(events, active_facts):
+    """Read-only negative context; never reintroduce revoked values into active facts."""
+    seen = {(fact['entity'], fact['attribute']) for fact in active_facts}
+    notes = []
+    for event in events:  # Newest first.
+        for change in reversed(event.get('changes', [])):
+            after = change.get('after') or {}
+            key = (after.get('entity'), after.get('attribute'))
+            if key in seen or not all(key):
+                continue
+            seen.add(key)
+            if after.get('status') == 'revoked':
+                notes.append({**after, 'value': '用户已撤销此条件', 'status': 'revoked',
+                              'version': event.get('result_version', after.get('version', 0))})
+    return notes

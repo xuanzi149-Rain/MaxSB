@@ -39,10 +39,9 @@ def _write_context(
     node_variable: Dict, workflow_variable: Dict, node: INode, workflow, answer: str, reasoning_content: str
 ):
     chat_model = node_variable.get("chat_model")
-    message_tokens = chat_model.get_num_tokens_from_messages(node_variable.get("message_list"))
-    answer_tokens = chat_model.get_num_tokens(answer)
-    node.context["message_tokens"] = message_tokens
-    node.context["answer_tokens"] = answer_tokens
+    if not node.context.get("memory"):
+        node.context["message_tokens"] = chat_model.get_num_tokens_from_messages(node_variable.get("message_list"))
+        node.context["answer_tokens"] = chat_model.get_num_tokens(answer)
     if node.context.get("memory"):
         from application.conversation_memory.service import finish_usage
         finish_usage(node.context["memory"], node.context.get("memory_answer_usage", {}))
@@ -80,7 +79,8 @@ def write_context_stream(node_variable: Dict, workflow_variable: Dict, node: INo
         if node.context.get("memory") and getattr(chunk, "usage_metadata", None):
             usage = node.context.setdefault("memory_answer_usage", {"input_tokens": 0, "output_tokens": 0})
             for key in ("input_tokens", "output_tokens"):
-                usage[key] += chunk.usage_metadata.get(key, 0)
+                value = chunk.usage_metadata.get(key)
+                usage[key] = usage[key] + value if isinstance(usage[key], int) and isinstance(value, int) else None
         if workflow.is_the_task_interrupted():
             break
         reasoning_chunk = reasoning.get_reasoning_content(chunk)

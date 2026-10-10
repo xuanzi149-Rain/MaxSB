@@ -8,7 +8,7 @@ from uuid import UUID
 from django.db import transaction
 from django.utils import timezone
 from application.models import Chat, ChatRecord, ConversationMemory, ConversationMemoryEvent
-from .policy import apply_operations
+from .policy import apply_operations, revocation_notes
 from .types import MemorySnapshot, TurnTicket
 
 
@@ -44,6 +44,12 @@ class MemoryStore:
         self._chat(identity, chat_id)
         state = ConversationMemory.objects.filter(chat_id=chat_id).first()
         return snapshot(state) if state else MemorySnapshot()
+
+    def revoked_context(self, identity, chat_id, active_facts):
+        self._chat(identity, chat_id)
+        events = ConversationMemoryEvent.objects.filter(memory_id=chat_id, status='completed').exclude(
+            changes=[]).order_by('-created_at', '-id').values('changes', 'result_version')[:100]
+        return revocation_notes(events, active_facts)
 
     def sources(self, identity, chat_id):
         self._chat(identity, chat_id)

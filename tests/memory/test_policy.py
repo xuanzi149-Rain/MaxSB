@@ -45,3 +45,16 @@ class PolicyTests(unittest.TestCase):
         result = apply_operations(MemorySnapshot(), [Operation('replace', target='foreign', value='x')])
         self.assertEqual(result.snapshot.facts, [])
         self.assertEqual(result.rejected, ['unknown_target'])
+
+
+class RevocationContextTests(unittest.TestCase):
+    def test_later_fact_and_pending_candidate_suppress_old_revocation(self):
+        from application.conversation_memory.policy import revocation_notes
+        revoked = {'id': 'one', 'entity': '手表', 'attribute': '防水', 'value': '要求', 'status': 'revoked'}
+        events = [{'changes': [{'after': revoked}], 'result_version': 2}]
+        self.assertEqual(revocation_notes(events, [dict(revoked, status='confirmed')]), [])
+        later = {'changes': [{'after': dict(revoked, status='pending')}], 'result_version': 3}
+        self.assertEqual(revocation_notes([later, *events], []), [])
+        notes = revocation_notes(events, [])
+        self.assertEqual(notes[0]['status'], 'revoked')
+        self.assertEqual(notes[0]['value'], '用户已撤销此条件')

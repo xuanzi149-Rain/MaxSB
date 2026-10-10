@@ -49,6 +49,9 @@ def prepare_memory_context(identity, chat_id, record_id, question, model, policy
     trace['version'] = state.version
     if trace['status'] not in {'ok', 'reused'}:
         state = MemorySnapshot(version=state.version, generation=state.generation)
+    if trace['status'] in {'ok', 'reused'}:
+        notes = store.revoked_context(identity, chat_id, state.facts)
+        state = MemorySnapshot([*state.facts, *notes], state.version, state.generation)
     answer_turns = store.filter_recent(identity, chat_id, answer_turns)
     selected = select_context(question, state, answer_turns, model.get_num_tokens, policy['context_token_budget'])
     latest = store.read(identity, chat_id)
