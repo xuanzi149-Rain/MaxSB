@@ -2,6 +2,7 @@
 """Hash runtime dependencies while storing only non-secret identifiers and configuration."""
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 from django.core.serializers.json import DjangoJSONEncoder
@@ -26,7 +27,7 @@ def capture_snapshot(application_id: str) -> dict:
             return isinstance(value, list) and any(contains_capability(item) for item in value)
         if contains_capability(app.work_flow) or contains_capability(app.default_model_setting):
             raise ValueError('Workflow has external tool capabilities')
-        safe_nodes = {'base-node', 'start-node', 'ai-chat-node', 'search-dataset-node', 'reply-node', 'reranker-node'}
+        safe_nodes = {'base-node', 'start-node', 'ai-chat-node', 'search-dataset-node', 'search-knowledge-node', 'reply-node', 'reranker-node'}
         if any(node.get('type') not in safe_nodes for node in app.work_flow.get('nodes', [])):
             raise ValueError('Use the controlled evaluation tool fixture for tool cases')
     # Hash all application fields without exporting embedded tool secrets.
@@ -53,12 +54,16 @@ def capture_snapshot(application_id: str) -> dict:
             return None
     sha = git('rev-parse', 'HEAD') or os.environ.get('MAXSB_CODE_SHA', 'unknown')
     diff = git('diff', 'HEAD')
+    # Archive deployments can supply the verified checkout diff digest at packaging time.
+    deployed_diff = os.environ.get('MAXSB_LOCAL_DIFF_HASH', '')
+    diff_hash = (dataset_digest(diff) if diff is not None else
+                 deployed_diff if re.fullmatch(r'[0-9a-f]{64}', deployed_diff) else None)
     # Includes untracked implementation files; does not hash credentials or runtime .env files.
     source_files = {}
     for base in (root / 'apps/application/evaluation', root / 'apps/application/model_routing',
                  root / 'docs/implementation/evaluation'):
         for path in sorted(base.glob('*')):
-            if path.suffix in ('.py', '.json'):
+            if not path.name.startswith('.') and path.suffix in ('.py', '.json'):
                 source_files[str(path.relative_to(root))] = path.read_text()
     protocol_path = root / 'docs/implementation/evaluation/task6-protocol.json'
     protocol = json.loads(protocol_path.read_text()) if protocol_path.exists() else {}
@@ -76,6 +81,6 @@ def capture_snapshot(application_id: str) -> dict:
             'model_id': str(app.model_id) if app.model_id else None,
             'model_params': {k: v for k, v in app.model_params_setting.items()
                              if k in ('temperature', 'top_p', 'max_tokens', 'seed')},
-            'code_sha': sha, 'local_diff_hash': dataset_digest(diff) if diff is not None else None,
+            'code_sha': sha, 'local_diff_hash': diff_hash,
             'evaluation_source_hash': dataset_digest(source_files),
             'image_id': os.environ.get('MAXSB_IMAGE_ID', 'unknown')}

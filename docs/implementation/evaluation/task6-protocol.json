@@ -1,6 +1,6 @@
 {
-  "version": "task6-v1",
-  "status": "development_smoke_only_pending_frozen_review_and_actual_bills",
+  "version": "task6-8084-v1",
+  "status": "ready",
   "budget_cny": "100",
   "requested_models": {
     "low": "MaxSB1 / qwen3.7-plus",
@@ -46,5 +46,5 @@
       "max_input_tokens": 65536
     }
   },
-  "note": "100 CNY cumulative reservation cap. Model aliases may change underlying versions; capture provider response model. Qwen token-plan actual marginal cost is unknown. Daily reference rates expire; reservations and reference pricing are not bills. Frozen protocol not ready."
+  "note": "Protocol frozen before formal runs. 100 CNY cumulative reservation cap includes prior smoke calls. Model aliases may change underlying versions; capture provider response model. Qwen token-plan actual marginal cost is unknown. Reference rates expire and are not bills. Human answer review and actual bills remain pending; ready means execution protocol is frozen, not acceptance passed."
 }

@@ -89,3 +89,15 @@ class RunnerTests(TestCase):
             with self.captureOnCommitCallbacks(execute=False) as callbacks:
                 service.create_run('eval', str(self.app.id), str(self.user.id), self.dataset, enqueue=False)
             self.assertEqual(len(callbacks), 0)
+
+    def test_archive_snapshot_requires_valid_packaging_diff_hash(self):
+        from application.evaluation.snapshot import capture_snapshot
+        self.app.type = 'WORK_FLOW'
+        self.app.work_flow = {'nodes': [{'type': 'search-knowledge-node'}]}
+        self.app.save()
+        with patch('application.evaluation.snapshot.subprocess.check_output', side_effect=OSError), \
+                patch.dict('os.environ', {'MAXSB_LOCAL_DIFF_HASH': 'a' * 64}):
+            self.assertEqual(capture_snapshot(str(self.app.pk))['local_diff_hash'], 'a' * 64)
+        with patch('application.evaluation.snapshot.subprocess.check_output', side_effect=OSError), \
+                patch.dict('os.environ', {'MAXSB_LOCAL_DIFF_HASH': 'unknown'}):
+            self.assertIsNone(capture_snapshot(str(self.app.pk))['local_diff_hash'])
