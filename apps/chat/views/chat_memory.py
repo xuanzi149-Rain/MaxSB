@@ -1,3 +1,6 @@
+from common.auth import TokenAuth
+from common.auth.authentication import has_permissions
+from common.constants.permission_constants import PermissionConstants, RoleConstants, ViewPermission, CompareConstants
 # coding=utf-8
 from dataclasses import asdict
 from rest_framework.views import APIView
@@ -50,9 +53,6 @@ class ChatMemoryView(APIView):
         return self.operate(request, chat_id, **kwargs)
 
 
-from common.auth import TokenAuth
-from common.auth.authentication import has_permissions
-from common.constants.permission_constants import PermissionConstants, RoleConstants, ViewPermission, CompareConstants
 
 
 class DebugMemoryView(ChatMemoryView):

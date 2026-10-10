@@ -26,11 +26,17 @@ def main():
     parser.add_argument('--budget-file', type=Path, required=True)
     parser.add_argument('--evaluation-module', type=Path, required=True)
     parser.add_argument('--baseline', type=Path, required=True)
+    parser.add_argument('--max-cases', type=int)
+    parser.add_argument('--code-sha', required=True)
     args = parser.parse_args()
     cases = json.loads((args.dataset_dir / (args.split + '.json')).read_text())
     manifest = json.loads((args.dataset_dir / 'manifest.json').read_text())
     if manifest[args.split] != digest(cases):
         raise ValueError('Sealed data changed')
+    if args.max_cases is not None:
+        if args.split != 'dev' or args.max_cases < 1:
+            raise ValueError('Only dev smoke runs may limit cases')
+        cases = cases[:args.max_cases]
     if not args.budget_file.is_file():
         raise ValueError('Existing shared budget required')
     args.output.mkdir(parents=True, exist_ok=False)
@@ -63,12 +69,19 @@ def main():
     source = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
               for folder in ['apps/application/conversation_memory', 'apps/application/flow/step_node/ai_chat_step_node']
               for p in (ROOT / folder).rglob('*.py')}
-    snapshot = {'dataset_hash': digest(cases), 'model': model_row.model_name, 'model_revision': str(model_row.update_time),
+    snapshot = {'code_sha': args.code_sha, 'dataset_hash': digest(cases), 'model': model_row.model_name, 'model_revision': str(model_row.update_time),
                 'model_id': str(model_row.id), 'source': source, 'history_rounds': 3, 'temperature': 0,
                 'max_tokens': 1024, 'started_at': time.time(), 'kind': 'production-node-debug-cache-probe',
                 'budget_before': json.loads(args.budget_file.read_text())}
     (args.output / 'snapshot.json').write_text(json.dumps(snapshot, ensure_ascii=False, indent=2))
     records = []
+    candidates = []
+    from application.conversation_memory import extractor
+    parse = extractor.parse_operations
+    def capture(text, *a, **kw):
+        candidates.append(text)
+        return parse(text, *a, **kw)
+    extractor.parse_operations = capture
     system = '你是需求记录助手。只根据用户明确条件回答，不知道就澄清。闲聊和记住要求的请求只简短确认，不复述全部历史。'
     with override_settings(CACHES={'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}):
         for case in cases:
@@ -79,6 +92,7 @@ def main():
                 for index, question in enumerate(case['turns']):
                     record_id = str(uuid4())
                     row = {'case_id': case['id'], 'strategy': strategy, 'turn': index, 'question': question}
+                    candidates.clear()
                     started = time.monotonic()
                     try:
                         if index == case.get('clear_before') and strategy == 'memory':
@@ -118,6 +132,7 @@ def main():
                         history.append(ChatRecord(id=record_id, problem_text=question, answer_text=response.content))
                     except Exception as exc:
                         row['error'] = type(exc).__name__
+                    row['extraction_candidates'] = list(candidates)
                     row['duration_seconds'] = time.monotonic() - started
                     records.append(row)
                     (args.output / 'records.json').write_text(json.dumps(records, ensure_ascii=False, indent=2))

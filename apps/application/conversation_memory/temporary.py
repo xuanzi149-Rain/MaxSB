@@ -54,6 +54,11 @@ class TemporaryMemoryStore:
         with self._write() as data:
             state = MemorySnapshot(**data['snapshot'])
             key = str(record_id)
+            cleared = data.get('cleared_turns', {}).get(key)
+            if cleared:
+                if cleared != hashlib.sha256(question.encode()).hexdigest():
+                    raise MemoryConflict('Send edited text as a new message')
+                return TurnTicket('', str(chat_id), state.version, state.generation, 'cleared', state)
             event = data['events'].get(key)
             if event:
                 if event['question'] != question:
@@ -113,7 +118,10 @@ class TemporaryMemoryStore:
             if state.version != expected_version:
                 raise MemoryConflict('Memory changed; refresh')
             state = MemorySnapshot(version=state.version + 1, generation=state.generation + 1)
-            data.update(snapshot=asdict(state), events={}, clears=[*data['clears'], request_id])
+            tombstones = data.get('cleared_turns', {})
+            tombstones.update({e['record_id']: hashlib.sha256(e['question'].encode()).hexdigest()
+                               for e in data['events'].values() if e['kind'] == 'turn'})
+            data.update(snapshot=asdict(state), cleared_turns=tombstones, events={}, clears=[*data['clears'], request_id])
             return state
 
     def filter_recent(self, identity, chat_id, turns):

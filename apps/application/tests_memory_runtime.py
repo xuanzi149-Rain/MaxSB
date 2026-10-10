@@ -73,3 +73,14 @@ class MemoryRuntimeTests(MemoryFixture):
                 '推荐一个', SimpleNamespace(get_num_tokens=len), parse_memory_policy({'enabled': True}),
                 [{'id': str(__import__('uuid').uuid4()), 'question': '预算3000', 'answer': '记住了'}])
         self.assertEqual(selected.history, [])
+
+    def test_prepared_history_preserved_separately_from_extraction(self):
+        from types import SimpleNamespace
+        raw = [{'id': 'old', 'question': '原问题', 'answer': '原答案'}]
+        prepared = [{'id': 'old', 'question': '节点处理后的问题', 'answer': '节点答案'}]
+        with patch('application.conversation_memory.service.extract_operations', return_value=ExtractionResult()) as extract:
+            selected, _ = prepare_memory_context(self.identity, str(self.chat.id), str(__import__('uuid').uuid4()),
+                '继续', SimpleNamespace(get_num_tokens=len), parse_memory_policy({'enabled': True}), raw,
+                answer_turns=prepared)
+        self.assertEqual(selected.history[0]['question'], '节点处理后的问题')
+        self.assertEqual(extract.call_args.args[3][0]['question'], '原问题')

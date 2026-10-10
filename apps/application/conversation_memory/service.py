@@ -19,9 +19,10 @@ def finish_usage(trace, answer_usage):
     trace['total_usage']['cost'] = None
 
 
-def prepare_memory_context(identity, chat_id, record_id, question, model, policy, recent_turns, store=None):
+def prepare_memory_context(identity, chat_id, record_id, question, model, policy, recent_turns, store=None, answer_turns=None):
     store = store or MemoryStore()
     ticket = store.begin_turn(identity, chat_id, record_id, question)
+    answer_turns = recent_turns if answer_turns is None else answer_turns
     recent_turns = store.filter_recent(identity, chat_id, recent_turns)
     state = ticket.snapshot
     trace = {'enabled': True, 'version': state.version, 'generation': state.generation,
@@ -48,12 +49,12 @@ def prepare_memory_context(identity, chat_id, record_id, question, model, policy
     trace['version'] = state.version
     if trace['status'] not in {'ok', 'reused'}:
         state = MemorySnapshot(version=state.version, generation=state.generation)
-    recent_turns = store.filter_recent(identity, chat_id, recent_turns)
-    selected = select_context(question, state, recent_turns, model.get_num_tokens, policy['context_token_budget'])
+    answer_turns = store.filter_recent(identity, chat_id, answer_turns)
+    selected = select_context(question, state, answer_turns, model.get_num_tokens, policy['context_token_budget'])
     latest = store.read(identity, chat_id)
     if latest.version != state.version or latest.generation != state.generation:
-        recent_turns = store.filter_recent(identity, chat_id, recent_turns)
-        selected = select_context(question, MemorySnapshot(), recent_turns, model.get_num_tokens,
+        answer_turns = store.filter_recent(identity, chat_id, answer_turns)
+        selected = select_context(question, MemorySnapshot(), answer_turns, model.get_num_tokens,
                                   policy['context_token_budget'])
         trace['status'] = 'changed_before_answer'
     trace.update(selected_facts=selected.facts, selected_history=selected.history, block=selected.block,

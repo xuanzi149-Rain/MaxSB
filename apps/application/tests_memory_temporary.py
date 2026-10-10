@@ -31,3 +31,12 @@ class TemporaryMemoryTests(SimpleTestCase):
         store = TemporaryMemoryStore(identity, 'chat')
         with self.assertRaises(MemoryDenied):
             store.read(Identity('app', 'other', 'PLATFORM_USER'), 'chat')
+
+    def test_clear_does_not_reextract_old_turn(self):
+        identity = Identity('app', 'user', 'PLATFORM_USER')
+        chat_id, record_id = str(uuid4()), str(uuid4())
+        store = TemporaryMemoryStore(identity, chat_id)
+        ticket = store.begin_turn(identity, chat_id, record_id, '预算3000')
+        store.commit_turn(ticket, apply_operations(ticket.snapshot, []))
+        store.clear(identity, chat_id, 1, str(uuid4()))
+        self.assertNotEqual(store.begin_turn(identity, chat_id, record_id, '预算3000').status, 'received')

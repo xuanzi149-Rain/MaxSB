@@ -7,11 +7,11 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'maxkb.settings')
 os.environ.setdefault('SERVER_NAME', 'web')
 import django
 django.setup()
-from django.conf import settings
-from django.test.utils import get_runner
+from django.conf import settings  # noqa: E402
+from django.test.utils import get_runner  # noqa: E402
 settings.DATABASES['default']['TEST']['NAME'] = 'test_maxsb_memory_task4'
-from django.db import connection
-import psycopg
+from django.db import connection  # noqa: E402
+import psycopg  # noqa: E402
 original_create = connection.creation._create_test_db
 
 def create_test_database(*args, **kwargs):

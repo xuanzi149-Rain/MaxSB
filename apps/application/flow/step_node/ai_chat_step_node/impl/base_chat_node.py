@@ -297,12 +297,20 @@ class BaseChatNode(IChatNode):
                                 str(body.get("chat_user_type")))
             recent_turns = [{"id": str(r.id), "question": r.problem_text, "answer": r.answer_text or ""}
                             for r in (history_chat_record[-dialogue_number:] if dialogue_number > 0 else [])]
+            eligible_records = (history_chat_record[-dialogue_number:] if dialogue_number > 0 else [])
+            if dialogue_type == "NODE":
+                eligible_records = [r for r in eligible_records
+                                    if r.get_node_details_runtime_node_id(self.runtime_node_id) is not None]
+            answer_turns = [{"id": str(record.id), "question": messages[0].content, "answer": messages[1].content}
+                            for record, messages in zip(eligible_records,
+                                zip((history_message or [])[::2], (history_message or [])[1::2]))]
             memory_store = None
             if body.get("debug"):
                 from application.conversation_memory.temporary import TemporaryMemoryStore
                 memory_store = TemporaryMemoryStore(identity, chat_id)
             selection, memory_trace = prepare_memory_context(
-                identity, chat_id, chat_record_id, raw_question, chat_model, policy, recent_turns, store=memory_store)
+                identity, chat_id, chat_record_id, raw_question, chat_model, policy, recent_turns, store=memory_store,
+                answer_turns=answer_turns)
             history_message = []
             for turn in selection.history:
                 history_message.extend([HumanMessage(turn["question"]), AIMessage(turn["answer"])])

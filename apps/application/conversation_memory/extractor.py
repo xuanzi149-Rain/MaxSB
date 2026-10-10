@@ -42,6 +42,8 @@ def parse_operations(text, question, snapshot, source, evidence=None):
             raise ValueError()
         result = []
         for row in rows:
+            if isinstance(row, dict) and row.get('target') is None and row.get('action') in {'add', 'pending'}:
+                row = {**row, 'target': ''}
             if (not isinstance(row, dict) or set(row) - {'action', 'entity', 'attribute', 'value', 'target', 'quote'}
                     or any(not isinstance(v, str) for v in row.values())):
                 raise ValueError()
@@ -53,6 +55,12 @@ def parse_operations(text, question, snapshot, source, evidence=None):
             target = next((f for f in snapshot.facts if f['id'] == op.target), None)
             if op.action in {'replace', 'revoke'} and target is None:
                 raise ValueError()
+            uncertain = bool(re.search(r'如果|假设|假如|是否|例如|举例|[？?]|[“”「」]|\b(if|example)\b', question, re.I))
+            if target and op.action in {'replace', 'revoke'}:
+                competing = [f for f in snapshot.facts if f['attribute'] == target['attribute']
+                             and f['entity'] != target['entity'] and f['entity'] in op.quote]
+                if competing and target['entity'] not in op.quote:
+                    raise ValueError()
             # A quote is not proof of a normalized/inferred value. Require literal values for automatic confirmation.
             op.references = ordinal_reference(question, op.value, evidence or [])
             if op.value and op.value not in op.quote and not op.references:
@@ -61,14 +69,17 @@ def parse_operations(text, question, snapshot, source, evidence=None):
                 op.attribute = target['attribute'] if target else op.attribute
             if op.action in {'replace', 'revoke'}:
                 key_present = target['attribute'] in op.quote
+                same_key = {f['entity'] for f in snapshot.facts if f['attribute'] == target['attribute']}
+                entity_present = target['entity'] in op.quote or len(same_key) == 1
                 cue = (r'改为|改成|调整为|更正为|不是.+而是|change.+to|instead' if op.action == 'replace'
                        else r'不再|取消|撤销|不要|无需|no longer|remove|cancel')
-                op.explicit = (key_present and bool(re.search(cue, op.quote, re.I))
-                               and not re.search(r'如果|假设|假如|是否|[？?]|\bif\b', question, re.I))
+                op.explicit = key_present and entity_present and bool(re.search(cue, op.quote, re.I)) and not uncertain
                 if not op.explicit:
                     op.action = 'pending'
                     op.entity, op.attribute = target['entity'], target['attribute']
                     op.value = op.value or '撤销该条件（待确认）'
+            if op.action == 'add' and uncertain:
+                op.action = 'pending'
             if op.action == 'add' and not op.references and re.search(r'第[一二三四五六七八九十\d]+款|那个|这个|它', op.quote):
                 op.action = 'pending'
             result.append(op)

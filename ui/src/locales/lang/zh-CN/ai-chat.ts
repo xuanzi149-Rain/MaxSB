@@ -1,5 +1,6 @@
 export default {
   memory: {
+    conflict: '条件已被更新，请检查最新内容后重试；更正文本已保留。', failed: '操作失败，请重试。',
     "title": "会话记忆",
     "temporary": "临时调试记忆，缓存过期后清除",
     "scope": "仅清除记忆，不删除聊天记录及历史执行详情。",

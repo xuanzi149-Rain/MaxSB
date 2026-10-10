@@ -1,4 +1,10 @@
 # coding=utf-8
+import time
+from queue import Queue
+from concurrent.futures import ThreadPoolExecutor
+from django.test import TransactionTestCase
+from django.db import close_old_connections, connection, transaction
+from application.models import ConversationMemory
 from uuid import uuid4
 from django.test import TestCase
 from application.models import Application, Chat
@@ -92,13 +98,19 @@ class StoreTests(MemoryFixture):
         self.assertEqual(self.store.read(self.identity, self.chat.id).facts[0]['value'], '4000')
 
 
-from concurrent.futures import ThreadPoolExecutor
-from django.test import TransactionTestCase
-from django.db import close_old_connections
-from application.models import ConversationMemory
+    def test_clear_does_not_reextract_old_turn(self):
+        record_id = str(uuid4())
+        ticket = self.begin(record_id)
+        self.store.commit_turn(ticket, apply_operations(ticket.snapshot, []))
+        self.store.clear(self.identity, self.chat.id, 1, str(uuid4()))
+        self.assertNotEqual(self.begin(record_id).status, 'received')
 
 
 class MemoryConcurrencyTests(TransactionTestCase):
+    def setUp(self):
+        from application.models.application import ApplicationFolder
+        ApplicationFolder.objects.get_or_create(id='default', defaults={'name': 'Default'})
+
     def test_first_requests_share_one_state(self):
         app = Application.objects.create(id=uuid4(), name='concurrent memory', workspace_id='default')
         chat = Chat.objects.create(application=app, chat_user_id='owner', chat_user_type='CHAT_USER')
@@ -112,3 +124,47 @@ class MemoryConcurrencyTests(TransactionTestCase):
         with ThreadPoolExecutor(max_workers=2) as executor:
             self.assertEqual(list(executor.map(begin, [1, 2])), [0, 0])
         self.assertEqual(ConversationMemory.objects.filter(chat=chat).count(), 1)
+
+    def test_correction_waits_for_extraction_commit_and_detects_conflict(self):
+        app = Application.objects.create(id=uuid4(), name='race memory', workspace_id='default')
+        chat = Chat.objects.create(application=app, chat_user_id='owner', chat_user_type='CHAT_USER')
+        identity = Identity(str(app.id), 'owner', 'CHAT_USER')
+        store = MemoryStore()
+        ticket = store.begin_turn(identity, str(chat.id), str(uuid4()), '预算3000')
+        initial = store.commit_turn(ticket, apply_operations(ticket.snapshot, [
+            Operation('add', entity='旅行', attribute='预算', value='3000')]))
+        ticket = store.begin_turn(identity, str(chat.id), str(uuid4()), '人数2')
+        changes = apply_operations(ticket.snapshot, [Operation('add', entity='旅行', attribute='人数', value='2')])
+        pid = Queue()
+        def correct():
+            close_old_connections()
+            try:
+                with connection.cursor() as cursor:
+                    cursor.execute('SELECT pg_backend_pid()')
+                    pid.put(cursor.fetchone()[0])
+                try:
+                    store.correct(identity, chat.id, initial.facts[0]['id'], Operation('replace', value='4000'),
+                                  initial.version, str(uuid4()))
+                    return 'overwritten'
+                except MemoryConflict:
+                    return 'conflict'
+            finally:
+                close_old_connections()
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            with transaction.atomic():
+                ConversationMemory.objects.select_for_update().get(chat=chat)
+                future = executor.submit(correct)
+                backend_pid = pid.get(timeout=5)
+                deadline = time.monotonic() + 5
+                while True:
+                    with connection.cursor() as cursor:
+                        cursor.execute('SELECT wait_event_type FROM pg_stat_activity WHERE pid=%s', [backend_pid])
+                        waiting = cursor.fetchone()
+                    if waiting and waiting[0] == 'Lock':
+                        break
+                    if time.monotonic() > deadline:
+                        raise AssertionError('Concurrent writer did not reach the locked state')
+                    time.sleep(0.01)
+                store.commit_turn(ticket, changes)
+            self.assertEqual(future.result(timeout=5), 'conflict')
+        self.assertEqual({f['value'] for f in store.read(identity, chat.id).facts}, {'3000', '2'})

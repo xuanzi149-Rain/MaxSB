@@ -1,5 +1,6 @@
 export default {
   memory: {
+    conflict: 'Memory changed. Review the latest state and retry; your correction is retained.', failed: 'Operation failed. Please retry.',
     "title": "Session memory",
     "temporary": "Temporary debug memory expires with the cache",
     "scope": "Clear memory only; retain chat records and historical execution details.",

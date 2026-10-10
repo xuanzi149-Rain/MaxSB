@@ -24,7 +24,8 @@
 </template>
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { v4 as uuidv4 } from 'uuid'
+import { ElMessageBox, ElMessage } from 'element-plus'
 import { useI18n } from 'vue-i18n'
 import { memoryRequest } from '@/api/chat/chat-memory'
 const props = defineProps<{ chatId: string; debug: boolean; applicationId: string }>()
@@ -33,7 +34,11 @@ const visible = ref(false)
 const loading = ref(false)
 const state = ref<any>(null)
 let epoch = 0
-watch(() => props.chatId, () => { epoch++; state.value = null; visible.value = false })
+const drafts = new Map<string, string>()
+function mutationError(error: any) {
+  ElMessage.warning(t(error?.response?.status === 409 ? 'aiChat.memory.conflict' : 'aiChat.memory.failed'))
+}
+watch(() => props.chatId, () => { epoch++; drafts.clear(); state.value = null; visible.value = false })
 function source(id: string) { return state.value?.sources.find((s: any) => s.id === id) }
 async function refresh() {
   const current = ++epoch
@@ -49,15 +54,18 @@ async function mutate(fact: any, operation: string, value?: string) {
   loading.value = true
   try {
     const updated = await memoryRequest(props.chatId, props.debug, props.applicationId, 'patch', {
-      expected_version: state.value.version, request_id: crypto.randomUUID(), operation, value: value ?? fact.value,
+      expected_version: state.value.version, request_id: uuidv4(), operation, value: value ?? fact.value,
     }, fact.id)
-    if (current === epoch) state.value = updated
-  } catch { if (current === epoch) await refresh() }
+    if (current === epoch) { state.value = updated; drafts.delete(fact.id) }
+  } catch (error) {
+    if (current === epoch) { mutationError(error); await refresh() }
+  }
   finally { if (current === epoch) loading.value = false }
 }
 async function correct(fact: any) {
   try {
-    const { value } = await ElMessageBox.prompt(t('aiChat.memory.correct'), fact.attribute, { inputValue: fact.value, inputValidator: (s) => !!s?.trim() && s.length <= 2048 })
+    const { value } = await ElMessageBox.prompt(t('aiChat.memory.correct'), fact.attribute, { inputValue: drafts.get(fact.id) ?? fact.value, inputValidator: (s) => !!s?.trim() && s.length <= 2048 })
+    drafts.set(fact.id, value)
     await mutate(fact, 'replace', value)
   } catch { /* Dialog cancelled. */ }
 }
@@ -67,10 +75,10 @@ async function clearMemory() {
   loading.value = true
   try {
     const updated = await memoryRequest(props.chatId, props.debug, props.applicationId, 'delete', {
-      expected_version: state.value.version, request_id: crypto.randomUUID(),
+      expected_version: state.value.version, request_id: uuidv4(),
     })
     if (current === epoch) state.value = updated
-  } catch { if (current === epoch) await refresh() }
+  } catch (error) { if (current === epoch) { mutationError(error); await refresh() } }
   finally { if (current === epoch) loading.value = false }
 }
 </script>

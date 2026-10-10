@@ -53,12 +53,17 @@ class MemoryStore:
     @transaction.atomic
     def begin_turn(self, identity, chat_id, record_id, question):
         self._chat(identity, chat_id, lock=True)
-        state, _ = ConversationMemory.objects.get_or_create(chat_id=chat_id)
+        state, _ = ConversationMemory.objects.select_for_update().get_or_create(chat_id=chat_id)
         record_id = str(UUID(str(record_id)))
         digest = hashlib.sha256(question.encode()).hexdigest()
         old_record = ChatRecord.objects.filter(chat_id=chat_id, id=record_id).first()
         if old_record and old_record.problem_text != question:
             raise MemoryConflict('Send edited text as a new message')
+        cleared = state.events.filter(record_id=record_id, kind='cleared_turn').first()
+        if cleared or (old_record and state.generation and old_record.create_time < state.history_since):
+            if cleared and cleared.question_hash != digest:
+                raise MemoryConflict('Send edited text as a new message')
+            return TurnTicket('', str(chat_id), state.version, state.generation, 'cleared', snapshot(state))
         event = state.events.filter(generation=state.generation, request_id='turn:' + record_id).first()
         if event:
             if event.question_hash != digest:
@@ -102,7 +107,7 @@ class MemoryStore:
     @transaction.atomic
     def correct(self, identity, chat_id, fact_id, operation, expected_version, request_id):
         self._chat(identity, chat_id, lock=True)
-        state, _ = ConversationMemory.objects.get_or_create(chat_id=chat_id)
+        state, _ = ConversationMemory.objects.select_for_update().get_or_create(chat_id=chat_id)
         request_id = 'edit:' + str(UUID(str(request_id)))
         if state.events.filter(request_id=request_id, generation=state.generation).exists():
             return snapshot(state)
@@ -126,13 +131,15 @@ class MemoryStore:
     @transaction.atomic
     def clear(self, identity, chat_id, expected_version, request_id):
         self._chat(identity, chat_id, lock=True)
-        state, _ = ConversationMemory.objects.get_or_create(chat_id=chat_id)
+        state, _ = ConversationMemory.objects.select_for_update().get_or_create(chat_id=chat_id)
         request_id = 'clear:' + str(UUID(str(request_id)))
         if state.events.filter(request_id=request_id, kind='clear').exists():
             return snapshot(state)
         if state.version != expected_version:
             raise MemoryConflict('Memory changed; refresh')
-        state.events.exclude(kind='clear').delete()
+        state.events.filter(kind='turn').update(kind='cleared_turn', status='cleared', question='',
+                                                changes=[], usage={})
+        state.events.exclude(kind__in=['clear', 'cleared_turn']).delete()
         state.facts = []
         state.generation += 1
         state.version += 1

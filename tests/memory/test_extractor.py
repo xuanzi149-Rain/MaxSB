@@ -40,3 +40,30 @@ class ExtractorTests(unittest.TestCase):
                                   evidence=[{'id': 'old', 'question': '两款相机', 'answer': '1. Alpha\n2. Beta'}])
         self.assertEqual(result.operations[0].action, 'add')
         self.assertEqual(result.operations[0].value, 'Beta')
+
+    def test_optional_null_target_on_add(self):
+        text = '{"operations":[{"action":"add","entity":"当前任务","attribute":"旅行预算","value":"3000元","target":null,"quote":"我的旅行预算是3000元"}]}'
+        result = parse_operations(text, '我的旅行预算是3000元，请记住。', MemorySnapshot(), 'turn')
+        self.assertEqual(result.status, 'ok')
+        self.assertEqual(result.operations[0].target, '')
+
+    def test_wrong_entity_target_cannot_replace_confirmed_fact(self):
+        import json
+        from application.conversation_memory.types import Operation
+        from application.conversation_memory.policy import apply_operations
+        state = apply_operations(MemorySnapshot(), [Operation('add', entity='相机', attribute='预算', value='3000'),
+                              Operation('add', entity='电脑', attribute='预算', value='8000')]).snapshot
+        text = json.dumps({'operations': [{'action': 'replace', 'target': state.facts[0]['id'],
+                          'value': '9000', 'quote': '电脑预算改为9000'}]})
+        result = parse_operations(text, '电脑预算改为9000', state, 'turn')
+        self.assertEqual(result.status, 'invalid')
+
+    def test_hypothetical_add_not_confirmed(self):
+        text = '{"operations":[{"action":"add","entity":"当前任务","attribute":"预算","value":"3000","quote":"如果预算3000呢？"}]}'
+        result = parse_operations(text, '如果预算3000呢？', MemorySnapshot(), 'turn')
+        self.assertEqual(result.operations[0].action, 'pending')
+
+    def test_quoted_example_not_confirmed(self):
+        text = '{"operations":[{"action":"add","entity":"当前任务","attribute":"预算","value":"3000","quote":"预算3000"}]}'
+        result = parse_operations(text, '例如客户说“预算3000”时怎么办', MemorySnapshot(), 'turn')
+        self.assertEqual(result.operations[0].action, 'pending')
