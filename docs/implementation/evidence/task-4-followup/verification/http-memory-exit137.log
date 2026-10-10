@@ -1,0 +1,7 @@
+Creating test database for alias 'default'...
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.837 seconds.
+Prefix dict has been built successfully.
+READY task4 isolated HTTP on 18084
+Killed

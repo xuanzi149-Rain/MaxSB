@@ -1,0 +1,35 @@
+{
+  "code_sha": "d3b638dd8-plus-followup-reviewed",
+  "dataset_hash": "b748d2d98632e9d5bdb07d1f0c108582f045a2331575833d7cb709010a7d9a23",
+  "model": "qwen3.7-plus",
+  "model_revision": "2026-10-09 08:05:16.800476+00:00",
+  "model_id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+  "source": {
+    "apps/application/conversation_memory/types.py": "286bc5124ef1ab4a40073d785f4b1ffb23a50848097e0d36917044d0cb7250c6",
+    "apps/application/conversation_memory/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/conversation_memory/service.py": "098551b4db20285cbe4f9def4947cebbddf618e6af526303da0160dfde15c5c8",
+    "apps/application/conversation_memory/extractor.py": "7257862e8f156a4613a82b7914389d0b0a1ceb7ca534ce5d48033ed2df241836",
+    "apps/application/conversation_memory/provider.py": "7881a01f437f9b7a09196dfa17490a5ec1743f81f806849a7eec19d3e1e19655",
+    "apps/application/conversation_memory/temporary.py": "62164dbe5493f5f7ad217dc00ce74626f281cad89c57b8721894a886b22b8b5d",
+    "apps/application/conversation_memory/policy.py": "4cc3e2a4702bec797ead6334134dc3d6863f89f96d7661f8dcacf7c8a24a9eee",
+    "apps/application/conversation_memory/report.py": "adf351c8da595e6f99336b7c67fe81063b8041b06be1b91341c1c83d9da767dd",
+    "apps/application/conversation_memory/store.py": "3e7e0a38306319a00bce13775094567a8269c2be35e690e62b1be8eb1bd9d063",
+    "apps/application/conversation_memory/config.py": "776f16c48b4d2ecef394ddff572681b565529864442addc85aeca48ddd1c5f8c",
+    "apps/application/conversation_memory/context.py": "1099d410067f02ff2085ee9b69622d810d1570aff9a8e6c26c5aa2839c8d7229",
+    "apps/application/flow/step_node/ai_chat_step_node/__init__.py": "14a656d2aeb51ccad1977c781398d2f6ad0626c3a8f43de57f6839bc4500da00",
+    "apps/application/flow/step_node/ai_chat_step_node/i_chat_node.py": "7b93562cce9764fe7ac3252c103d3b430aa958ec6197e76e37310623f8765c06",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py": "f0a21e64cee567db4f9fa0e586191207d8d10adda655c6839f6d797b97d35e38",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/__init__.py": "662c3c5940ba420062a9116acc642275d9880598ff0a9999c60ea1a505a878a0"
+  },
+  "history_rounds": 3,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "started_at": 1791615271.0328412,
+  "kind": "production-node-debug-cache-probe",
+  "budget_before": {
+    "limit_cny": "300",
+    "reserved_cny": "64.894062",
+    "requests": 1683,
+    "pricing": "conservative list-price equivalent; not a bill"
+  }
+}

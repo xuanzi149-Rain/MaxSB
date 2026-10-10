@@ -1,0 +1,42 @@
+Creating test database for alias 'default'...
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.575 seconds.
+Prefix dict has been built successfully.
+READY task4 isolated HTTP on 18084; fixture=/tmp/maxsb-task4/followup-http-daa139f5
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):65a9492d4c378a3e1948b5a7a91a780c2296f404945ba5fc188b8474ca39cb91"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):65a9492d4c378a3e1948b5a7a91a780c2296f404945ba5fc188b8474ca39cb91"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):90a975a104ab20eef22ab9a61c3eaaef4b5eeab0a07d927277060d22d4558d5d"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):90a975a104ab20eef22ab9a61c3eaaef4b5eeab0a07d927277060d22d4558d5d"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):90a975a104ab20eef22ab9a61c3eaaef4b5eeab0a07d927277060d22d4558d5d"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):90a975a104ab20eef22ab9a61c3eaaef4b5eeab0a07d927277060d22d4558d5d"
+  warnings.warn(warning, CacheKeyWarning)
+2026-10-10 14:40:16 [log WARNING] Not Found: /chat/api/profile
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):9d2569e2535988e2fe7443bb74e7a282941c7a327c348530b61a4c2c98b6ae86"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):a89509d6ab34c028038ca1985db713b0ae858b2c699ea28cfbcf7708df0e3769"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):ff8155b22514ef54f823b006eb47c017c6bf15fde926f3a466258f6f832220e3"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6b2293a0>):ff8155b22514ef54f823b006eb47c017c6bf15fde926f3a466258f6f832220e3"
+  warnings.warn(warning, CacheKeyWarning)
+Destroying test database for alias 'default'...
+Traceback (most recent call last):
+  File "/tmp/maxsb-task4/docs/implementation/scripts/serve_task4_acceptance.py", line 128, in <module>
+    main()
+  File "/tmp/maxsb-task4/docs/implementation/scripts/serve_task4_acceptance.py", line 122, in main
+    server.serve_forever()
+  File "/usr/local/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/maxsb-task4/docs/implementation/scripts/serve_task4_acceptance.py", line 120, in stop
+    raise KeyboardInterrupt
+KeyboardInterrupt

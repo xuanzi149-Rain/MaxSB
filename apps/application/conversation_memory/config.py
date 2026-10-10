@@ -25,34 +25,27 @@ def validate_node(data):
     policy = parse_memory_policy(data.get('memory_policy'))
     if not policy['enabled']:
         return
-    if any(data.get(k) for k in ('tool_ids', 'mcp_servers', 'mcp_tool_id', 'mcp_tool_ids', 'application_ids',
-                                 'skill_tool_ids', 'vision', 'image_list', 'video_list', 'audio_list', 'document_list')):
-        raise ValueError('Conversation memory supports text nodes without tools only')
     if re.search(r'\{[^}]*\bmemory\b[^}]*\}', str(data.get('prompt', '')) + str(data.get('system', ''))):
         raise ValueError('Do not combine session memory with the upstream memory variable')
 
 
-def nested_memory(value):
-    if isinstance(value, dict):
-        if isinstance(value.get('memory_policy'), dict) and value['memory_policy'].get('enabled'):
-            return True
-        return any(nested_memory(v) for v in value.values())
-    if isinstance(value, list):
-        return any(nested_memory(v) for v in value)
-    return False
+def memory_nodes(nodes):
+    for node in nodes:
+        node_type = node.get('type') if isinstance(node, dict) else node.type
+        properties = node.get('properties', {}) if isinstance(node, dict) else node.properties
+        data = properties.get('node_data') or {}
+        if parse_memory_policy(data.get('memory_policy'))['enabled']:
+            validate_node(data)
+            if node_type != 'ai-chat-node':
+                raise ValueError('Memory requires an AI node')
+            yield node
+        loop = data.get('loop_body') or {}
+        if isinstance(loop, dict):
+            yield from memory_nodes(loop.get('nodes') or [])
 
 
 def validate_memory_workflow(workflow):
-    enabled = []
-    for node in workflow.nodes:
-        data = node.properties.get('node_data') or {}
-        if nested_memory(data.get('loop_body')):
-            raise ValueError('Memory cannot be enabled inside loops')
-        if parse_memory_policy(data.get('memory_policy'))['enabled']:
-            validate_node(data)
-            if node.type != 'ai-chat-node':
-                raise ValueError('Memory requires an AI text node')
-            enabled.append(node)
+    enabled = list(memory_nodes(workflow.nodes))
     mode = getattr(workflow.workflow_mode, 'value', workflow.workflow_mode)
-    if len(enabled) > 1 or (enabled and mode != 'application'):
-        raise ValueError('Only one top-level application AI node may enable memory')
+    if len(enabled) > 1 or (enabled and mode not in {'application', 'application-loop'}):
+        raise ValueError('Only one application AI node definition may enable memory')

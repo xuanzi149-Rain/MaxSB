@@ -1,0 +1,42 @@
+{
+  "code_sha": "d3b638dd8-plus-followup-working-diff",
+  "dataset_hash": "91b645177261b75e7d7610f7bae536bcb8dc581708b21e3d7382e3b3d40fbb8e",
+  "model": "qwen3.7-plus",
+  "model_revision": "2026-10-09 08:05:16.800476+00:00",
+  "model_id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+  "source": {
+    "apps/application/conversation_memory/._types.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/types.py": "286bc5124ef1ab4a40073d785f4b1ffb23a50848097e0d36917044d0cb7250c6",
+    "apps/application/conversation_memory/__init__.py": "7a867a19f89f6ea84c2cdce396a44356297ecb20643a654df6e8d280958d0656",
+    "apps/application/conversation_memory/service.py": "098551b4db20285cbe4f9def4947cebbddf618e6af526303da0160dfde15c5c8",
+    "apps/application/conversation_memory/._policy.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/extractor.py": "f6d5458e8041480b5508932385f7968010c3f09676145d0db574170fc1c9f2c5",
+    "apps/application/conversation_memory/provider.py": "7881a01f437f9b7a09196dfa17490a5ec1743f81f806849a7eec19d3e1e19655",
+    "apps/application/conversation_memory/temporary.py": "62164dbe5493f5f7ad217dc00ce74626f281cad89c57b8721894a886b22b8b5d",
+    "apps/application/conversation_memory/policy.py": "4cc3e2a4702bec797ead6334134dc3d6863f89f96d7661f8dcacf7c8a24a9eee",
+    "apps/application/conversation_memory/report.py": "adf351c8da595e6f99336b7c67fe81063b8041b06be1b91341c1c83d9da767dd",
+    "apps/application/conversation_memory/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/conversation_memory/store.py": "3e7e0a38306319a00bce13775094567a8269c2be35e690e62b1be8eb1bd9d063",
+    "apps/application/conversation_memory/config.py": "776f16c48b4d2ecef394ddff572681b565529864442addc85aeca48ddd1c5f8c",
+    "apps/application/conversation_memory/context.py": "0ea242a67bda0c8ad86e9ad4f7115f72caa531f61b57fc792d1810578eb8973f",
+    "apps/application/flow/step_node/ai_chat_step_node/._i_chat_node.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/__init__.py": "14a656d2aeb51ccad1977c781398d2f6ad0626c3a8f43de57f6839bc4500da00",
+    "apps/application/flow/step_node/ai_chat_step_node/i_chat_node.py": "7b93562cce9764fe7ac3252c103d3b430aa958ec6197e76e37310623f8765c06",
+    "apps/application/flow/step_node/ai_chat_step_node/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/._base_chat_node.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py": "f0a21e64cee567db4f9fa0e586191207d8d10adda655c6839f6d797b97d35e38",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/__init__.py": "662c3c5940ba420062a9116acc642275d9880598ff0a9999c60ea1a505a878a0",
+    "apps/application/flow/step_node/ai_chat_step_node/impl/.___init__.py": "46b913e09c8451bb9be5433c19b3e716d4ced8c70587e2c185d5183853936335"
+  },
+  "history_rounds": 3,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "started_at": 1791613537.2990413,
+  "kind": "production-node-debug-cache-probe",
+  "budget_before": {
+    "limit_cny": "300",
+    "reserved_cny": "58.172823",
+    "requests": 1440,
+    "pricing": "conservative list-price equivalent; not a bill"
+  }
+}

@@ -290,7 +290,7 @@ class BaseChatNode(IChatNode):
                            "video_list": kwargs.get("video_list"), "audio_list": kwargs.get("audio_list"),
                            "document_list": kwargs.get("document_list")})
             validate_memory_workflow(self.workflow_manage.flow)
-            if not isinstance(question.content, str) or not raw_question:
+            if not isinstance(raw_question, str):
                 raise ValueError("Conversation memory requires the original user text")
             policy = parse_memory_policy(memory_policy)
             identity = Identity(str(body.get("application_id")), str(body.get("chat_user_id")),

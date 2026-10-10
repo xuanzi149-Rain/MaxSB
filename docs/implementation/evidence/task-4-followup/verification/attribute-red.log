@@ -1,0 +1,14 @@
+..F................
+======================================================================
+FAIL: test_explicit_revoke_accepts_attribute_requirement_suffix (test_extractor.ExtractorTests.test_explicit_revoke_accepts_attribute_requirement_suffix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 159, in test_explicit_revoke_accepts_attribute_requirement_suffix
+    self.assertTrue(result.operations[0].explicit)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.008s
+
+FAILED (failures=1)

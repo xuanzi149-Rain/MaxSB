@@ -1,0 +1,20 @@
+{
+  "paired_cases": [
+    "fresh-proposal",
+    "fresh-retracted",
+    "fresh-two-items"
+  ],
+  "failed_cases": [],
+  "human_correctness": null,
+  "human_review": "pending",
+  "fixed": {
+    "input_tokens": 2540,
+    "output_tokens": 249,
+    "cost": null
+  },
+  "memory": {
+    "input_tokens": 7106,
+    "output_tokens": 761,
+    "cost": null
+  }
+}

@@ -15,9 +15,8 @@ class ConfigTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parse_memory_policy({'enabled': True, 'context_token_budget': 0})
 
-    def test_multiple_and_tool_nodes_rejected(self):
+    def test_multiple_and_legacy_memory_rejected(self):
         for nodes in ([node(memory_policy={'enabled': True})] * 2,
-                      [node(memory_policy={'enabled': True}, tool_ids=['tool'])],
                       [node(memory_policy={'enabled': True}, prompt='{{global.memory}}')]):
             with self.assertRaises(ValueError):
                 validate_memory_workflow(SimpleNamespace(nodes=nodes, workflow_mode='application'))
@@ -27,8 +26,14 @@ class ConfigTests(unittest.TestCase):
             validate_memory_workflow(SimpleNamespace(nodes=[node(memory_policy={'enabled': True})],
                                                      workflow_mode='TOOL'))
 
-    def test_nested_loop_memory_rejected_before_execution(self):
+    def test_single_nested_loop_memory_allowed(self):
         loop = SimpleNamespace(type='loop-node', properties={'node_data': {'loop_body': {'nodes': [
             {'type': 'ai-chat-node', 'properties': {'node_data': {'memory_policy': {'enabled': True}}}}]}}})
+        validate_memory_workflow(SimpleNamespace(nodes=[loop], workflow_mode='application'))
         with self.assertRaises(ValueError):
-            validate_memory_workflow(SimpleNamespace(nodes=[loop], workflow_mode='application'))
+            validate_memory_workflow(SimpleNamespace(nodes=[loop, node(memory_policy={'enabled': True})],
+                                                     workflow_mode='application'))
+
+    def test_tool_and_multimodal_nodes_allowed_in_application_loop(self):
+        validate_memory_workflow(SimpleNamespace(nodes=[node(memory_policy={'enabled': True},
+            tool_ids=['tool'], vision=True, image_list=['image'])], workflow_mode='application-loop'))

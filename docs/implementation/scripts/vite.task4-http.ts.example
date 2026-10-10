@@ -1,0 +1,8 @@
+import { defineConfig, mergeConfig } from 'vite'
+import base from './vite.config'
+export default defineConfig((env) => {
+  const config = (base as any)(env)
+  config.server.proxy['/chat/api'].target = 'http://127.0.0.1:8084'
+  config.server.proxy['/chat/'].target = 'http://127.0.0.1:5177'
+  return mergeConfig(config, { server: { host: '127.0.0.1', port: 5177 } })
+})

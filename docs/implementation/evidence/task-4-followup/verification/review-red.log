@@ -1,0 +1,80 @@
+F.....E.....F.F..
+======================================================================
+ERROR: test_later_hypothesis_does_not_discard_explicit_fact (test_extractor.ExtractorTests.test_later_hypothesis_does_not_discard_explicit_fact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 109, in test_later_hypothesis_does_not_discard_explicit_fact
+    self.assertEqual(result.operations[0].action, 'add')
+                     ~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+FAIL: test_ambiguous_entity_cannot_be_assigned_to_one_old_budget (test_extractor.ExtractorTests.test_ambiguous_entity_cannot_be_assigned_to_one_old_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 131, in test_ambiguous_entity_cannot_be_assigned_to_one_old_budget
+    self.assertEqual([(f['value'],f['status']) for f in changed.facts[:2]],
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     [('900元','confirmed'),('600元','confirmed')])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [('900元', 'pending'), ('600元', 'confirmed')] != [('900元', 'confirmed'), ('600元', 'confirmed')]
+
+First differing element 0:
+('900元', 'pending')
+('900元', 'confirmed')
+
+- [('900元', 'pending'), ('600元', 'confirmed')]
+?            ^ - ---
+
++ [('900元', 'confirmed'), ('600元', 'confirmed')]
+?            ^^^^^^^
+
+
+======================================================================
+FAIL: test_question_mark_omitted_from_model_quote_still_does_not_write (test_extractor.ExtractorTests.test_question_mark_omitted_from_model_quote_still_does_not_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 102, in test_question_mark_omitted_from_model_quote_still_does_not_write
+    self.assertEqual(parse_operations(text, '旅行预算是4000元吗？', MemorySnapshot(), 'turn').operations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Operation(action='add', entity='旅行', attr[97 chars]=[])] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Operation(action='add', entity='旅行', attribute='预算', value='4000元', target='', quote='预算是4000元', source='turn', explicit=False, references=[])
+
++ []
+- [Operation(action='add',
+-            entity='旅行',
+-            attribute='预算',
+-            value='4000元',
+-            target='',
+-            quote='预算是4000元',
+-            source='turn',
+-            explicit=False,
+-            references=[])]
+
+======================================================================
+FAIL: test_two_local_ordinals_keep_distinct_choices (test_extractor.ExtractorTests.test_two_local_ordinals_keep_distinct_choices)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 119, in test_two_local_ordinals_keep_distinct_choices
+    self.assertEqual([op.value for op in result.operations], ['松木书桌','橡木书桌'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['松木书桌', '松木书桌'] != ['松木书桌', '橡木书桌']
+
+First differing element 1:
+'松木书桌'
+'橡木书桌'
+
+- ['松木书桌', '松木书桌']
+?           ^
+
++ ['松木书桌', '橡木书桌']
+?           ^
+
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.009s
+
+FAILED (failures=3, errors=1)

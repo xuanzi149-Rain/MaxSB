@@ -17,10 +17,18 @@ def select_context(question, snapshot, recent_turns, count_tokens, budget):
             return len(text.encode('utf-8'))
 
     def block(facts):
-        return PREFIX + json.dumps(facts, ensure_ascii=False) if facts else ''
+        compact = [{k: f[k] for k in ('entity', 'attribute', 'value', 'status')} for f in facts]
+        for item, fact in zip(compact, facts):
+            if fact['status'] in {'pending', 'revoked'} and fact.get('quote'):
+                item['quote'] = fact['quote']
+        return PREFIX + json.dumps(compact, ensure_ascii=False, separators=(',', ':')) if facts else ''
+
+    def content_text(value):
+        return value if isinstance(value, str) else json.dumps(value, ensure_ascii=False, separators=(',', ':'))
 
     def size(facts, turns):
-        return count(block(facts) + ''.join('\n用户：' + t['question'] + '\n助手：' + t['answer'] for t in turns))
+        return count(block(facts) + ''.join('\n用户：' + content_text(t['question']) +
+                     '\n助手：' + content_text(t['answer']) for t in turns))
 
     ordered = sorted(snapshot.facts, key=lambda f: (
         f.get('version') == snapshot.version or f['status'] == 'pending',

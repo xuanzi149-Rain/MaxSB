@@ -1,0 +1,76 @@
+{
+  "chat": "01a12486-eb65-7a40-b2e6-b46616e71089",
+  "answer": {
+    "code": 200,
+    "message": "Success",
+    "data": {
+      "chat_id": "01a12486-eb65-7a40-b2e6-b46616e71089",
+      "id": "01a12486-ebc8-77d0-af74-83a4d20745ed",
+      "operate": true,
+      "content": "已记录，台灯预算为280元。",
+      "is_end": true,
+      "answer_list": [
+        {
+          "view_type": "many_view",
+          "content": "已记录，台灯预算为280元。",
+          "runtime_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3",
+          "chat_record_id": "01a12486-ebc8-77d0-af74-83a4d20745ed",
+          "child_node": {},
+          "reasoning_content": "",
+          "real_node_id": "e25cef54619c424dae7ec5bcd3350e8e2ff6cbf3"
+        }
+      ],
+      "completion_tokens": 354,
+      "prompt_tokens": 87
+    }
+  },
+  "memory": {
+    "code": 200,
+    "message": "Success",
+    "data": {
+      "facts": [
+        {
+          "id": "9573c161-4018-4292-9f60-2f61f28c17a1",
+          "quote": "我的台灯预算是280元",
+          "value": "280元",
+          "entity": "当前任务",
+          "source": "2d5548d5-d90b-4a57-b116-1ae81f3d9358",
+          "status": "confirmed",
+          "version": 1,
+          "attribute": "预算",
+          "references": [],
+          "updated_at": "2026-10-10T06:36:27.684842+00:00"
+        }
+      ],
+      "version": 1,
+      "generation": 0,
+      "sources": [
+        {
+          "id": "2d5548d5-d90b-4a57-b116-1ae81f3d9358",
+          "record_id": "01a12486-ebc8-77d0-af74-83a4d20745ed",
+          "question": "我的台灯预算是280元，请记住。",
+          "kind": "turn",
+          "created_at": "2026-10-10T06:36:24.883Z",
+          "changes": [
+            {
+              "after": {
+                "id": "9573c161-4018-4292-9f60-2f61f28c17a1",
+                "quote": "我的台灯预算是280元",
+                "value": "280元",
+                "entity": "当前任务",
+                "source": "2d5548d5-d90b-4a57-b116-1ae81f3d9358",
+                "status": "confirmed",
+                "version": 1,
+                "attribute": "预算",
+                "references": [],
+                "updated_at": "2026-10-10T06:36:27.684842+00:00"
+              },
+              "before": null
+            }
+          ]
+        }
+      ],
+      "temporary": false
+    }
+  }
+}

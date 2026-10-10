@@ -1,0 +1,20 @@
+{
+  "memory_pure": 43,
+  "context_pure": 63,
+  "retrieval_pure": 23,
+  "application_database": 68,
+  "total_passed": 197,
+  "typecheck": "passed",
+  "build_admin": "passed",
+  "build_chat": "passed",
+  "changed_runtime_ruff": "passed",
+  "desktop_http": "passed",
+  "mobile_http": "passed",
+  "iframe": "user_confirmed_passed",
+  "human_quality": "pending",
+  "isolated_databases_removed": true,
+  "business_database_restored": true,
+  "budget_reserved_cny": "74.183736",
+  "budget_limit_cny": "300",
+  "actual_cost": null
+}

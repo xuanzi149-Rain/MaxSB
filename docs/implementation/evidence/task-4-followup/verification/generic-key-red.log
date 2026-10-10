@@ -1,0 +1,27 @@
+.F................
+======================================================================
+FAIL: test_ambiguous_generic_entity_keys_do_not_pin_a_target (test_extractor.ExtractorTests.test_ambiguous_generic_entity_keys_do_not_pin_a_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 145, in test_ambiguous_generic_entity_keys_do_not_pin_a_target
+    self.assertEqual([(f['value'],f['status']) for f in changed.facts[:2]],
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     [('900元','confirmed'),('600元','confirmed')])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [('900元', 'pending'), ('600元', 'confirmed')] != [('900元', 'confirmed'), ('600元', 'confirmed')]
+
+First differing element 0:
+('900元', 'pending')
+('900元', 'confirmed')
+
+- [('900元', 'pending'), ('600元', 'confirmed')]
+?            ^ - ---
+
++ [('900元', 'confirmed'), ('600元', 'confirmed')]
+?            ^^^^^^^
+
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.011s
+
+FAILED (failures=1)

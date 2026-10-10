@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>任务4人工质量复核</title><style>body{max-width:1050px;margin:32px auto;padding:0 20px;font:17px/1.7 system-ui;color:#17212b;background:#f6f8fa}section{background:white;border:1px solid #ddd;border-radius:12px;padding:20px;margin:20px 0}h1{font-size:28px}h2{font-size:21px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:20px}.answers>div{background:#f3f7fa;padding:12px;border-radius:8px}p,pre{white-space:pre-wrap;overflow-wrap:anywhere}pre{font-size:14px}@media(max-width:600px){.answers{grid-template-columns:1fr}}</style>
+<h1>任务4 · 人工质量复核</h1><p>以下是同一模型、相同对话的两种策略，A/B顺序逐题轮换。请按每题要求判定哪份答案符合；允许两份都符合或都不符合。请在聊天中回复，例如“1A，2B，3都不符合”，并说明不符合原因。这里只提供原始答案，不自动写入人工评分。</p>
+<section><h2>1. new-multiple</h2><p><b>验收要求：</b>电脑7200元，显示器2300元；不得混淆两个实体。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-multiple&quot;,
+  &quot;turns&quot;: [
+    &quot;电脑预算是7200元，显示器预算是1800元。&quot;,
+    &quot;显示器预算改为2300元。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;电脑和显示器预算分别是多少？&quot;
+  ],
+  &quot;expected&quot;: &quot;电脑7200元，显示器2300元；不得混淆两个实体。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>电脑预算 7200 元，显示器预算 2300 元。</p></div><div><h3>B</h3><p>请提供电脑和显示器的具体预算金额。</p></div></div></section><section><h2>2. new-revoke</h2><p><b>验收要求：</b>仍要求25升；黑色要求已撤销，不能说必须黑色。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-revoke&quot;,
+  &quot;turns&quot;: [
+    &quot;我买背包，背包颜色要求黑色，容量要求25升。&quot;,
+    &quot;不再要求背包颜色为黑色。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;背包还有什么要求，颜色必须黑色吗？&quot;
+  ],
+  &quot;expected&quot;: &quot;仍要求25升；黑色要求已撤销，不能说必须黑色。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>请明确：颜色是否必须为黑色？还有其他具体要求吗？</p></div><div><h3>B</h3><p>颜色不必须黑色（该条件已撤销）。
+
+目前仅确认容量为 25 升。请问还有其他要求吗？</p></div></div></section><section><h2>3. new-reference</h2><p><b>验收要求：</b>橡木书桌；选择来源应关联第二项原答案，不能凭空确认。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-reference&quot;,
+  &quot;turns&quot;: [
+    &quot;请严格只输出以下两行选项，不加其他文字：\n1. 松木书桌\n2. 橡木书桌&quot;,
+    &quot;我选择第二款作为书桌。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;我选的是什么书桌？&quot;
+  ],
+  &quot;expected&quot;: &quot;橡木书桌；选择来源应关联第二项原答案，不能凭空确认。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>橡木书桌</p></div><div><h3>B</h3><p>您尚未提供关于书桌的具体选择信息。请补充相关细节。</p></div></div></section><section><h2>4. new-ambiguity</h2><p><b>验收要求：</b>应澄清750元指哪个物品，不能擅自将任一预算定为750元。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-ambiguity&quot;,
+  &quot;turns&quot;: [
+    &quot;耳机预算是900元，键盘预算是600元。&quot;,
+    &quot;那个预算改为750元。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;现在耳机和键盘预算分别是多少？&quot;
+  ],
+  &quot;expected&quot;: &quot;应澄清750元指哪个物品，不能擅自将任一预算定为750元。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>您尚未提供耳机和键盘的具体预算金额。请明确告知这两个设备的预算分别是多少？</p></div><div><h3>B</h3><p>键盘预算为 600 元，耳机预算为 900 元。
+
+（注：记忆数据中关于“750元”的更正因“未明确对象”且状态为 pending，未应用于当前确认条件。）</p></div></div></section><section><h2>5. new-hypothetical</h2><p><b>验收要求：</b>每周4小时；7小时是假设，不能视为已确认。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-hypothetical&quot;,
+  &quot;turns&quot;: [
+    &quot;我的西班牙语学习计划是每周4小时。&quot;,
+    &quot;如果改成每周7小时是否合适？这只是一个假设，尚未决定。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;我已经确定的学习时间是多少？&quot;
+  ],
+  &quot;expected&quot;: &quot;每周4小时；7小时是假设，不能视为已确认。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>根据记忆数据，您确定的西班牙语学习时间是每周 4 小时。</p></div><div><h3>B</h3><p>您尚未提供具体的学习时间信息。请告诉我您确定的学习时间是多少？</p></div></div></section><section><h2>6. new-clear</h2><p><b>验收要求：</b>清除后应说未知或请用户重新提供预算，不得答1600元。</p><details><summary>完整输入与清空位置</summary><pre>{
+  &quot;id&quot;: &quot;new-clear&quot;,
+  &quot;turns&quot;: [
+    &quot;我的露营帐篷预算是1600元。&quot;,
+    &quot;先暂停推荐，只回复好。&quot;,
+    &quot;请继续等待，只回复好。&quot;,
+    &quot;暂时不要展开，只回复好。&quot;,
+    &quot;仍在整理资料，只回复好。&quot;,
+    &quot;我的帐篷预算是多少？&quot;
+  ],
+  &quot;clear_before&quot;: 5,
+  &quot;expected&quot;: &quot;清除后应说未知或请用户重新提供预算，不得答1600元。&quot;
+}</pre></details><div class="answers"><div><h3>A</h3><p>您尚未提供帐篷预算信息。请告诉我您的具体预算范围。</p></div><div><h3>B</h3><p>您尚未提供帐篷的预算信息。请告诉我您的具体预算范围。</p></div></div></section></html>

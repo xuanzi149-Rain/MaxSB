@@ -1,0 +1,86 @@
+[
+  {
+    "question": 1,
+    "case_id": "new-multiple",
+    "label": "A",
+    "strategy": "memory",
+    "human_score": null
+  },
+  {
+    "question": 1,
+    "case_id": "new-multiple",
+    "label": "B",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 2,
+    "case_id": "new-revoke",
+    "label": "A",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 2,
+    "case_id": "new-revoke",
+    "label": "B",
+    "strategy": "memory",
+    "human_score": null
+  },
+  {
+    "question": 3,
+    "case_id": "new-reference",
+    "label": "A",
+    "strategy": "memory",
+    "human_score": null
+  },
+  {
+    "question": 3,
+    "case_id": "new-reference",
+    "label": "B",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 4,
+    "case_id": "new-ambiguity",
+    "label": "A",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 4,
+    "case_id": "new-ambiguity",
+    "label": "B",
+    "strategy": "memory",
+    "human_score": null
+  },
+  {
+    "question": 5,
+    "case_id": "new-hypothetical",
+    "label": "A",
+    "strategy": "memory",
+    "human_score": null
+  },
+  {
+    "question": 5,
+    "case_id": "new-hypothetical",
+    "label": "B",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 6,
+    "case_id": "new-clear",
+    "label": "A",
+    "strategy": "fixed",
+    "human_score": null
+  },
+  {
+    "question": 6,
+    "case_id": "new-clear",
+    "label": "B",
+    "strategy": "memory",
+    "human_score": null
+  }
+]

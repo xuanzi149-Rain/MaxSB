@@ -1,0 +1,125 @@
+..FF.F..FFF..
+======================================================================
+FAIL: test_hypothetical_add_not_confirmed (test_extractor.ExtractorTests.test_hypothetical_add_not_confirmed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 64, in test_hypothetical_add_not_confirmed
+    self.assertEqual(result.operations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Operation(action='pending', entity='当前任务'[104 chars]=[])] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Operation(action='pending', entity='当前任务', attribute='预算', value='3000', target='', quote='如果预算3000呢？', source='turn', explicit=False, references=[])
+
++ []
+- [Operation(action='pending',
+-            entity='当前任务',
+-            attribute='预算',
+-            value='3000',
+-            target='',
+-            quote='如果预算3000呢？',
+-            source='turn',
+-            explicit=False,
+-            references=[])]
+
+======================================================================
+FAIL: test_hypothetical_correction_does_not_mutate (test_extractor.ExtractorTests.test_hypothetical_correction_does_not_mutate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 33, in test_hypothetical_correction_does_not_mutate
+    self.assertEqual(result.operations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Operation(action='pending', entity='旅行', [140 chars]=[])] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Operation(action='pending', entity='旅行', attribute='预算', value='4000', target='fe6d64b0-4f9b-45b2-952e-44c9465d976f', quote='如果预算改为4000呢？', source='turn', explicit=False, references=[])
+
++ []
+- [Operation(action='pending',
+-            entity='旅行',
+-            attribute='预算',
+-            value='4000',
+-            target='fe6d64b0-4f9b-45b2-952e-44c9465d976f',
+-            quote='如果预算改为4000呢？',
+-            source='turn',
+-            explicit=False,
+-            references=[])]
+
+======================================================================
+FAIL: test_mixed_question_retains_independent_declarative_quote (test_extractor.ExtractorTests.test_mixed_question_retains_independent_declarative_quote)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 96, in test_mixed_question_retains_independent_declarative_quote
+    self.assertEqual(result.operations[0].action, 'add')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pending' != 'add'
+- pending
++ add
+
+
+======================================================================
+FAIL: test_ordinal_literal_resolves_only_unique_explicit_choice (test_extractor.ExtractorTests.test_ordinal_literal_resolves_only_unique_explicit_choice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 84, in test_ordinal_literal_resolves_only_unique_explicit_choice
+    self.assertEqual(result.operations[0].value, '橡木书桌')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '第二款' != '橡木书桌'
+- 第二款
++ 橡木书桌
+
+
+======================================================================
+FAIL: test_question_cannot_create_new_condition (test_extractor.ExtractorTests.test_question_cannot_create_new_condition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 76, in test_question_cannot_create_new_condition
+    self.assertEqual(result.operations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Operation(action='pending', entity='背包', [100 chars]=[])] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Operation(action='pending', entity='背包', attribute='颜色', value='黑色吗？', target='', quote='颜色必须黑色吗？', source='turn', explicit=False, references=[])
+
++ []
+- [Operation(action='pending',
+-            entity='背包',
+-            attribute='颜色',
+-            value='黑色吗？',
+-            target='',
+-            quote='颜色必须黑色吗？',
+-            source='turn',
+-            explicit=False,
+-            references=[])]
+
+======================================================================
+FAIL: test_quoted_example_not_confirmed (test_extractor.ExtractorTests.test_quoted_example_not_confirmed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.codex/worktrees/conversation-memory/MaxSB/tests/memory/test_extractor.py", line 69, in test_quoted_example_not_confirmed
+    self.assertEqual(result.operations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Operation(action='pending', entity='当前任务'[100 chars]=[])] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Operation(action='pending', entity='当前任务', attribute='预算', value='3000', target='', quote='预算3000', source='turn', explicit=False, references=[])
+
++ []
+- [Operation(action='pending',
+-            entity='当前任务',
+-            attribute='预算',
+-            value='3000',
+-            target='',
+-            quote='预算3000',
+-            source='turn',
+-            explicit=False,
+-            references=[])]
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.007s
+
+FAILED (failures=6)

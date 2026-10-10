@@ -6,8 +6,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'apps'))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'maxkb.settings')
 os.environ.setdefault('SERVER_NAME', 'web')
 import django
-django.setup()
 from django.conf import settings  # noqa: E402
+# Bypass alias-keyed pooling so test setup cannot reuse a service connection.
+settings.DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
+django.setup()
 from django.test.utils import get_runner  # noqa: E402
 settings.DATABASES['default']['TEST']['NAME'] = 'test_maxsb_memory_task4'
 from django.db import connection  # noqa: E402

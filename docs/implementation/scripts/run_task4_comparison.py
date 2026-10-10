@@ -68,7 +68,7 @@ def main():
         raise ValueError('Bounded extraction adapter unavailable')
     source = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
               for folder in ['apps/application/conversation_memory', 'apps/application/flow/step_node/ai_chat_step_node']
-              for p in (ROOT / folder).rglob('*.py')}
+              for p in (ROOT / folder).rglob('*.py') if not p.name.startswith('._')}
     snapshot = {'code_sha': args.code_sha, 'dataset_hash': digest(cases), 'model': model_row.model_name, 'model_revision': str(model_row.update_time),
                 'model_id': str(model_row.id), 'source': source, 'history_rounds': 3, 'temperature': 0,
                 'max_tokens': 1024, 'started_at': time.time(), 'kind': 'production-node-debug-cache-probe',

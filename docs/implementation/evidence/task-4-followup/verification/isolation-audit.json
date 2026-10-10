@@ -1,0 +1,9 @@
+{
+  "business_memory_migration_count": 0,
+  "business_memory_tables": [
+    null,
+    null
+  ],
+  "acceptance_apps_in_business_db": 0,
+  "remaining_test_databases": []
+}
