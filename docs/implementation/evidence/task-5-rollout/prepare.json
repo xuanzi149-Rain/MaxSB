@@ -1,0 +1,29 @@
+{
+  "database": "maxsb_task4_staging",
+  "backup": "/opt/maxkb/rollback/task5-staging/pre-0017.dump",
+  "restore_verified": true,
+  "existing_data_unchanged": true,
+  "before": {
+    "application": {
+      "count": 1,
+      "sha256": "4e3fe8868152482e389c853ca2ee9ba589a4e0dd5978611c90c65ccbd756b1be"
+    },
+    "application_chat": {
+      "count": 6,
+      "sha256": "9a76caad3726110b48450b78fcad00c8abee7e87ffc09b1b87430e6ff94bc7a5"
+    },
+    "application_chat_record": {
+      "count": 12,
+      "sha256": "2d2c1180c74fb8e8e02a94d8dd2f7214c2469b5b49b2ec282ceb561b1d880f6e"
+    },
+    "application_conversation_memory": {
+      "count": 4,
+      "sha256": "f06a7f876c98ca1dd3a01b7a7f467aafcb564ebf90c377bf57ca82cb190597bf"
+    },
+    "application_conversation_memory_event": {
+      "count": 14,
+      "sha256": "b425158583b73825bb62792532dda101c281e199047d84387efd87ee5adad73d"
+    }
+  },
+  "migration": "0017_tool_recovery"
+}

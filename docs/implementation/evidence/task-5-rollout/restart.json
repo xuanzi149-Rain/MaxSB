@@ -1,0 +1,17 @@
+{
+  "phase": "restart",
+  "run_status": "succeeded",
+  "passed": true,
+  "static": [
+    {
+      "spa": "admin",
+      "html": 200,
+      "entry_js": 200
+    },
+    {
+      "spa": "chat",
+      "html": 200,
+      "entry_js": 200
+    }
+  ]
+}

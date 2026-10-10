@@ -1,0 +1,11 @@
+{
+  "commit": "b005600b8",
+  "database": "maxsb_task4_staging",
+  "port": 18084,
+  "sha256": {
+    "apps/application/tool_recovery/store.py": "db5f70f3ef32362fe7d11b254eb5889475dfb7dd4de5f753dcdcbf668ecb4b79",
+    "apps/application/flow/workflow_manage.py": "ee84974d835e32a91c068d61505aaae5da6b8bf87652af679c3b3be7267dc356",
+    "apps/static/admin/index.html": "0be4f84f17820d4edada59499adbaa2bbc937ca63ce5427898106446320d6ae9",
+    "apps/static/chat/index.html": "c19678ab2c585e09b709311ab1b661e658d893b0a2cefa0d4fa802da6b6c2a04"
+  }
+}
