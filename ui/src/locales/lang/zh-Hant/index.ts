@@ -10,6 +10,7 @@ import workflow from './workflow'
 import home from './home'
 export default {
   lang: '繁體中文',
+  evaluation: { title: 'Agent 評測' },
   layout,
   views,
   theme,

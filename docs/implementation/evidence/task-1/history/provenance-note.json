@@ -1,0 +1,9 @@
+{
+  "recorded_label": "fix-budget-parameters",
+  "verified_implementation_commit": "52ba078c024fb1b22761c9e5c25665011d6b3d39",
+  "run_ids": [
+    "2eaafd07-1001-403d-aed0-4f6cfdda33e2",
+    "04772f05-6a3b-4dd8-9807-7a543be6388f"
+  ],
+  "note": "Original records retained unchanged. These runs used the earlier deployed dataset and are excluded from the sealed baseline."
+}

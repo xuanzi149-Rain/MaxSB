@@ -1,0 +1,15 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.813 seconds.
+Prefix dict has been built successfully.
+{"run_id": "fe4124da-b9a7-4fe5-8525-0c01d8ca2826", "status": "completed", "output": "/tmp/maxsb-eval/task1-results/sealed-v1/dev-a.json"}
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.899 seconds.
+Prefix dict has been built successfully.
+{"run_id": "151e5ea6-73e4-4694-889d-266c08e109b2", "status": "completed", "output": "/tmp/maxsb-eval/task1-results/sealed-v1/dev-b.json"}
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.856 seconds.
+Prefix dict has been built successfully.
+{"run_id": "09ad35f9-add7-444f-b9b9-866f4f9ff267", "status": "completed", "output": "/tmp/maxsb-eval/task1-results/sealed-v1/frozen-baseline.json"}

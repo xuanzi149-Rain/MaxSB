@@ -1,0 +1,13 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.668 seconds.
+Prefix dict has been built successfully.
+Found 14 test(s).
+Using existing test database for alias 'default'...
+System check identified no issues (0 silenced).
+..............
+----------------------------------------------------------------------
+Ran 14 tests in 0.262s
+
+OK
+Preserving test database for alias 'default'...

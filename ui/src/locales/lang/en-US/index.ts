@@ -10,6 +10,7 @@ import workflow from './workflow'
 import home from './home.ts'
 export default {
   lang: 'English',
+  evaluation: { title: 'Agent evaluation' },
   layout,
   views,
   theme,

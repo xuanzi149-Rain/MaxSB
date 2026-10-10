@@ -1,0 +1,185 @@
+{
+  "version": "corpus-v1",
+  "documents": [
+    {
+      "evidence_id": "D-hours",
+      "text": "[D-hours] 青禾图书室周二至周日09:00—18:00开放；周一闭馆。自助还书箱全天可用。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-loan",
+      "text": "[D-loan] 青禾图书室普通读者每人最多借5本，借期21天，可续借1次14天；预约中的书不可续借。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-room",
+      "text": "[D-room] 青禾图书室讨论室需提前1天预约，每次最多2小时，容纳6人；阅览区无需预约且禁止交谈。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-access",
+      "text": "[D-access] 青禾图书室一楼有无障碍入口和电梯；大字版图书位于二楼A区。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-copy",
+      "text": "[D-copy] 青禾图书室的借阅上限为5本，普通借期为21天，最多续借一次14天。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-old",
+      "text": "[D-old] 青禾图书室2024年公告：周六16:00闭馆。此公告已被2025年公告取代。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "D-new",
+      "text": "[D-new] 青禾图书室2025年公告：周六18:00闭馆；此公告取代2024年周六开放安排。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-north",
+      "text": "[F-north] 北站寄件截止16:00，单件限重20千克；工作日开放，周末关闭。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-south",
+      "text": "[F-south] 南站寄件截止18:00，单件限重15千克；每天开放。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-east",
+      "text": "[F-east] 东站仅接收预付运单，不提供现场付款；可接收最长80厘米的包裹。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-west",
+      "text": "[F-west] 西站提供纸箱和填充物；纸箱3元，填充物免费；不接收冷藏件。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-track",
+      "text": "[F-track] 运单状态已揽收表示包裹进入运输；待揽收仅表示已创建运单，不代表包裹已交付。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-fragile",
+      "text": "[F-fragile] 易碎件须使用双层包装并填充空隙；外箱贴易碎标签不能替代缓冲包装。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-code",
+      "text": "[F-code] 取件码有效期48小时；过期后须重新生成。领取需要取件码及运单尾号4位。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-locker",
+      "text": "[F-locker] 自助柜单件限重5千克，最长40厘米；人工柜台单件限重20千克、最长100厘米。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-return",
+      "text": "[F-return] 退件须保留原运单号，并在系统中注明退件原因；寄件人地址不完整时先联系寄件人补全。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-change",
+      "text": "[F-change] 包裹已出库后不可直接修改目的地；须提交拦截申请，申请不保证成功。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-holiday",
+      "text": "[F-holiday] 节假日北站关闭，南站10:00—15:00开放；节假日安排优先于普通日期安排。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-lost",
+      "text": "[F-lost] 丢失件查询需要运单号、寄件日期和寄件站点；缺少这些信息时应先询问补全，不猜测。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-battery",
+      "text": "[F-battery] 电池件仅可走专用渠道，须申报电池类型；普通渠道不接收。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-bulk",
+      "text": "[F-bulk] 批量寄件满10件可以预约上门；提前24小时预约；未满10件须到站寄件。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-service",
+      "text": "[F-service] 客服工作日09:00—17:00在线；站点投诉需提供站点名称与事件日期。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-volume",
+      "text": "[F-volume] 体积重量按长乘宽乘高除以6000计算，长度单位厘米，重量单位千克；计费重量取实际和体积重量较大者。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-dupe",
+      "text": "[F-dupe] 北站在工作日开放，周末不开放；寄件截止时间为16:00，包裹每件不得超过20千克。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-notice-old",
+      "text": "[F-notice-old] 南站2024版规则：寄件截止17:00；已被2025版规则替代。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-notice-new",
+      "text": "[F-notice-new] 南站2025版规则：寄件截止18:00，取代2024版17:00规则。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-scope-a",
+      "text": "[F-scope-a] 企业柜台对签约企业支持月结；这条政策不适用于个人寄件。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-scope-b",
+      "text": "[F-scope-b] 个人柜台须逐单付款，不支持月结。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-uncertain-a",
+      "text": "[F-uncertain-a] 未标日期的公告甲称临时柜台周三开放；未说明是否替代其他公告。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    },
+    {
+      "evidence_id": "F-uncertain-b",
+      "text": "[F-uncertain-b] 未标日期的公告乙称临时柜台周三关闭；未说明是否替代其他公告。",
+      "source": "synthetic://maxsb-evaluation-v1",
+      "kind": "synthetic_fixture"
+    }
+  ]
+}

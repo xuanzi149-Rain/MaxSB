@@ -3,11 +3,17 @@ from chat.views.chat_memory import DebugMemoryView
 from django.urls import path
 
 from . import views
+from application.views.evaluation import EvaluationRuns, EvaluationDetail, EvaluationReview, EvaluationCompare
 
 app_name = "application"
 # @formatter:off
 # fmt: off
 urlpatterns = [
+    path('workspace/<str:workspace_id>/application/<str:application_id>/evaluation/runs', EvaluationRuns.as_view()),
+    path('workspace/<str:workspace_id>/application/<str:application_id>/evaluation/runs/<uuid:run_id>', EvaluationDetail.as_view()),
+    path('workspace/<str:workspace_id>/application/<str:application_id>/evaluation/runs/<uuid:run_id>/cases/<str:case_id>', EvaluationDetail.as_view()),
+    path('workspace/<str:workspace_id>/application/<str:application_id>/evaluation/runs/<uuid:run_id>/cases/<str:case_id>/review', EvaluationReview.as_view()),
+    path('workspace/<str:workspace_id>/application/<str:application_id>/evaluation/compare', EvaluationCompare.as_view()),
     path('workspace/<str:workspace_id>/application/<str:application_id>/tool_runs/<uuid:run_id>/resolution', ManageToolRunView.as_view()),
     path('workspace/<str:workspace_id>/application/<str:application_id>/chat_memory/<uuid:chat_id>', DebugMemoryView.as_view()),
     path('workspace/<str:workspace_id>/application/<str:application_id>/chat_memory/<uuid:chat_id>/facts/<uuid:fact_id>', DebugMemoryView.as_view()),

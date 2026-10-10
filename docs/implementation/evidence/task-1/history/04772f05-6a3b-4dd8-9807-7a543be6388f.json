@@ -1,0 +1,735 @@
+{
+  "run_id": "04772f05-6a3b-4dd8-9807-7a543be6388f",
+  "status": "interrupted",
+  "dataset_version": "dev-v1",
+  "dataset_hash": "7f30a0578d809f5e69fd0b0630e871fee439f4d39c93aff56eb580d960db0953",
+  "config_hash": "82a46110d45e74da9f7f85bce2f9971fd33f127ef61bd684cd71e8837779a0f7",
+  "created_at": "2026-10-09T08:14:02.576Z",
+  "started_at": "2026-10-09T08:14:02.582Z",
+  "finished_at": "2026-10-09T08:16:47.529Z",
+  "progress": 3,
+  "total": 20,
+  "summary": {
+    "count": 20,
+    "review_coverage": 0.0,
+    "accuracy": null,
+    "confirmed_correct_fraction": 0.0,
+    "successful_execution_count": 3,
+    "cost_per_success": null,
+    "actual_cost": null,
+    "currency": null,
+    "average_input_tokens": 263.6666666666667,
+    "input_token_coverage": 0.15,
+    "average_output_tokens": 19.0,
+    "output_token_coverage": 0.15,
+    "p95_seconds": 20.885928384999715,
+    "latency_sample_count": 3,
+    "evidence_recall": 1.0,
+    "evidence_recall_sample_count": 3,
+    "tool_complete": null,
+    "tool_complete_sample_count": 0,
+    "citation_accuracy": null,
+    "citation_reviewed_count": 0,
+    "cost_coverage": 0.0
+  },
+  "error": "runtime_dataset_outdated",
+  "snapshot": {
+    "models": [
+      {
+        "id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+        "provider": "aliyun_bai_lian_model_provider",
+        "model_name": "qwen3.7-plus",
+        "model_type": "LLM",
+        "update_time": "2026-10-09T08:05:16.800Z"
+      }
+    ],
+    "code_sha": "fix-budget-parameters",
+    "image_id": "sha256:762dd063cad1ebe2f83342ee394b757296c924d7ff30586de954b7866ff0a351",
+    "model_id": "7a5eb522-3cb8-41a6-9b49-a205d59ce866",
+    "config_hash": "82a46110d45e74da9f7f85bce2f9971fd33f127ef61bd684cd71e8837779a0f7",
+    "model_params": {
+      "max_tokens": 2048,
+      "temperature": 0
+    },
+    "tool_fixture": "readonly_lookup_v1",
+    "workspace_id": "default",
+    "knowledge_ids": [
+      "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73"
+    ],
+    "application_id": "01a11f8e-fbdc-7fa1-9378-3fec7c7ec793",
+    "knowledge_hash": "6bae7634ea785a4b6e39fdbb4b78dbdcbf17581575537115cf98fd274316ca07",
+    "local_diff_hash": null,
+    "application_hash": "875cec2fd0d54ea86ad50518ef1d41255e2d9acf04a72991a68b4fcd929551c5",
+    "application_type": "SIMPLE",
+    "tool_fixture_hash": "d55158325ddb50f22d567e1e065d6dd372778a9368206c828fd748428e12f39a",
+    "model_version_status": "provider model names; immutable revision not reported",
+    "evaluation_source_hash": "d3a13e080894400c4fd1689b833b1747864af01af34fe73d877785e859a26933"
+  },
+  "cases": [
+    {
+      "error": null,
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          true
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.7502007484436035,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.4922218322753906,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": null,
+          "answer": "青禾图书室周一不开放，周一闭馆[D-hours]。",
+          "complete": true,
+          "record_id": "01a11fba-3413-7e31-8f0b-fe62e68debea",
+          "input_tokens": 266,
+          "usage_source": "provider_callback",
+          "output_tokens": 15,
+          "model_call_count": 1,
+          "estimated_input_tokens": 266,
+          "estimated_output_tokens": 15
+        }
+      ],
+      "answer": "青禾图书室周一不开放，周一闭馆[D-hours]。",
+      "status": "success",
+      "case_id": "dev-01",
+      "chat_id": "01a11fba-2c56-7b13-ae3e-3e3ceeb686ae",
+      "scenario": "direct",
+      "citations": [
+        "D-hours"
+      ],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": 266,
+      "usage_source": "see_turns",
+      "output_tokens": 15,
+      "elapsed_seconds": 20.885928384999715,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-hours",
+        "D-loan",
+        "D-new"
+      ],
+      "review": {}
+    },
+    {
+      "error": null,
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.8494842052459717,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.330331325531006,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": null,
+          "answer": "根据提供的资料，青禾图书室普通读者每人最多可借5本书[D-loan][D-copy]。",
+          "complete": true,
+          "record_id": "01a11fba-7a99-78b1-ae67-b21248d3366c",
+          "input_tokens": 263,
+          "usage_source": "provider_callback",
+          "output_tokens": 24,
+          "model_call_count": 1,
+          "estimated_input_tokens": 263,
+          "estimated_output_tokens": 24
+        }
+      ],
+      "answer": "根据提供的资料，青禾图书室普通读者每人最多可借5本书[D-loan][D-copy]。",
+      "status": "success",
+      "case_id": "dev-02",
+      "chat_id": "01a11fba-7250-7f21-a7e9-9ed94a355130",
+      "scenario": "direct",
+      "citations": [
+        "D-loan",
+        "D-copy"
+      ],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": 263,
+      "usage_source": "see_turns",
+      "output_tokens": 24,
+      "elapsed_seconds": 17.426948841999547,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-hours",
+        "D-loan",
+        "D-room"
+      ],
+      "review": {}
+    },
+    {
+      "error": null,
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          true
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.6041817665100098,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.750229597091675,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": null,
+          "answer": "根据资料 [D-room]，青禾图书室讨论室最多容纳6人。",
+          "complete": true,
+          "record_id": "01a11fba-bd9b-7be1-b1d8-02593f14fd88",
+          "input_tokens": 262,
+          "usage_source": "provider_callback",
+          "output_tokens": 18,
+          "model_call_count": 1,
+          "estimated_input_tokens": 262,
+          "estimated_output_tokens": 18
+        }
+      ],
+      "answer": "根据资料 [D-room]，青禾图书室讨论室最多容纳6人。",
+      "status": "success",
+      "case_id": "dev-03",
+      "chat_id": "01a11fba-b448-7c82-9737-df5d0d1083f1",
+      "scenario": "direct",
+      "citations": [
+        "D-room"
+      ],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": 262,
+      "usage_source": "see_turns",
+      "output_tokens": 18,
+      "elapsed_seconds": 17.3088559659991,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-loan",
+        "D-room",
+        "F-locker"
+      ],
+      "review": {}
+    }
+  ],
+  "questions": [
+    {
+      "turns": [
+        "青禾图书室周一开放吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-01",
+      "scenario": "direct",
+      "expected_facts": [
+        "周一闭馆"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "周一闭馆"
+      ],
+      "required_evidence_ids": [
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "普通读者一次能借几本书？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-02",
+      "scenario": "direct",
+      "expected_facts": [
+        "最多5本"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "最多5本"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "讨论室最多容纳多少人？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-03",
+      "scenario": "direct",
+      "expected_facts": [
+        "6人"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "6人"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "周一能进入青禾图书室并用自助箱还书吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-04",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "室内闭馆",
+        "自助还书箱可用"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "室内闭馆；自助还书箱可用"
+      ],
+      "required_evidence_ids": [
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "周六带五位朋友讨论两小时，该怎么安排？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-05",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "6人可容纳",
+        "需提前1天预约",
+        "不超过2小时",
+        "18:00前结束"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "6人可容纳；需提前1天预约；不超过2小时；18:00前结束"
+      ],
+      "required_evidence_ids": [
+        "D-room",
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "行动不便的读者如何寻找大字版图书？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-06",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "一楼无障碍入口",
+        "乘电梯到二楼A区"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "一楼无障碍入口；乘电梯到二楼A区"
+      ],
+      "required_evidence_ids": [
+        "D-access"
+      ]
+    },
+    {
+      "turns": [
+        "请给出借阅上限与借期，并保留资料出处。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-07",
+      "scenario": "duplicate",
+      "expected_facts": [
+        "5本",
+        "21天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "5本；21天"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "两段资料都提到续借，续借次数能相加吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-08",
+      "scenario": "duplicate",
+      "expected_facts": [
+        "不能相加",
+        "最多1次14天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "不能相加；最多1次14天"
+      ],
+      "required_evidence_ids": [
+        "D-loan",
+        "D-copy"
+      ]
+    },
+    {
+      "turns": [
+        "图书室管理员的私人电话是多少？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-09",
+      "scenario": "no_evidence",
+      "expected_facts": [
+        "资料未提供",
+        "不编造电话"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "资料未提供；不编造电话"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "图书室打印一页多少钱？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-10",
+      "scenario": "no_evidence",
+      "expected_facts": [
+        "资料未提供价格"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "资料未提供价格"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "我要与同学讨论作业。",
+        "这里应该选阅览区还是讨论室？",
+        "它需要提前多久预约？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-11",
+      "scenario": "conversation",
+      "expected_facts": [
+        "讨论室",
+        "提前1天预约"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "讨论室；提前1天预约"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "我们7个人想预约讨论室。",
+        "有1人取消，现在人数变了。",
+        "现在能用讨论室吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-12",
+      "scenario": "conversation",
+      "expected_facts": [
+        "最终人数6人",
+        "可用讨论室"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "最终人数6人；可用讨论室"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "我想续借一本普通书。",
+        "补充一下，这本书已被其他人预约。",
+        "还能续借吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-13",
+      "scenario": "conversation",
+      "expected_facts": [
+        "预约中的书不可续借"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "预约中的书不可续借"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "用只读查件工具查询DEV001，报告返回状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-14",
+      "scenario": "tool_success",
+      "expected_facts": [
+        "已揽收"
+      ],
+      "tool_expectation": {
+        "status": "已揽收",
+        "outcome": "success",
+        "tracking_id": "DEV001"
+      },
+      "acceptable_answers": [
+        "已揽收"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "用只读查件工具查询DEV002，不要凭常识猜状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-15",
+      "scenario": "tool_success",
+      "expected_facts": [
+        "待揽收"
+      ],
+      "tool_expectation": {
+        "status": "待揽收",
+        "outcome": "success",
+        "tracking_id": "DEV002"
+      },
+      "acceptable_answers": [
+        "待揽收"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "查询DEV-TIMEOUT；若工具超时，说明无法确认状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-16",
+      "scenario": "tool_timeout",
+      "expected_facts": [
+        "无法确认状态",
+        "工具超时"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "DEV-TIMEOUT"
+      },
+      "acceptable_answers": [
+        "无法确认状态；工具超时"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "旧公告说周六16点闭馆，现在应该按几点？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-17",
+      "scenario": "conflict",
+      "expected_facts": [
+        "2025公告优先",
+        "18:00"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "2025公告优先；18:00"
+      ],
+      "required_evidence_ids": [
+        "D-old",
+        "D-new"
+      ]
+    },
+    {
+      "turns": [
+        "普通续借规则适用于被预约的书吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-18",
+      "scenario": "conflict",
+      "expected_facts": [
+        "不适用",
+        "预约书不可续借"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "不适用；预约书不可续借"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "只返回JSON对象，字段max_books为整数：普通借阅上限是多少？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-19",
+      "scenario": "routing",
+      "expected_facts": [
+        "JSON对象",
+        "max_books为5"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "JSON对象；max_books为5"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "为6人安排周六讨论并借书，列出时间、预约与借阅限制。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-20",
+      "scenario": "routing",
+      "expected_facts": [
+        "18:00前",
+        "提前1天",
+        "2小时",
+        "每人5本21天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "18:00前；提前1天；2小时；每人5本21天"
+      ],
+      "required_evidence_ids": [
+        "D-hours",
+        "D-room",
+        "D-loan"
+      ]
+    }
+  ]
+}

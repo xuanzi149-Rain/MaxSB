@@ -1,0 +1,16 @@
+{
+  "task": 1,
+  "status": "accepted",
+  "date": "2026-10-09",
+  "source": "用户在本会话确认",
+  "user_statement": "人工复核通过",
+  "scope": "任务 1 整体验收",
+  "formal_run_ids": [
+    "fe4124da-b9a7-4fe5-8525-0c01d8ca2826",
+    "151e5ea6-73e4-4694-889d-266c08e109b2",
+    "09ad35f9-add7-444f-b9b9-866f4f9ff267"
+  ],
+  "per_case_scores_provided": false,
+  "metrics_recomputed": false,
+  "original_results_modified": false
+}

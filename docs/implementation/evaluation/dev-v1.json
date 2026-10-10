@@ -1,0 +1,514 @@
+{
+  "version": "dev-v1",
+  "split": "dev",
+  "cases": [
+    {
+      "case_id": "dev-01",
+      "scenario": "direct",
+      "turns": [
+        "青禾图书室周一开放吗？"
+      ],
+      "required_evidence_ids": [
+        "D-hours"
+      ],
+      "expected_facts": [
+        "周一闭馆"
+      ],
+      "acceptable_answers": [
+        "周一闭馆"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-02",
+      "scenario": "direct",
+      "turns": [
+        "普通读者一次能借几本书？"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ],
+      "expected_facts": [
+        "最多5本"
+      ],
+      "acceptable_answers": [
+        "最多5本"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-03",
+      "scenario": "direct",
+      "turns": [
+        "讨论室最多容纳多少人？"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ],
+      "expected_facts": [
+        "6人"
+      ],
+      "acceptable_answers": [
+        "6人"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-04",
+      "scenario": "multi_evidence",
+      "turns": [
+        "6人的讨论室容量够吗？周一能进入讨论并使用自助箱还书吗？"
+      ],
+      "required_evidence_ids": [
+        "D-room",
+        "D-hours"
+      ],
+      "expected_facts": [
+        "容量6人够",
+        "周一室内闭馆",
+        "自助还书箱可用"
+      ],
+      "acceptable_answers": [
+        "容量6人够；周一室内闭馆；自助还书箱可用"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-05",
+      "scenario": "multi_evidence",
+      "turns": [
+        "周六带五位朋友讨论两小时，该怎么安排？"
+      ],
+      "required_evidence_ids": [
+        "D-room",
+        "D-hours"
+      ],
+      "expected_facts": [
+        "6人可容纳",
+        "需提前1天预约",
+        "不超过2小时",
+        "18:00前结束"
+      ],
+      "acceptable_answers": [
+        "6人可容纳；需提前1天预约；不超过2小时；18:00前结束"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-06",
+      "scenario": "multi_evidence",
+      "turns": [
+        "周六17点行动不便的读者要借大字版图书，如何到达、最晚何时离开？"
+      ],
+      "required_evidence_ids": [
+        "D-access",
+        "D-hours"
+      ],
+      "expected_facts": [
+        "一楼无障碍入口",
+        "电梯到二楼A区",
+        "18点前离开"
+      ],
+      "acceptable_answers": [
+        "一楼无障碍入口；电梯到二楼A区；18点前离开"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-07",
+      "scenario": "duplicate",
+      "turns": [
+        "请给出借阅上限与借期，并保留资料出处。"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ],
+      "expected_facts": [
+        "5本",
+        "21天"
+      ],
+      "acceptable_answers": [
+        "5本；21天"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "D-loan"
+        ]
+      ]
+    },
+    {
+      "case_id": "dev-08",
+      "scenario": "duplicate",
+      "turns": [
+        "两段资料都提到续借，续借次数能相加吗？"
+      ],
+      "required_evidence_ids": [
+        "D-loan",
+        "D-copy"
+      ],
+      "expected_facts": [
+        "不能相加",
+        "最多1次14天"
+      ],
+      "acceptable_answers": [
+        "不能相加；最多1次14天"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-09",
+      "scenario": "no_evidence",
+      "turns": [
+        "图书室管理员的私人电话是多少？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供",
+        "不编造电话"
+      ],
+      "acceptable_answers": [
+        "资料未提供；不编造电话"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-10",
+      "scenario": "no_evidence",
+      "turns": [
+        "图书室打印一页多少钱？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供价格"
+      ],
+      "acceptable_answers": [
+        "资料未提供价格"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-11",
+      "scenario": "conversation",
+      "turns": [
+        "我要与同学讨论作业。",
+        "这里应该选阅览区还是讨论室？",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "它需要提前多久预约？"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ],
+      "expected_facts": [
+        "讨论室",
+        "提前1天预约"
+      ],
+      "acceptable_answers": [
+        "讨论室；提前1天预约"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-12",
+      "scenario": "conversation",
+      "turns": [
+        "我们7个人想预约讨论室。",
+        "有1人取消，现在人数变了。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "现在能用讨论室吗？"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ],
+      "expected_facts": [
+        "最终人数6人",
+        "可用讨论室"
+      ],
+      "acceptable_answers": [
+        "最终人数6人；可用讨论室"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-13",
+      "scenario": "conversation",
+      "turns": [
+        "我想续借一本普通书。",
+        "补充一下，这本书已被其他人预约。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "还能续借吗？"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ],
+      "expected_facts": [
+        "预约中的书不可续借"
+      ],
+      "acceptable_answers": [
+        "预约中的书不可续借"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-14",
+      "scenario": "tool_success",
+      "turns": [
+        "用只读查件工具查询DEV001，报告返回状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "已揽收"
+      ],
+      "acceptable_answers": [
+        "已揽收"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "DEV001",
+        "status": "已揽收"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "dev-15",
+      "scenario": "tool_success",
+      "turns": [
+        "用只读查件工具查询DEV002，不要凭常识猜状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "待揽收"
+      ],
+      "acceptable_answers": [
+        "待揽收"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "DEV002",
+        "status": "待揽收"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "dev-16",
+      "scenario": "tool_timeout",
+      "turns": [
+        "查询DEV-TIMEOUT；若工具超时，说明无法确认状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "无法确认状态",
+        "工具超时"
+      ],
+      "acceptable_answers": [
+        "无法确认状态；工具超时"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "DEV-TIMEOUT"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "dev-17",
+      "scenario": "conflict",
+      "turns": [
+        "旧公告说周六16点闭馆，现在应该按几点？"
+      ],
+      "required_evidence_ids": [
+        "D-old",
+        "D-new"
+      ],
+      "expected_facts": [
+        "2025公告优先",
+        "18:00"
+      ],
+      "acceptable_answers": [
+        "2025公告优先；18:00"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-18",
+      "scenario": "conflict",
+      "turns": [
+        "普通续借规则适用于被预约的书吗？"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ],
+      "expected_facts": [
+        "不适用",
+        "预约书不可续借"
+      ],
+      "acceptable_answers": [
+        "不适用；预约书不可续借"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-19",
+      "scenario": "routing",
+      "turns": [
+        "只返回JSON对象，字段max_books为整数：普通借阅上限是多少？"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ],
+      "expected_facts": [
+        "JSON对象",
+        "max_books为5"
+      ],
+      "acceptable_answers": [
+        "JSON对象；max_books为5"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "dev-20",
+      "scenario": "routing",
+      "turns": [
+        "为6人安排周六讨论并借书，列出时间、预约与借阅限制。"
+      ],
+      "required_evidence_ids": [
+        "D-hours",
+        "D-room",
+        "D-loan"
+      ],
+      "expected_facts": [
+        "18:00前",
+        "提前1天",
+        "2小时",
+        "每人5本21天"
+      ],
+      "acceptable_answers": [
+        "18:00前；提前1天；2小时；每人5本21天"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    }
+  ]
+}

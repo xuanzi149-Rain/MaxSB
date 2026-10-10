@@ -12,6 +12,21 @@ const ApplicationDetailRouter = {
   hidden: true,
   children: [
     {
+      path: 'evaluation',
+      name: 'ApplicationEvaluation',
+      meta: {
+        title: 'evaluation.title', active: 'evaluation', icon: 'app-all-menu',
+        parentPath: '/application/:from/:id/:type', parentName: 'ApplicationDetail',
+        permission: [
+          () => { const to: any = get_next_route(); return PermissionConst.APPLICATION_READ.getApplicationWorkspaceResourcePermission(String(to?.params.id || '')) },
+          () => RoleConst.WORKSPACE_MANAGE.getWorkspaceRole(),
+          () => PermissionConst.APPLICATION_READ.getWorkspacePermissionWorkspaceManageRole(),
+          () => RoleConst.ADMIN,
+        ],
+      },
+      component: () => import('@/views/application-evaluation/index.vue'),
+    },
+    {
       path: 'overview',
       name: 'AppOverview',
       meta: {

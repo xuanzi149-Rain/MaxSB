@@ -1,0 +1,8 @@
+PASS: 22 core tests; 14 Django application/chat tests.
+PASS: 120 formal results unique by (run_id, case_id); all three batches completed.
+PASS: reviewed dataset hashes match all exported runs.
+PASS: identical configuration and evaluation source hashes across formal runs.
+PASS: every recorded case contains the planned number of turns.
+PASS: no fabricated human reviews; final accuracy remains null.
+PASS: no credential fields or API-key patterns in formal JSON exports.
+PASS: shared reservation 14.676858 CNY is below the authorized 300 CNY limit.

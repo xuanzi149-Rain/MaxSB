@@ -1,0 +1,23 @@
+{
+  "dialogue_number": 3,
+  "knowledge_setting": {
+    "top_n": 5,
+    "similarity": 0.2,
+    "max_paragraph_char_number": 5000,
+    "search_mode": "embedding"
+  },
+  "model_params": {
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "max_tokens": 2048,
+    "max_retries": 0,
+    "temperature": 0,
+    "stream_usage": true
+  },
+  "api_host": "token-plan.cn-beijing.maas.aliyuncs.com",
+  "broker": "isolated memory broker; no production bookkeeping tasks",
+  "code_sha": "ad6ec469f",
+  "model_alias": "qwen3.7-plus",
+  "note": "Provider alias, not a guaranteed immutable revision; actual billing unavailable"
+}

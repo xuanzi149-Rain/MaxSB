@@ -13,3 +13,4 @@ from .application_api_key import *
 from .conversation_memory import ConversationMemory as ConversationMemory
 from .conversation_memory import ConversationMemoryEvent as ConversationMemoryEvent
 from .tool_recovery import ToolRun, ToolStep, ToolAttempt
+from .evaluation import EvaluationRun, EvaluationCaseResult

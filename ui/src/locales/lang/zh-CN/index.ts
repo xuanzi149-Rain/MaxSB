@@ -10,6 +10,7 @@ import workflow from './workflow'
 import home from './home'
 export default {
   lang: '简体中文',
+  evaluation: { title: 'Agent 评测' },
   zhCn,
   views,
   theme,

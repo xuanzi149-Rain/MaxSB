@@ -1,0 +1,22 @@
+name: Evaluation core
+on:
+  pull_request:
+    paths:
+      - 'apps/application/evaluation/**'
+      - 'tests/evaluation/**'
+      - 'docs/implementation/evaluation/**'
+      - '.github/workflows/evaluation.yml'
+  push:
+    paths:
+      - 'apps/application/evaluation/**'
+      - 'tests/evaluation/**'
+      - 'docs/implementation/evaluation/**'
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: PYTHONPATH=apps python -m unittest discover -s tests/evaluation -v

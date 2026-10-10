@@ -1,0 +1,2033 @@
+{
+  "version": "frozen-v1",
+  "split": "frozen",
+  "cases": [
+    {
+      "case_id": "frozen-001",
+      "scenario": "direct",
+      "turns": [
+        "北站工作日几点停止寄件？"
+      ],
+      "required_evidence_ids": [
+        "F-north"
+      ],
+      "expected_facts": [
+        "16:00"
+      ],
+      "acceptable_answers": [
+        "16:00"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-002",
+      "scenario": "direct",
+      "turns": [
+        "南站单件重量上限？"
+      ],
+      "required_evidence_ids": [
+        "F-south"
+      ],
+      "expected_facts": [
+        "15千克"
+      ],
+      "acceptable_answers": [
+        "15千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-003",
+      "scenario": "direct",
+      "turns": [
+        "东站接受现场付款吗？"
+      ],
+      "required_evidence_ids": [
+        "F-east"
+      ],
+      "expected_facts": [
+        "不接受"
+      ],
+      "acceptable_answers": [
+        "不接受"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-004",
+      "scenario": "direct",
+      "turns": [
+        "西站纸箱多少钱？"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "3元"
+      ],
+      "acceptable_answers": [
+        "3元"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-005",
+      "scenario": "direct",
+      "turns": [
+        "已揽收状态表示什么？"
+      ],
+      "required_evidence_ids": [
+        "F-track"
+      ],
+      "expected_facts": [
+        "包裹进入运输"
+      ],
+      "acceptable_answers": [
+        "包裹进入运输"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-006",
+      "scenario": "direct",
+      "turns": [
+        "易碎标签可以替代缓冲材料吗？"
+      ],
+      "required_evidence_ids": [
+        "F-fragile"
+      ],
+      "expected_facts": [
+        "不可以"
+      ],
+      "acceptable_answers": [
+        "不可以"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-007",
+      "scenario": "direct",
+      "turns": [
+        "取件码有效多久？"
+      ],
+      "required_evidence_ids": [
+        "F-code"
+      ],
+      "expected_facts": [
+        "48小时"
+      ],
+      "acceptable_answers": [
+        "48小时"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-008",
+      "scenario": "direct",
+      "turns": [
+        "自助柜最长可以收多长包裹？"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "40厘米"
+      ],
+      "acceptable_answers": [
+        "40厘米"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-009",
+      "scenario": "direct",
+      "turns": [
+        "退件时需保留什么编号？"
+      ],
+      "required_evidence_ids": [
+        "F-return"
+      ],
+      "expected_facts": [
+        "原运单号"
+      ],
+      "acceptable_answers": [
+        "原运单号"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-010",
+      "scenario": "direct",
+      "turns": [
+        "出库后能直接改目的地吗？"
+      ],
+      "required_evidence_ids": [
+        "F-change"
+      ],
+      "expected_facts": [
+        "不能直接修改"
+      ],
+      "acceptable_answers": [
+        "不能直接修改"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-011",
+      "scenario": "direct",
+      "turns": [
+        "节假日南站几点开放？"
+      ],
+      "required_evidence_ids": [
+        "F-holiday"
+      ],
+      "expected_facts": [
+        "10:00—15:00"
+      ],
+      "acceptable_answers": [
+        "10:00—15:00"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-012",
+      "scenario": "direct",
+      "turns": [
+        "丢件查询缺寄件日期时怎么办？"
+      ],
+      "required_evidence_ids": [
+        "F-lost"
+      ],
+      "expected_facts": [
+        "询问补全寄件日期"
+      ],
+      "acceptable_answers": [
+        "询问补全寄件日期"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-013",
+      "scenario": "multi_evidence",
+      "turns": [
+        "周末一件18千克包裹能在北站或南站寄吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-south"
+      ],
+      "expected_facts": [
+        "北站周末关闭",
+        "南站限15千克",
+        "两者均不满足"
+      ],
+      "acceptable_answers": [
+        "北站周末关闭；南站限15千克；两者均不满足"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-014",
+      "scenario": "multi_evidence",
+      "turns": [
+        "节假日14点寄12千克普通包裹，北站南站选哪里？"
+      ],
+      "required_evidence_ids": [
+        "F-holiday",
+        "F-south"
+      ],
+      "expected_facts": [
+        "南站",
+        "北站关闭",
+        "15点前且不超过15千克"
+      ],
+      "acceptable_answers": [
+        "南站；北站关闭；15点前且不超过15千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-015",
+      "scenario": "multi_evidence",
+      "turns": [
+        "6千克长30厘米包裹可以放自助柜吗？若改为周末到北站人工寄件是否可行？"
+      ],
+      "required_evidence_ids": [
+        "F-locker",
+        "F-north"
+      ],
+      "expected_facts": [
+        "自助柜超过5千克",
+        "北站周末关闭"
+      ],
+      "acceptable_answers": [
+        "自助柜超过5千克；北站周末关闭"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-016",
+      "scenario": "multi_evidence",
+      "turns": [
+        "在西站寄易碎品，免费填充物够不够？"
+      ],
+      "required_evidence_ids": [
+        "F-west",
+        "F-fragile"
+      ],
+      "expected_facts": [
+        "可取免费填充物",
+        "仍需双层包装并填空隙"
+      ],
+      "acceptable_answers": [
+        "可取免费填充物；仍需双层包装并填空隙"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-017",
+      "scenario": "multi_evidence",
+      "turns": [
+        "只有已生成50小时的取件码和待揽收状态，能证明可领取吗？"
+      ],
+      "required_evidence_ids": [
+        "F-code",
+        "F-track"
+      ],
+      "expected_facts": [
+        "取件码过期需重生成",
+        "待揽收不证明已交付",
+        "领取还需运单尾号4位"
+      ],
+      "acceptable_answers": [
+        "取件码过期需重生成；待揽收不证明已交付；领取还需运单尾号4位"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-018",
+      "scenario": "multi_evidence",
+      "turns": [
+        "运单待揽收且刚改口说已经出库，应该相信哪个状态、能直接改目的地吗？"
+      ],
+      "required_evidence_ids": [
+        "F-track",
+        "F-change"
+      ],
+      "expected_facts": [
+        "信息冲突须核实",
+        "若确已出库不能直接改地址需拦截"
+      ],
+      "acceptable_answers": [
+        "信息冲突须核实；若确已出库不能直接改地址需拦截"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-019",
+      "scenario": "multi_evidence",
+      "turns": [
+        "退件地址不完整还想向客服投诉，分别要补哪些信息？"
+      ],
+      "required_evidence_ids": [
+        "F-return",
+        "F-service"
+      ],
+      "expected_facts": [
+        "退件补寄件人地址并保留运单原因",
+        "投诉站点名称与事件日期"
+      ],
+      "acceptable_answers": [
+        "退件补寄件人地址并保留运单原因；投诉站点名称与事件日期"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-020",
+      "scenario": "multi_evidence",
+      "turns": [
+        "企业月结资格可用于个人寄件吗？"
+      ],
+      "required_evidence_ids": [
+        "F-scope-a",
+        "F-scope-b"
+      ],
+      "expected_facts": [
+        "不可",
+        "个人逐单付款"
+      ],
+      "acceptable_answers": [
+        "不可；个人逐单付款"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-021",
+      "scenario": "multi_evidence",
+      "turns": [
+        "长60宽40高30厘米、实际10千克的包裹，其计费重量及南站实际限重是否满足？"
+      ],
+      "required_evidence_ids": [
+        "F-volume",
+        "F-south"
+      ],
+      "expected_facts": [
+        "体积重量12千克",
+        "计费12千克",
+        "实际10千克不超过南站15千克"
+      ],
+      "acceptable_answers": [
+        "体积重量12千克；计费12千克；实际10千克不超过南站15千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-022",
+      "scenario": "multi_evidence",
+      "turns": [
+        "周末有9件各18千克包裹想上门取件或到南站，哪些条件不满足？"
+      ],
+      "required_evidence_ids": [
+        "F-bulk",
+        "F-south"
+      ],
+      "expected_facts": [
+        "不满10件无法上门",
+        "南站每件超过15千克"
+      ],
+      "acceptable_answers": [
+        "不满10件无法上门；南站每件超过15千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-023",
+      "scenario": "multi_evidence",
+      "turns": [
+        "工作日18点想在南站寄件后联系在线客服投诉，需要区分哪些时间和信息？"
+      ],
+      "required_evidence_ids": [
+        "F-service",
+        "F-south"
+      ],
+      "expected_facts": [
+        "南站寄件截止18点",
+        "客服17点结束",
+        "投诉须站点和事件日期"
+      ],
+      "acceptable_answers": [
+        "南站寄件截止18点；客服17点结束；投诉须站点和事件日期"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-024",
+      "scenario": "multi_evidence",
+      "turns": [
+        "电池件在东站用预付运单即可走普通渠道吗？"
+      ],
+      "required_evidence_ids": [
+        "F-east",
+        "F-battery"
+      ],
+      "expected_facts": [
+        "不可走普通渠道",
+        "专用渠道并申报电池类型",
+        "预付不能替代限制"
+      ],
+      "acceptable_answers": [
+        "不可走普通渠道；专用渠道并申报电池类型；预付不能替代限制"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-025",
+      "scenario": "duplicate",
+      "turns": [
+        "北站两份资料都写限重20千克，是否合计允许40千克？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "仍是20千克"
+      ],
+      "acceptable_answers": [
+        "仍是20千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-026",
+      "scenario": "duplicate",
+      "turns": [
+        "综合北站重复说明，周日可寄件吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "周末关闭"
+      ],
+      "acceptable_answers": [
+        "周末关闭"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-027",
+      "scenario": "duplicate",
+      "turns": [
+        "去掉重复信息列出北站截止时间与限重。"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "16:00",
+        "20千克"
+      ],
+      "acceptable_answers": [
+        "16:00；20千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-028",
+      "scenario": "duplicate",
+      "turns": [
+        "两份北站说明的工作日安排有矛盾吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "没有矛盾",
+        "工作日开放"
+      ],
+      "acceptable_answers": [
+        "没有矛盾；工作日开放"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-029",
+      "scenario": "duplicate",
+      "turns": [
+        "北站有重复政策段落，15:30的19千克工作日包裹符合吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "符合截止与限重"
+      ],
+      "acceptable_answers": [
+        "符合截止与限重"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-030",
+      "scenario": "duplicate",
+      "turns": [
+        "20.5千克包裹工作日15点到北站，重复说明能改变限制吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "不能",
+        "超过20千克"
+      ],
+      "acceptable_answers": [
+        "不能；超过20千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-031",
+      "scenario": "duplicate",
+      "turns": [
+        "北站16:30寄一件1千克包裹可行吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "超过截止16:00"
+      ],
+      "acceptable_answers": [
+        "超过截止16:00"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-032",
+      "scenario": "duplicate",
+      "turns": [
+        "只用一句话总结北站适用日期，不重复表述。"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-dupe"
+      ],
+      "expected_facts": [
+        "工作日开放周末关闭"
+      ],
+      "acceptable_answers": [
+        "工作日开放周末关闭"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application",
+      "required_evidence_groups": [
+        [
+          "F-north",
+          "F-dupe"
+        ]
+      ]
+    },
+    {
+      "case_id": "frozen-033",
+      "scenario": "no_evidence",
+      "turns": [
+        "北站负责人私人手机号？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供"
+      ],
+      "acceptable_answers": [
+        "资料未提供"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-034",
+      "scenario": "no_evidence",
+      "turns": [
+        "寄件到火星的运费是多少？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供"
+      ],
+      "acceptable_answers": [
+        "资料未提供"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-035",
+      "scenario": "no_evidence",
+      "turns": [
+        "南站精确经纬度？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供"
+      ],
+      "acceptable_answers": [
+        "资料未提供"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-036",
+      "scenario": "no_evidence",
+      "turns": [
+        "运单UNKNOWN今天几点送达？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "无法由资料确定"
+      ],
+      "acceptable_answers": [
+        "无法由资料确定"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-037",
+      "scenario": "no_evidence",
+      "turns": [
+        "东站支持哪些外币？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供"
+      ],
+      "acceptable_answers": [
+        "资料未提供"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-038",
+      "scenario": "no_evidence",
+      "turns": [
+        "西站仓库门禁密码？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供，不编造"
+      ],
+      "acceptable_answers": [
+        "资料未提供，不编造"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-039",
+      "scenario": "no_evidence",
+      "turns": [
+        "遗失包裹一定赔多少钱？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供金额"
+      ],
+      "acceptable_answers": [
+        "资料未提供金额"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-040",
+      "scenario": "no_evidence",
+      "turns": [
+        "临时柜台上一次消防检查的具体日期是什么？"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "资料未提供日期，不能编造"
+      ],
+      "acceptable_answers": [
+        "资料未提供日期，不能编造"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-041",
+      "scenario": "conversation",
+      "turns": [
+        "我有4千克包裹。",
+        "更正为6千克，长30厘米。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "能用自助柜吗？"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "不能",
+        "超过5千克"
+      ],
+      "acceptable_answers": [
+        "不能；超过5千克"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-042",
+      "scenario": "conversation",
+      "turns": [
+        "我准备去北站。",
+        "改成周日寄件。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "这天那里开放吗？"
+      ],
+      "required_evidence_ids": [
+        "F-north"
+      ],
+      "expected_facts": [
+        "北站周日关闭"
+      ],
+      "acceptable_answers": [
+        "北站周日关闭"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-043",
+      "scenario": "conversation",
+      "turns": [
+        "比较北站和南站。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "第二个站点能接18千克吗？"
+      ],
+      "required_evidence_ids": [
+        "F-south"
+      ],
+      "expected_facts": [
+        "南站",
+        "超过15千克不能"
+      ],
+      "acceptable_answers": [
+        "南站；超过15千克不能"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-044",
+      "scenario": "conversation",
+      "turns": [
+        "我有9件要寄。",
+        "又增加2件。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "现在能预约上门吗？"
+      ],
+      "required_evidence_ids": [
+        "F-bulk"
+      ],
+      "expected_facts": [
+        "11件满足数量",
+        "提前24小时预约"
+      ],
+      "acceptable_answers": [
+        "11件满足数量；提前24小时预约"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-045",
+      "scenario": "conversation",
+      "turns": [
+        "包裹还没出库。",
+        "刚确认已经出库了。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "还能直接改地址吗？"
+      ],
+      "required_evidence_ids": [
+        "F-change"
+      ],
+      "expected_facts": [
+        "不能",
+        "提交拦截且不保证成功"
+      ],
+      "acceptable_answers": [
+        "不能；提交拦截且不保证成功"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-046",
+      "scenario": "conversation",
+      "turns": [
+        "我的取件码已经生成24小时。",
+        "又过了30小时。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "还能使用吗？"
+      ],
+      "required_evidence_ids": [
+        "F-code"
+      ],
+      "expected_facts": [
+        "54小时已过48小时",
+        "重新生成"
+      ],
+      "acceptable_answers": [
+        "54小时已过48小时；重新生成"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-047",
+      "scenario": "conversation",
+      "turns": [
+        "我是签约企业用户。",
+        "这次是我个人寄件。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "可以用月结吗？"
+      ],
+      "required_evidence_ids": [
+        "F-scope-a",
+        "F-scope-b"
+      ],
+      "expected_facts": [
+        "个人寄件不支持月结"
+      ],
+      "acceptable_answers": [
+        "个人寄件不支持月结"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-048",
+      "scenario": "conversation",
+      "turns": [
+        "我要寄普通包裹。",
+        "补充：里面有电池。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "可以走普通渠道吗？"
+      ],
+      "required_evidence_ids": [
+        "F-battery"
+      ],
+      "expected_facts": [
+        "不能",
+        "专用渠道",
+        "申报类型"
+      ],
+      "acceptable_answers": [
+        "不能；专用渠道；申报类型"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-049",
+      "scenario": "conversation",
+      "turns": [
+        "我在工作日去南站。",
+        "实际日期是节假日，16点到。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "是否还开放？"
+      ],
+      "required_evidence_ids": [
+        "F-holiday"
+      ],
+      "expected_facts": [
+        "节假日15点关闭"
+      ],
+      "acceptable_answers": [
+        "节假日15点关闭"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-050",
+      "scenario": "conversation",
+      "turns": [
+        "查询丢失包裹。",
+        "我只有运单号和寄件日期。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "还需要提供什么？"
+      ],
+      "required_evidence_ids": [
+        "F-lost"
+      ],
+      "expected_facts": [
+        "寄件站点"
+      ],
+      "acceptable_answers": [
+        "寄件站点"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-051",
+      "scenario": "conversation",
+      "turns": [
+        "我选自助柜，包裹4千克。",
+        "长边从40厘米改成45厘米。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "现在符合吗？"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "超出40厘米",
+        "不符合"
+      ],
+      "acceptable_answers": [
+        "超出40厘米；不符合"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-052",
+      "scenario": "conversation",
+      "turns": [
+        "我打算向西站买纸箱。",
+        "只要填充物，不买纸箱了。",
+        "补充一个无关安排：我下午准备整理书桌，这不改变之前的条件。",
+        "我更喜欢用简短条目接收答复，业务条件保持不变。",
+        "暂时不需要你制定计划，请先记住前面的要求。",
+        "我今天还会清理电子邮件，这与刚才的问题无关。",
+        "请不要把我接下来谈的日常安排当作业务条件。",
+        "我晚饭后准备散步；此前的数量、地点和日期仍按原话。",
+        "先不执行任何操作，我还在核对信息。",
+        "我习惯把待办事项写在纸上，不需要额外软件建议。",
+        "回到前面的事项之前，请保留我已经更正过的信息。",
+        "现在结束闲聊，下一条我会继续问原来的事项。",
+        "按资料需要支付多少？"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "填充物免费"
+      ],
+      "acceptable_answers": [
+        "填充物免费"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 最终轮必须使用最初条件及明确更正；中间无关轮次不能覆盖条件。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-053",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F001，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "已揽收"
+      ],
+      "acceptable_answers": [
+        "已揽收"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F001",
+        "status": "已揽收"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-054",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F002，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "待揽收"
+      ],
+      "acceptable_answers": [
+        "待揽收"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F002",
+        "status": "待揽收"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-055",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F003，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "运输中"
+      ],
+      "acceptable_answers": [
+        "运输中"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F003",
+        "status": "运输中"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-056",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F004，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "待领取"
+      ],
+      "acceptable_answers": [
+        "待领取"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F004",
+        "status": "待领取"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-057",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F005，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "已退回"
+      ],
+      "acceptable_answers": [
+        "已退回"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F005",
+        "status": "已退回"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-058",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F006，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "已签收"
+      ],
+      "acceptable_answers": [
+        "已签收"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F006",
+        "status": "已签收"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-059",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F007，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "拦截中"
+      ],
+      "acceptable_answers": [
+        "拦截中"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F007",
+        "status": "拦截中"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-060",
+      "scenario": "tool_success",
+      "turns": [
+        "调用只读查件工具查运单F008，根据工具返回报告状态，不编造送达时间。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "查无记录"
+      ],
+      "acceptable_answers": [
+        "查无记录"
+      ],
+      "tool_expectation": {
+        "outcome": "success",
+        "tracking_id": "F008",
+        "status": "查无记录"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-061",
+      "scenario": "tool_timeout",
+      "turns": [
+        "调用只读工具查FT01，若服务超时，明确告知无法确认，不能猜测运输状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "工具超时",
+        "无法确认状态"
+      ],
+      "acceptable_answers": [
+        "工具超时；无法确认状态"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "FT01"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-062",
+      "scenario": "tool_timeout",
+      "turns": [
+        "调用只读工具查FT02，若服务超时，明确告知无法确认，不能猜测运输状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "工具超时",
+        "无法确认状态"
+      ],
+      "acceptable_answers": [
+        "工具超时；无法确认状态"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "FT02"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-063",
+      "scenario": "tool_timeout",
+      "turns": [
+        "调用只读工具查FT03，若服务超时，明确告知无法确认，不能猜测运输状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "工具超时",
+        "无法确认状态"
+      ],
+      "acceptable_answers": [
+        "工具超时；无法确认状态"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "FT03"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-064",
+      "scenario": "tool_timeout",
+      "turns": [
+        "调用只读工具查FT04，若服务超时，明确告知无法确认，不能猜测运输状态。"
+      ],
+      "required_evidence_ids": [],
+      "expected_facts": [
+        "工具超时",
+        "无法确认状态"
+      ],
+      "acceptable_answers": [
+        "工具超时；无法确认状态"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "FT04"
+      },
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。 此项仅评测受控只读工具工作流的执行，不评测Agent自主选工具；超时失败不是任务完成。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "controlled_tool_workflow"
+    },
+    {
+      "case_id": "frozen-065",
+      "scenario": "conflict",
+      "turns": [
+        "南站旧规则17点、新规则18点，现行几点截止？"
+      ],
+      "required_evidence_ids": [
+        "F-notice-old",
+        "F-notice-new"
+      ],
+      "expected_facts": [
+        "18点",
+        "2025版替代旧版"
+      ],
+      "acceptable_answers": [
+        "18点；2025版替代旧版"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-066",
+      "scenario": "conflict",
+      "turns": [
+        "17:30去南站按2024版会拒收，按现行时间规则呢？"
+      ],
+      "required_evidence_ids": [
+        "F-notice-old",
+        "F-notice-new"
+      ],
+      "expected_facts": [
+        "2025版18点截止",
+        "17:30未超过"
+      ],
+      "acceptable_answers": [
+        "2025版18点截止；17:30未超过"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-067",
+      "scenario": "conflict",
+      "turns": [
+        "北站普通工作日开放，但节假日遇到周三怎么办？"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-holiday"
+      ],
+      "expected_facts": [
+        "节假日关闭优先"
+      ],
+      "acceptable_answers": [
+        "节假日关闭优先"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-068",
+      "scenario": "conflict",
+      "turns": [
+        "南站每天开放，节假日8点可以到吗？"
+      ],
+      "required_evidence_ids": [
+        "F-south",
+        "F-holiday"
+      ],
+      "expected_facts": [
+        "不可以",
+        "节假日10点开放"
+      ],
+      "acceptable_answers": [
+        "不可以；节假日10点开放"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-069",
+      "scenario": "conflict",
+      "turns": [
+        "月结与逐单付款两条规则是不是互相矛盾？"
+      ],
+      "required_evidence_ids": [
+        "F-scope-a",
+        "F-scope-b"
+      ],
+      "expected_facts": [
+        "适用对象不同",
+        "签约企业月结",
+        "个人逐单"
+      ],
+      "acceptable_answers": [
+        "适用对象不同；签约企业月结；个人逐单"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-070",
+      "scenario": "conflict",
+      "turns": [
+        "两份无日期公告对临时柜台周三相反，应确定说开还是关？"
+      ],
+      "required_evidence_ids": [
+        "F-uncertain-a",
+        "F-uncertain-b"
+      ],
+      "expected_facts": [
+        "无法确定",
+        "需核实公告生效信息"
+      ],
+      "acceptable_answers": [
+        "无法确定；需核实公告生效信息"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-071",
+      "scenario": "conflict",
+      "turns": [
+        "有免费填充物是否说明西站纸箱也免费？"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "不说明",
+        "纸箱3元"
+      ],
+      "acceptable_answers": [
+        "不说明；纸箱3元"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-072",
+      "scenario": "conflict",
+      "turns": [
+        "人工柜台允许100厘米，能把规则用于自助柜吗？"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "不可以",
+        "自助柜40厘米"
+      ],
+      "acceptable_answers": [
+        "不可以；自助柜40厘米"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-073",
+      "scenario": "routing",
+      "turns": [
+        "以JSON返回南站限重，字段max_kg必须为整数。"
+      ],
+      "required_evidence_ids": [
+        "F-south"
+      ],
+      "expected_facts": [
+        "合法JSON",
+        "max_kg为15"
+      ],
+      "acceptable_answers": [
+        "合法JSON；max_kg为15"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-074",
+      "scenario": "routing",
+      "turns": [
+        "只返回数组列出领取所需两种信息。"
+      ],
+      "required_evidence_ids": [
+        "F-code"
+      ],
+      "expected_facts": [
+        "取件码",
+        "运单尾号4位"
+      ],
+      "acceptable_answers": [
+        "取件码；运单尾号4位"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-075",
+      "scenario": "routing",
+      "turns": [
+        "分类：待揽收是否代表已交付？输出已交付或未确认交付。"
+      ],
+      "required_evidence_ids": [
+        "F-track"
+      ],
+      "expected_facts": [
+        "未确认交付"
+      ],
+      "acceptable_answers": [
+        "未确认交付"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-076",
+      "scenario": "routing",
+      "turns": [
+        "提取西站纸箱价格，JSON字段price和currency。"
+      ],
+      "required_evidence_ids": [
+        "F-west"
+      ],
+      "expected_facts": [
+        "price为3",
+        "currency为CNY"
+      ],
+      "acceptable_answers": [
+        "price为3；currency为CNY"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-077",
+      "scenario": "routing",
+      "turns": [
+        "周日寄18千克电池件，综合北站、南站和渠道规则给出结论。"
+      ],
+      "required_evidence_ids": [
+        "F-north",
+        "F-south",
+        "F-battery"
+      ],
+      "expected_facts": [
+        "北站关闭",
+        "南站超重",
+        "电池须专用渠道"
+      ],
+      "acceptable_answers": [
+        "北站关闭；南站超重；电池须专用渠道"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-078",
+      "scenario": "routing",
+      "turns": [
+        "12件易碎件明天寄出，计划上门并使用西站材料，需要哪些条件？"
+      ],
+      "required_evidence_ids": [
+        "F-bulk",
+        "F-fragile",
+        "F-west"
+      ],
+      "expected_facts": [
+        "提前24小时",
+        "满10件",
+        "双层包装填充",
+        "纸箱3元填充免费"
+      ],
+      "acceptable_answers": [
+        "提前24小时；满10件；双层包装填充；纸箱3元填充免费"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-079",
+      "scenario": "routing",
+      "turns": [
+        "如何处理出库后地址修改以及寄件人地址缺失的退件？区分两种情形。"
+      ],
+      "required_evidence_ids": [
+        "F-change",
+        "F-return"
+      ],
+      "expected_facts": [
+        "出库后申请拦截不保证",
+        "退件补全地址保留运单原因"
+      ],
+      "acceptable_answers": [
+        "出库后申请拦截不保证；退件补全地址保留运单原因"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    },
+    {
+      "case_id": "frozen-080",
+      "scenario": "routing",
+      "turns": [
+        "比较自助柜和人工柜台的重量尺寸，并判断6千克50厘米包裹选哪个。"
+      ],
+      "required_evidence_ids": [
+        "F-locker"
+      ],
+      "expected_facts": [
+        "5千克40厘米",
+        "20千克100厘米",
+        "人工柜台"
+      ],
+      "acceptable_answers": [
+        "5千克40厘米；20千克100厘米；人工柜台"
+      ],
+      "tool_expectation": null,
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "evaluation_scope": "application"
+    }
+  ]
+}

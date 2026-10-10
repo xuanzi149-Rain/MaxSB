@@ -1,0 +1,10 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.915 seconds.
+Prefix dict has been built successfully.
+Migrations for 'application':
+  apps/application/migrations/0017_alter_application_work_flow_and_more.py
+    ~ Alter field work_flow on application
+    ~ Alter field access_num on applicationchatuserstats
+    ~ Alter field work_flow on applicationversion
+    ~ Alter field answer_text_list on chatrecord

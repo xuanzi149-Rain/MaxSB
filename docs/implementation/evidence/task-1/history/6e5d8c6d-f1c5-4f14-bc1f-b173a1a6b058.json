@@ -1,0 +1,870 @@
+{
+  "run_id": "6e5d8c6d-f1c5-4f14-bc1f-b173a1a6b058",
+  "status": "interrupted",
+  "dataset_version": "dev-v1",
+  "dataset_hash": "7f30a0578d809f5e69fd0b0630e871fee439f4d39c93aff56eb580d960db0953",
+  "config_hash": "014ae9a9f6626fa4b065bd0bd8f2e28d78ca64473153fa57d8d7abf224e0a47d",
+  "created_at": "2026-10-09T07:57:25.187Z",
+  "started_at": "2026-10-09T07:57:25.198Z",
+  "finished_at": "2026-10-09T08:05:16.819Z",
+  "progress": 5,
+  "total": 20,
+  "summary": {
+    "count": 20,
+    "review_coverage": 0.0,
+    "accuracy": null,
+    "confirmed_correct_fraction": 0.0,
+    "successful_execution_count": 0,
+    "cost_per_success": null,
+    "actual_cost": null,
+    "currency": null,
+    "average_input_tokens": null,
+    "input_token_coverage": 0.0,
+    "average_output_tokens": null,
+    "output_token_coverage": 0.0,
+    "p95_seconds": 58.985115152001526,
+    "latency_sample_count": 5,
+    "evidence_recall": 1.0,
+    "evidence_recall_sample_count": 5,
+    "tool_complete": null,
+    "tool_complete_sample_count": 0,
+    "citation_accuracy": null,
+    "citation_reviewed_count": 0,
+    "cost_coverage": 0.0
+  },
+  "error": "budget_guard_rejected_filtered_parameters",
+  "snapshot": {
+    "models": [
+      {
+        "id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+        "provider": "aliyun_bai_lian_model_provider",
+        "model_name": "qwen3.7-plus",
+        "model_type": "LLM",
+        "update_time": "2026-10-09T02:20:30.104Z"
+      }
+    ],
+    "code_sha": "aab45ab55",
+    "image_id": "sha256:762dd063cad1ebe2f83342ee394b757296c924d7ff30586de954b7866ff0a351",
+    "model_id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+    "config_hash": "014ae9a9f6626fa4b065bd0bd8f2e28d78ca64473153fa57d8d7abf224e0a47d",
+    "model_params": {
+      "max_tokens": 2048,
+      "temperature": 0
+    },
+    "tool_fixture": "readonly_lookup_v1",
+    "workspace_id": "default",
+    "knowledge_ids": [
+      "01a11f8e-fbbb-7a33-a42c-c6a5636b8e73"
+    ],
+    "application_id": "01a11f8e-fbdc-7fa1-9378-3fec7c7ec793",
+    "knowledge_hash": "6bae7634ea785a4b6e39fdbb4b78dbdcbf17581575537115cf98fd274316ca07",
+    "local_diff_hash": null,
+    "application_hash": "05dc44d72c47bb7a2b07c825e5cd26f19b2f5945a144e603f4adf593bde697ee",
+    "application_type": "SIMPLE",
+    "tool_fixture_hash": "d55158325ddb50f22d567e1e065d6dd372778a9368206c828fd748428e12f39a",
+    "model_version_status": "provider model names; immutable revision not reported",
+    "evaluation_source_hash": "46ee3c8f741627f54ef3ed64aba0268d132606ff36cfec2621e88e43bd06c2bf"
+  },
+  "cases": [
+    {
+      "error": "missing_end_frame",
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 31.27828097343445,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 4.579859256744385,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": "missing_end_frame",
+          "answer": "",
+          "complete": false,
+          "record_id": "01a11fab-8dfd-76e3-8a55-b663eba39148",
+          "input_tokens": null,
+          "usage_source": "unknown",
+          "output_tokens": null,
+          "model_call_count": 1,
+          "estimated_input_tokens": 0,
+          "estimated_output_tokens": 0
+        }
+      ],
+      "answer": "",
+      "status": "failed",
+      "case_id": "dev-01",
+      "chat_id": "01a11fab-0623-7622-aba7-4cede47d3619",
+      "scenario": "direct",
+      "citations": [],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": null,
+      "usage_source": "see_turns",
+      "output_tokens": null,
+      "elapsed_seconds": 58.985115152001526,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-hours",
+        "D-loan",
+        "D-new"
+      ],
+      "review": {}
+    },
+    {
+      "error": "missing_end_frame",
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 2.466919422149658,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 4.058817148208618,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": "missing_end_frame",
+          "answer": "",
+          "complete": false,
+          "record_id": "01a11fac-017c-7801-8467-32e006559337",
+          "input_tokens": null,
+          "usage_source": "unknown",
+          "output_tokens": null,
+          "model_call_count": 1,
+          "estimated_input_tokens": 0,
+          "estimated_output_tokens": 0
+        }
+      ],
+      "answer": "",
+      "status": "failed",
+      "case_id": "dev-02",
+      "chat_id": "01a11fab-ec6c-72c3-8931-ce7b9d7cb9a6",
+      "scenario": "direct",
+      "citations": [],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": null,
+      "usage_source": "see_turns",
+      "output_tokens": null,
+      "elapsed_seconds": 28.94758717899822,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-hours",
+        "D-loan",
+        "D-room"
+      ],
+      "review": {}
+    },
+    {
+      "error": "missing_end_frame",
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.9348061084747314,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.357194423675537,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": "missing_end_frame",
+          "answer": "",
+          "complete": false,
+          "record_id": "01a11fac-55f7-7623-a299-fb6f66e28ecc",
+          "input_tokens": null,
+          "usage_source": "unknown",
+          "output_tokens": null,
+          "model_call_count": 1,
+          "estimated_input_tokens": 0,
+          "estimated_output_tokens": 0
+        }
+      ],
+      "answer": "",
+      "status": "failed",
+      "case_id": "dev-03",
+      "chat_id": "01a11fac-4e8a-7532-b323-8bef6a3bd513",
+      "scenario": "direct",
+      "citations": [],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": null,
+      "usage_source": "see_turns",
+      "output_tokens": null,
+      "elapsed_seconds": 21.332478717999038,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-loan",
+        "D-room",
+        "F-locker"
+      ],
+      "review": {}
+    },
+    {
+      "error": "missing_end_frame",
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false,
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.7983403205871582,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.240128993988037,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": "missing_end_frame",
+          "answer": "",
+          "complete": false,
+          "record_id": "01a11fac-a0fe-7f60-84ab-98dfb5fe0052",
+          "input_tokens": null,
+          "usage_source": "unknown",
+          "output_tokens": null,
+          "model_call_count": 1,
+          "estimated_input_tokens": 0,
+          "estimated_output_tokens": 0
+        }
+      ],
+      "answer": "",
+      "status": "failed",
+      "case_id": "dev-04",
+      "chat_id": "01a11fac-99c0-7503-89f8-5eac0ea5ac59",
+      "scenario": "multi_evidence",
+      "citations": [],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": null,
+      "usage_source": "see_turns",
+      "output_tokens": null,
+      "elapsed_seconds": 19.145076425000298,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-access",
+        "D-copy",
+        "D-hours",
+        "D-loan",
+        "D-new"
+      ],
+      "review": {}
+    },
+    {
+      "error": "missing_end_frame",
+      "score": {
+        "correct": null,
+        "fact_mentions": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "review_status": "pending",
+        "tool_complete": null,
+        "evidence_recall": 1.0,
+        "citation_accuracy": null,
+        "missing_evidence_ids": []
+      },
+      "trace": [
+        {
+          "status": 200,
+          "node_id": "search_step",
+          "run_time": 0.9967916011810303,
+          "node_type": "search_step"
+        },
+        {
+          "status": 200,
+          "node_id": "generate_human_message",
+          "run_time": null,
+          "node_type": "generate_human_message"
+        },
+        {
+          "status": 200,
+          "node_id": "chat_step",
+          "run_time": 2.7045509815216064,
+          "node_type": "chat_step"
+        }
+      ],
+      "turns": [
+        {
+          "error": "missing_end_frame",
+          "answer": "",
+          "complete": false,
+          "record_id": "01a11fac-eb32-7dd2-aac3-db5cd8b7a7d7",
+          "input_tokens": null,
+          "usage_source": "unknown",
+          "output_tokens": null,
+          "model_call_count": 1,
+          "estimated_input_tokens": 0,
+          "estimated_output_tokens": 0
+        }
+      ],
+      "answer": "",
+      "status": "failed",
+      "case_id": "dev-05",
+      "chat_id": "01a11fac-e18d-7312-8431-2d9060596b40",
+      "scenario": "multi_evidence",
+      "citations": [],
+      "actual_cost": null,
+      "tool_events": [],
+      "input_tokens": null,
+      "usage_source": "see_turns",
+      "output_tokens": null,
+      "elapsed_seconds": 19.051318674999493,
+      "evaluation_scope": "application",
+      "retrieved_evidence_ids": [
+        "D-copy",
+        "D-hours",
+        "D-new",
+        "D-old",
+        "D-room"
+      ],
+      "review": {}
+    }
+  ],
+  "questions": [
+    {
+      "turns": [
+        "青禾图书室周一开放吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-01",
+      "scenario": "direct",
+      "expected_facts": [
+        "周一闭馆"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "周一闭馆"
+      ],
+      "required_evidence_ids": [
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "普通读者一次能借几本书？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-02",
+      "scenario": "direct",
+      "expected_facts": [
+        "最多5本"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "最多5本"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "讨论室最多容纳多少人？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-03",
+      "scenario": "direct",
+      "expected_facts": [
+        "6人"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "6人"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "周一能进入青禾图书室并用自助箱还书吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-04",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "室内闭馆",
+        "自助还书箱可用"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "室内闭馆；自助还书箱可用"
+      ],
+      "required_evidence_ids": [
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "周六带五位朋友讨论两小时，该怎么安排？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-05",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "6人可容纳",
+        "需提前1天预约",
+        "不超过2小时",
+        "18:00前结束"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "6人可容纳；需提前1天预约；不超过2小时；18:00前结束"
+      ],
+      "required_evidence_ids": [
+        "D-room",
+        "D-hours"
+      ]
+    },
+    {
+      "turns": [
+        "行动不便的读者如何寻找大字版图书？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-06",
+      "scenario": "multi_evidence",
+      "expected_facts": [
+        "一楼无障碍入口",
+        "乘电梯到二楼A区"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "一楼无障碍入口；乘电梯到二楼A区"
+      ],
+      "required_evidence_ids": [
+        "D-access"
+      ]
+    },
+    {
+      "turns": [
+        "请给出借阅上限与借期，并保留资料出处。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-07",
+      "scenario": "duplicate",
+      "expected_facts": [
+        "5本",
+        "21天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "5本；21天"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "两段资料都提到续借，续借次数能相加吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-08",
+      "scenario": "duplicate",
+      "expected_facts": [
+        "不能相加",
+        "最多1次14天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "不能相加；最多1次14天"
+      ],
+      "required_evidence_ids": [
+        "D-loan",
+        "D-copy"
+      ]
+    },
+    {
+      "turns": [
+        "图书室管理员的私人电话是多少？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-09",
+      "scenario": "no_evidence",
+      "expected_facts": [
+        "资料未提供",
+        "不编造电话"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "资料未提供；不编造电话"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "图书室打印一页多少钱？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-10",
+      "scenario": "no_evidence",
+      "expected_facts": [
+        "资料未提供价格"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "资料未提供价格"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "我要与同学讨论作业。",
+        "这里应该选阅览区还是讨论室？",
+        "它需要提前多久预约？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-11",
+      "scenario": "conversation",
+      "expected_facts": [
+        "讨论室",
+        "提前1天预约"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "讨论室；提前1天预约"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "我们7个人想预约讨论室。",
+        "有1人取消，现在人数变了。",
+        "现在能用讨论室吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-12",
+      "scenario": "conversation",
+      "expected_facts": [
+        "最终人数6人",
+        "可用讨论室"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "最终人数6人；可用讨论室"
+      ],
+      "required_evidence_ids": [
+        "D-room"
+      ]
+    },
+    {
+      "turns": [
+        "我想续借一本普通书。",
+        "补充一下，这本书已被其他人预约。",
+        "还能续借吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-13",
+      "scenario": "conversation",
+      "expected_facts": [
+        "预约中的书不可续借"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "预约中的书不可续借"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "用只读查件工具查询DEV001，报告返回状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-14",
+      "scenario": "tool_success",
+      "expected_facts": [
+        "已揽收"
+      ],
+      "tool_expectation": {
+        "status": "已揽收",
+        "outcome": "success",
+        "tracking_id": "DEV001"
+      },
+      "acceptable_answers": [
+        "已揽收"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "用只读查件工具查询DEV002，不要凭常识猜状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-15",
+      "scenario": "tool_success",
+      "expected_facts": [
+        "待揽收"
+      ],
+      "tool_expectation": {
+        "status": "待揽收",
+        "outcome": "success",
+        "tracking_id": "DEV002"
+      },
+      "acceptable_answers": [
+        "待揽收"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "查询DEV-TIMEOUT；若工具超时，说明无法确认状态。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-16",
+      "scenario": "tool_timeout",
+      "expected_facts": [
+        "无法确认状态",
+        "工具超时"
+      ],
+      "tool_expectation": {
+        "outcome": "timeout",
+        "tracking_id": "DEV-TIMEOUT"
+      },
+      "acceptable_answers": [
+        "无法确认状态；工具超时"
+      ],
+      "required_evidence_ids": []
+    },
+    {
+      "turns": [
+        "旧公告说周六16点闭馆，现在应该按几点？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-17",
+      "scenario": "conflict",
+      "expected_facts": [
+        "2025公告优先",
+        "18:00"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "2025公告优先；18:00"
+      ],
+      "required_evidence_ids": [
+        "D-old",
+        "D-new"
+      ]
+    },
+    {
+      "turns": [
+        "普通续借规则适用于被预约的书吗？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-18",
+      "scenario": "conflict",
+      "expected_facts": [
+        "不适用",
+        "预约书不可续借"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "不适用；预约书不可续借"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "只返回JSON对象，字段max_books为整数：普通借阅上限是多少？"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-19",
+      "scenario": "routing",
+      "expected_facts": [
+        "JSON对象",
+        "max_books为5"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "JSON对象；max_books为5"
+      ],
+      "required_evidence_ids": [
+        "D-loan"
+      ]
+    },
+    {
+      "turns": [
+        "为6人安排周六讨论并借书，列出时间、预约与借阅限制。"
+      ],
+      "rubric": {
+        "correct": "必须满足全部关键事实；等价表达可接受；不得添加与资料矛盾的事实。",
+        "failure": "缺失关键事实、错误继承条件、无依据断言或未完成要求的行为均不通过。"
+      },
+      "case_id": "dev-20",
+      "scenario": "routing",
+      "expected_facts": [
+        "18:00前",
+        "提前1天",
+        "2小时",
+        "每人5本21天"
+      ],
+      "tool_expectation": null,
+      "acceptable_answers": [
+        "18:00前；提前1天；2小时；每人5本21天"
+      ],
+      "required_evidence_ids": [
+        "D-hours",
+        "D-room",
+        "D-loan"
+      ]
+    }
+  ]
+}
