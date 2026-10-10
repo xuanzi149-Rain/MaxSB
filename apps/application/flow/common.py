@@ -203,6 +203,8 @@ class Workflow:
         """
         校验工作流数据
         """
+        from application.conversation_memory.config import validate_memory_workflow
+        validate_memory_workflow(self)
         self.is_valid_model_params()
         self.is_valid_start_node()
         self.is_valid_base_node()
