@@ -27,7 +27,7 @@ class Handler(BaseHTTPRequestHandler):
             while data := os.read(proc.stdout.fileno(), 65536):
                 self.connection.sendall(data)
         self.close_connection = True
-    do_GET = do_POST = do_PATCH = do_DELETE = do_OPTIONS = forward
+    do_GET = do_POST = do_PUT = do_PATCH = do_DELETE = do_OPTIONS = forward
     def log_message(self, *args):
         pass
 

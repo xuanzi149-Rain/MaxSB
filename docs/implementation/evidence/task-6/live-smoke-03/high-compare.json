@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "high",
+  "case_id": "compare",
+  "question": "比较方案A（每月20元、10GB）与B（每月30元、30GB）的流量单价。",
+  "answer": "{\"answer\":\"方案A：2元/GB，方案B：1元/GB，方案B更便宜。\"}",
+  "status": "success",
+  "elapsed_seconds": 0.7296278750000056,
+  "model_routing": {
+    "task_id": "d5c62edf-7dc7-480a-ad75-701ebf382458",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "high",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "cd5c092b-ee8f-4558-bd3b-22238b673387",
+        "role": "high",
+        "model_id": "01a11f05-0114-7e73-859e-5cc08ccb3e70",
+        "model_name": "deepseek-v4-flash",
+        "started_at": "2026-10-10T11:53:56.375238+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 44,
+          "output_tokens": 25,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "deepseek-flash",
+        "ended_at": "2026-10-10T11:53:57.104051+00:00",
+        "elapsed_seconds": 0.7288282500085188,
+        "priced_cost": "0.000144",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_basis": "offpeak_reference_price_not_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 44,
+      "output_tokens": 25
+    },
+    "priced_cost": "0.000144",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

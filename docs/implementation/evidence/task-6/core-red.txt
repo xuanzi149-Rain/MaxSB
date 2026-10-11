@@ -1,0 +1,21 @@
+test_core (unittest.loader._FailedTest.test_core) ... ERROR
+
+======================================================================
+ERROR: test_core (unittest.loader._FailedTest.test_core)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_core
+Traceback (most recent call last):
+  File "/Users/wangzixuan/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangzixuan/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "/Users/wangzixuan/.codex/worktrees/task6-model-routing/MaxSB/tests/model_routing/test_core.py", line 2, in <module>
+    from application.model_routing.config import parse_policy
+ModuleNotFoundError: No module named 'application.model_routing'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

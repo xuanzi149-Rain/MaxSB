@@ -1,0 +1,478 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.832 seconds.
+Prefix dict has been built successfully.
+Found 117 test(s).
+Creating test database for alias 'default' ('test_maxsb_routing_task6')...
+Operations to perform:
+  Synchronize unmigrated apps: common, drf_spectacular, drf_spectacular_sidecar, messages, rest_framework, staticfiles
+  Apply all migrations: application, contenttypes, django_apscheduler, django_celery_beat, knowledge, models_provider, system_manage, tools, trigger, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying users.0001_initial... OK
+  Applying tools.0001_initial... OK
+  Applying system_manage.0001_initial... OK
+  Applying system_manage.0002_refresh_collation_reindex...ERROR:root:reindex database maxkb发送错误:connection failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "root" does not exist
+ERROR:root:reindex database root 发送错误:connection failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "root" does not exist
+ OK
+  Applying models_provider.0001_initial... OK
+  Applying knowledge.0001_initial... OK
+  Applying application.0001_initial... OK
+  Applying system_manage.0003_alter_workspaceuserresourcepermission_target... OK
+  Applying system_manage.0004_alter_systemsetting_type_and_more... OK
+  Applying knowledge.0002_alter_file_source_type... OK
+  Applying knowledge.0003_tag_documenttag... OK
+  Applying knowledge.0004_alter_document_type_alter_knowledge_type_and_more... OK
+  Applying knowledge.0005_knowledgeaction... OK
+  Applying knowledge.0006_paragraph_chunks... OK
+  Applying knowledge.0007_remove_knowledgeworkflowversion_workflow_and_more... OK
+  Applying application.0002_application_simple_mcp... OK
+  Applying application.0003_application_stt_model_params_setting_and_more... OK
+  Applying system_manage.0005_resourcemapping... OK
+  Applying application.0004_application_application_enable_and_more... OK
+  Applying application.0005_chatrecord_vote_other_content_chatrecord_vote_reason... OK
+  Applying application.0006_application_file_clean_time... OK
+  Applying application.0007_applicationapikey_expire_time_and_more... OK
+  Applying application.0008_chat_ip_address_chat_source_chatrecord_ip_address_and_more... OK
+  Applying application.0009_clean_application_knowledge_mapping... OK
+  Applying application.0010_chatsharelink... OK
+  Applying application.0011_application_skill_tool_ids... OK
+  Applying application.0012_remove_applicationapikey_user... OK
+  Applying application.0013_application_long_term_enable_and_more... OK
+  Applying application.0014_applicationversion_knowledge_ids... OK
+  Applying application.0015_application_default_model_setting_and_more... OK
+  Applying application.0016_conversation_memory... OK
+  Applying application.0017_tool_recovery... OK
+  Applying application.0016_evaluation... OK
+  Applying application.0018_merge_evaluation... OK
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying django_apscheduler.0001_initial... OK
+  Applying django_apscheduler.0002_auto_20180412_0758... OK
+  Applying django_apscheduler.0003_auto_20200716_1632... OK
+  Applying django_apscheduler.0004_auto_20200717_1043... OK
+  Applying django_apscheduler.0005_migrate_name_to_id... OK
+  Applying django_apscheduler.0006_remove_djangojob_name... OK
+  Applying django_apscheduler.0007_auto_20200717_1404... OK
+  Applying django_apscheduler.0008_remove_djangojobexecution_started... OK
+  Applying django_apscheduler.0009_djangojobexecution_unique_job_executions... OK
+  Applying django_celery_beat.0001_initial... OK
+  Applying django_celery_beat.0002_auto_20161118_0346... OK
+  Applying django_celery_beat.0003_auto_20161209_0049... OK
+  Applying django_celery_beat.0004_auto_20170221_0000... OK
+  Applying django_celery_beat.0005_add_solarschedule_events_choices... OK
+  Applying django_celery_beat.0006_auto_20180322_0932... OK
+  Applying django_celery_beat.0007_auto_20180521_0826... OK
+  Applying django_celery_beat.0008_auto_20180914_1922... OK
+  Applying django_celery_beat.0006_auto_20180210_1226... OK
+  Applying django_celery_beat.0006_periodictask_priority... OK
+  Applying django_celery_beat.0009_periodictask_headers... OK
+  Applying django_celery_beat.0010_auto_20190429_0326... OK
+  Applying django_celery_beat.0011_auto_20190508_0153... OK
+  Applying django_celery_beat.0012_periodictask_expire_seconds... OK
+  Applying django_celery_beat.0013_auto_20200609_0727... OK
+  Applying django_celery_beat.0014_remove_clockedschedule_enabled... OK
+  Applying django_celery_beat.0015_edit_solarschedule_events_choices... OK
+  Applying django_celery_beat.0016_alter_crontabschedule_timezone... OK
+  Applying django_celery_beat.0017_alter_crontabschedule_month_of_year... OK
+  Applying django_celery_beat.0018_improve_crontab_helptext... OK
+  Applying django_celery_beat.0019_alter_periodictasks_options... OK
+  Applying knowledge.0008_termbase... OK
+  Applying knowledge.0009_document_user... OK
+  Applying knowledge.0010_publicfileaccess... OK
+  Applying knowledge.0011_knowledgeworkflow_default_model_setting_and_more... OK
+  Applying tools.0002_alter_tool_tool_type... OK
+  Applying tools.0003_alter_tool_template_id... OK
+  Applying tools.0004_alter_tool_tool_type... OK
+  Applying tools.0005_taskrecord... OK
+  Applying tools.0006_alter_tool_tool_type... OK
+  Applying tools.0007_alter_tool_tool_type_toolworkflow_and_more... OK
+  Applying tools.0008_toolworkflow_default_model_setting_and_more... OK
+  Applying trigger.0001_initial... OK
+  Applying trigger.0002_remove_taskrecord_trigger_task_and_more... OK
+System check identified no issues (0 silenced).
+test_admin_cannot_read_run_via_wrong_workspace_or_application (application.tests_evaluation_api.EvaluationAPITests.test_admin_cannot_read_run_via_wrong_workspace_or_application) ... ok
+test_comparison_rejects_other_application_and_unfinished_run (application.tests_evaluation_api.EvaluationAPITests.test_comparison_rejects_other_application_and_unfinished_run) ... ok
+test_human_citation_review_updates_report_and_keeps_audit_history (application.tests_evaluation_api.EvaluationAPITests.test_human_citation_review_updates_report_and_keeps_audit_history) ... ok
+test_no_permissions_cannot_read_or_create (application.tests_evaluation_api.EvaluationAPITests.test_no_permissions_cannot_read_or_create) ... ok
+test_read_permission_cannot_review (application.tests_evaluation_api.EvaluationAPITests.test_read_permission_cannot_review) ... ok
+test_unsupported_application_returns_validation_error (application.tests_evaluation_api.EvaluationAPITests.test_unsupported_application_returns_validation_error) ... 2026-10-10 19:37:14 [handle_exception ERROR] [Errno 2] No such file or directory: '/tmp/task6/docs/implementation/evaluation/dev-v1.json':Traceback (most recent call last):
+  File "/opt/py3/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/views/evaluation.py", line 86, in post
+    dataset = json.loads((DATA_ROOT / (version + '.json')).read_text())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/task6/docs/implementation/evaluation/dev-v1.json'
+
+FAIL
+test_broker_failure_is_visible_and_sync_run_does_not_enqueue (application.tests_evaluation_runner.RunnerTests.test_broker_failure_is_visible_and_sync_run_does_not_enqueue) ... ERROR:celery.backends.redis:Connection to Redis lost: Retry (0/20) now.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR:celery.backends.redis:Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL:celery.backends.redis:
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ok
+test_configuration_drift_does_not_execute_cases (application.tests_evaluation_runner.RunnerTests.test_configuration_drift_does_not_execute_cases) ... ok
+test_cross_workspace_creation_rejected (application.tests_evaluation_runner.RunnerTests.test_cross_workspace_creation_rejected) ... ok
+test_failure_continues_and_reruns_do_not_overwrite (application.tests_evaluation_runner.RunnerTests.test_failure_continues_and_reruns_do_not_overwrite) ... ok
+test_mid_last_case_drift_cannot_finalize_as_completed (application.tests_evaluation_runner.RunnerTests.test_mid_last_case_drift_cannot_finalize_as_completed) ... ok
+test_nested_workflow_tools_are_rejected_before_run_creation (application.tests_evaluation_runner.RunnerTests.test_nested_workflow_tools_are_rejected_before_run_creation) ... ok
+test_body_cannot_override_identity (application.tests_memory_api.MemoryAPITests.test_body_cannot_override_identity) ... ok
+test_clear_returns_version_and_keeps_chat (application.tests_memory_api.MemoryAPITests.test_clear_returns_version_and_keeps_chat) ... ok
+test_correction_sources_and_stale_version (application.tests_memory_api.MemoryAPITests.test_correction_sources_and_stale_version) ... ok
+test_get_hides_other_user (application.tests_memory_api.MemoryAPITests.test_get_hides_other_user) ... ok
+test_other_application_client_type_and_deleted_chat_denied (application.tests_memory_api.MemoryAPITests.test_other_application_client_type_and_deleted_chat_denied) ... ok
+test_real_authentication_rejects_missing_token (application.tests_memory_api.MemoryAPITests.test_real_authentication_rejects_missing_token) ... ok
+test_multimodal_and_tool_path_keep_original_message_and_raw_text (application.tests_memory_extended.ExtendedRuntimeTests.test_multimodal_and_tool_path_keep_original_message_and_raw_text) ... ok
+test_same_record_repeated_by_loop_extracts_once (application.tests_memory_extended.ExtendedRuntimeTests.test_same_record_repeated_by_loop_extracts_once) ... ok
+test_actual_ai_node_receives_memory (application.tests_memory_runtime.MemoryRuntimeTests.test_actual_ai_node_receives_memory) ... ok
+test_clear_excludes_old_recent_history (application.tests_memory_runtime.MemoryRuntimeTests.test_clear_excludes_old_recent_history) ... ok
+test_extraction_failure_does_not_inject_old_facts (application.tests_memory_runtime.MemoryRuntimeTests.test_extraction_failure_does_not_inject_old_facts) ... ok
+test_extraction_updates_model_context (application.tests_memory_runtime.MemoryRuntimeTests.test_extraction_updates_model_context) ... ok
+test_prepared_history_preserved_separately_from_extraction (application.tests_memory_runtime.MemoryRuntimeTests.test_prepared_history_preserved_separately_from_extraction) ... ok
+test_revocation_survives_history_window_without_becoming_active (application.tests_memory_runtime.MemoryRuntimeTests.test_revocation_survives_history_window_without_becoming_active) ... ok
+test_stream_and_nonstream_actual_usage_and_missing_fields (application.tests_memory_runtime.MemoryRuntimeTests.test_stream_and_nonstream_actual_usage_and_missing_fields) ... ok
+test_clear_does_not_reextract_old_turn (application.tests_memory_store.StoreTests.test_clear_does_not_reextract_old_turn) ... ok
+test_clear_rejects_inflight_commit (application.tests_memory_store.StoreTests.test_clear_rejects_inflight_commit) ... ok
+test_correction_and_clear_version_checks (application.tests_memory_store.StoreTests.test_correction_and_clear_version_checks) ... ok
+test_duplicate_cannot_extract_twice (application.tests_memory_store.StoreTests.test_duplicate_cannot_extract_twice) ... ok
+test_manual_correction_invalidates_old_ticket (application.tests_memory_store.StoreTests.test_manual_correction_invalidates_old_ticket) ... ok
+test_rechat_cannot_change_original_message (application.tests_memory_store.StoreTests.test_rechat_cannot_change_original_message) ... ok
+test_source_survives_before_chat_record (application.tests_memory_store.StoreTests.test_source_survives_before_chat_record) ... ok
+test_update_and_idempotent_replay (application.tests_memory_store.StoreTests.test_update_and_idempotent_replay) ... ok
+test_wrong_identity_and_deleted_chat_denied (application.tests_memory_store.StoreTests.test_wrong_identity_and_deleted_chat_denied) ... ok
+test_evidence_id_and_content_come_from_same_bound_result (application.tests_model_routing_integration.RoutingIntegrationTests.test_evidence_id_and_content_come_from_same_bound_result) ... ok
+test_permission_and_status_revalidated_without_model_call (application.tests_model_routing_integration.RoutingIntegrationTests.test_permission_and_status_revalidated_without_model_call) ... ok
+test_completed_routed_ai_is_restored_without_another_model_call (application.tests_model_routing_integration.RoutingRecoveryTests.test_completed_routed_ai_is_restored_without_another_model_call) ... 2026-10-10 19:37:40 [workflow_manage ERROR] Exception: Tool execution failed: timeout
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 433, in hand_node_result
+    current_result = node_result_future.result()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 43, in result
+    raise self.e
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 599, in run_node_future
+    result = self.run_node(node)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 606, in run_node
+    return node.run()
+           ^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/i_step_node.py", line 377, in run
+    result = self._run()
+             ^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/i_mcp_node.py", line 30, in _run
+    return self.execute(**self.node_params_serializer.data, **self.flow_params_serializer.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/impl/base_mcp_node.py", line 53, in execute
+    result = execute_mcp(recovery.claim, self.id, RecoveryPolicy.parse(self.node_params.get('recovery_policy')),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tool_recovery/executor.py", line 47, in execute_mcp
+    raise ToolExecutionFailure(state, kind)
+application.tool_recovery.executor.ToolExecutionFailure: Tool execution failed: timeout
+ok
+test_other_user_cannot_read_or_resume (application.tests_tool_recovery_api.ApiTests.test_other_user_cannot_read_or_resume) ... ok
+test_resume_cannot_override_inputs (application.tests_tool_recovery_api.ApiTests.test_resume_cannot_override_inputs) ... ok
+test_snapshot_and_keys_not_exposed (application.tests_tool_recovery_api.ApiTests.test_snapshot_and_keys_not_exposed) ... ok
+test_business_failure_is_not_success_or_retry (application.tests_tool_recovery_executor.ExecutorTests.test_business_failure_is_not_success_or_retry) ... ok
+test_lost_response_keeps_key_and_one_write (application.tests_tool_recovery_executor.ExecutorTests.test_lost_response_keeps_key_and_one_write) ... ok
+test_real_deadline_stops_waiting (application.tests_tool_recovery_executor.ExecutorTests.test_real_deadline_stops_waiting) ... ok
+test_retry_limit (application.tests_tool_recovery_executor.ExecutorTests.test_retry_limit) ... ok
+test_sdk_timeout_is_classified_without_message_matching (application.tests_tool_recovery_executor.ExecutorTests.test_sdk_timeout_is_classified_without_message_matching) ... ok
+test_unknown_write_never_retries (application.tests_tool_recovery_executor.ExecutorTests.test_unknown_write_never_retries) ... ok
+test_controlled_failure_matrix (application.tests_tool_recovery_report.FaultReportTests.test_controlled_failure_matrix) ... ok
+test_completed_ai_is_restored_without_another_model_call (application.tests_tool_recovery_runtime.RuntimeTests.test_completed_ai_is_restored_without_another_model_call) ... 2026-10-10 19:37:44 [workflow_manage ERROR] Exception: Tool execution failed: timeout
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 433, in hand_node_result
+    current_result = node_result_future.result()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 43, in result
+    raise self.e
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 599, in run_node_future
+    result = self.run_node(node)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 606, in run_node
+    return node.run()
+           ^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/i_step_node.py", line 377, in run
+    result = self._run()
+             ^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/i_mcp_node.py", line 30, in _run
+    return self.execute(**self.node_params_serializer.data, **self.flow_params_serializer.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/impl/base_mcp_node.py", line 53, in execute
+    result = execute_mcp(recovery.claim, self.id, RecoveryPolicy.parse(self.node_params.get('recovery_policy')),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tool_recovery/executor.py", line 47, in execute_mcp
+    raise ToolExecutionFailure(state, kind)
+application.tool_recovery.executor.ToolExecutionFailure: Tool execution failed: timeout
+ok
+test_completed_nodes_skipped_when_resuming_real_engine (application.tests_tool_recovery_runtime.RuntimeTests.test_completed_nodes_skipped_when_resuming_real_engine) ... 2026-10-10 19:37:45 [workflow_manage ERROR] Exception: Tool execution failed: timeout
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 433, in hand_node_result
+    current_result = node_result_future.result()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 43, in result
+    raise self.e
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 599, in run_node_future
+    result = self.run_node(node)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 606, in run_node
+    return node.run()
+           ^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/i_step_node.py", line 377, in run
+    result = self._run()
+             ^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/i_mcp_node.py", line 30, in _run
+    return self.execute(**self.node_params_serializer.data, **self.flow_params_serializer.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/impl/base_mcp_node.py", line 53, in execute
+    result = execute_mcp(recovery.claim, self.id, RecoveryPolicy.parse(self.node_params.get('recovery_policy')),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tool_recovery/executor.py", line 47, in execute_mcp
+    raise ToolExecutionFailure(state, kind)
+application.tool_recovery.executor.ToolExecutionFailure: Tool execution failed: timeout
+ok
+test_workflow_version_change_rejected_before_restore (application.tests_tool_recovery_runtime.RuntimeTests.test_workflow_version_change_rejected_before_restore) ... ok
+test_write_checkpoint_failure_requires_confirmation (application.tests_tool_recovery_runtime.RuntimeTests.test_write_checkpoint_failure_requires_confirmation) ... 2026-10-10 19:37:45 [workflow_manage ERROR] Exception: Tool execution outcome_unknown: checkpoint
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/tool_recovery/runtime.py", line 123, in after_node
+    self.store.checkpoint(self.claim, node.id,
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tests_tool_recovery_runtime.py", line 130, in fail_after_write
+    raise ValueError('size limit after remote success')
+ValueError: size limit after remote success
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 418, in run_chain
+    self.recovery.after_node(current_node)
+  File "/tmp/task6/apps/application/tool_recovery/runtime.py", line 132, in after_node
+    raise ToolExecutionFailure(state, 'checkpoint') from exc
+application.tool_recovery.executor.ToolExecutionFailure: Tool execution outcome_unknown: checkpoint
+ok
+test_completed_checkpoints_can_publish_after_crash (application.tests_tool_recovery_store.FinalPersistenceTests.test_completed_checkpoints_can_publish_after_crash) ... ok
+test_crash_between_nodes_resumes_next_without_repeating_write (application.tests_tool_recovery_store.FinalPersistenceTests.test_crash_between_nodes_resumes_next_without_repeating_write) ... ok
+test_stale_final_record_cannot_overwrite_recovered_answer (application.tests_tool_recovery_store.FinalPersistenceTests.test_stale_final_record_cannot_overwrite_recovered_answer) ... ok
+test_confirmed_execution_returns_result_without_remote_call (application.tests_tool_recovery_store.ResolutionTests.test_confirmed_execution_returns_result_without_remote_call) ... ok
+test_cross_identity_and_deleted_denied (application.tests_tool_recovery_store.StoreTests.test_cross_identity_and_deleted_denied) ... ok
+test_duplicate_resume_does_not_create_second_claim (application.tests_tool_recovery_store.StoreTests.test_duplicate_resume_does_not_create_second_claim) ... ok
+test_expired_claim_requires_fencing (application.tests_tool_recovery_store.StoreTests.test_expired_claim_requires_fencing) ... ok
+test_input_and_key_stay_stable (application.tests_tool_recovery_store.StoreTests.test_input_and_key_stay_stable) ... ok
+test_stale_executor_cannot_checkpoint (application.tests_tool_recovery_store.StoreTests.test_stale_executor_cannot_checkpoint) ... ok
+test_unknown_cannot_resume (application.tests_tool_recovery_store.StoreTests.test_unknown_cannot_resume) ... ok
+test_actual_mcp_response_loss_has_one_remote_write (application.tests_tool_recovery_transport.TransportTests.test_actual_mcp_response_loss_has_one_remote_write) ... ERROR
+test_sandbox_denies_loopback_without_remote_side_effect (application.tests_tool_recovery_transport.TransportTests.test_sandbox_denies_loopback_without_remote_side_effect) ... ERROR
+test_budget_empty_uses_no_reference_behavior (application.tests_context.ContextIntegrationTests.test_budget_empty_uses_no_reference_behavior) ... ok
+test_config_survives_application_serializer_and_rejects_invalid (application.tests_context.ContextIntegrationTests.test_config_survives_application_serializer_and_rejects_invalid) ... ok
+test_containment_sends_complete_original_with_extra_facts (application.tests_context.ContextIntegrationTests.test_containment_sends_complete_original_with_extra_facts) ... ok
+test_direct_return_remains_available_even_when_budget_is_tiny (application.tests_context.ContextIntegrationTests.test_direct_return_remains_available_even_when_budget_is_tiny) ... ok
+test_disabled_message_matches_upstream_bytes (application.tests_context.ContextIntegrationTests.test_disabled_message_matches_upstream_bytes) ... ok
+test_disabled_reranker_preserves_original_truncation (application.tests_context.ContextIntegrationTests.test_disabled_reranker_preserves_original_truncation) ... ok
+test_enabled_pipeline_model_receives_one_copy_and_original_source (application.tests_context.ContextIntegrationTests.test_enabled_pipeline_model_receives_one_copy_and_original_source) ... ok
+test_no_removal_keeps_original_model_message_and_history (application.tests_context.ContextIntegrationTests.test_no_removal_keeps_original_model_message_and_history) ... ok
+test_normalized_source_labels_removed_only_from_comparison (application.tests_context.ContextIntegrationTests.test_normalized_source_labels_removed_only_from_comparison) ... ok
+test_old_pipeline_settings_need_no_new_fields (application.tests_context.ContextIntegrationTests.test_old_pipeline_settings_need_no_new_fields) ... ok
+test_reranker_selects_before_truncation_and_preserves_metadata (application.tests_context.ContextIntegrationTests.test_reranker_selects_before_truncation_and_preserves_metadata) ... ok
+test_search_node_filters_actual_output_and_replay (application.tests_context.ContextIntegrationTests.test_search_node_filters_actual_output_and_replay) ... ok
+test_live_pipeline_uses_workspace_and_filters_actual_model_message (application.tests_context.SemanticRuntimeIntegrationTests.test_live_pipeline_uses_workspace_and_filters_actual_model_message) ... ok
+test_policy_switch_roundtrips_and_rejects_bad_value (application.tests_context.SemanticRuntimeIntegrationTests.test_policy_switch_roundtrips_and_rejects_bad_value) ... ok
+test_reranker_title_only_is_preserved_and_output_metadata_stays_sanitized (application.tests_context.SemanticRuntimeIntegrationTests.test_reranker_title_only_is_preserved_and_output_metadata_stays_sanitized) ... ok
+test_reranker_uses_original_fields_for_approved_hash (application.tests_context.SemanticRuntimeIntegrationTests.test_reranker_uses_original_fields_for_approved_hash) ... ok
+test_real_langchain_callback_captures_provider_metadata (application.tests_evaluation_usage.ProviderUsageTests.test_real_langchain_callback_captures_provider_metadata) ... ok
+test_registered_budget_parameters_survive_original_model_loader (application.tests_evaluation_usage.ProviderUsageTests.test_registered_budget_parameters_survive_original_model_loader) ... ok
+test_unpropagated_worker_context_reports_unknown_never_zero (application.tests_evaluation_usage.ProviderUsageTests.test_unpropagated_worker_context_reports_unknown_never_zero) ... ok
+test_real_anthropic_sdk_local_transport (application.tests_memory_extended.NativeProviderProtocolTests.test_real_anthropic_sdk_local_transport) ... ok
+test_correction_waits_for_extraction_commit_and_detects_conflict (application.tests_memory_store.MemoryConcurrencyTests.test_correction_waits_for_extraction_commit_and_detects_conflict) ... ok
+test_first_requests_share_one_state (application.tests_memory_store.MemoryConcurrencyTests.test_first_requests_share_one_state) ... ok
+test_migration_round_trip (application.tests_memory_store.MemoryConcurrencyTests.test_migration_round_trip) ... ok
+test_clear_does_not_reextract_old_turn (application.tests_memory_temporary.TemporaryMemoryTests.test_clear_does_not_reextract_old_turn) ... ok
+test_debug_isolated_and_clear_rejects_inflight (application.tests_memory_temporary.TemporaryMemoryTests.test_debug_isolated_and_clear_rejects_inflight) ... ok
+test_wrong_identity_denied (application.tests_memory_temporary.TemporaryMemoryTests.test_wrong_identity_denied) ... ok
+test_invalid_combinations_and_dependencies (application.tests_model_routing_runtime.RoutingNodeTests.test_invalid_combinations_and_dependencies) ... ok
+test_node_replaces_old_model_and_retains_failed_usage (application.tests_model_routing_runtime.RoutingNodeTests.test_node_replaces_old_model_and_retains_failed_usage) ... ok
+test_ai_node_history_removes_only_current_verified_context (application.tests_retrieval.DialogueIntegrationTests.test_ai_node_history_removes_only_current_verified_context) ... ok
+test_clearing_dialogue_context_reference_preserves_optional_configuration (application.tests_retrieval.DialogueIntegrationTests.test_clearing_dialogue_context_reference_preserves_optional_configuration) ... ok
+test_dialogue_settings_are_optional_and_typed (application.tests_retrieval.DialogueIntegrationTests.test_dialogue_settings_are_optional_and_typed) ... ok
+test_live_ai_input_uses_guidance_only_when_enabled_without_tools (application.tests_retrieval.DialogueIntegrationTests.test_live_ai_input_uses_guidance_only_when_enabled_without_tools) ... ok
+test_workflow_history_and_disabled_node_history_remain_unchanged (application.tests_retrieval.DialogueIntegrationTests.test_workflow_history_and_disabled_node_history_remain_unchanged) ... ok
+test_cleared_optional_reference_is_valid (application.tests_retrieval.DynamicRerankerTests.test_cleared_optional_reference_is_valid) ... ok
+test_complex_reranks_raw_candidates_before_context_deduplication (application.tests_retrieval.DynamicRerankerTests.test_complex_reranks_raw_candidates_before_context_deduplication) ... ok
+test_disabled_source_uses_legacy_processed_paragraphs (application.tests_retrieval.DynamicRerankerTests.test_disabled_source_uses_legacy_processed_paragraphs) ... ok
+test_empty_input_does_not_load_reranker_and_replays_audit (application.tests_retrieval.DynamicRerankerTests.test_empty_input_does_not_load_reranker_and_replays_audit) ... ok
+test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence (application.tests_retrieval.DynamicRerankerTests.test_mismatched_source_is_rejected_instead_of_skipping_unrelated_evidence) ... ok
+test_missing_dynamic_model_falls_back_to_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_missing_dynamic_model_falls_back_to_original_evidence) ... ok
+test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip (application.tests_retrieval.DynamicRerankerTests.test_run_resolves_explicit_budget_and_raw_candidates_without_requiring_model_for_skip) ... ok
+test_simple_bypasses_reranker_and_still_deduplicates_original_evidence (application.tests_retrieval.DynamicRerankerTests.test_simple_bypasses_reranker_and_still_deduplicates_original_evidence) ... ok
+test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload (application.tests_retrieval.DynamicRerankerTests.test_unavailable_dynamic_reranker_retains_sources_without_exposing_error_payload) ... ok
+test_unlinked_and_unknown_reranker_keep_original_failure_semantics (application.tests_retrieval.DynamicRerankerTests.test_unlinked_and_unknown_reranker_keep_original_failure_semantics) ... ok
+test_empty_authorized_knowledge_skips_model_and_reports_empty_scope (application.tests_retrieval.RetrievalIntegrationTests.test_empty_authorized_knowledge_skips_model_and_reports_empty_scope) ... ok
+test_greeting_skips_embedding_and_vector_io_with_replayable_trace (application.tests_retrieval.RetrievalIntegrationTests.test_greeting_skips_embedding_and_vector_io_with_replayable_trace) ... ok
+test_old_and_disabled_workflow_outputs_are_identical (application.tests_retrieval.RetrievalIntegrationTests.test_old_and_disabled_workflow_outputs_are_identical) ... ok
+test_policy_serializer_roundtrip_and_range_validation (application.tests_retrieval.RetrievalIntegrationTests.test_policy_serializer_roundtrip_and_range_validation) ... ok
+test_query_uses_decision_before_context_processing_and_keeps_raw_sources (application.tests_retrieval.RetrievalIntegrationTests.test_query_uses_decision_before_context_processing_and_keeps_raw_sources) ... ok
+test_unknown_keeps_fixed_query_and_complex_expands (application.tests_retrieval.RetrievalIntegrationTests.test_unknown_keeps_fixed_query_and_complex_expands) ... ok
+test_http_resume_replay_persists_one_record (application.tests_tool_recovery_http.HttpTests.test_http_resume_replay_persists_one_record) ... 2026-10-10 19:38:58 [workflow_manage ERROR] Exception: Tool execution failed: timeout
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 433, in hand_node_result
+    current_result = node_result_future.result()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 43, in result
+    raise self.e
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 599, in run_node_future
+    result = self.run_node(node)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/workflow_manage.py", line 606, in run_node
+    return node.run()
+           ^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/i_step_node.py", line 377, in run
+    result = self._run()
+             ^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/i_mcp_node.py", line 30, in _run
+    return self.execute(**self.node_params_serializer.data, **self.flow_params_serializer.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/step_node/mcp_node/impl/base_mcp_node.py", line 53, in execute
+    result = execute_mcp(recovery.claim, self.id, RecoveryPolicy.parse(self.node_params.get('recovery_policy')),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tool_recovery/executor.py", line 47, in execute_mcp
+    raise ToolExecutionFailure(state, kind)
+application.tool_recovery.executor.ToolExecutionFailure: Tool execution failed: timeout
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6545b7e0>):aeecc916b6663eda0b2c79213db2d9b68d94b3099fad8de7c4dfddfdcd542caf"
+  warnings.warn(warning, CacheKeyWarning)
+ok
+test_real_http_authentication_and_isolation (application.tests_tool_recovery_http.HttpTests.test_real_http_authentication_and_isolation) ... /opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6545b7e0>):76616185130f71f26313453c0084adc72b2c8970de2f553343d0048ac9d40278"
+  warnings.warn(warning, CacheKeyWarning)
+/opt/py3/lib/python3.11/site-packages/django/core/cache/backends/base.py:119: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ":('CHAT', <function Cache_Version.<lambda> at 0xffff6545b7e0>):37768be53a90d8b74c3f0e9ec934d4ed528a6e0fb1006fac621fd3c8976a70de"
+  warnings.warn(warning, CacheKeyWarning)
+2026-10-10 19:39:06 [log WARNING] Not Found: /chat/api/tool_runs/392df1df-53b9-4953-ace1-6506903adfd5
+2026-10-10 19:39:06 [log WARNING] Bad Request: /chat/api/tool_runs/392df1df-53b9-4953-ace1-6506903adfd5/resume
+2026-10-10 19:39:06 [log WARNING] Unauthorized: /chat/api/tool_runs/392df1df-53b9-4953-ace1-6506903adfd5
+ok
+test_two_resume_requests_only_one_executor (application.tests_tool_recovery_store.ConcurrentStoreTests.test_two_resume_requests_only_one_executor) ... ok
+
+======================================================================
+ERROR: test_actual_mcp_response_loss_has_one_remote_write (application.tests_tool_recovery_transport.TransportTests.test_actual_mcp_response_loss_has_one_remote_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/py3/lib/python3.11/site-packages/anyio/streams/memory.py", line 250, in send
+    self.send_nowait(item)
+  File "/opt/py3/lib/python3.11/site-packages/anyio/streams/memory.py", line 233, in send_nowait
+    raise WouldBlock
+anyio._core._exceptions.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/asyncio/tasks.py", line 500, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/backend/sandbox_mcp.py", line 51, in describe_tool
+    async with self.session(server_name) as session:
+  File "/usr/local/lib/python3.11/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/langchain_mcp_adapters/client.py", line 159, in session
+    await session.initialize()
+  File "/opt/py3/lib/python3.11/site-packages/mcp/client/session.py", line 183, in initialize
+    result = await self.send_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/py3/lib/python3.11/site-packages/mcp/shared/session.py", line 281, in send_request
+    await self._write_stream.send(SessionMessage(message=JSONRPCMessage(jsonrpc_request), metadata=metadata))
+  File "/opt/py3/lib/python3.11/site-packages/anyio/streams/memory.py", line 256, in send
+    await send_event.wait()
+  File "/usr/local/lib/python3.11/asyncio/locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/tests_tool_recovery_transport.py", line 18, in test_actual_mcp_response_loss_has_one_remote_write
+    self.check_transport(0)
+  File "/tmp/task6/apps/application/tests_tool_recovery_transport.py", line 56, in check_transport
+    output = execute_mcp(self.claim, 'tool', policy, backend, 'local', 'write_once', {})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/tool_recovery/executor.py", line 23, in execute_mcp
+    schema = asyncio.run(asyncio.wait_for(backend.describe_tool(server, tool), policy.timeout))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/tasks.py", line 502, in wait_for
+    raise exceptions.TimeoutError() from exc
+TimeoutError
+
+======================================================================
+ERROR: test_sandbox_denies_loopback_without_remote_side_effect (application.tests_tool_recovery_transport.TransportTests.test_sandbox_denies_loopback_without_remote_side_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/tests_tool_recovery_transport.py", line 21, in test_sandbox_denies_loopback_without_remote_side_effect
+    self.check_transport(1)
+  File "/tmp/task6/apps/application/tests_tool_recovery_transport.py", line 39, in check_transport
+    backend = SandboxMCPBackend({'local': {'transport': 'streamable_http',
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/backend/sandbox_mcp.py", line 21, in __init__
+    super().__init__(connections=self._build_connections(servers))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/application/flow/backend/sandbox_mcp.py", line 39, in _build_connections
+    connections[name] = sandbox_connection(config)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/common/mcp/sandbox.py", line 42, in sandbox_connection
+    settings = sandbox_settings()
+               ^^^^^^^^^^^^^^^^^^
+  File "/tmp/task6/apps/common/mcp/sandbox.py", line 28, in sandbox_settings
+    raise ValueError("MCP sandbox library or configuration is missing")
+ValueError: MCP sandbox library or configuration is missing
+
+======================================================================
+FAIL: test_unsupported_application_returns_validation_error (application.tests_evaluation_api.EvaluationAPITests.test_unsupported_application_returns_validation_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/task6/apps/application/tests_evaluation_api.py", line 43, in test_unsupported_application_returns_validation_error
+    self.assertEqual(response.status_code, 400)
+AssertionError: 200 != 400
+
+----------------------------------------------------------------------
+Ran 117 tests in 114.442s
+
+FAILED (failures=1, errors=2)
+Destroying test database for alias 'default' ('test_maxsb_routing_task6')...

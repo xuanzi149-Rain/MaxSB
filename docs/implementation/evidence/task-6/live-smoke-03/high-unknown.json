@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "high",
+  "case_id": "unknown",
+  "question": "为什么要给实验保留失败记录？",
+  "answer": "{\"answer\":\"保留失败记录能避免重复错误、提供对比基准、揭示隐藏变量、促进诚实文化，并可能从失败中发现意外机会。\"}",
+  "status": "success",
+  "elapsed_seconds": 0.730811083005392,
+  "model_routing": {
+    "task_id": "86735426-6c1d-4c0b-b4af-bc486f08ba20",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "high",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "0374da9f-2330-408e-bac6-96a64f6acf0c",
+        "role": "high",
+        "model_id": "01a11f05-0114-7e73-859e-5cc08ccb3e70",
+        "model_name": "deepseek-v4-flash",
+        "started_at": "2026-10-10T11:53:57.147905+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 26,
+          "output_tokens": 32,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "deepseek-flash",
+        "ended_at": "2026-10-10T11:53:57.877976+00:00",
+        "elapsed_seconds": 0.7300227079977049,
+        "priced_cost": "0.000154",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_basis": "offpeak_reference_price_not_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 26,
+      "output_tokens": 32
+    },
+    "priced_cost": "0.000154",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

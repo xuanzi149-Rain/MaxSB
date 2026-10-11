@@ -99,8 +99,8 @@ class ChatRecord(AppModelMixin):
     answer_text_list = ArrayField(verbose_name="改进标注列表",
                                   base_field=models.JSONField(encoder=SystemEncoder)
                                   , default=list)
-    message_tokens = models.IntegerField(verbose_name="请求token数量", default=0)
-    answer_tokens = models.IntegerField(verbose_name="响应token数量", default=0)
+    message_tokens = models.IntegerField(verbose_name="请求token数量", default=0, null=True)
+    answer_tokens = models.IntegerField(verbose_name="响应token数量", default=0, null=True)
     const = models.IntegerField(verbose_name="总费用", default=0)
     details = models.JSONField(verbose_name="对话详情", default=dict, encoder=SystemEncoder)
     improve_paragraph_id_list = ArrayField(verbose_name="改进标注列表",

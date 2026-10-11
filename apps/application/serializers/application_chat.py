@@ -185,7 +185,8 @@ class ApplicationChatQuerySerializers(serializers.Serializer):
                     f"{improve_paragraph_list[index].get('title')}\n{improve_paragraph_list[index].get('content')}"
                     for index in range(len(improve_paragraph_list))]),
                 row.get('asker').get('username'),
-                (row.get('message_tokens') or 0) + (row.get('answer_tokens') or 0),
+                (row['message_tokens'] + row['answer_tokens']
+                 if row.get('message_tokens') is not None and row.get('answer_tokens') is not None else '-'),
                 row.get('ip_address') or '-',
                 get_source_display(row.get('source')),
                 row.get('run_time'),

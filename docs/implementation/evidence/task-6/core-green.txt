@@ -1,0 +1,8 @@
+test_config_disabled_and_invalid (test_core.RoutingTests.test_config_disabled_and_invalid) ... ok
+test_rules_conservative (test_core.RoutingTests.test_rules_conservative) ... ok
+test_strict_json_and_citations (test_core.RoutingTests.test_strict_json_and_citations) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

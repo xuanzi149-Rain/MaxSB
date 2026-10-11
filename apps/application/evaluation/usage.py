@@ -3,7 +3,7 @@
 
 
 def extract_usage(runs) -> dict:
-    usages, seen = [], set()
+    usages, seen, model_calls = [], set(), []
     def field(obj, key, default=None):
         return obj.get(key, default) if isinstance(obj, dict) else getattr(obj, key, default)
     def visit(run):
@@ -27,6 +27,11 @@ def extract_usage(runs) -> dict:
                 usages.append((inputs, outputs_count))
             else:
                 usages.append((None, None))
+            metadata = (field(run, 'extra') or {}).get('metadata') or {}
+            model_calls.append({'attempt_id': str(identity) if identity else None,
+                'model_id': metadata.get('routing_model_id'), 'role': metadata.get('routing_role'),
+                'input_tokens': usages[-1][0], 'output_tokens': usages[-1][1],
+                'status': 'failed' if field(run, 'error') else 'completed'})
         for child in field(run, 'child_runs', []):
             visit(child)
     for run in runs:
@@ -34,4 +39,4 @@ def extract_usage(runs) -> dict:
     known = bool(usages) and all(type(n) is int and n >= 0 for pair in usages for n in pair)
     return {'input_tokens': sum(p[0] for p in usages) if known else None,
             'output_tokens': sum(p[1] for p in usages) if known else None,
-            'usage_source': 'provider_callback' if known else 'unknown', 'model_call_count': len(usages)}
+            'usage_source': 'provider_callback' if known else 'unknown', 'model_call_count': len(usages), 'model_calls': model_calls}

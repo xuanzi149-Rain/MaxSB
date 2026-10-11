@@ -26,6 +26,16 @@ class ChatNodeSerializer(serializers.Serializer):
     # 多轮对话数量
     dialogue_number = serializers.IntegerField(required=True, label=_("Number of multi-round conversations"))
 
+    model_routing = serializers.DictField(required=False, default=dict)
+
+    def validate_model_routing(self, value):
+        from application.model_routing.config import parse_policy
+        try:
+            parse_policy(value)
+        except ValueError as exc:
+            raise serializers.ValidationError(str(exc)) from exc
+        return value
+
     memory_policy = serializers.DictField(required=False, default=dict)
 
     def validate_memory_policy(self, value):

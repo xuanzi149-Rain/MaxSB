@@ -248,10 +248,9 @@ class WorkflowManage:
             while self.is_run():
                 pass
             details = self.get_runtime_details()
-            message_tokens = sum([row.get('message_tokens') for row in details.values() if
-                                  'message_tokens' in row and row.get('message_tokens') is not None])
-            answer_tokens = sum([row.get('answer_tokens') for row in details.values() if
-                                 'answer_tokens' in row and row.get('answer_tokens') is not None])
+            from application.model_routing.usage import workflow_total
+            message_tokens = workflow_total(details, 'message_tokens')
+            answer_tokens = workflow_total(details, 'answer_tokens')
             answer_text_list = self.get_answer_text_list()
             answer_text = '\n\n'.join(
                 '\n\n'.join([a.get('content') for a in answer]) for answer in
@@ -345,10 +344,9 @@ class WorkflowManage:
             while self.is_run():
                 pass
             details = self.get_runtime_details()
-            message_tokens = sum([row.get('message_tokens') for row in details.values() if
-                                  'message_tokens' in row and row.get('message_tokens') is not None])
-            answer_tokens = sum([row.get('answer_tokens') for row in details.values() if
-                                 'answer_tokens' in row and row.get('answer_tokens') is not None])
+            from application.model_routing.usage import workflow_total
+            message_tokens = workflow_total(details, 'message_tokens')
+            answer_tokens = workflow_total(details, 'answer_tokens')
             self.work_flow_post_handler.handler(self)
             yield self.base_to_response.to_stream_chunk_response(self.params.get('chat_id'),
                                                                  self.params.get('chat_record_id'),

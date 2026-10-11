@@ -1,0 +1,72 @@
+vite v6.4.4 building for production...
+transforming...
+
+<--- Last few GCs --->
+
+[80743:0x130008000]   171328 ms: Scavenge (interleaved) 2033.0 (2050.8) -> 2029.8 (2059.0) MB, pooled: 0 MB, 20.17 / 0.00 ms  (average mu = 0.240, current mu = 0.180) allocation failure; 
+[80743:0x130008000]   180247 ms: Mark-Compact (reduce) 2037.8 (2059.5) -> 2027.7 (2044.5) MB, pooled: 0 MB, 6162.04 / 0.00 ms  (+ 790.3 ms in 122 steps since start of marking, biggest step 25.4 ms, walltime since start of marking 7558 ms) (average mu = 0.
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0x102d459f4 node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 2: 0x102fc0000 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 3: 0x10321f4b4 v8::internal::Heap::stack() [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 4: 0x103222888 v8::internal::Heap::HasLowYoungGenerationAllocationRate() [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 5: 0x103233a7c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1::operator()() const [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 6: 0x103233350 void heap::base::Stack::SetMarkerAndCallbackImpl<v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1>(heap::base::Stack*, void*, void const*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 7: 0x103be7be0 PushAllRegistersAndIterateStack [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 8: 0x10321d1b8 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 9: 0x103211ec4 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+10: 0x1031dd960 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller(v8::internal::DirectHandle<v8::internal::Map>, int, v8::internal::DirectHandle<v8::internal::HeapObject>, v8::internal::AllocationType) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+11: 0x10354a780 v8::internal::Handle<v8::internal::NameDictionary> v8::internal::NameDictionary::New<v8::internal::Isolate>(v8::internal::Isolate*, int, v8::internal::AllocationType, v8::internal::MinimumCapacity) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+12: 0x10320104c v8::internal::Factory::NewSlowJSObjectFromMap(v8::internal::DirectHandle<v8::internal::Map>, int, v8::internal::AllocationType, v8::internal::DirectHandle<v8::internal::AllocationSite>, v8::internal::NewJSObjectType) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+13: 0x10368892c v8::internal::Runtime_ObjectCreate(int, unsigned long*, v8::internal::Isolate*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+14: 0x103cda234 Builtins_CEntry_Return1_ArgvOnStack_NoBuiltinExit [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+15: 0x103cb4564 Builtins_ObjectCreate [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+16: 0x138d9a544 
+17: 0x1391023e0 
+18: 0x138281b60 
+19: 0x138d96800 
+20: 0x138e9b538 
+21: 0x138ea2454 
+22: 0x138ea2164 
+23: 0x13870e9c4 
+24: 0x138d60a78 
+25: 0x1391022e4 
+26: 0x138281b60 
+27: 0x138e9b538 
+28: 0x138ea2454 
+29: 0x138ea2164 
+30: 0x13870e9c4 
+31: 0x13903c2e8 
+32: 0x138d969a8 
+33: 0x1391022e4 
+34: 0x138281b60 
+35: 0x13870e94c 
+36: 0x138d969a8 
+37: 0x139102498 
+38: 0x138281b60 
+39: 0x138d548ac 
+40: 0x103c3cbec Builtins_InterpreterEntryTrampoline [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+41: 0x103c7b7e8 Builtins_AsyncFunctionAwaitResolveClosure [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+42: 0x103d50e58 Builtins_PromiseFulfillReactionJob [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+43: 0x103c6abd0 Builtins_RunMicrotasks [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+44: 0x103c3a7b0 Builtins_JSRunMicrotasksEntry [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+45: 0x103163690 v8::internal::(anonymous namespace)::Invoke(v8::internal::Isolate*, v8::internal::(anonymous namespace)::InvokeParams const&) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+46: 0x103163f04 v8::internal::(anonymous namespace)::InvokeWithTryCatch(v8::internal::Isolate*, v8::internal::(anonymous namespace)::InvokeParams const&) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+47: 0x103164040 v8::internal::Execution::TryRunMicrotasks(v8::internal::Isolate*, v8::internal::MicrotaskQueue*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+48: 0x103192de4 v8::internal::MicrotaskQueue::RunMicrotasks(v8::internal::Isolate*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+49: 0x103193744 v8::internal::MicrotaskQueue::PerformCheckpoint(v8::Isolate*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+50: 0x102c230b8 node::InternalCallbackScope::Close() [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+51: 0x102c22a3c node::CallbackScope::~CallbackScope() [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+52: 0x102cf9180 (anonymous namespace)::uvimpl::Work::AfterThreadPoolWork(int) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+53: 0x102cf9598 node::ThreadPoolWork::ScheduleWork()::'lambda'(uv_work_s*, int)::operator()(uv_work_s*, int) const [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+54: 0x102cf944c node::ThreadPoolWork::ScheduleWork()::'lambda'(uv_work_s*, int)::__invoke(uv_work_s*, int) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+55: 0x103c13af8 uv__work_done [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+56: 0x103c17548 uv__async_io [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+57: 0x103c2be40 uv__io_poll [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+58: 0x103c17e9c uv_run [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+59: 0x102c246a8 node::SpinEventLoopInternal(node::Environment*) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+60: 0x102da07d8 node::NodeMainInstance::Run() [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+61: 0x102cf27e0 node::Start(int, char**) [/Users/wangzixuan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+62: 0x187a7b154 start [/usr/lib/dyld]

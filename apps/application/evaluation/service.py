@@ -14,9 +14,17 @@ from application.evaluation.adapter import execute_case
 TERMINAL = {'completed', 'configuration_drift', 'interrupted', 'dispatch_failed'}
 
 
-def create_run(workspace_id: str, application_id: str, user_id: str, dataset: dict, enqueue=True) -> EvaluationRun:
+def create_run(workspace_id: str, application_id: str, user_id: str, dataset: dict, enqueue=True, routing_strategy=None) -> EvaluationRun:
     Application.objects.get(pk=application_id, workspace_id=workspace_id)
     snapshot = capture_snapshot(application_id)
+    if routing_strategy is not None:
+        if routing_strategy not in {'low', 'high', 'routing'}:
+            raise ValueError('invalid_routing_strategy')
+        nodes = snapshot.get('application_config', {}).get('work_flow', {}).get('nodes', [])
+        if not any((n.get('properties', {}).get('node_data', {}).get('model_routing') or {}).get('enabled')
+                   for n in nodes):
+            raise ValueError('routing_evaluation_requires_enabled_node')
+        snapshot['routing_strategy'] = routing_strategy
     snapshot['user_id'] = user_id
     with transaction.atomic():
         run = EvaluationRun.objects.create(application_id=application_id, workspace_id=workspace_id, user_id=user_id,

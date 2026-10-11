@@ -1,0 +1,54 @@
+{
+  "run_id": "c70ba7fb-d80e-479a-825e-befc8b3d1772",
+  "group": "routing",
+  "case_id": "evidence",
+  "question": "综合资料：规则一借期21天；规则二儿童限借3本。请回答儿童可借几本、多久。",
+  "answer": "{\"answer\":\"儿童可借3本，借期21天。\"}",
+  "status": "success",
+  "elapsed_seconds": 0.379995916999178,
+  "model_routing": {
+    "task_id": "f561870a-6473-4d2f-869b-85c0d55cff62",
+    "rule_id": "complex_or_unknown",
+    "rule_version": "1",
+    "reason": "Complex, mixed or unknown task",
+    "selected_role": "high",
+    "status": "succeeded",
+    "attempts": [
+      {
+        "attempt_id": "13b59505-b5da-4615-9d36-e3bce8d673c3",
+        "role": "high",
+        "model_id": "01a11f05-0114-7e73-859e-5cc08ccb3e70",
+        "model_name": "deepseek-v4-flash",
+        "started_at": "2026-10-10T11:54:03.404286+00:00",
+        "status": "succeeded",
+        "usage": {
+          "input_tokens": 47,
+          "output_tokens": 15,
+          "cache_read_tokens": 0
+        },
+        "usage_source": "provider",
+        "error": null,
+        "response_model": "deepseek-flash",
+        "ended_at": "2026-10-10T11:54:03.783021+00:00",
+        "elapsed_seconds": 0.3787540000048466,
+        "priced_cost": "0.000107",
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_basis": "offpeak_reference_price_not_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "provider",
+      "input_tokens": 47,
+      "output_tokens": 15
+    },
+    "priced_cost": "0.000107",
+    "currency": "CNY",
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}

@@ -11,7 +11,9 @@
         ref="aiChatNodeFormRef"
         hide-required-asterisk
       >
+        <ModelRoutingConfig v-model="chat_data.model_routing" :options="modelOptions" :node-model="nodeModel" />
         <el-form-item
+          v-if="!chat_data.model_routing?.enabled"
           :label="$t('views.application.form.aiModel.label')"
           :prop="chat_data.model_id_type === 'reference' ? 'model_id_reference' : 'model_id'"
           :rules="{
@@ -643,6 +645,7 @@
   </NodeContainer>
 </template>
 <script setup lang="ts">
+import ModelRoutingConfig from './ModelRoutingConfig.vue'
 import { cloneDeep, set, groupBy } from 'lodash'
 import NodeContainer from '@/workflow/common/NodeContainer.vue'
 import DefaultModelDisplay from '@/workflow/common/DefaultModelDisplay.vue'
@@ -727,7 +730,10 @@ const collapseData = reactive({
   agent: true,
 })
 
+const routingDefault = () => ({ enabled: false, low: { model_id: '', params: {} }, high: { model_id: '', params: {} }, timeout: 60, contract: { required_fields: [], citation_field: '', evidence_reference: [] } })
+
 const form = {
+  model_routing: routingDefault(),
   model_id: '',
   model_id_type: 'default',
   model_id_reference: [],
@@ -751,6 +757,9 @@ const form = {
 const chat_data = computed({
   get: () => {
     if (props.nodeModel.properties.node_data) {
+      if (!props.nodeModel.properties.node_data.model_routing) {
+        set(props.nodeModel.properties.node_data, 'model_routing', routingDefault())
+      }
       if (!props.nodeModel.properties.node_data.memory_policy) {
         set(props.nodeModel.properties.node_data, 'memory_policy', { enabled: false, context_token_budget: 2048, extraction_input_token_budget: 4096, extraction_output_token_limit: 1024, extraction_timeout_seconds: 20 })
       }

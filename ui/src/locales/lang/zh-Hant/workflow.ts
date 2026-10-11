@@ -1,4 +1,5 @@
 export default {
+  modelRouting: {"title": "模型路由", "hint": "开启后使用下方两模型替代原模型选择。仅支持纯文本节点；结构化答案校验完成后输出，等待时间可能增加。", "low": "低成本模型", "high": "高能力模型", "temperature": "温度", "maxTokens": "最大输出 token", "timeout": "单次超时（秒）", "fields": "必需 JSON 字段（输入后回车；留空为开放回答）", "citations": "引用字段名（可选）", "evidence": "绑定检索节点的 paragraph_list", "upgrade": "升级／失败原因", "role": "模型角色", "model": "实际模型", "status": "状态", "seconds": "耗时（秒）", "unknown": "— 表示未知用量，不能作为零费用。"},
   toolRecovery: { executed: '已執行且結果可核對', notExecuted: '已終止且確認未執行', evidence: '核對依據（至少10字元）', output: '實際工具輸出（JSON文字陣列）', confirm: '儲存核對結果', title: '工具恢復', run: '執行', generation: '執行代次', resumes: '恢復次數', resume: '從失敗處繼續', unknownHint: '結果未知：請管理員核對遠端操作結果，確認前不可再次執行。', configHint: '在開始節點開啟後生效。僅支援串行文字工作流；寫入重試必須有工具側冪等保證。', mode: '副作用類型', timeout: '每次逾時（秒）', retries: '最多重試次數', keyField: '工具冪等參數名', retention: '工具去重保留期（小時）', unknown: '未知', read_only: '唯讀', idempotent_write: '冪等寫入', unprotected_write: '無保護寫入' },
   node: '節點',
   nodeName: '節點名稱',

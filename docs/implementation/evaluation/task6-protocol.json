@@ -1,0 +1,50 @@
+{
+  "version": "task6-8084-v1",
+  "status": "ready",
+  "budget_cny": "100",
+  "requested_models": {
+    "low": "MaxSB1 / qwen3.7-plus",
+    "high": "MaxSB2 / deepseek-v4-flash"
+  },
+  "groups": [
+    "low",
+    "high",
+    "routing"
+  ],
+  "quality_delta_min": 0,
+  "scenario_quality_delta_min": 0,
+  "new_evidence_regressions_max": 0,
+  "new_citation_regressions_max": 0,
+  "cost_coverage_min": 1,
+  "cost_per_success_must_decrease": true,
+  "human_review_required": true,
+  "prices": {
+    "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42": {
+      "currency": "CNY",
+      "version": "reference-2026-10-10",
+      "valid_from": "2026-10-09T16:00:00+00:00",
+      "valid_until": "2026-10-10T16:00:00+00:00",
+      "model_name": "qwen3.7-plus",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+      "basis": "public_list_price_not_token_plan_bill",
+      "input_per_million": "2",
+      "output_per_million": "8",
+      "cache_per_million": ".4",
+      "max_input_tokens": 256000
+    },
+    "01a11f05-0114-7e73-859e-5cc08ccb3e70": {
+      "currency": "CNY",
+      "version": "reference-2026-10-10",
+      "valid_from": "2026-10-09T16:00:00+00:00",
+      "valid_until": "2026-10-10T16:00:00+00:00",
+      "model_name": "deepseek-v4-flash",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "basis": "offpeak_reference_price_not_bill",
+      "input_per_million": "1",
+      "output_per_million": "4",
+      "cache_per_million": ".02",
+      "max_input_tokens": 65536
+    }
+  },
+  "note": "Protocol frozen before formal runs. 100 CNY cumulative reservation cap includes prior smoke calls. Model aliases may change underlying versions; capture provider response model. Qwen token-plan actual marginal cost is unknown. Reference rates expire and are not bills. Human answer review and actual bills remain pending; ready means execution protocol is frozen, not acceptance passed."
+}

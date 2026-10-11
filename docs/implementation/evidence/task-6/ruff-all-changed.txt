@@ -1,0 +1,245 @@
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task6/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:601:16
+    |
+599 |         # 处理参数中的变量
+600 |         for k, v in tool_params.items():
+601 |             if type(v) == str:
+    |                ^^^^^^^^^^^^^^
+602 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+603 |             elif type(v) == dict:
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task6/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:603:18
+    |
+601 |             if type(v) == str:
+602 |                 tool_params[k] = self.workflow_manage.generate_prompt(tool_params[k])
+603 |             elif type(v) == dict:
+    |                  ^^^^^^^^^^^^^^^
+604 |                 self.handle_variables(v)
+605 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task6/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:605:19
+    |
+603 |             elif type(v) == dict:
+604 |                 self.handle_variables(v)
+605 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                   ^^^^^^^^^^^^^^^
+606 |                 tool_params[k] = self.get_reference_content(v)
+607 |         return tool_params
+    |
+
+E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+   --> /tmp/task6/apps/application/flow/step_node/ai_chat_step_node/impl/base_chat_node.py:605:56
+    |
+603 |             elif type(v) == dict:
+604 |                 self.handle_variables(v)
+605 |             elif (type(v) == list) and len(v) > 0 and (type(v[0]) == str):
+    |                                                        ^^^^^^^^^^^^^^^^^
+606 |                 tool_params[k] = self.get_reference_content(v)
+607 |         return tool_params
+    |
+
+F841 [*] Local variable `e` is assigned to but never used
+   --> /tmp/task6/apps/application/flow/tools.py:702:41
+    |
+700 |                             await save_tool_record(tool_lib_id, tool_info, tool_result, source_id, source_type)
+701 |                         tool_result = json.dumps(text_result, ensure_ascii=False)
+702 |                     except Exception as e:
+    |                                         ^
+703 |                         tool_result = chunk[0].content
+704 |                     content = generate_tool_message_complete(
+    |
+help: Remove assignment to unused variable `e`
+
+F841 [*] Local variable `e` is assigned to but never used
+  --> /tmp/task6/apps/application/flow/workflow_manage.py:50:25
+   |
+48 |         result.result(timeout)
+49 |         return False
+50 |     except Exception as e:
+   |                         ^
+51 |         return True
+   |
+help: Remove assignment to unused variable `e`
+
+F841 [*] Local variable `e` is assigned to but never used
+  --> /tmp/task6/apps/application/flow/workflow_manage.py:72:34
+   |
+70 |                 current_node_chunk = self.node_chunk_list.pop(0)
+71 |                 self.current_node_chunk = current_node_chunk
+72 |             except IndexError as e:
+   |                                  ^
+73 |                 pass
+74 |         if self.current_node_chunk is not None:
+   |
+help: Remove assignment to unused variable `e`
+
+F841 [*] Local variable `e` is assigned to but never used
+  --> /tmp/task6/apps/application/flow/workflow_manage.py:78:34
+   |
+76 |                 chunk = self.current_node_chunk.chunk_list.pop(0)
+77 |                 return chunk
+78 |             except IndexError as e:
+   |                                  ^
+79 |                 if self.current_node_chunk.is_end():
+80 |                     self.current_node_chunk = None
+   |
+help: Remove assignment to unused variable `e`
+
+F841 [*] Local variable `e` is assigned to but never used
+   --> /tmp/task6/apps/application/flow/workflow_manage.py:326:29
+    |
+324 |                 else:
+325 |                     return True
+326 |         except Exception as e:
+    |                             ^
+327 |             return True
+    |
+help: Remove assignment to unused variable `e`
+
+F841 [*] Local variable `e` is assigned to but never used
+   --> /tmp/task6/apps/application/serializers/application.py:929:29
+    |
+927 |         try:
+928 |             mk_instance = restricted_loads(mk_instance_bytes)
+929 |         except Exception as e:
+    |                             ^
+930 |             raise AppApiException(1001, _("Unsupported file format"))
+931 |         application = mk_instance.application
+    |
+help: Remove assignment to unused variable `e`
+
+F841 Local variable `other_knowledge_id_list` is assigned to but never used
+    --> /tmp/task6/apps/application/serializers/application.py:1443:13
+     |
+1442 |             view_knowledge_id_list = [knowledge.get("id") for knowledge in knowledge_list]
+1443 |             other_knowledge_id_list = [
+     |             ^^^^^^^^^^^^^^^^^^^^^^^
+1444 |                 knowledge_id
+1445 |                 for knowledge_id in all_knowledge_id_list
+     |
+help: Remove assignment to unused variable `other_knowledge_id_list`
+
+F841 [*] Local variable `e` is assigned to but never used
+    --> /tmp/task6/apps/application/serializers/application.py:1595:29
+     |
+1593 |         try:
+1594 |             mk_instance = restricted_loads(res.content)
+1595 |         except Exception as e:
+     |                             ^
+1596 |             raise AppApiException(1001, _("Unsupported file format"))
+1597 |         application = mk_instance.application
+     |
+help: Remove assignment to unused variable `e`
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:12:1
+   |
+10 | os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task6_live_settings')
+11 | os.environ['SERVER_NAME'] = 'web'
+12 | import django
+   | ^^^^^^^^^^^^^
+13 | django.setup()
+14 | from application.evaluation.budget import install_budget_guard
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:14:1
+   |
+12 | import django
+13 | django.setup()
+14 | from application.evaluation.budget import install_budget_guard
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15 | from application.model_routing.config import parse_policy
+16 | from application.model_routing.integration import prepare_models
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:15:1
+   |
+13 | django.setup()
+14 | from application.evaluation.budget import install_budget_guard
+15 | from application.model_routing.config import parse_policy
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+16 | from application.model_routing.integration import prepare_models
+17 | from application.model_routing.policy import select_route
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:16:1
+   |
+14 | from application.evaluation.budget import install_budget_guard
+15 | from application.model_routing.config import parse_policy
+16 | from application.model_routing.integration import prepare_models
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+17 | from application.model_routing.policy import select_route
+18 | from application.model_routing.executor import execute_routed
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:17:1
+   |
+15 | from application.model_routing.config import parse_policy
+16 | from application.model_routing.integration import prepare_models
+17 | from application.model_routing.policy import select_route
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18 | from application.model_routing.executor import execute_routed
+19 | from application.model_routing.types import RouteDecision
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:18:1
+   |
+16 | from application.model_routing.integration import prepare_models
+17 | from application.model_routing.policy import select_route
+18 | from application.model_routing.executor import execute_routed
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+19 | from application.model_routing.types import RouteDecision
+20 | from langchain_core.messages import HumanMessage, SystemMessage
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:19:1
+   |
+17 | from application.model_routing.policy import select_route
+18 | from application.model_routing.executor import execute_routed
+19 | from application.model_routing.types import RouteDecision
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+20 | from langchain_core.messages import HumanMessage, SystemMessage
+   |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/docs/implementation/scripts/run_task6_live_smoke.py:20:1
+   |
+18 | from application.model_routing.executor import execute_routed
+19 | from application.model_routing.types import RouteDecision
+20 | from langchain_core.messages import HumanMessage, SystemMessage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+
+F405 `DATABASES` may be undefined, or defined from star imports
+ --> /tmp/task6/tests/task6_settings.py:3:1
+  |
+1 | """Disposable routing tests: no business database, cache or queue."""
+2 | from maxkb.settings import *  # noqa: F403
+3 | DATABASES['default'].update(ENGINE='django.db.backends.postgresql', NAME='postgres',
+  | ^^^^^^^^^
+4 |                             USER='postgres', PASSWORD='', HOST='127.0.0.1', PORT=5432)
+5 | CACHES = {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}
+  |
+
+E402 Module level import not at top of file
+  --> /tmp/task6/tests/task6_settings.py:10:1
+   |
+ 9 | # The upstream Celery app imports maxkb.settings directly.
+10 | from maxkb import settings as base_settings
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+11 | base_settings.CELERY_BROKER_URL = CELERY_BROKER_URL
+12 | base_settings.CELERY_RESULT_BACKEND = CELERY_RESULT_BACKEND
+   |
+
+Found 22 errors.
+[*] 7 fixable with the `--fix` option (1 hidden fix can be enabled with the `--unsafe-fixes` option).

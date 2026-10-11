@@ -4,12 +4,16 @@ on:
     paths:
       - 'apps/application/evaluation/**'
       - 'tests/evaluation/**'
+      - 'apps/application/model_routing/**'
+      - 'tests/model_routing/**'
       - 'docs/implementation/evaluation/**'
       - '.github/workflows/evaluation.yml'
   push:
     paths:
       - 'apps/application/evaluation/**'
       - 'tests/evaluation/**'
+      - 'apps/application/model_routing/**'
+      - 'tests/model_routing/**'
       - 'docs/implementation/evaluation/**'
 jobs:
   contracts:
@@ -20,3 +24,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: PYTHONPATH=apps python -m unittest discover -s tests/evaluation -v
+      - run: PYTHONPATH=apps python -m unittest discover -s tests/model_routing -v

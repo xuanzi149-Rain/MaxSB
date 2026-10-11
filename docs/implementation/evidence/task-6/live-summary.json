@@ -1,0 +1,64 @@
+{
+  "scope": "new_development_smoke_not_frozen_acceptance",
+  "cases": 18,
+  "successful_executions": 18,
+  "human_review_coverage": 0,
+  "actual_cost": null,
+  "cost_optimized": false,
+  "cumulative_budget": {
+    "version": 2,
+    "limit_cny": "100",
+    "reserved_cny": "3.43368",
+    "requests": 20,
+    "models": {
+      "qwen3.7-plus": {
+        "endpoint": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
+        "input_per_million": "20",
+        "output_per_million": "80",
+        "max_tokens": 1024
+      },
+      "deepseek-v4-flash": {
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "input_per_million": "20",
+        "output_per_million": "80",
+        "max_tokens": 1024
+      }
+    }
+  },
+  "groups": {
+    "low": {
+      "count": 6,
+      "input_tokens": 310,
+      "output_tokens": 143,
+      "reference_priced_cost": "0.001764",
+      "currency": "CNY",
+      "actual_cost": null,
+      "response_models": [
+        "qwen3.7-plus"
+      ]
+    },
+    "high": {
+      "count": 6,
+      "input_tokens": 230,
+      "output_tokens": 109,
+      "reference_priced_cost": "0.000666",
+      "currency": "CNY",
+      "actual_cost": null,
+      "response_models": [
+        "deepseek-flash"
+      ]
+    },
+    "routing": {
+      "count": 6,
+      "input_tokens": 255,
+      "output_tokens": 115,
+      "reference_priced_cost": "0.000894",
+      "currency": "CNY",
+      "actual_cost": null,
+      "response_models": [
+        "deepseek-flash",
+        "qwen3.7-plus"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+test_rejects_unbounded_or_changed_model (test_budget.BudgetTests.test_rejects_unbounded_or_changed_model) ... ok
+test_reservation_survives_failures_and_rejects_overspend (test_budget.BudgetTests.test_reservation_survives_failures_and_rejects_overspend) ... ok
+test_sanitized_tool_result_keeps_fields_required_for_completion (test_budget.BudgetTests.test_sanitized_tool_result_keeps_fields_required_for_completion) ... ok
+test_alternative_duplicate_evidence_does_not_require_both_copies (test_contracts.ContractTests.test_alternative_duplicate_evidence_does_not_require_both_copies) ... ok
+test_environment_mismatch_and_incomplete_batch_are_not_strictly_comparable (test_contracts.ContractTests.test_environment_mismatch_and_incomplete_batch_are_not_strictly_comparable) ... ok
+test_failed_stream_does_not_export_provider_exception_text (test_contracts.ContractTests.test_failed_stream_does_not_export_provider_exception_text) ... ok
+test_incomplete_run_does_not_report_final_accuracy (test_contracts.ContractTests.test_incomplete_run_does_not_report_final_accuracy) ... ok
+test_node_error_is_not_a_successful_answer (test_contracts.ContractTests.test_node_error_is_not_a_successful_answer) ... ok
+test_sanitizer_erases_failed_answer_and_unstructured_error (test_contracts.ContractTests.test_sanitizer_erases_failed_answer_and_unstructured_error) ... ok
+test_shipped_datasets_are_sealed_and_evidence_ids_exist (test_contracts.ContractTests.test_shipped_datasets_are_sealed_and_evidence_ids_exist) ... ok
+test_timeout_observation_is_not_tool_task_completion (test_contracts.ContractTests.test_timeout_observation_is_not_tool_task_completion) ... ok
+test_tool_fixture_is_deterministic_and_timeout_is_observable (test_contracts.ContractTests.test_tool_fixture_is_deterministic_and_timeout_is_observable) ... ok
+test_tracking_id_adjacent_to_chinese_is_extracted_without_guessing (test_contracts.ContractTests.test_tracking_id_adjacent_to_chinese_is_extracted_without_guessing) ... ok
+test_usage_only_accepts_actual_provider_counts_and_sums_calls (test_contracts.ContractTests.test_usage_only_accepts_actual_provider_counts_and_sums_calls) ... ok
+test_comparison_joins_ids_and_flags_dataset_changes (test_core.EvaluationTests.test_comparison_joins_ids_and_flags_dataset_changes) ... ok
+test_dataset_rejects_duplicate_ids_unknown_evidence_and_empty_turns (test_core.EvaluationTests.test_dataset_rejects_duplicate_ids_unknown_evidence_and_empty_turns) ... ok
+test_metrics_include_failed_cost_and_do_not_invent_unknowns (test_core.EvaluationTests.test_metrics_include_failed_cost_and_do_not_invent_unknowns) ... ok
+test_retrieval_does_not_prove_citation_or_semantic_correctness (test_core.EvaluationTests.test_retrieval_does_not_prove_citation_or_semantic_correctness) ... ok
+test_sanitize_drops_unknown_tool_params_and_credentials (test_core.EvaluationTests.test_sanitize_drops_unknown_tool_params_and_credentials) ... ok
+test_stream_handles_utf8_fragmentation_and_cumulative_usage (test_core.EvaluationTests.test_stream_handles_utf8_fragmentation_and_cumulative_usage) ... ok
+test_stream_missing_end_and_zero_usage_remain_unknown (test_core.EvaluationTests.test_stream_missing_end_and_zero_usage_remain_unknown) ... ok
+test_unreviewed_results_are_not_final_accuracy_and_p95_is_nearest_rank (test_core.EvaluationTests.test_unreviewed_results_are_not_final_accuracy_and_p95_is_nearest_rank) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.012s
+
+OK

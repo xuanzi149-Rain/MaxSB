@@ -1,0 +1,50 @@
+{
+  "run_id": "04d8f128-a33d-48f6-a54e-7a82a90ab589",
+  "group": "low",
+  "case_id": "classify",
+  "question": "分类这个评价为正面或负面：服务很好，下次还来。",
+  "answer": "",
+  "status": "failed",
+  "elapsed_seconds": 0.004409958011819981,
+  "model_routing": {
+    "task_id": "268a7a47-f80a-4b45-ae27-cd3b220cd94b",
+    "rule_id": "fixed_baseline",
+    "rule_version": "1",
+    "reason": "Fixed baseline",
+    "selected_role": "low",
+    "status": "failed",
+    "attempts": [
+      {
+        "attempt_id": "7d294d28-d43b-44f7-98a3-b67ddd32800e",
+        "role": "low",
+        "model_id": "01a11e76-45ee-79c1-bf92-2bb8dd5a9c42",
+        "model_name": "qwen3.7-plus",
+        "started_at": "2026-10-10T11:51:18.602300+00:00",
+        "status": "failed",
+        "usage": {},
+        "usage_source": "unknown",
+        "error": "transport_error",
+        "ended_at": "2026-10-10T11:51:18.606290+00:00",
+        "elapsed_seconds": 0.003987625008448958,
+        "priced_cost": null,
+        "actual_cost": null,
+        "currency": "CNY",
+        "price_version": "reference-2026-10-10",
+        "price_source": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "price_basis": "public_list_price_not_token_plan_bill"
+      }
+    ],
+    "usage": {
+      "model_call_count": 1,
+      "usage_source": "unknown",
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "error": "transport_error",
+    "priced_cost": null,
+    "currency": null,
+    "actual_cost": null
+  },
+  "actual_cost": null,
+  "scope": "six_new_development_smoke_cases_not_frozen_acceptance"
+}
