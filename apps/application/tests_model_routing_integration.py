@@ -2,7 +2,8 @@
 from types import SimpleNamespace as NS
 from unittest.mock import patch
 from uuid import uuid4
-from django.test import TestCase
+import requests
+from django.test import LiveServerTestCase, TestCase, override_settings
 from models_provider.models import Model
 from application.model_routing.integration import validate_definition, resolve_evidence
 from application.model_routing.config import parse_policy
@@ -13,7 +14,11 @@ from application.tests_tool_recovery_runtime import graph
 from application.flow.common import Workflow
 from application.flow.workflow_manage import WorkflowManage
 from application.tool_recovery.runtime import RecoveryRuntime
-from application.models import ApplicationVersion, ToolRun
+from application.models import ApplicationAccessToken, ApplicationVersion, ChatRecord, ToolRun
+from application.flow.i_step_node import WorkFlowPostHandler
+from application.serializers.common import ChatInfo
+from common.auth.common import ChatAuthentication, ChatUserToken
+from common.constants.authentication_type import AuthenticationType
 from langchain_core.messages import AIMessageChunk
 
 class RoutingIntegrationTests(TestCase):
@@ -85,6 +90,11 @@ class RoutingRecoveryTests(RecoveryFixture):
             run = ToolRun.objects.get(record_id=params['chat_record_id'])
             self.assertEqual(run.failed_node, 'b')
             self.assertEqual(len(calls), 2)
+            routed_before = run.steps.get(node_id='a').output['context']['model_routing']
+            self.assertEqual([attempt['role'] for attempt in routed_before['attempts']], ['low', 'high'])
+            self.assertEqual(len({attempt['attempt_id'] for attempt in routed_before['attempts']}), 2)
+            self.assertEqual(routed_before['usage']['input_tokens'], 20)
+            self.assertEqual(routed_before['usage']['output_tokens'], 4)
             claim = self.store.claim(self.identity, run.id, str(uuid4()), run.version)
             resumed = WorkflowManage(Workflow.new_instance(definition), params, handler)
             resumed.recovery = RecoveryRuntime(resumed, claim)
@@ -93,8 +103,71 @@ class RoutingRecoveryTests(RecoveryFixture):
             self.assertEqual(len(calls), 2)
             self.assertEqual(resumed.node_context[1].answer_text, '{"name":"A"}')
             self.assertEqual(len(resumed.get_answer_text_list()), 1)
+            self.assertEqual(run.steps.get(node_id='a').output['context']['model_routing'], routed_before)
+            self.assertEqual(resumed.node_context[1].context['model_routing'], routed_before)
         first.recovery.close()
         resumed.recovery.close()
+
+
+@override_settings(ALLOWED_HOSTS=['localhost', '127.0.0.1', 'testserver'])
+class RoutingRecoveryHttpTests(LiveServerTestCase):
+    setUp = RecoveryFixture.setUp
+
+    def test_http_resume_keeps_routing_attempts_and_single_answer(self):
+        definition = graph()
+        definition['nodes'][2]['type'] = 'ai-chat-node'
+        definition['nodes'][2]['properties']['node_data'] = {
+            'model_id': '', 'model_routing': POLICY, 'system': 'Answer briefly', 'prompt': 'hello',
+            'dialogue_number': 0, 'is_result': True, 'model_params_setting': {}}
+        version = ApplicationVersion.objects.create(application=self.app, name='routed-http', work_flow=definition)
+        owner, access = str(uuid4()), str(uuid4())
+        self.chat.chat_user_id, self.chat.chat_user_type = owner, 'ANONYMOUS_USER'
+        self.chat.save()
+        ApplicationAccessToken.objects.create(application=self.app, access_token=access, show_exec=False)
+        params = {'chat_id': str(self.chat.id), 'chat_record_id': str(uuid4()), 'question': '提取姓名',
+                  'application_id': str(self.app.id), 'workspace_id': 'default', 'chat_user_id': owner,
+                  'chat_user_type': 'ANONYMOUS_USER', 'stream': False, 'history_chat_record': [],
+                  're_chat': False, 'debug': False}
+        info = ChatInfo(str(self.chat.id), owner, 'ANONYMOUS_USER', '', {}, [], [], str(self.app.id))
+        info.application = version
+        manager = WorkflowManage(Workflow.new_instance(definition), params, WorkFlowPostHandler(info))
+        manager.recovery = RecoveryRuntime(manager)
+        calls = []
+
+        class ControlledModel:
+            async def astream(self, messages, **kwargs):
+                calls.append(kwargs['config']['run_id'])
+                yield AIMessageChunk(content='bad' if len(calls) == 1 else '{"name":"A"}',
+                    usage_metadata={'input_tokens': 10, 'output_tokens': 2, 'total_tokens': 12})
+
+        async def timeout(*args):
+            raise TimeoutError()
+
+        async def success(*args):
+            return NS(isError=False, content=[NS(text='tool done')])
+
+        with patch('application.model_routing.integration.prepare_models',
+                   return_value={'low': ControlledModel(), 'high': ControlledModel()}), \
+                patch('application.flow.i_step_node.extract_long_term_memory.apply_async'):
+            with patch('application.flow.backend.sandbox_mcp.SandboxMCPBackend.call_tool', timeout):
+                manager.run_chain_manage(None, None)
+            run = ToolRun.objects.get(record_id=params['chat_record_id'])
+            before = run.steps.get(node_id='a').output['context']['model_routing']
+            self.assertEqual(run.status, 'failed')
+            self.assertEqual(len(calls), 2)
+            token = ChatUserToken(self.app.id, None, access, AuthenticationType.CHAT_ANONYMOUS_USER,
+                                  'ANONYMOUS_USER', owner, ChatAuthentication(None)).to_token()
+            url = self.live_server_url + '/chat/api/tool_runs/' + str(run.id) + '/resume'
+            body = {'request_id': str(uuid4()), 'expected_version': run.version}
+            with patch('application.flow.backend.sandbox_mcp.SandboxMCPBackend.call_tool', success):
+                response = requests.post(url, headers={'Authorization': 'Bearer ' + token}, json=body, timeout=20)
+            self.assertEqual(response.status_code, 200, response.text)
+            self.assertEqual(response.json()['data']['status'], 'succeeded')
+            self.assertNotIn('details', response.json()['data'])
+            self.assertEqual(len(calls), 2)
+            self.assertEqual(run.steps.get(node_id='a').output['context']['model_routing'], before)
+            self.assertEqual(ChatRecord.objects.filter(id=run.record_id).count(), 1)
+        manager.recovery.close()
 
 
 class RoutingPersistenceTests(RecoveryFixture):

@@ -81,8 +81,10 @@ class RunnerTests(TestCase):
     def test_broker_failure_is_visible_and_sync_run_does_not_enqueue(self):
         service = self.service()
         with patch('application.evaluation.service.capture_snapshot', return_value={'config_hash': 'same'}):
-            with self.captureOnCommitCallbacks(execute=True), \
-                    patch('application.tasks.run_evaluation.delay', side_effect=RuntimeError('broker unavailable')):
+            # Keep the mocked broker active until deferred commit callbacks finish.
+            with patch('application.tasks.run_evaluation') as task, \
+                    self.captureOnCommitCallbacks(execute=True):
+                task.delay.side_effect = RuntimeError('broker unavailable')
                 run = service.create_run('eval', str(self.app.id), str(self.user.id), self.dataset)
             run.refresh_from_db()
             self.assertEqual(run.status, 'dispatch_failed')
